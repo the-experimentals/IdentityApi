@@ -1,4 +1,5 @@
 ﻿using System;
+using IdentityApi.DataModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace IdentityApi.Services.SQLServer
@@ -8,5 +9,10 @@ namespace IdentityApi.Services.SQLServer
         public IdentityStore(DbContextOptions<IdentityStore> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) { }
+
+        public DbSet<Credential> CREDENTIAL { get; set; }
+        public DbSet<Person> PERSON { get; set; }
+        public DbSet<Profile> PROFILE { get; set; }
+        public DbSet<RefreshToken> REFRESH_TOKEN { get; set; }        
     }
 }
