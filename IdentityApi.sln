@@ -45,4 +45,7 @@ Global
 		{6EE4A0D3-8C26-4009-9A88-0192D3712982}.Release|x86.ActiveCfg = Release|Any CPU
 		{6EE4A0D3-8C26-4009-9A88-0192D3712982}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		version = 0.0.1
+	EndGlobalSection
 EndGlobal
