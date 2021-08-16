@@ -47,8 +47,8 @@ namespace IdentityApi.DataModels
         public Credential CREDENTIAL { get; set; }
         [NotMapped]
         public bool NEW { get; set; }
-        //[NotMapped]
-        //public Person PERSON { get; set; }
+        [NotMapped]
+        public Person PERSON { get; set; }
         //[NotMapped]
         //public ProfileRole PROFILE_ROLE { get; set; }
         //[NotMapped]
