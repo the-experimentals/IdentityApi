@@ -18,9 +18,23 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.9" />
+    <PackageReference Include="Moq" Version="4.16.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\IdentityApi\IdentityApi.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Data\" />
+    <None Remove="Mockings\" />
+    <None Remove="Ordering\" />
+    <None Remove="Microsoft.EntityFrameworkCore.InMemory" />
+    <None Remove="Moq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Mockings\" />
+    <Folder Include="Ordering\" />
   </ItemGroup>
 </Project>

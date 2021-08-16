@@ -20,7 +20,7 @@ namespace IdentityApi.Data
         /// <summary>
         /// Seeds default admin account for new database.
         /// </summary>
-        private void SeedAdmin()
+        public ProfileSaveStatus SeedAdmin()
         {
             Profile newAdmin = new()
             {
@@ -37,7 +37,7 @@ namespace IdentityApi.Data
                 PASSWORD = "DONOTSHARE"
             };
 
-            //_accountManager.CreateProfile(newAdmin);
+            return _accountManager.CreateProfile(newAdmin);
         }
     }
 }
