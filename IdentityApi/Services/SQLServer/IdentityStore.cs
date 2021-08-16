@@ -11,7 +11,7 @@ namespace IdentityApi.Services.SQLServer
         protected override void OnModelCreating(ModelBuilder modelBuilder) { }
 
         public DbSet<Credential> CREDENTIALS { get; set; }
-        public DbSet<Person> PERSON { get; set; }
+        //public DbSet<Person> PERSON { get; set; }
         public DbSet<Profile> PROFILE { get; set; }
         public DbSet<RefreshToken> REFRESH_TOKEN { get; set; }        
     }

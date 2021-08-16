@@ -68,6 +68,7 @@ namespace IdentityApi.Account
 
                 transaction.Commit();
                 status.IS_SAVED = true;
+                status.PROFILE_ID = profile.ID;
             }
             catch(Exception ex)
             {
