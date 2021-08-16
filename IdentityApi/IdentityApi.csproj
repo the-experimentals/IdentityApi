@@ -8,8 +8,6 @@
     <None Remove="Controllers\" />
     <None Remove="Services\" />
     <None Remove="Services\SQLServer\" />
-    <None Remove="Services\SQLServer\Auth\" />
-    <None Remove="Services\SQLServer\Account\" />
     <None Remove="Microsoft.EntityFrameworkCore.Design" />
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
     <None Remove="Microsoft.EntityFrameworkCore" />
@@ -19,8 +17,6 @@
     <Folder Include="Controllers\" />
     <Folder Include="Services\" />
     <Folder Include="Services\SQLServer\" />
-    <Folder Include="Services\SQLServer\Auth\" />
-    <Folder Include="Services\SQLServer\Account\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.9">
