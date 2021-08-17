@@ -1,6 +1,7 @@
 ﻿using IdentityApi.Account;
 using IdentityApi.Auth;
 using IdentityApi.Services.SQLServer;
+using IdentityApi.Utilities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -30,6 +31,7 @@ namespace IdentityApi
 
             services.AddSingleton<IAuthManager, AuthManager>();
             services.AddSingleton<IAccountManager, AccountManager>();
+            services.AddSingleton<TMCache>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
