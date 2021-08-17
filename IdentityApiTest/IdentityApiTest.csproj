@@ -32,11 +32,13 @@
     <None Remove="Microsoft.EntityFrameworkCore.InMemory" />
     <None Remove="Moq" />
     <None Remove="Account\" />
+    <None Remove="Auth\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Mockings\" />
     <Folder Include="Ordering\" />
     <Folder Include="Account\" />
+    <Folder Include="Auth\" />
   </ItemGroup>
 </Project>
