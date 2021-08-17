@@ -1,10 +1,11 @@
 ﻿using System;
+using IdentityApi.RequestModels;
+using IdentityApi.ResponseModels;
+
 namespace IdentityApi.Auth
 {
-    public class IAuthManager
+    public interface IAuthManager
     {
-        public IAuthManager()
-        {
-        }
+        public LogInResponse Authenticate(LogInRequest logInRequest);
     }
 }
