@@ -1,5 +1,6 @@
 ﻿using System;
 using IdentityApi.Auth;
+using IdentityApi.RequestModels;
 using IdentityApi.ResponseModels;
 using IdentityApiTest.Mockings;
 using IdentityApiTest.Ordering;
@@ -17,14 +18,11 @@ namespace IdentityApiTest.Auth
             _authManager = new AuthManager(storeMock._store, cacheMock._cache);
         }
 
-        [Fact(DisplayName = "Test authenictate user"), Priority(1)]
-        public void TestAuthenticate()
+        [Theory(DisplayName ="Test authenticate user."), Priority(1)]
+        [ClassData(typeof(LogInRequestTestData))]
+        public void TestAuthenticate(LogInRequest logInRequest)
         {
-            LogInResponse result = _authManager.Authenticate(new()
-            {
-                USERNAME = "testuser",
-                PASSWORD = "testPassword"
-            });
+            LogInResponse result = _authManager.Authenticate(logInRequest);
 
             Assert.True(result.IS_AUTHENTICATED);
         }
