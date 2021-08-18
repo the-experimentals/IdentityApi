@@ -42,6 +42,7 @@ namespace IdentityApi
 
             // configure jwt authentication.
             var JwtSecretKeySection = Configuration.GetSection("JwtSecretKey");
+            services.Configure<JwtSecretKey>(JwtSecretKeySection);
             var jwtSettings = JwtSecretKeySection.Get<JwtSecretKey>();
             var key = Encoding.ASCII.GetBytes(jwtSettings.SECRET);
 

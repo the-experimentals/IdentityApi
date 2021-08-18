@@ -46,7 +46,24 @@ namespace IdentityApi.Controllers
         [ProducesResponseType(typeof(List<string>), StatusCodes.Status401Unauthorized)]
         public IActionResult LogIn([FromBody]LogInRequest logInRequest)
         {
-            return Unauthorized();
+            LogInResponse logInResponse;
+
+
+            logInResponse = _authManager.Authenticate(logInRequest);
+
+            if (logInResponse.IS_AUTHENTICATED)
+            {
+                string token = _authManager.GenerateJwtToken(logInResponse);
+
+                if (logInResponse.IS_VERIFIED)
+                {
+
+                }
+
+                logInResponse.TOKEN.ACCESS = token;
+            }            
+
+            return Ok(logInResponse);            
         }
     }
 }
