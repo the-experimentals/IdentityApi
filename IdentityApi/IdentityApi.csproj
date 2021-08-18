@@ -28,6 +28,16 @@
     <None Remove="Swashbuckle.AspNetCore.SwaggerUI" />
     <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
     <None Remove="UAParser" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Grpc.Net.Client" />
+    <None Remove="Google.Protobuf" />
+    <None Remove="Grpc.Tools" />
+    <None Remove="Grpc.AspNetCore" />
+    <None Remove="Grpc.Net.Client.Web" />
+    <None Remove="Protos\" />
+    <None Remove="Protos\policyapi.proto" />
+    <None Remove="Services\gRPC\" />
+    <None Remove="Services\gRPC\Clients\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -42,6 +52,9 @@
     <Folder Include="Identifiers\" />
     <Folder Include="Utilities\" />
     <Folder Include="Mappings\" />
+    <Folder Include="Protos\" />
+    <Folder Include="Services\gRPC\" />
+    <Folder Include="Services\gRPC\Clients\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.9">
@@ -58,5 +71,20 @@
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.1.5" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.9" />
     <PackageReference Include="UAParser" Version="3.1.47" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.39.0" />
+    <PackageReference Include="Google.Protobuf" Version="3.17.3" />
+    <PackageReference Include="Grpc.Tools" Version="2.39.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.39.0" />
+    <PackageReference Include="Grpc.Net.Client.Web" Version="2.39.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="Protos\policyapi.proto" GrpcServices="Client">
+      <Link>Protos\policyapi.proto</Link>
+      <OutputDir>obj\Debug\net5.0\</OutputDir>
+    </Protobuf>
   </ItemGroup>
 </Project>

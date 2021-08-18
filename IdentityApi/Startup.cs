@@ -5,11 +5,13 @@ using System.Text;
 using IdentityApi.Account;
 using IdentityApi.Auth;
 using IdentityApi.Data;
+using IdentityApi.Services.gRPC.Clients;
 using IdentityApi.Services.SQLServer;
 using IdentityApi.Utilities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -31,6 +33,7 @@ namespace IdentityApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper(typeof(Startup));
             services.AddControllers().AddJsonOptions(options =>
             {
                 options.JsonSerializerOptions.PropertyNamingPolicy = null;
@@ -100,6 +103,8 @@ namespace IdentityApi
             services.AddScoped<IAccountManager, AccountManager>();
             services.AddSingleton<TMCache>();
             services.AddScoped<DBInitializer>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<PolicyApiClient>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -123,6 +128,13 @@ namespace IdentityApi
             dBInitializer.Initialize();
 
             app.UseRouting();
+
+            app.UseCors(
+                options => options.WithOrigins("http://localhost:4200")
+                                  .SetIsOriginAllowed(x => _ = true)
+                                  .AllowAnyMethod()
+                                  .AllowAnyHeader()
+            );
 
             app.UseAuthentication();
 
