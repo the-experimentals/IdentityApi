@@ -1,5 +1,6 @@
 ﻿using IdentityApi.Account;
 using IdentityApi.Auth;
+using IdentityApi.Data;
 using IdentityApi.Services.SQLServer;
 using IdentityApi.Utilities;
 using Microsoft.AspNetCore.Builder;
@@ -29,18 +30,21 @@ namespace IdentityApi
             services.AddDistributedMemoryCache(); // Adds a default in-memory implementation of IDistributedCache
             services.AddDbContext<IdentityStore>(options => options.UseSqlServer(Configuration.GetConnectionString("IdentityStoreConnectionString")));
 
-            services.AddSingleton<IAuthManager, AuthManager>();
-            services.AddSingleton<IAccountManager, AccountManager>();
+            services.AddScoped<IAuthManager, AuthManager>();
+            services.AddScoped<IAccountManager, AccountManager>();
             services.AddSingleton<TMCache>();
+            services.AddScoped<DBInitializer>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, DBInitializer dBInitializer)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            dBInitializer.Initialize();
 
             app.UseRouting();
 

@@ -16,7 +16,7 @@ namespace IdentityApi.Services.SQLServer
 
             DbContextOptionsBuilder<IdentityStore> builder = new();
 
-            string connectionString = configuration.GetConnectionString("AccountStoreConnectionString");
+            string connectionString = configuration.GetConnectionString("IdentityStoreConnectionString");
 
             builder.UseSqlServer(connectionString);
 
