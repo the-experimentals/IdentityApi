@@ -46,5 +46,22 @@ namespace IdentityApi.Utilities
 
             return sb.ToString();
         }
+
+        public static string GetUniqueString(int maxSize)
+        {
+            char[] chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".ToCharArray();
+            byte[] data = new byte[1];
+            using RNGCryptoServiceProvider crypto = new();
+
+            crypto.GetNonZeroBytes(data); //produces wild sequences of numbers that are NOT reproducible.
+            data = new byte[maxSize];
+            crypto.GetNonZeroBytes(data);
+
+            StringBuilder result = new(maxSize);
+            foreach (byte b in data)
+                result.Append(chars[b % (chars.Length)]);
+
+            return result.ToString();
+        }
     }
 }

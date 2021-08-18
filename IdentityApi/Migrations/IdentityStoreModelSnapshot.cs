@@ -145,7 +145,7 @@ namespace IdentityApi.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("REFRESH_TOKEN");
+                    b.ToTable("REFRESH_TOKENS");
                 });
 
             modelBuilder.Entity("IdentityApi.DataModels.Credential", b =>

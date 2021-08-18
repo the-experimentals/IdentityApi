@@ -148,7 +148,29 @@ namespace IdentityApi.Auth
 
         public RefreshToken GenerateRefreshToken(string profileID, UserAgent ua, IPAddress ipAddress)
         {
-            throw new NotImplementedException();
+            string sha = GetSHA(profileID, ua, ipAddress);
+
+            RefreshToken newRefreshToken = new()
+            {
+                ID = Guid.NewGuid().ToString(),
+                PROFILE_ID = profileID,
+                GENERATED_ON = DateTime.UtcNow,
+                REFRESHED_ON = DateTime.UtcNow,
+                TOKEN = Utilities.Utility.GetUniqueString(32),
+                LIFE_SPAN = 1,
+                OS = ua.OS,
+                BROWSER = ua.BROWSER,
+                DEVICE = ua.DEVICE,
+                IPv4 = ipAddress.ToString(),
+                ACTIVE = true,
+                SHA = sha,
+                STATUS = Status.ACTIVE
+            };
+
+            _store.REFRESH_TOKENS.Add(newRefreshToken);
+            _store.SaveChanges();
+
+            return newRefreshToken;
         }
 
         public RefreshToken GetOrCreateRefreshToken(string profileID, UserAgent ua, IPAddress ipAddress)
