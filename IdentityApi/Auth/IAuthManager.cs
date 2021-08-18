@@ -1,11 +1,20 @@
 ﻿using System;
+using System.Net;
+using IdentityApi.DataModels;
 using IdentityApi.RequestModels;
 using IdentityApi.ResponseModels;
+using UAParser;
 
 namespace IdentityApi.Auth
 {
     public interface IAuthManager
     {
         public LogInResponse Authenticate(LogInRequest logInRequest);
+        public RefreshToken GetOrCreateRefreshToken(string profileID, UserAgent ua, IPAddress ipAddress);
+        public RefreshToken GenerateRefreshToken(string profileID, UserAgent ua, IPAddress ipAddress);
+        public RefreshToken GetRefreshToken(string profileID, UserAgent ua, IPAddress ipAddress);
+        public void UpdateRefreshToken(RefreshToken token);
+        public string GenerateJwtToken(LogInResponse logInResponse);
+        public void Logout(string profileID, UserAgent ua, IPAddress ipAddress);
     }
 }

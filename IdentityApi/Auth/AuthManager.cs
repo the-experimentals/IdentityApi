@@ -7,6 +7,8 @@ using IdentityApi.Utilities;
 using System.Linq;
 using IdentityApi.Account;
 using IdentityApi.Identifiers;
+using UAParser;
+using System.Net;
 
 namespace IdentityApi.Auth
 {
@@ -103,6 +105,36 @@ namespace IdentityApi.Auth
             }
 
             return logInResponse;
+        }
+
+        public string GenerateJwtToken(LogInResponse logInResponse)
+        {
+            throw new NotImplementedException();
+        }
+
+        public RefreshToken GenerateRefreshToken(string profileID, UserAgent ua, IPAddress ipAddress)
+        {
+            throw new NotImplementedException();
+        }
+
+        public RefreshToken GetOrCreateRefreshToken(string profileID, UserAgent ua, IPAddress ipAddress)
+        {
+            throw new NotImplementedException();
+        }
+
+        public RefreshToken GetRefreshToken(string profileID, UserAgent ua, IPAddress ipAddress)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Logout(string profileID, UserAgent ua, IPAddress ipAddress)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateRefreshToken(RefreshToken token)
+        {
+            throw new NotImplementedException();
         }
     }
 }
