@@ -1,17 +1,20 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
+using System.Text;
 using IdentityApi.Account;
 using IdentityApi.Auth;
 using IdentityApi.Data;
 using IdentityApi.Services.SQLServer;
 using IdentityApi.Utilities;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
 namespace IdentityApi
@@ -28,11 +31,38 @@ namespace IdentityApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.PropertyNamingPolicy = null;
+            });
 
             services.AddMemoryCache();
             services.AddDistributedMemoryCache(); // Adds a default in-memory implementation of IDistributedCache
             services.AddDbContext<IdentityStore>(options => options.UseSqlServer(Configuration.GetConnectionString("IdentityStoreConnectionString")));
+
+            // configure jwt authentication.
+            var JwtSecretKeySection = Configuration.GetSection("JwtSecretKey");
+            var jwtSettings = JwtSecretKeySection.Get<JwtSecretKey>();
+            var key = Encoding.ASCII.GetBytes(jwtSettings.SECRET);
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.RequireHttpsMetadata = false;
+                options.SaveToken = true;
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+
+                };
+            });
 
             services.AddSwaggerGen(swagger =>
             {
@@ -91,9 +121,9 @@ namespace IdentityApi
 
             dBInitializer.Initialize();
 
-            
-
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
