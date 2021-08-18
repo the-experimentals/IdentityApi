@@ -1,4 +1,7 @@
-﻿using IdentityApi.Account;
+﻿using System;
+using System.IO;
+using System.Reflection;
+using IdentityApi.Account;
 using IdentityApi.Auth;
 using IdentityApi.Data;
 using IdentityApi.Services.SQLServer;
@@ -9,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 
 namespace IdentityApi
 {
@@ -30,6 +34,37 @@ namespace IdentityApi
             services.AddDistributedMemoryCache(); // Adds a default in-memory implementation of IDistributedCache
             services.AddDbContext<IdentityStore>(options => options.UseSqlServer(Configuration.GetConnectionString("IdentityStoreConnectionString")));
 
+            services.AddSwaggerGen(swagger =>
+            {
+                swagger.SwaggerDoc("v1", new OpenApiInfo { Title = "Identity API", Version = "v1" });
+                swagger.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    In = ParameterLocation.Header,
+                    Description = "Please insert JWT with Bearer into info field",
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey
+                });
+                swagger.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        Array.Empty<string>()
+                    }
+                });
+
+                // Set the comments path for the Swagger JSON and UI.
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                swagger.IncludeXmlComments(xmlPath);
+            });
+
             services.AddScoped<IAuthManager, AuthManager>();
             services.AddScoped<IAccountManager, AccountManager>();
             services.AddSingleton<TMCache>();
@@ -42,9 +77,21 @@ namespace IdentityApi
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
+                app.UseSwagger();
+
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Identity API");
+                    c.DocumentTitle = "Identity API";
+                    c.DefaultModelsExpandDepth(-1);
+
+                });
             }
 
             dBInitializer.Initialize();
+
+            
 
             app.UseRouting();
 
