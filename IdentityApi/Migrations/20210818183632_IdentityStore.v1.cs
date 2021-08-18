@@ -30,7 +30,7 @@ namespace IdentityApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "REFRESH_TOKEN",
+                name: "REFRESH_TOKENS",
                 columns: table => new
                 {
                     ID = table.Column<string>(type: "nvarchar(450)", nullable: false),
@@ -49,7 +49,7 @@ namespace IdentityApi.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_REFRESH_TOKEN", x => x.ID);
+                    table.PrimaryKey("PK_REFRESH_TOKENS", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -85,7 +85,7 @@ namespace IdentityApi.Migrations
                 name: "CREDENTIALS");
 
             migrationBuilder.DropTable(
-                name: "REFRESH_TOKEN");
+                name: "REFRESH_TOKENS");
 
             migrationBuilder.DropTable(
                 name: "PROFILE");

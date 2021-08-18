@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IdentityApi.Migrations
 {
     [DbContext(typeof(IdentityStore))]
-    [Migration("20210818060203_IdentityStore.v1")]
+    [Migration("20210818183632_IdentityStore.v1")]
     partial class IdentityStorev1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -147,7 +147,7 @@ namespace IdentityApi.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("REFRESH_TOKEN");
+                    b.ToTable("REFRESH_TOKENS");
                 });
 
             modelBuilder.Entity("IdentityApi.DataModels.Credential", b =>
