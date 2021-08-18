@@ -3,7 +3,6 @@ using System.Net;
 using IdentityApi.DataModels;
 using IdentityApi.RequestModels;
 using IdentityApi.ResponseModels;
-using UAParser;
 
 namespace IdentityApi.Auth
 {
@@ -16,5 +15,6 @@ namespace IdentityApi.Auth
         public void UpdateRefreshToken(RefreshToken token);
         public string GenerateJwtToken(LogInResponse logInResponse);
         public void Logout(string profileID, UserAgent ua, IPAddress ipAddress);
+        public void DeleteRefreshToken(RefreshToken refreshToken);
     }
 }

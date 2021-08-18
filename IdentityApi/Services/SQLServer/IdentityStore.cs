@@ -13,6 +13,6 @@ namespace IdentityApi.Services.SQLServer
         public DbSet<Credential> CREDENTIALS { get; set; }
         //public DbSet<Person> PERSON { get; set; }
         public DbSet<Profile> PROFILE { get; set; }
-        public DbSet<RefreshToken> REFRESH_TOKEN { get; set; }        
+        public DbSet<RefreshToken> REFRESH_TOKENS { get; set; }        
     }
 }
