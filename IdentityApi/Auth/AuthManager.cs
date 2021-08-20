@@ -240,7 +240,14 @@ namespace IdentityApi.Auth
 
         public void UpdateRefreshToken(RefreshToken token)
         {
-            throw new NotImplementedException();
+            token.TOKEN = Utilities.Utility.GetUniqueString(32);
+            token.REFRESHED_ON = DateTime.UtcNow;
+
+            _store.REFRESH_TOKENS.Update(token);
+            _store.SaveChanges();
+
+            _cache.Remove(RefreshToken.REFRESH_TOKEN_CACHE_KEY + token.PROFILE_ID);
+            _cache.Add(RefreshToken.REFRESH_TOKEN_CACHE_KEY + token.PROFILE_ID, token);
         }
 
         private string GetSHA(string profileID, RequestModels.UserAgent ua, IPAddress ipAddress)
