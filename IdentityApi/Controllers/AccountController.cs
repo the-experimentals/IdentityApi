@@ -36,6 +36,13 @@ namespace IdentityApi.Controllers
             return Ok("Testing account endpoint");
         }
 
+        /// <summary>
+        /// Endpoing action for registering new profile request.
+        /// </summary>
+        /// <param name="newProfileView">Request model for containing new profile data.</param>
+        /// <returns>Boolean true for successful profile creation.</returns>
+        /// <response code="201">User's credentials have been authenticated successfully</response>
+        /// <response code="401">Unsuccessfull user's authentication, check errors in response model.</response> 
         [HttpPost(AccountMappings.CREATE_NEW_PROFILE)]
         [ProducesResponseType(typeof(NewProfileRequest), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(List<string>), StatusCodes.Status400BadRequest)]
@@ -66,7 +73,7 @@ namespace IdentityApi.Controllers
             {
                 profileResponse.IS_SAVED = true;
 
-                return Ok(profileResponse);
+                return Created(AccountMappings.CREATE_NEW_PROFILE,profileResponse);
             }
             else
                 return BadRequest(result.ERRORS);
