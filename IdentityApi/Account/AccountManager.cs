@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using IdentityApi.DataModels;
+using IdentityApi.RequestModels;
 using IdentityApi.ResponseModels;
 using IdentityApi.Services.SQLServer;
 using IdentityApi.Utilities;
@@ -12,9 +13,12 @@ namespace IdentityApi.Account
     public class AccountManager : IAccountManager
     {
         private readonly IdentityStore _store;
-        public AccountManager(IdentityStore store)
+        private readonly TMCache _cache;
+
+        public AccountManager(IdentityStore store, TMCache cache)
         {
             _store = store;
+            _cache = cache;
         }
 
         public ProfileSaveStatus CreateProfile(Profile profile)
@@ -158,6 +162,55 @@ namespace IdentityApi.Account
                 _store.SaveChanges();
 
             }
+        }
+
+        public ChangeRequestResponse ChangePassword(string profileID, ChangePasswordRequest changePasswordRequest)
+        {
+            Profile profile = GetProfile(profileID);
+
+            ChangeRequestResponse response = new();
+
+            UserSecret newPasswordSecret = Utility.GetUserSecret(profile.CREDENTIAL.SALT, changePasswordRequest.NEW_PASSWORD.Trim());
+
+            if (newPasswordSecret.SECRET_HASH.Equals(profile.CREDENTIAL.SECRET_HASH))
+            {
+                response.ERRORS.Add("Your new password cannot be same as old password");
+            }
+            else
+            {
+                UserSecret oldPasswordSecret = Utility.GetUserSecret(profile.CREDENTIAL.SALT, changePasswordRequest.OLD_PASSWORD.Trim());
+
+                if (!oldPasswordSecret.SECRET_HASH.Equals(profile.CREDENTIAL.SECRET_HASH))
+                {
+                    response.ERRORS.Add("Your old password is invalid");
+                }
+                else
+                {
+                    UserSecret userSecret = Utility.GetUserSecret(null, changePasswordRequest.NEW_PASSWORD.Trim());
+
+                    Credential credential = profile.CREDENTIAL;
+
+                    credential.SECRET_HASH = userSecret.SECRET_HASH;
+                    credential.SALT = userSecret.SALT;
+
+                    _store.CREDENTIALS.Update(credential);
+                    _store.SaveChanges();
+
+                    response.IS_CHANGED = true;
+                }
+            }
+
+            return response;
+        }
+
+        public Profile GetProfile(string profileID)
+        {
+            Profile profile = _cache.Get<Profile>(Profile.PROFILE_CACHE_KEY + profileID);
+
+            if (profile == null)
+                profile = _store.PROFILE.Find(profileID);
+
+            return profile;
         }
     }
 }

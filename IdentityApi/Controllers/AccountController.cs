@@ -113,5 +113,29 @@ namespace IdentityApi.Controllers
             List<ProfileCardResponse> profileCardResponse = _accountManager.GetProfiles();
             return Ok(profileCardResponse);
         }
+
+        /// <summary>
+        /// Endpoint action for accepting client's request to change account's password
+        /// </summary>
+        /// <param name="changePasswordRequest">Request model for containing user's OLD_PASSOWRD, NEW_PASSWORD and CONFIRM_PASSWORD</param>
+        /// <returns>Retruns HTTP Status 200 for successfull password change and 400 along with errors for unsuccessfull.</returns>
+        /// <response code="200">Password changed successfully</response>
+        /// <response code="400">Password change unsuccessful, check errors.</response> 
+        [HttpPut(AccountMappings.CHANGE_PASSWORD)]
+        [ProducesResponseType(typeof(ChangePasswordRequest), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(List<string>), StatusCodes.Status400BadRequest)]
+        public IActionResult ChangePassword([FromBody] ChangePasswordRequest changePasswordRequest)
+        {
+            // get profile ID from user claims
+            ClaimsIdentity userIdentity = HttpContext.User.Identity as ClaimsIdentity;
+            string profileID = userIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            ChangeRequestResponse response = _accountManager.ChangePassword(profileID, changePasswordRequest);
+
+            if (response.IS_CHANGED)
+                return Ok(response);
+            else
+                return BadRequest(response.ERRORS);
+        }
     }
 }
