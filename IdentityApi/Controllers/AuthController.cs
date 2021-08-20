@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Mime;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Grpc.Core;
 using IdentityApi.Auth;
+using IdentityApi.DataModels;
 using IdentityApi.Mappings;
 using IdentityApi.RequestModels;
 using IdentityApi.ResponseModels;
@@ -13,6 +15,7 @@ using IdentityApi.Services.gRPC.Clients;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Net.Http.Headers;
 using UAParser;
 
 namespace IdentityApi.Controllers
@@ -83,6 +86,49 @@ namespace IdentityApi.Controllers
             }            
 
             return Ok(logInResponse);            
+        }
+
+        /// <summary>
+        /// Endpoint  action for refreshing access tokens.
+        /// </summary>
+        /// <param name="refreshTokenRequest">Request model for containing refresh token.</param>
+        /// <returns>Token response which contains refreshed access token.</returns>
+        /// <response code="200">Access token has been refreshed successfully</response>
+        /// <response code="400">Invalid or missing refresh token.</response>
+        /// <response code="500">Something went wrong while fetching policy token.</response> 
+        [HttpPatch(AuthMappings.REFRESH_TOKEN)]
+        [ProducesResponseType(typeof(TokenResponse), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> RefreshTokenAsync(RefreshTokenRequest refreshTokenRequest)
+        {
+            ClaimsIdentity userIdentity = HttpContext.User.Identity as ClaimsIdentity;
+            string profileID = userIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            RefreshToken storedRefreshToken = _authManager.GetRefreshToken(profileID, GetClientInfo(), GetIPAddress());
+
+            if (storedRefreshToken != null && !storedRefreshToken.TOKEN.Equals(refreshTokenRequest.REFRESH, StringComparison.OrdinalIgnoreCase))
+                return BadRequest("Invalid/Missing refresh token initiate logout");
+
+            var token = HttpContext.Request.Headers[HeaderNames.Authorization];
+            Console.WriteLine(token[0]["Bearer ".Length..]);
+
+            var header = new Metadata
+                    {
+                        { "Authorization", $"Bearer {token[0]["Bearer ".Length..]}" }
+                    };
+
+            TokenResponse tokenResponse = await _policyApiClient.GetPolicyTokenAsync(header);
+
+            if (tokenResponse == null)
+                return StatusCode(StatusCodes.Status500InternalServerError);
+
+            _authManager.UpdateRefreshToken(storedRefreshToken);
+            tokenResponse.REFRESH = storedRefreshToken.TOKEN;
+            tokenResponse.IS_REFRESHED = true;
+            tokenResponse.ALLOW_REFRESH = true;
+
+            return Ok(tokenResponse);
         }
 
         private RequestModels.UserAgent GetClientInfo()
