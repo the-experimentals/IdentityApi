@@ -135,7 +135,6 @@ namespace IdentityApi.Controllers
         {
             RequestModels.UserAgent ua = new();
 
-
             var userAgent = HttpContext.Request.Headers["User-Agent"];
             string uaString = Convert.ToString(userAgent.FirstOrDefault());
             Parser uaParser = Parser.GetDefault();

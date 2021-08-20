@@ -38,6 +38,8 @@
     <None Remove="Protos\policyapi.proto" />
     <None Remove="Services\gRPC\" />
     <None Remove="Services\gRPC\Clients\" />
+    <None Remove="PwnedPasswords.Client" />
+    <None Remove="Microsoft.Extensions.Http.Polly" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -80,6 +82,8 @@
     </PackageReference>
     <PackageReference Include="Grpc.AspNetCore" Version="2.39.0" />
     <PackageReference Include="Grpc.Net.Client.Web" Version="2.39.0" />
+    <PackageReference Include="PwnedPasswords.Client" Version="1.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="5.0.1" />
   </ItemGroup>
   <ItemGroup>
     <Protobuf Include="Protos\policyapi.proto" GrpcServices="Client">

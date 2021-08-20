@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Net.Http;
 using System.Reflection;
 using System.Text;
 using IdentityApi.Account;
@@ -18,6 +19,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Polly;
 
 namespace IdentityApi
 {
@@ -98,6 +100,10 @@ namespace IdentityApi
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 swagger.IncludeXmlComments(xmlPath);
             });
+
+            services.AddPwnedPasswordHttpClient(minimumFrequencyToConsiderPwned: 1)
+                    .AddTransientHttpErrorPolicy(p => p.RetryAsync(3))
+                    .AddPolicyHandler(Policy.TimeoutAsync<HttpResponseMessage>(TimeSpan.FromSeconds(2)));
 
             services.AddScoped<IAuthManager, AuthManager>();
             services.AddScoped<IAccountManager, AccountManager>();
