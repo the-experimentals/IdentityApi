@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mime;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using IdentityApi.Account;
@@ -15,9 +16,11 @@ using Microsoft.AspNetCore.Mvc;
 using PwnedPasswords.Client;
 
 namespace IdentityApi.Controllers
-{
+{    
     [Authorize]
+    [ApiController]
     [Route(AccountMappings.ENDPOINT_ROUTE)]
+    [Produces(MediaTypeNames.Application.Json)]
     public class AccountController : Controller
     {
         private readonly IAccountManager _accountManager;
@@ -46,7 +49,7 @@ namespace IdentityApi.Controllers
         [HttpPost(AccountMappings.CREATE_NEW_PROFILE)]
         [ProducesResponseType(typeof(NewProfileRequest), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(List<string>), StatusCodes.Status400BadRequest)]
-        public IActionResult CreateNewProfile(NewProfileRequest newProfileView)
+        public IActionResult CreateNewProfile([FromBody]NewProfileRequest newProfileView)
         {
             NewProfileResponse profileResponse = new();
 
@@ -77,6 +80,38 @@ namespace IdentityApi.Controllers
             }
             else
                 return BadRequest(result.ERRORS);
+        }
+
+        /// <summary>
+        /// Endpoint action for accepting client's request to check password against pwned password list.
+        /// </summary>
+        /// <param name="passwordRequest">Password to be checked against pwned password list.</param>
+        /// <returns>Retruns HTTP Status 200 along with password matched result and 400 if massword is missing from request query.</returns>
+        /// <response code="200">Password match found in pwned password list or not.</response>
+        /// <response code="400">Password missing from request query.</response> 
+        [HttpGet(AccountMappings.CHECK_PWNED_PASSWORD)]
+        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> CheckPwnedPasswordAsync([FromQuery] CheckPwnedPasswordRequest passwordRequest)
+        {
+            if (string.IsNullOrEmpty(passwordRequest.PASSWORD))
+                return BadRequest();
+
+            bool result = await _pwnedPasswords.HasPasswordBeenPwned(passwordRequest.PASSWORD.Trim());
+            return Ok(result);
+        }
+
+        /// <summary>
+        /// Endpoint action for accepting client's request to get all profiles available in system. 
+        /// </summary>
+        /// <returns>List of available profile details.</returns>
+        /// <response code="200">List of profiles found successfully</response>
+        [HttpGet(AccountMappings.GET_PROFILES)]
+        [ProducesResponseType(typeof(List<ProfileCardResponse>), StatusCodes.Status200OK)]
+        public IActionResult GetProfiles()
+        {
+            List<ProfileCardResponse> profileCardResponse = _accountManager.GetProfiles();
+            return Ok(profileCardResponse);
         }
     }
 }

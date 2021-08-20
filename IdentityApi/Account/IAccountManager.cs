@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using IdentityApi.DataModels;
+using IdentityApi.ResponseModels;
 
 namespace IdentityApi.Account
 {
@@ -7,7 +9,7 @@ namespace IdentityApi.Account
     {
         // CURD operation methods
         //public Profile GetProfile(string profileID);
-        //public List<ProfileCardResponse> GetProfiles();
+        public List<ProfileCardResponse> GetProfiles();
         public ProfileSaveStatus CreateProfile(Profile profile);
         //public void UpdateProfile(Profile profile);
         //public void DeleteProfile(string profileID);

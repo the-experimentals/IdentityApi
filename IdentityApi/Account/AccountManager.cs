@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using IdentityApi.DataModels;
+using IdentityApi.ResponseModels;
 using IdentityApi.Services.SQLServer;
 using IdentityApi.Utilities;
 using Microsoft.EntityFrameworkCore.Storage;
@@ -77,6 +79,55 @@ namespace IdentityApi.Account
             }
 
             return status;
+        }
+
+        public List<ProfileCardResponse> GetProfiles()
+        {
+            var profiles = (from profile in _store.PROFILE
+                            join credential in _store.CREDENTIALS
+                            on profile.ID equals credential.PROFILE_ID
+                            where credential.USERNAME != "system"
+                            select new
+                            {
+                                dataProfile = profile,
+                                dataCredential = credential
+                            }).ToList();
+
+            List<ProfileCardResponse> profileViews = new();
+
+            if (profiles.Any())
+            {
+                foreach (var profile in profiles)
+                {
+                    profileViews.Add(new ProfileCardResponse
+                    {
+                        USERNAME = profile.dataCredential.USERNAME,
+                        NAME = profile.dataProfile.NAME,
+                        LOCKED = profile.dataProfile.LOCKED,
+                        INITIALS = GetNameInitials(profile.dataProfile.NAME)
+                    });
+                }
+            }
+
+            return profileViews;
+
+        }
+
+        private string GetNameInitials(string name)
+        {
+            string initials = "";
+
+            if (name.Length == 0)
+                return "";
+
+            string[] splitName = name.Split(" ");
+
+            foreach (string sp in splitName)
+            {
+                initials += sp[0];
+            }
+
+            return initials.ToUpper();
         }
 
         private void CreateCredentials(Credential credential)
