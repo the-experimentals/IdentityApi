@@ -16,7 +16,7 @@ namespace IdentityApi.RequestModels
 
         [Required(ErrorMessage = "Confirm password for your new profile is missing")]
         [MinLength(5, ErrorMessage = "Confirm password for your new profile cannot be less than 8 characters")]
-        [Compare("SECRET", ErrorMessage = "Confirm password didnt matched with password")]
+        [Compare("PASSWORD", ErrorMessage = "Confirm password didnt matched with password")]
         public string CONFIRM_PASSWORD { get; set; }
 
         [Required(ErrorMessage = "First name for your new profile is missing")]
