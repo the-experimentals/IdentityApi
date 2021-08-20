@@ -113,9 +113,9 @@ namespace IdentityApi.Controllers
             var token = HttpContext.Request.Headers[HeaderNames.Authorization];
 
             var header = new Metadata
-                    {
-                        { "Authorization", $"Bearer {token[0]["Bearer ".Length..]}" }
-                    };
+            {
+                { "Authorization", $"{token}" }
+            };
 
             TokenResponse tokenResponse = await _policyApiClient.GetPolicyTokenAsync(header);
 

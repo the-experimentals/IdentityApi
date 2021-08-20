@@ -23,7 +23,7 @@ namespace IdentityApi.Services.gRPC.Clients
 
             var headers = new Metadata();
             var token = httpContext.HttpContext.Request.Headers[HeaderNames.Authorization];
-            headers.Add("Authorization", $"Bearer {token}");
+            headers.Add("Authorization", $"{token}");
 
             var credentials = CallCredentials.FromInterceptor((context, metadata) =>
             {
