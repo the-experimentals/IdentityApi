@@ -111,7 +111,6 @@ namespace IdentityApi.Controllers
                 return BadRequest("Invalid/Missing refresh token initiate logout");
 
             var token = HttpContext.Request.Headers[HeaderNames.Authorization];
-            Console.WriteLine(token[0]["Bearer ".Length..]);
 
             var header = new Metadata
                     {
