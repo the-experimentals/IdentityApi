@@ -137,5 +137,16 @@ namespace IdentityApi.Controllers
             else
                 return BadRequest(response.ERRORS);
         }
+
+        [HttpPost(AccountMappings.SEND_VERIFICATION_CODE)]
+        public IActionResult SendVerificationCode()
+        {
+            ClaimsIdentity userIdentity = HttpContext.User.Identity as ClaimsIdentity;
+            string profileID = userIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            VerificationCodeResponse response = new();
+
+            return Ok(_accountManager.GenerateOTP(profileID));
+        }
     }
 }

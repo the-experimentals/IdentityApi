@@ -212,5 +212,14 @@ namespace IdentityApi.Account
 
             return profile;
         }
+
+        public string GenerateOTP(string profileID)
+        {
+            string otp = Utility.GetUniqueString(Utility.OTP_LENGTH);
+
+            _cache.Add<string>(profileID, otp);
+
+            return otp; 
+        }
     }
 }

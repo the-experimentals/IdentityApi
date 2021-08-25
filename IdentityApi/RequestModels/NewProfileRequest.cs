@@ -28,9 +28,6 @@ namespace IdentityApi.RequestModels
         [Required(ErrorMessage = "E-mail for your profile is missing")]
         [DataType(DataType.EmailAddress)]
         public string EMAIL { get; set; }
-
-        public bool IS_SAVED { get; set; } = false;
-
-        public List<string> ERRORS { get; set; } = new List<string>();
+        
     }
 }

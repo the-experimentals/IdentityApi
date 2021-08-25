@@ -8,6 +8,8 @@ namespace IdentityApi.Utilities
 {
     public class Utility
     {
+        public const int OTP_LENGTH = 6;
+
         public static UserSecret GetUserSecret(byte[] salt, string password)
         {
             if (salt == null) // create new salt

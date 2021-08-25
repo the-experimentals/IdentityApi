@@ -9,5 +9,6 @@ namespace IdentityApi.Mappings
         public const string GET_PROFILES = "get-profiles";
         public const string CREATE_NEW_PROFILE = "create-new-profile";
         public const string CHECK_PWNED_PASSWORD = "check-pwned-password";
+        public const string SEND_VERIFICATION_CODE = "send-verification-code";
     }
 }
