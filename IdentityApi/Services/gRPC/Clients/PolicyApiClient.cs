@@ -15,7 +15,7 @@ namespace IdentityApi.Services.gRPC.Clients
     {
         private readonly PolicyApi.Protos.PolicyApi.PolicyApiClient _client;
         private readonly IMapper _mapper;
-        private readonly string _serviceURL = "http://localhost:6002";
+        private readonly string _serviceURL = "http://localhost:6001";
 
         public PolicyApiClient(IMapper mapper, IHttpContextAccessor httpContext)
         {
