@@ -27,7 +27,7 @@ podAnnotations:
   "consul.hashicorp.com/connect-inject": "true"
   "consul.hashicorp.com/service-name": "identityapi"
   "consul.hashicorp.com/connect-service-port": "5001"
-  "consul.hashicorp.com/connect-service-upstreams": "policyapi:6001"
+  "consul.hashicorp.com/connect-service-upstreams": "policyapi:6001, notificationapi:6002"
   "consul.hashicorp.com/transparent-proxy-exclude-inbound-ports": "5001"
   "consul.hashicorp.com/transparent-proxy-exclude-outbound-cidrs": "10.96.0.1/32"
 

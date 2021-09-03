@@ -1,0 +1,22 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "IdentityApi.Protos";
+
+import "google/protobuf/wrappers.proto";
+
+package tmsolution.notification;
+
+service NotificationApi{
+    rpc SendEmail (EmailRequest) returns (EmailResponse);
+}
+
+message EmailRequest{
+    repeated google.protobuf.StringValue TO = 1;
+    google.protobuf.StringValue SUBJECT = 2;
+    google.protobuf.StringValue CONTENT = 3;
+    google.protobuf.BoolValue HTML = 4;
+}
+
+message EmailResponse{
+    google.protobuf.BoolValue SENT = 1;
+}

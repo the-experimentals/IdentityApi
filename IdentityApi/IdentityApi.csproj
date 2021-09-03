@@ -40,6 +40,7 @@
     <None Remove="Services\gRPC\Clients\" />
     <None Remove="PwnedPasswords.Client" />
     <None Remove="Microsoft.Extensions.Http.Polly" />
+    <None Remove="Protos\notificationapi.proto" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -89,6 +90,10 @@
     <Protobuf Include="Protos\policyapi.proto" GrpcServices="Client">
       <Link>Protos\policyapi.proto</Link>
       <OutputDir>obj\Debug\net5.0\</OutputDir>
+    </Protobuf>
+    <Protobuf Include="Protos\notificationapi.proto" GrpcServices="Client">
+      <OutputDir>obj\Debug\net5.0\</OutputDir>
+      <Link>Protos\notificationapi.proto</Link>
     </Protobuf>
   </ItemGroup>
 </Project>
