@@ -5,6 +5,7 @@ using AutoMapper;
 using Grpc.Core;
 using Grpc.Net.Client;
 using Grpc.Net.Client.Web;
+using IdentityApi.Protos;
 using IdentityApi.RequestModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Net.Http.Headers;
@@ -47,9 +48,9 @@ namespace IdentityApi.Services.gRPC.Clients
             _client = new(channel);
         }
 
-        public void SendEmail(EmailRequest emailRequest, Metadata header)
+        public async Task<EmailResponse> SendEmailAsync(RequestModels.EmailRequest emailRequest, Metadata header)
         {
-            var response = _client.SendEmailAsync(_mapper.Map<IdentityApi.Protos.EmailRequest>(emailRequest));
+           return await _client.SendEmailAsync(_mapper.Map<Protos.EmailRequest>(emailRequest), header);
         }
     }
 }

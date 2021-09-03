@@ -2,6 +2,7 @@
 using System.Net.Mime;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Grpc.Core;
 using IdentityApi.Account;
 using IdentityApi.DataModels;
 using IdentityApi.Mappings;
@@ -11,6 +12,7 @@ using IdentityApi.Services.gRPC.Clients;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Net.Http.Headers;
 using PwnedPasswords.Client;
 
 namespace IdentityApi.Controllers
@@ -35,17 +37,7 @@ namespace IdentityApi.Controllers
         [AllowAnonymous]
         [HttpGet("test")]
         public IActionResult Test()
-        {
-            List<string> sendTO = new();
-            sendTO.Add("itsbibeksaini@gmail.com");
-            _notificationClient.SendEmail(new()
-            {
-                TO = sendTO,
-                SUBJECT = "Test",
-                CONTENT = "<h1>Test from account endpoint</h1>",
-                HTML = true
-                
-            }, null);
+        {            
             return Ok("Testing account endpoint");
         }
 
@@ -147,16 +139,39 @@ namespace IdentityApi.Controllers
             else
                 return BadRequest(response.ERRORS);
         }
-
+        
         [HttpPost(AccountMappings.SEND_VERIFICATION_CODE)]
-        public IActionResult SendVerificationCode()
+        public async Task<IActionResult> SendVerificationCodeAsync()
         {
             ClaimsIdentity userIdentity = HttpContext.User.Identity as ClaimsIdentity;
             string profileID = userIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
 
+            var token = HttpContext.Request.Headers[HeaderNames.Authorization];
+
+            var header = new Metadata
+            {
+                { "Authorization", $"{token}" }
+            };
+
+
+            Profile profile = _accountManager.GetProfile(profileID);
+
             VerificationCodeResponse response = new();
 
-            return Ok(_accountManager.GenerateOTP(profileID));
+            List<string> sendTO = new();
+            sendTO.Add(profile.EMAIL);
+            var result = await _notificationClient.SendEmailAsync(new()
+            {
+                TO = sendTO,
+                SUBJECT = "Test",
+                CONTENT = $"<h1>One time password: {_accountManager.GenerateOTP(profile.ID)} </h1>",
+                HTML = true
+
+            }, header);
+
+            response.SENT = (bool)result.SENT;
+
+            return Ok(response);
         }
     }
 }

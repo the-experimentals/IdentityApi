@@ -10,5 +10,6 @@ namespace IdentityApi.Mappings
         public const string CREATE_NEW_PROFILE = "create-new-profile";
         public const string CHECK_PWNED_PASSWORD = "check-pwned-password";
         public const string SEND_VERIFICATION_CODE = "send-verification-code";
+        public const string VERIFY_PROFILE = "verify-profile";
     }
 }
