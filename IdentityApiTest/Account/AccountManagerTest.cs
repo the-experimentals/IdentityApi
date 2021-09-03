@@ -12,7 +12,7 @@ namespace IdentityApiTest.Account
         private readonly IAccountManager _accountManager;
         public AccountManagerTest(IdentityStoreMock mock)
         {
-            _accountManager = new AccountManager(mock._store);
+            _accountManager = new AccountManager(mock._store , null);
         }
 
         [Fact(DisplayName = "Test create new profile"), Priority(1)]

@@ -111,6 +111,7 @@ namespace IdentityApi
             services.AddScoped<DBInitializer>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<PolicyApiClient>();
+            services.AddScoped<NotificationClient>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Net.Mime;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -9,14 +7,14 @@ using IdentityApi.DataModels;
 using IdentityApi.Mappings;
 using IdentityApi.RequestModels;
 using IdentityApi.ResponseModels;
-using IdentityApi.Utilities;
+using IdentityApi.Services.gRPC.Clients;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PwnedPasswords.Client;
 
 namespace IdentityApi.Controllers
-{    
+{
     [Authorize]
     [ApiController]
     [Route(AccountMappings.ENDPOINT_ROUTE)]
@@ -25,17 +23,29 @@ namespace IdentityApi.Controllers
     {
         private readonly IAccountManager _accountManager;
         private readonly IPwnedPasswordsClient _pwnedPasswords;
+        private readonly NotificationClient _notificationClient;
 
-        public AccountController(IAccountManager accountManager, IPwnedPasswordsClient pwnedPasswords)
+        public AccountController(IAccountManager accountManager, IPwnedPasswordsClient pwnedPasswords, NotificationClient notificationClient)
         {
             _accountManager = accountManager;
             _pwnedPasswords = pwnedPasswords;
+            _notificationClient = notificationClient;
         }
 
         [AllowAnonymous]
         [HttpGet("test")]
         public IActionResult Test()
         {
+            List<string> sendTO = new();
+            sendTO.Add("itsbibeksaini@gmail.com");
+            _notificationClient.SendEmail(new()
+            {
+                TO = sendTO,
+                SUBJECT = "Test",
+                CONTENT = "<h1>Test from account endpoint</h1>",
+                HTML = true
+                
+            }, null);
             return Ok("Testing account endpoint");
         }
 
