@@ -16,5 +16,6 @@ namespace IdentityApi.Account
         //public void DeleteProfile(string profileID);
         public ChangeRequestResponse ChangePassword(string profileID, ChangePasswordRequest changePasswordRequest);
         public string GenerateOTP(string profile);
+        public bool VerifyProfile(string profile, string responseOTP);
     }
 }

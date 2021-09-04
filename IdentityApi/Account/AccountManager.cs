@@ -12,6 +12,7 @@ namespace IdentityApi.Account
 {
     public class AccountManager : IAccountManager
     {
+        private readonly string OTP_CACHE_KEY = "CACHE_OTP_";
         private readonly IdentityStore _store;
         private readonly TMCache _cache;
 
@@ -217,9 +218,28 @@ namespace IdentityApi.Account
         {
             string otp = Utility.GetUniqueString(Utility.OTP_LENGTH);
 
-            _cache.Add<string>(profileID, otp);
+            _cache.Add<string>(string.Concat(OTP_CACHE_KEY, profileID), otp);
 
             return otp; 
+        }
+
+        public bool VerifyProfile(string profileID, string responseOTP)
+        {
+            string cacheOTP = _cache.Get<string>(string.Concat(OTP_CACHE_KEY, profileID));
+            if (cacheOTP == null)
+                throw new Exception("Missing OTP from cache");
+
+            bool isVerified = cacheOTP.Equals(responseOTP);
+            if (isVerified)
+            {
+                Profile profile = GetProfile(profileID);
+                profile.EMAIL_VERIFIED = true;
+
+                _store.PROFILE.Add(profile);
+                _store.SaveChanges();
+            }
+
+            return isVerified;
         }
     }
 }

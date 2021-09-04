@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using Grpc.Core;
 using IdentityApi.Account;
 using IdentityApi.DataModels;
+using IdentityApi.EmailTemplate;
 using IdentityApi.Mappings;
 using IdentityApi.RequestModels;
 using IdentityApi.ResponseModels;
+using IdentityApi.Services.CustomRazorEngine;
 using IdentityApi.Services.gRPC.Clients;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -26,12 +28,14 @@ namespace IdentityApi.Controllers
         private readonly IAccountManager _accountManager;
         private readonly IPwnedPasswordsClient _pwnedPasswords;
         private readonly NotificationClient _notificationClient;
+        private readonly ICustomRazorEngine _customRazorEngine;
 
-        public AccountController(IAccountManager accountManager, IPwnedPasswordsClient pwnedPasswords, NotificationClient notificationClient)
+        public AccountController(IAccountManager accountManager, IPwnedPasswordsClient pwnedPasswords, NotificationClient notificationClient, ICustomRazorEngine customRazorEngine)
         {
             _accountManager = accountManager;
             _pwnedPasswords = pwnedPasswords;
             _notificationClient = notificationClient;
+            _customRazorEngine = customRazorEngine;
         }
 
         [AllowAnonymous]
@@ -139,8 +143,13 @@ namespace IdentityApi.Controllers
             else
                 return BadRequest(response.ERRORS);
         }
-        
+
+        /// <summary>
+        /// Endpoint action for accepting 
+        /// </summary>
+        /// <returns></returns>        
         [HttpPost(AccountMappings.SEND_VERIFICATION_CODE)]
+        [ProducesResponseType(typeof(VerificationCodeResponse), StatusCodes.Status200OK)]
         public async Task<IActionResult> SendVerificationCodeAsync()
         {
             ClaimsIdentity userIdentity = HttpContext.User.Identity as ClaimsIdentity;
@@ -158,18 +167,41 @@ namespace IdentityApi.Controllers
 
             VerificationCodeResponse response = new();
 
+            string emailBody = await _customRazorEngine.RazorViewToHtmlAsync<OtpView>("EmailTemplate/OtpEmail.cshtml", new()
+            {
+                OTP = _accountManager.GenerateOTP(profileID)
+            });
+
             List<string> sendTO = new();
             sendTO.Add(profile.EMAIL);
             var result = await _notificationClient.SendEmailAsync(new()
             {
                 TO = sendTO,
                 SUBJECT = "Test",
-                CONTENT = $"<h1>One time password: {_accountManager.GenerateOTP(profile.ID)} </h1>",
+                CONTENT = emailBody,
                 HTML = true
 
             }, header);
 
             response.SENT = (bool)result.SENT;
+
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Endpoint action for verifying profile and marking profile as verified if otp matches.
+        /// </summary>
+        /// <param name="verifyProfileRequest"></param>
+        /// <returns></returns>
+        [HttpPost(AccountMappings.VERIFY_PROFILE)]
+        [ProducesResponseType(typeof(VerifyProfileResponse), StatusCodes.Status200OK)]
+        public IActionResult VerifyProfile(VerifyProfileRequest verifyProfileRequest)
+        {
+            ClaimsIdentity userIdentity = HttpContext.User.Identity as ClaimsIdentity;
+            string profileID = userIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            VerifyProfileResponse response = new();
+            response.VERIFIED = _accountManager.VerifyProfile(profileID, verifyProfileRequest.OTP.Trim());
 
             return Ok(response);
         }
