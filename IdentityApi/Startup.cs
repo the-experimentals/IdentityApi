@@ -6,6 +6,7 @@ using System.Text;
 using IdentityApi.Account;
 using IdentityApi.Auth;
 using IdentityApi.Data;
+using IdentityApi.Services.CustomRazorEngine;
 using IdentityApi.Services.gRPC.Clients;
 using IdentityApi.Services.SQLServer;
 using IdentityApi.Utilities;
@@ -35,6 +36,8 @@ namespace IdentityApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllersWithViews();
+            services.AddRazorPages();
             services.AddAutoMapper(typeof(Startup));
             services.AddControllers().AddJsonOptions(options =>
             {
@@ -112,6 +115,7 @@ namespace IdentityApi
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<PolicyApiClient>();
             services.AddScoped<NotificationClient>();
+            services.AddScoped<ICustomRazorEngine, CustomRazorEngine>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
