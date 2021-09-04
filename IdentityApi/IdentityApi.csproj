@@ -41,6 +41,9 @@
     <None Remove="PwnedPasswords.Client" />
     <None Remove="Microsoft.Extensions.Http.Polly" />
     <None Remove="Protos\notificationapi.proto" />
+    <None Remove="EmailTemplate\" />
+    <None Remove="Microsoft.AspNetCore.Razor" />
+    <None Remove="Services\CustomRazorViewEngine\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -58,6 +61,8 @@
     <Folder Include="Protos\" />
     <Folder Include="Services\gRPC\" />
     <Folder Include="Services\gRPC\Clients\" />
+    <Folder Include="EmailTemplate\" />
+    <Folder Include="Services\CustomRazorEngine\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.9">

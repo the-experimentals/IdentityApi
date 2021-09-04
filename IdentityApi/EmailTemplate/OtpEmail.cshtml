@@ -1,0 +1,63 @@
+﻿@{ Layout = null; }
+@using IdentityApi.EmailTemplate;
+@model OtpView
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            width: 320px;
+            text-align: center;
+            margin: auto;
+            padding: 20px 30px;
+        }
+
+        .otp-wrapper {
+            border-radius: 0.25rem;
+            width: fit-content;
+            margin: auto;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            background-color: #c2c2c2;
+        }
+
+        .display-block {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <span style="font-size: 30px;font-weight: bold;">Verification code</span>
+        </header>
+
+        <div class="otp-wrapper">
+            <span style="font-size: 25px;">@Model.OTP</span>
+        </div>
+
+        <div>
+            <span class="display-block" style="line-height: 1.5;">Here is your OTP verefication code.</span>
+            <span class="display-block" style="line-height: 1.5;">It will expire in 5 minutes.</span>
+        </div>
+    </div>
+</body>
+
+</html>
+
