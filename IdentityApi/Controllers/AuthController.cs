@@ -48,15 +48,16 @@ namespace IdentityApi.Controllers
         /// <param name="logInRequest">Request model for containing user's IDENTIFIER and SECRET.</param>
         /// <returns>Login response which either contains authentication success status or errors for faliure.</returns>
         /// <response code="200">User's credentials have been authenticated successfully</response>
-        /// <response code="401">Unsuccessfull user's authentication, check errors in response model.</response> 
+        /// <response code="401">Unsuccessfull user's authentication, check errors in response model.</response>
+        /// <response code="500">Something went wrong.</response>
         [AllowAnonymous]
         [HttpPost(AuthMappings.LOG_IN)]
         [ProducesResponseType(typeof(LogInResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(List<string>), StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> LogInAsync([FromBody]LogInRequest logInRequest)
         {
             LogInResponse logInResponse;
-
 
             logInResponse = _authManager.Authenticate(logInRequest);
 
@@ -83,9 +84,11 @@ namespace IdentityApi.Controllers
                 }
 
                 logInResponse.TOKEN.ACCESS = token;
-            }            
 
-            return Ok(logInResponse);            
+                return Ok(logInResponse);
+            }
+            else
+                return Unauthorized(logInResponse);
         }
 
         /// <summary>
