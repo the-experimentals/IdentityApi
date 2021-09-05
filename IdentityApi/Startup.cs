@@ -9,6 +9,8 @@ using IdentityApi.Data;
 using IdentityApi.Services.CustomRazorEngine;
 using IdentityApi.Services.gRPC.Clients;
 using IdentityApi.Services.SQLServer;
+using IdentityApi.StartupTasks;
+using IdentityApi.StartupTasks.Tasks;
 using IdentityApi.Utilities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -116,6 +118,8 @@ namespace IdentityApi
             services.AddScoped<PolicyApiClient>();
             services.AddScoped<NotificationClient>();
             services.AddScoped<ICustomRazorEngine, CustomRazorEngine>();
+
+            services.AddStartupTask<DBMigrator>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

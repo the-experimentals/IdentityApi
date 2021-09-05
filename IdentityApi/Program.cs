@@ -1,4 +1,5 @@
-﻿using IdentityApi.Services.SQLServer;
+﻿using System.Threading.Tasks;
+using IdentityApi.StartupTasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,19 +9,9 @@ namespace IdentityApi
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            var host = CreateHostBuilder(args).Build();
-
-            using (var scope = host.Services.CreateScope())
-            {
-                var services = scope.ServiceProvider;
-                var context = services.GetService<IdentityStore>();
-
-                context.Database.Migrate();
-            }
-
-            host.Run();
+            await CreateHostBuilder(args).Build().RunWithTasksAsync();            
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
