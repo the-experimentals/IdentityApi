@@ -19,6 +19,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -71,7 +72,6 @@ namespace IdentityApi
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = false,
                     ValidateAudience = false
-
                 };
             });
 
@@ -115,11 +115,12 @@ namespace IdentityApi
             services.AddSingleton<TMCache>();
             services.AddScoped<DBInitializer>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped<PolicyApiClient>();
-            services.AddScoped<NotificationClient>();
-            services.AddScoped<ICustomRazorEngine, CustomRazorEngine>();
+            services.AddSingleton<PolicyApiClient>();
+            services.AddSingleton<NotificationClient>();
+            services.AddSingleton<ICustomRazorEngine, CustomRazorEngine>();
 
             services.AddStartupTask<DBMigrator>();
+            services.AddStartupTask<WarmupServices>().TryAddSingleton(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

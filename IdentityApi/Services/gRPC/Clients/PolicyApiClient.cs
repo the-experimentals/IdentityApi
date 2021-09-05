@@ -6,7 +6,6 @@ using Grpc.Core;
 using Grpc.Net.Client;
 using Grpc.Net.Client.Web;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Net.Http.Headers;
 using PolicyApi.Protos;
 
 namespace IdentityApi.Services.gRPC.Clients
@@ -21,26 +20,11 @@ namespace IdentityApi.Services.gRPC.Clients
         {
             _mapper = mapper;
 
-            var headers = new Metadata();
-            var token = httpContext.HttpContext.Request.Headers[HeaderNames.Authorization];
-            headers.Add("Authorization", $"{token}");
-
-            var credentials = CallCredentials.FromInterceptor((context, metadata) =>
-            {
-                if (!string.IsNullOrEmpty(token))
-                {
-                    metadata.Add("Authorization", $"{token}");
-                }
-
-                return Task.CompletedTask;
-            });
-
             GrpcWebHandler handler = new(GrpcWebMode.GrpcWebText, new HttpClientHandler());
 
             var channel = GrpcChannel.ForAddress(_serviceURL, new()
             {
-                HttpClient = new(handler)
-                //Credentials = ChannelCredentials.Create(new SslCredentials(), credentials)
+                HttpClient = new(handler)                
             });
 
             _client = new(channel);
