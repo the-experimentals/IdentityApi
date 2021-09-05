@@ -71,19 +71,28 @@ namespace IdentityApi.Auth
                         logInResponse.IS_AUTHENTICATED = false;
                         logInResponse.ERRORS.Add("Profile locked due to many invalid attempts to login. Contact administartor for assistance");
                     }
-
+                    else
                     if (userProfile.STATUS == Status.DEACTIVE)
                     {
                         logInResponse.IS_AUTHENTICATED = false;
                         logInResponse.ERRORS.Add("Your profile is temporarily deactivated. To activate your profile conatct administrator.");
                     }
+                    else
+                    {
+                        logInResponse.IS_AUTHENTICATED = true;
+                        logInResponse.PROFILE_ID = userProfile.ID;
+                        logInResponse.NAME = userProfile.NAME;
 
-                    logInResponse.IS_AUTHENTICATED = true;
-                    logInResponse.PROFILE_ID = userProfile.ID;
-                    logInResponse.NAME = userProfile.NAME;
+                        // reset login attempts
 
-                    _cache.Add<Profile>(Profile.PROFILE_CACHE_KEY + userProfile.ID, userProfile);
-                    _cache.Add<String>(userProfile.CREDENTIAL.USERNAME, userProfile.ID);
+                        userProfile.LOGIN_ATTEMPTS = 0;
+
+                        _store.PROFILE.Update(userProfile);
+                        _store.SaveChanges();
+
+                        _cache.Add<Profile>(Profile.PROFILE_CACHE_KEY + userProfile.ID, userProfile);
+                        _cache.Add<String>(userProfile.CREDENTIAL.USERNAME, userProfile.ID);
+                    }                    
                 }
                 else
                 {
