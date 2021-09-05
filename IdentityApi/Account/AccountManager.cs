@@ -235,7 +235,7 @@ namespace IdentityApi.Account
                 Profile profile = GetProfile(profileID);
                 profile.EMAIL_VERIFIED = true;
 
-                _store.PROFILE.Add(profile);
+                _store.PROFILE.Update(profile);
                 _store.SaveChanges();
             }
 
