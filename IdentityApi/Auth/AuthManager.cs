@@ -109,9 +109,11 @@ namespace IdentityApi.Auth
 
                             _store.PROFILE.Update(userProfile);
                             _store.SaveChanges();
+
+                            logInResponse.ERRORS.Add("Invalid password");
                         }
                         else
-                            logInResponse.ERRORS.Add("Invalid password");
+                            logInResponse.ERRORS.Add("Profile locked due to many invalid attempts to login. Contact administartor for assistance");
                     }
                 }
             }
