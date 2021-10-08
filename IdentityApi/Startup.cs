@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -110,6 +111,12 @@ namespace IdentityApi
                     .AddTransientHttpErrorPolicy(p => p.RetryAsync(3))
                     .AddPolicyHandler(Policy.TimeoutAsync<HttpResponseMessage>(TimeSpan.FromSeconds(2)));
 
+            services.Configure<ForwardedHeadersOptions>(options =>
+            {
+                options.ForwardedHeaders =
+                    ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+            });
+
             services.AddScoped<IAuthManager, AuthManager>();
             services.AddScoped<IAccountManager, AccountManager>();
             services.AddSingleton<TMCache>();
@@ -140,6 +147,8 @@ namespace IdentityApi
 
                 });
             }
+
+            app.UseForwardedHeaders();
 
             dBInitializer.Initialize();
 

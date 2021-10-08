@@ -39,7 +39,13 @@ namespace IdentityApi.Controllers
         [HttpGet("test")]
         public IActionResult Test()
         {
-            return Ok("Testing auth endpoint");
+            Dictionary<string, string> requestHeaders = new();
+            foreach (var header in Request.Headers)
+            {
+                requestHeaders.Add(header.Key, header.Value);
+            }
+
+            return Ok(requestHeaders);
         }
 
         /// <summary>
