@@ -22,11 +22,25 @@ namespace IdentityApiTest.Auth
 
         [Theory(DisplayName ="Test authenticate user."), Priority(1)]
         [ClassData(typeof(LogInRequestTestData))]
-        public void TestAuthenticate(LogInRequest logInRequest)
+        void TestAuthenticate(LogInRequest logInRequest)
         {
             LogInResponse result = _authManager.Authenticate(logInRequest);
 
             Assert.True(result.IS_AUTHENTICATED);
+        }
+
+        [Fact(DisplayName ="Test username not found")]
+        void TestUserNameNotFound()
+        {
+            LogInRequest request = new()
+            {
+                USERNAME = "invalidUser",
+                PASSWORD = "invallidPassword"
+            };
+
+            LogInResponse response =  _authManager.Authenticate(request);
+
+            Assert.Equal("User not found", response.ERRORS[0]);
         }
     }
 }
