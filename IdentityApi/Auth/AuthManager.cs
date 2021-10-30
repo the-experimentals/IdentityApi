@@ -143,7 +143,7 @@ namespace IdentityApi.Auth
             ClaimsIdentity claimsIdentity = new(claims);
 
             byte[] key = Encoding.ASCII.GetBytes(_jwtSecretKey.SECRET);
-            SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor
+            SecurityTokenDescriptor tokenDescriptor = new()
             {
                 Subject = claimsIdentity,
                 Issuer = _jwtSecretKey.ISSUER,
@@ -261,7 +261,7 @@ namespace IdentityApi.Auth
             _cache.Add(RefreshToken.REFRESH_TOKEN_CACHE_KEY + token.PROFILE_ID, token);
         }
 
-        private string GetSHA(string profileID, RequestModels.UserAgent ua, IPAddress ipAddress)
+        private string GetSHA(string profileID, UserAgent ua, IPAddress ipAddress)
         {
             return Utilities.Utility.ComputeSHA(string.Concat(profileID, ua.DEVICE, ua.BROWSER, ua.BROWSER, ipAddress));
         }

@@ -33,6 +33,7 @@
     <None Remove="Moq" />
     <None Remove="Account\" />
     <None Remove="Auth\" />
+    <None Remove="Identifiers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
@@ -40,5 +41,6 @@
     <Folder Include="Ordering\" />
     <Folder Include="Account\" />
     <Folder Include="Auth\" />
+    <Folder Include="Identifiers\" />
   </ItemGroup>
 </Project>

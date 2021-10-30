@@ -139,6 +139,10 @@ namespace IdentityApi.Controllers
             return Ok(tokenResponse);
         }
 
+        public IActionResult LogOut()
+        {
+            return Unauthorized();
+        }
         private RequestModels.UserAgent GetClientInfo()
         {
             RequestModels.UserAgent ua = new();
