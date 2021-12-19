@@ -139,6 +139,7 @@ namespace IdentityApi.Controllers
             return Ok(tokenResponse);
         }
 
+        [HttpPatch("log-out")]
         public IActionResult LogOut()
         {
             return Unauthorized();
