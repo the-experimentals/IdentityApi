@@ -29,7 +29,7 @@ stages:
     steps:        
     - bash: |
         echo Setting the imageTag to git sha $(build.SourceVersion)
-        cho '##vso[task.setvariable variable=imageTag]$(build.SourceVersion)'
+        echo '##vso[task.setvariable variable=imageTag]$(build.SourceVersion)'
       displayName: Set image TAG to git SHA
     - task: Docker@2
       displayName: Build and push an image to container registry
