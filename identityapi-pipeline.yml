@@ -40,11 +40,13 @@ stages:
   jobs:
     - job: Build      
       steps:
-        - task: HelmInstaller@0
-          displayName: Build and push helm chart to container registry
+        - task: HelmInstaller@1
+          displayName: 'install helm'
           inputs:
-             helmVersion: $(helmVersiion)
-             installKubectl: false
-        - script: |
-            helm chart save $(build.sourcesdirectory)/src/$(containerRegistry)/$(imageRepository)-chart:latest
-          displayName: save the chart and set the alias
+            helmVersionToInstall: $(helmVersion)
+        - bash: |
+            # run helm lint
+            helm lint ./charts/identityapi
+          failOnStderr: true
+          displayName: 'helm lint'
+        
