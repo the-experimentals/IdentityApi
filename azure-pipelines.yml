@@ -1,8 +1,5 @@
 name: IdentityApi
 
-trigger:
-- identityapi-pipeline
-
 pool:
   vmImage: ubuntu-latest
 
