@@ -56,4 +56,31 @@ stages:
             $(helmChart)
           failOnStderr: true
           displayName: 'helm package'
+        - bash: |
+           #still experimental in Helm v3
+           export HELM_EXPERIMENTAL_OCI=1
+
+           # Helm needs to login to ACR    
+           echo '$(registryPassword)' | helm registry login $(containerRegistry) \
+           --username $(registryLogin) \
+           --password-stdin
+
+           # Save the Helm chart locally - version tag comes from chart version
+           # A local save is required before you can push the chart to ACR
+           chartVersion=`helm chart save charts/template $(containerRegistry)/helm/$(imageRepository) | grep version | awk -F ': ' '{print $2}'`
+
+           # Push the chart
+           # Note: if a chart with the same version already exists, it will be overwritten
+           #       this might not be the behavior you want
+           helm chart push $(containerRegistry)/helm/$(imageRepository):$chartVersion
+
+           # save the Helm chart version and image tag to a JSON file to publish as an artifact
+           echo $(jq -n --arg chartVersion "$chartVersion" --arg imgVersion "$(imageTag)" '{chartVersion: $chartVersion, imgVersion: $imgVersion}') > $(build.artifactStagingDirectory)/variables.json
+
+          failOnStderr: true
+          name: helmPush
+          displayName: 'helm chart push'
+        
+        - publish: $(build.artifactStagingDirectory)
+          artifact: build-artifact
         
