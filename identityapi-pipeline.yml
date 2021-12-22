@@ -13,6 +13,7 @@ variables:
   tag: '$(Build.BuildId)'
   helmVersion: 3.7.0
   HELM_EXPERIMENTAL_OCI: 1
+  helmChart: './identityapi-chart'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -46,13 +47,13 @@ stages:
             helmVersionToInstall: $(helmVersion)
         - bash: |
             # run helm lint
-            helm lint ./identityapi-chart
+            helm lint $(helmChart)
           failOnStderr: true
           displayName: 'helm lint'
         - bash: |
             helm package \
             --app-version $(tag) \
-            charts/$(imageRepository)
+            $(helmChart)
           failOnStderr: true
           displayName: 'helm package'
         
