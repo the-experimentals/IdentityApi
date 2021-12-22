@@ -1,7 +1,7 @@
 name: IdentityApi
 
-trigger:
-- main
+# trigger:
+# - main
 
 pool:
   vmImage: ubuntu-latest
