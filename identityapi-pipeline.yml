@@ -46,7 +46,7 @@ stages:
             helmVersionToInstall: $(helmVersion)
         - bash: |
             # run helm lint
-            helm lint ./charts/identityapi
+            helm lint **/identityapi-chart
           failOnStderr: true
           displayName: 'helm lint'
         
