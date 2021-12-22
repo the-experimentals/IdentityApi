@@ -13,7 +13,7 @@ variables:
   helmVersion: 3.7.0
   HELM_EXPERIMENTAL_OCI: 1
   helmChart: './identityapi-chart'
-  tag: $(git rev-parse --short HEAD)
+  tag: $(build.SourceVersion)
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
