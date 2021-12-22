@@ -56,15 +56,12 @@ stages:
             $(helmChart)
           failOnStderr: true
           displayName: 'helm package'
-        - task: HelmDeploy@0
+        - task: PublishBuildArtifacts@1
           displayName: Helm package
           inputs:
-              command: package
-              chartPath: $(helmChart)
-              destination: $(Build.ArtifactStagingDirectory)
-              azureContainerRegistry: $(containerRegistry)
-              azureSubscriptionForACR: $(dockerRegistryServiceConnection)
-              azureResourceGroupForACR: 'TMSolution'
+              PathtoPublish: $(helmChart)
+              ArtifactName: $(imageRepository)-chart
+              publishLocation: Container
         # - bash: |
         #    #still experimental in Helm v3
         #    export HELM_EXPERIMENTAL_OCI=1
