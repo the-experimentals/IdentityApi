@@ -9,8 +9,7 @@ variables:
   dockerRegistryServiceConnection: 'd0ee37c6-ad7b-407e-b5ff-b7bf63093093'
   imageRepository: 'identityapi'
   containerRegistry: 'tmsolutioncr.azurecr.io'
-  dockerfilePath: '**/Dockerfile'
-  tag: '$(Build.BuildId)'
+  dockerfilePath: '**/Dockerfile'  
   helmVersion: 3.7.0
   HELM_EXPERIMENTAL_OCI: 1
   helmChart: './identityapi-chart'
@@ -39,7 +38,7 @@ stages:
         dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
-          $(tag)
+          $(imageTag)
 - stage: BuildHelmChart
   displayName: Build and push helm chart
   jobs:
@@ -56,7 +55,7 @@ stages:
           displayName: 'helm lint'
         - bash: |
             helm package \
-            --app-version $(tag) \
+            --app-version $(imageTag) \
             $(helmChart)
           failOnStderr: true
           displayName: 'helm package'
