@@ -49,4 +49,10 @@ stages:
             helm lint ./identityapi-chart
           failOnStderr: true
           displayName: 'helm lint'
+        - bash: |
+            helm package \
+            --app-version $(tag) \
+            charts/$(imageRepository)
+          failOnStderr: true
+          displayName: 'helm package'
         
