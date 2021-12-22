@@ -46,5 +46,5 @@ stages:
              helmVersion: $(helmVersiion)
              installKubectl: false
         - script: |
-            helm chart save $(build.sourcesdirectory)/src/$(imageRepository)-chart/ $(containerRegistry)/$(imageRepository):latest
+            helm chart save $(build.sourcesdirectory)/src/$(containerRegistry)/$(imageRepository)-chart:latest
           displayName: save the chart and set the alias
