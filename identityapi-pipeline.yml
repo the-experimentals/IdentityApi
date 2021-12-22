@@ -1,5 +1,7 @@
-trigger:
-- main
+name: IdentityApi
+
+# trigger:
+# - main
 
 resources:
 - repo: self
@@ -89,4 +91,12 @@ stages:
         
         # - publish: $(build.artifactStagingDirectory)
         #   artifact: build-artifact
+- stage: DeployService
+  displayName: Deploy service to k8s
+  jobs:
+    - job: 
+      steps:
+        - task: HelmInstaller@1
+          inputs:
+            helmVersionToInstall: $(helmVersion)
         
