@@ -11,13 +11,15 @@ variables:
   containerRegistry: 'tmsolutioncr.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
+  helmVersion: 3.7.0
+  HELM_EXPERIMENTAL_OCI: 1
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
 stages:
 - stage: Build
-  displayName: Build and push stage
+  displayName: Build and push docker image
   jobs:
   - job: Build
     displayName: Build
@@ -33,3 +35,16 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+- stage: Build
+  displayName: Build and push helm chart
+  jobs:
+    - job: Build      
+      steps:
+        - task: HelmInstaller@0
+          displayName: Build and push helm chart to container registry
+          inputs:
+             helmVersion: $(helmVersiion)
+             installKubectl: false
+        - script: |
+            helm chart save $(build.sourcesdirectory)/src/$(imageRepository)-chart/ $(containerRegistry)/$(imageRepository):latest
+          displayName: save the chart and set the alias
