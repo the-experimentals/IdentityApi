@@ -13,6 +13,7 @@ variables:
   helmVersion: 3.7.0
   HELM_EXPERIMENTAL_OCI: 1
   helmChart: './identityapi-chart'
+  tag: $(build.SourceVersion)
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -25,11 +26,7 @@ stages:
     displayName: Build
     pool:
       vmImage: $(vmImageName)
-    steps:        
-    - bash: |
-        echo Setting the imageTag to git sha $(build.SourceVersion)
-        echo '##vso[task.setvariable variable=imageTag]$(build.SourceVersion)'
-      displayName: Set image TAG to git SHA
+    steps:            
     - task: Docker@2
       displayName: Build and push an image to container registry
       inputs:          
@@ -38,7 +35,7 @@ stages:
         dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
-          $(imageTag)
+          $(tag)
 - stage: BuildHelmChart
   displayName: Build and push helm chart
   jobs:
@@ -55,7 +52,7 @@ stages:
           displayName: 'helm lint'
         - bash: |
             helm package \
-            --app-version $(imageTag) \
+            --app-version $(tag) \
             $(helmChart)
           failOnStderr: true
           displayName: 'helm package'
