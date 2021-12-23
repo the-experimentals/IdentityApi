@@ -59,19 +59,13 @@ stages:
           failOnStderr: true
           displayName: 'helm package'
         - task: PublishBuildArtifacts@1
-          displayName: Helm package
-          inputs:
-              PathtoPublish: $(helmChart)
-              ArtifactName: $(imageRepository)-chart
-              publishLocation: Container
-        # - bash: |
-        #    #still experimental in Helm v3
-        #    export HELM_EXPERIMENTAL_OCI=1
+          displayName: Helm package          
+        - bash: |
+           #still experimental in Helm v3
+           export HELM_EXPERIMENTAL_OCI=1
 
-        #    # Helm needs to login to ACR
-        #    echo '$(registryPassword)' | helm registry login $(containerRegistry) \
-        #    --username $(registryLogin) \
-        #    --password-stdin
+           # Helm needs to login to ACR
+           helm registry login $(containerRegistry) 
 
         #    # Save the Helm chart locally - version tag comes from chart version
         #    # A local save is required before you can push the chart to ACR
@@ -91,12 +85,12 @@ stages:
         
         # - publish: $(build.artifactStagingDirectory)
         #   artifact: build-artifact
-- stage: DeployService
-  displayName: Deploy service to k8s
-  jobs:
-    - job: 
-      steps:
-        - task: HelmInstaller@1
-          inputs:
-            helmVersionToInstall: $(helmVersion)
+# - stage: DeployService
+#   displayName: Deploy service to k8s
+#   jobs:
+#     - job: 
+#       steps:
+#         - task: HelmInstaller@1
+#           inputs:
+#             helmVersionToInstall: $(helmVersion)
         
