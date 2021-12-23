@@ -14,9 +14,8 @@ variables:
   dockerfilePath: '**/Dockerfile'  
   helmVersion: 3.7.0
   HELM_EXPERIMENTAL_OCI: 1
-  helmChart: './identityapi-chart'
-  shortHash: 'git rev-parse --short=7'
-  tag: $(Build.SourceBranchName)_$(shortHash)
+  helmChart: './identityapi-chart'  
+  tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
