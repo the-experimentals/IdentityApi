@@ -55,7 +55,7 @@ stages:
         displayName: Installing helm chart
         inputs:
           connectionType: Kubernetes Service Connection
-          azureSubscriptionForACR: $(dockerRegistryServiceConnection)
+          azureSubscriptionForACR: 'Azure subscription 1 (edea4587-93d3-4dbd-8ce3-0993c5d229d6)'
           azureContainerRegistry: $(containerRegistry)
           azureResourceGroupForACR: 'TMSolution'          
           command: upgrade
