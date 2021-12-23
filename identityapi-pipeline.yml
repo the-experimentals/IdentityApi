@@ -79,9 +79,9 @@ stages:
         #    # save the Helm chart version and image tag to a JSON file to publish as an artifact
         #    echo $(jq -n --arg chartVersion "$chartVersion" --arg imgVersion "$(imageTag)" '{chartVersion: $chartVersion, imgVersion: $imgVersion}') > $(build.artifactStagingDirectory)/variables.json
 
-        #   failOnStderr: true
-        #   name: helmPush
-        #   displayName: 'helm chart push'
+          failOnStderr: true
+          name: helmPush
+          displayName: 'helm chart push'
         
         # - publish: $(build.artifactStagingDirectory)
         #   artifact: build-artifact
