@@ -15,6 +15,7 @@ variables:
   helmVersion: 3.7.0
   HELM_EXPERIMENTAL_OCI: 1
   helmChart: './identityapi-chart'  
+  valueFile: './identityapi-chart/values.yaml'
   tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
 
   # Agent VM image name
@@ -38,61 +39,43 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
-- stage: BuildHelmChart
-  displayName: Build and push helm chart
+- stage: HelmDeploy
+  displayName: Helm deploy
   jobs:
-    - job: Build      
-      steps:
-        - task: HelmInstaller@1
-          displayName: 'install helm'
-          inputs:
-            helmVersionToInstall: $(helmVersion)
-        - bash: |
-            # run helm lint
-            helm lint $(helmChart)
-          failOnStderr: true
-          displayName: 'helm lint'
-        - bash: |
-            helm package \
-            --app-version $(tag) \
-            $(helmChart)
-          failOnStderr: true
-          displayName: 'helm package'
-        - task: PublishBuildArtifacts@1
-          displayName: Helm package          
-        - bash: |
-           #still experimental in Helm v3
-           export HELM_EXPERIMENTAL_OCI=1
-
-           # Helm needs to login to ACR
-           echo '$(registryPassword)' | helm registry login $(containerRegistry) \
-            --username $(registryLogin) \
-            --password-stdin
-
-           # Save the Helm chart locally - version tag comes from chart version
-           # A local save is required before you can push the chart to ACR
-           chartVersion=`helm chart save $(helmChart) $(containerRegistry)/helm/$(imageRepository)-chart | grep version | awk -F ': ' '{print $2}'`
-
-           # Push the chart
-           # Note: if a chart with the same version already exists, it will be overwritten
-           #       this might not be the behavior you want
-           helm chart push $(containerRegistry)/helm/$(imageRepository)-chart:$chartVersion
-
-           # save the Helm chart version and image tag to a JSON file to publish as an artifact
-           echo $(jq -n --arg chartVersion "$chartVersion" --arg imgVersion "$(imageTag)" '{chartVersion: $chartVersion, imgVersion: $imgVersion}') > $(build.artifactStagingDirectory)/variables.json
-
-          failOnStderr: true
-          name: helmPush
-          displayName: 'helm chart push'
-        
-        # - publish: $(build.artifactStagingDirectory)
-        #   artifact: build-artifact
-# - stage: DeployService
-#   displayName: Deploy service to k8s
-#   jobs:
-#     - job: 
-#       steps:
-#         - task: HelmInstaller@1
-#           inputs:
-#             helmVersionToInstall: $(helmVersion)
-        
+  - job: Deploy
+    displayName: Deploy
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+      - task: HelmInstaller@1
+        displayName: Installing Helm
+        inputs:
+          helmVersionToInstall: $(helmVersion)
+      - task: HelmDeploy@0
+        displayName: Installing helm chart
+        inputs:
+          connectionType: Kubernetes Service Connection
+          azureSubscriptionForACR: $(dockerRegistryServiceConnection)
+          azureContainerRegistry: $(containerRegistry)
+          azureResourceGroupForACR: 'TMSolution'          
+          command: upgrade
+          chartType: FilePath
+          chartPath: $(helmChart)
+          install: true
+          releaseName: $(imageRepository)
+          valueFile: $(valueFile)
+          arguments: >-
+            --timeout 1200
+            --atomic
+            --set image.tag=$(tag)
+          useClusterAdmin: true
+      - task: HelmDeploy@0
+        displayName: Listing helm charts
+        inputs:
+          connectionType: Kubernetes Service Connection 
+          azureSubscriptionForACR: $(dockerRegistryServiceConnection)
+          azureContainerRegistry: $(containerRegistry)
+          azureResourceGroupForACR: 'TMSolution'
+          command: ls
+          arguments: '--all'
+          useClusterAdmin: true
