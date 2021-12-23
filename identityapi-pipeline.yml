@@ -15,7 +15,8 @@ variables:
   helmVersion: 3.7.0
   HELM_EXPERIMENTAL_OCI: 1
   helmChart: './identityapi-chart'
-  tag: $(Build.SourceBranchName)_$(echo $(Build.SourceVersion) | cut -c1-7)
+  shortHash: 'git rev-parse --short=7'
+  tag: $(Build.SourceBranchName)_$(shortHash)
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
