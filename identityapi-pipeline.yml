@@ -17,6 +17,7 @@ variables:
   helmChart: './identityapi-chart'  
   valueFile: './identityapi-chart/values.yaml'
   tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
+  imagePullSecret: 'tmsolutioncr6942264c-auth'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -51,6 +52,12 @@ stages:
         displayName: Installing Helm
         inputs:
           helmVersionToInstall: $(helmVersion)
+      - task: KubernetesManifest@0
+        displayName: Create imagePullSecret
+        inputs:
+              action: createSecret
+              secretName: $(imagePullSecret)
+              dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
       - task: HelmDeploy@0
         displayName: Installing helm chart
         inputs:
@@ -66,7 +73,7 @@ stages:
           releaseName: $(imageRepository)
           valueFile: $(valueFile)
           arguments: >-
-            --timeout 1200s
+            --timeout 300s
             --atomic
             --set image.tag=$(tag)
           useClusterAdmin: true
