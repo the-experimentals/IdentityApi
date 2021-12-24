@@ -77,7 +77,7 @@ stages:
             --timeout 300s
             --atomic
             --set image.tag=$(tag)
-            --set imagePullSecrets[0].name=$(tmsolutioncr6942264c-auth)
+            --set imagePullSecrets[0].name=$(imagePullSecret)
           useClusterAdmin: true
       - task: HelmDeploy@0
         displayName: Listing helm charts
