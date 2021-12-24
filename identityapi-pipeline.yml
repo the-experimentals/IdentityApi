@@ -57,7 +57,8 @@ stages:
           connectionType: Azure Resource Manager
           azureSubscriptionForACR: 'Test'
           azureContainerRegistry: $(containerRegistry)
-          azureResourceGroupForACR: 'TMSolution'          
+          azureResourceGroupForACR: 'TMSolution'     
+          kubernetesCluster: 'TMSolutionCluster'    
           command: upgrade
           chartType: FilePath
           chartPath: $(helmChart)
@@ -76,6 +77,7 @@ stages:
           azureSubscriptionForACR: 'Test'
           azureContainerRegistry: $(containerRegistry)
           azureResourceGroupForACR: 'TMSolution'
+          kubernetesCluster: 'TMSolutionCluster'
           command: ls
           arguments: '--all'
           useClusterAdmin: true
