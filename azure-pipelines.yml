@@ -1,0 +1,90 @@
+name: IdentityApi
+
+# trigger:
+# - main
+
+resources:
+- repo: self
+
+variables:
+  # Container registry service connection established during pipeline creation
+  dockerRegistryServiceConnection: 'd0ee37c6-ad7b-407e-b5ff-b7bf63093093'
+  imageRepository: 'identityapi'
+  containerRegistry: 'tmsolutioncr.azurecr.io'
+  dockerfilePath: '**/Dockerfile'  
+  helmVersion: 3.7.0
+  HELM_EXPERIMENTAL_OCI: 1
+  helmChart: './identityapi-chart'  
+  valueFile: './identityapi-chart/values.yaml'
+  tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
+  imagePullSecret: 'tmsolutioncr1261f867-auth'
+
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
+
+stages:
+- stage: BuildImage
+  displayName: Build and push docker image
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: $(vmImageName)
+    steps:            
+    - task: Docker@2
+      displayName: Build and push an image to container registry
+      inputs:          
+        command: buildAndPush    
+        repository: $(imageRepository)
+        dockerfile: $(dockerfilePath)
+        containerRegistry: $(dockerRegistryServiceConnection)
+        tags: |
+          $(tag)
+- stage: HelmDeploy
+  displayName: Helm deploy
+  jobs:
+  - job: Deploy
+    displayName: Deploy
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+      - task: HelmInstaller@1
+        displayName: Installing Helm
+        inputs:
+          helmVersionToInstall: $(helmVersion)
+      - task: KubernetesManifest@0
+        displayName: Create imagePullSecret
+        inputs:
+              action: createSecret
+              secretName: $(imagePullSecret)
+              dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
+      - task: HelmDeploy@0
+        displayName: Installing helm chart
+        inputs:
+          connectionType: Kubernetes Service Connection      
+          azureSubscriptionForACR: 'Test'
+          azureContainerRegistry: $(containerRegistry)
+          azureResourceGroupForACR: 'TMSolution'     
+          kubernetesServiceConnection: 'TMSolutionCluster'    
+          command: upgrade
+          chartType: FilePath
+          chartPath: $(helmChart)
+          install: true
+          releaseName: $(imageRepository)
+          valueFile: $(valueFile)
+          arguments: >-
+            --timeout 300s
+            --atomic
+            --set image.tag=$(tag)
+          useClusterAdmin: true
+      - task: HelmDeploy@0
+        displayName: Listing helm charts
+        inputs:
+          connectionType: Kubernetes Service Connection 
+          azureSubscriptionForACR: 'Test'
+          azureContainerRegistry: $(containerRegistry)
+          azureResourceGroupForACR: 'TMSolution'
+          kubernetesServiceConnection: 'TMSolutionCluster'
+          command: ls
+          arguments: '--all'
+          useClusterAdmin: true
