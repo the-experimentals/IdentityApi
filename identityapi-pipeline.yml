@@ -55,9 +55,10 @@ stages:
       - task: KubernetesManifest@0
         displayName: Create imagePullSecret
         inputs:
-              action: createSecret
-              secretName: $(imagePullSecret)
-              dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
+          action: createSecret
+          secretName: $(imagePullSecret)
+          dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
+          kubernetesServiceConnection: 'TMSolutionCluster'
       - task: HelmDeploy@0
         displayName: Installing helm chart
         inputs:
