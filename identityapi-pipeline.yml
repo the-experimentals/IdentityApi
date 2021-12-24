@@ -55,7 +55,7 @@ stages:
         displayName: Installing helm chart
         inputs:
           connectionType: Azure Resource Manager
-          azureSubscriptionForACR: 'Azure subscription 1 (edea4587-93d3-4dbd-8ce3-0993c5d229d6)'
+          azureSubscriptionForACR: 'Test'
           azureContainerRegistry: $(containerRegistry)
           azureResourceGroupForACR: 'TMSolution'          
           command: upgrade
@@ -73,7 +73,7 @@ stages:
         displayName: Listing helm charts
         inputs:
           connectionType: Kubernetes Service Connection 
-          azureSubscriptionForACR: $(dockerRegistryServiceConnection)
+          azureSubscriptionForACR: 'Test'
           azureContainerRegistry: $(containerRegistry)
           azureResourceGroupForACR: 'TMSolution'
           command: ls
