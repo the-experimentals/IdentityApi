@@ -54,7 +54,7 @@ stages:
       - task: HelmDeploy@0
         displayName: Installing helm chart
         inputs:
-          connectionType: Azure Resource Manager
+          connectionType: Kubernetes Service Connection      
           azureSubscriptionForACR: 'Test'
           azureContainerRegistry: $(containerRegistry)
           azureResourceGroupForACR: 'TMSolution'     
