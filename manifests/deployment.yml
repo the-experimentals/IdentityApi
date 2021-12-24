@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: identityapi 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: identityapi
+  template:
+    metadata:
+      labels:
+        app: identityapi 
+    spec:
+      containers:
+        - name: identityapi 
+          image: tmsolutioncr.azurecr.io/identityapi
+          ports:
+          - containerPort: 5001
