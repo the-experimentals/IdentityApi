@@ -12,6 +12,10 @@ resources:
 
 # - repo: self
 
+# Agent VM image name
+pool:
+  vmImageName: 'ubuntu-latest'
+
 variables:
 - template: variables.yml@templates
   parameters:    
@@ -21,10 +25,6 @@ variables:
     tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
     imagePullSecret: 'tmsolutioncr6942264c-auth'
     
-# Agent VM image name
-pool:
-  vmImageName: 'ubuntu-latest'
-
 stages:
 - stage: BuildImage
   displayName: Build and push docker image
