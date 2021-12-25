@@ -24,7 +24,7 @@ variables:
     imagePullSecret: 'tmsolutioncr6942264c-auth'
 
 steps:
-  - script: echo ${{ variables.imageRepository }}
+  - script: echo ${{ variables.helmVersion }}
     
 # stages:
 # - stage: BuildImage
