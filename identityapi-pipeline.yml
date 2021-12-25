@@ -13,17 +13,14 @@ resources:
 # - repo: self
 
 variables:
-  # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'd0ee37c6-ad7b-407e-b5ff-b7bf63093093'
-  imageRepository: 'identityapi'
-  containerRegistry: 'tmsolutioncr.azurecr.io'
-  dockerfilePath: '**/Dockerfile'  
-  helmVersion: 3.7.0
-  HELM_EXPERIMENTAL_OCI: 1
-  helmChart: './identityapi-chart'  
-  valueFile: './identityapi-chart/values.yaml'
-  tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
-  imagePullSecret: 'tmsolutioncr6942264c-auth'
+- template: variables.yaml@templates
+  parameters:    
+    imageRepository: 'identityapi'
+    helmChart: './identityapi-chart'  
+    valueFile: './identityapi-chart/values.yaml'
+    tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
+    imagePullSecret: 'tmsolutioncr6942264c-auth'
+  
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
