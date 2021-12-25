@@ -20,10 +20,8 @@ variables:
     valueFile: './identityapi-chart/values.yaml'
     tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
     imagePullSecret: 'tmsolutioncr6942264c-auth'
-  
-
-  # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+    # Agent VM image name
+    vmImageName: 'ubuntu-latest'
 
 stages:
 - stage: BuildImage
