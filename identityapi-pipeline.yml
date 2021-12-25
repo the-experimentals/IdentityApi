@@ -14,10 +14,6 @@ resources:
 
 pr: none
 
-# Agent VM image name
-pool:
-  vmImageName: 'ubuntu-latest'
-
 variables:
 - template: variables.yml@templates
   parameters:    
@@ -53,7 +49,7 @@ stages:
         displayName: Create imagePullSecret
         inputs:
           action: createSecret
-          secretName: ${{ parameters.imagePullSecret }}
+          secretName: $(imagePullSecret)
           dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
           kubernetesServiceConnection: 'TMSolutionCluster'
       - task: HelmDeploy@0
@@ -66,15 +62,15 @@ stages:
           kubernetesServiceConnection: 'TMSolutionCluster'    
           command: upgrade
           chartType: FilePath
-          chartPath: ${{ parameters.helmChart }}
+          chartPath: $(helmChart)
           install: true
-          releaseName: ${{ parameters.imageRepository }}
-          valueFile: ${{ parameters.valueFile }}
+          releaseName: $(imageRepository)
+          valueFile: $(valueFile)
           arguments: >-
             --timeout 300s
             --atomic
-            --set image.tag=${{ parameters.tag }}
-            --set imagePullSecrets[0].name=${{ parameters.imagePullSecret }}
+            --set image.tag=$(tag)
+            --set imagePullSecrets[0].name=$(imagePullSecret)
           useClusterAdmin: true
       - task: HelmDeploy@0
         displayName: Listing helm charts
