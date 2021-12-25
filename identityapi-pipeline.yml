@@ -15,27 +15,30 @@ resources:
 pr: none
 
 variables:  
-- template: variables.yml@templates
-  parameters:   
-    imageRepository: 'identityapi'
-    helmChart: './identityapi-chart'  
-    valueFile: './identityapi-chart/values.yaml'
-    tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
-    imagePullSecret: 'tmsolutioncr6942264c-auth'
+  imageRepository: 'identityapi'
+  helmChart: './identityapi-chart'  
+  valueFile: './identityapi-chart/values.yaml'
+  tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
+  imagePullSecret: 'tmsolutioncr6942264c-auth'
+  helmVersion: 3.7.0
+  dockerRegistryServiceConnection: d0ee37c6-ad7b-407e-b5ff-b7bf63093093
+  containerRegistry: tmsolutioncr.azurecr.io
+  dockerfilePath: '**/Dockerfile'
+  vmImageName: ubuntu-latest
 
 steps:
   - script: echo ${{ parameters.imageRepository }}
     
-# stages:
-# - stage: BuildImage
-#   displayName: Build and push docker image
-#   jobs:  
-#   - job: Build
-#     displayName: Build
-#     pool:
-#       vmImage: $(vmImageName)
-#     steps:         
-#     - template: build-image.yml@templates          
+stages:
+- stage: BuildImage
+  displayName: Build and push docker image
+  jobs:  
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: $(vmImageName)
+    steps:         
+    - template: build-image.yml@templates          
 # - stage: HelmDeploy
 #   displayName: Helm deploy
 #   jobs:
