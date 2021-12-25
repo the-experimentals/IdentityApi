@@ -16,12 +16,9 @@ variables:
   imageRepository: 'identityapi'
   helmChart: './identityapi-chart'  
   valueFile: './identityapi-chart/values.yaml'
-  tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
   imagePullSecret: 'tmsolutioncr6942264c-auth'
   helmVersion: 3.7.0
-  dockerRegistryServiceConnection: d0ee37c6-ad7b-407e-b5ff-b7bf63093093
   containerRegistry: tmsolutioncr.azurecr.io
-  dockerfilePath: '**/Dockerfile'
   vmImageName: ubuntu-latest
 
 stages:
@@ -34,3 +31,6 @@ stages:
       vmImage: $(vmImageName)
     steps:         
     - template: build-image.yml@templates
+      parameters:
+        tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
+        imageRepository: $(imageRepository)
