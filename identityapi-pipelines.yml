@@ -16,6 +16,7 @@ variables:
   imageRepository: 'identityapi'
   helmChart: './identityapi-chart'  
   valueFile: './identityapi-chart/values.yaml'
+  tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
   vmImageName: ubuntu-latest
 
 stages:
@@ -29,7 +30,7 @@ stages:
     steps:         
     - template: build-image.yml@templates
       parameters:
-        tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
+        tag: $(tag)
         imageRepository: $(imageRepository)
 - stage: Deploy
   displayName: Helm Deploy
@@ -43,3 +44,4 @@ stages:
           helmChart: $(helmChart)
           imageRepository: $(imageRepository)
           valueFile: $(valueFile)
+          tag: $(tag)
