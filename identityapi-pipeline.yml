@@ -15,69 +15,74 @@ resources:
 pr: none
 
 variables:  
-  imageRepository: 'identityapi'
-  helmChart: './identityapi-chart'  
-  valueFile: './identityapi-chart/values.yaml'
-  tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
-  imagePullSecret: 'tmsolutioncr6942264c-auth'
+- template: variables.yml@templates
+  parameters:   
+    imageRepository: 'identityapi'
+    helmChart: './identityapi-chart'  
+    valueFile: './identityapi-chart/values.yaml'
+    tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
+    imagePullSecret: 'tmsolutioncr6942264c-auth'
+
+steps:
+  - script: echo ${{ parameters.imageRepository }}
     
-stages:
-- stage: BuildImage
-  displayName: Build and push docker image
-  jobs:  
-  - job: Build
-    displayName: Build
-    pool:
-      vmImage: $(vmImageName)
-    steps:         
-    - template: build-image.yml@templates          
-- stage: HelmDeploy
-  displayName: Helm deploy
-  jobs:
-  - job: Deploy
-    displayName: Deploy
-    pool:
-      vmImage: $(vmImageName)
-    steps:
-      - task: HelmInstaller@1
-        displayName: Installing Helm
-        inputs:
-          helmVersionToInstall: $(helmVersion)
-      - task: KubernetesManifest@0
-        displayName: Create imagePullSecret
-        inputs:
-          action: createSecret
-          secretName: $(imagePullSecret)
-          dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
-          kubernetesServiceConnection: 'TMSolutionCluster'
-      - task: HelmDeploy@0
-        displayName: Installing helm chart
-        inputs:
-          connectionType: Kubernetes Service Connection      
-          azureSubscriptionForACR: 'Test'
-          azureContainerRegistry: $(containerRegistry)
-          azureResourceGroupForACR: 'TMSolution'     
-          kubernetesServiceConnection: 'TMSolutionCluster'    
-          command: upgrade
-          chartType: FilePath
-          chartPath: $(helmChart)
-          install: true
-          releaseName: $(imageRepository)
-          valueFile: $(valueFile)
-          arguments: >-
-            --timeout 300s
-            --atomic
-            --set image.tag=$(tag)
-            --set imagePullSecrets[0].name=$(imagePullSecret)
-          useClusterAdmin: true
-      - task: HelmDeploy@0
-        displayName: Listing helm charts
-        inputs:
-          connectionType: Kubernetes Service Connection 
-          azureSubscriptionForACR: 'Test'
-          azureContainerRegistry: $(containerRegistry)
-          azureResourceGroupForACR: 'TMSolution'
-          kubernetesServiceConnection: 'TMSolutionCluster'
-          command: ls
-          arguments: '--all'
-          useClusterAdmin: true
+# stages:
+# - stage: BuildImage
+#   displayName: Build and push docker image
+#   jobs:  
+#   - job: Build
+#     displayName: Build
+#     pool:
+#       vmImage: $(vmImageName)
+#     steps:         
+#     - template: build-image.yml@templates          
+# - stage: HelmDeploy
+#   displayName: Helm deploy
+#   jobs:
+#   - job: Deploy
+#     displayName: Deploy
+#     pool:
+#       vmImage: $(vmImageName)
+#     steps:
+#       - task: HelmInstaller@1
+#         displayName: Installing Helm
+#         inputs:
+#           helmVersionToInstall: $(helmVersion)
+#       - task: KubernetesManifest@0
+#         displayName: Create imagePullSecret
+#         inputs:
+#           action: createSecret
+#           secretName: $(imagePullSecret)
+#           dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
+#           kubernetesServiceConnection: 'TMSolutionCluster'
+#       - task: HelmDeploy@0
+#         displayName: Installing helm chart
+#         inputs:
+#           connectionType: Kubernetes Service Connection      
+#           azureSubscriptionForACR: 'Test'
+#           azureContainerRegistry: $(containerRegistry)
+#           azureResourceGroupForACR: 'TMSolution'     
+#           kubernetesServiceConnection: 'TMSolutionCluster'    
+#           command: upgrade
+#           chartType: FilePath
+#           chartPath: $(helmChart)
+#           install: true
+#           releaseName: $(imageRepository)
+#           valueFile: $(valueFile)
+#           arguments: >-
+#             --timeout 300s
+#             --atomic
+#             --set image.tag=$(tag)
+#             --set imagePullSecrets[0].name=$(imagePullSecret)
+#           useClusterAdmin: true
+#       - task: HelmDeploy@0
+#         displayName: Listing helm charts
+#         inputs:
+#           connectionType: Kubernetes Service Connection 
+#           azureSubscriptionForACR: 'Test'
+#           azureContainerRegistry: $(containerRegistry)
+#           azureResourceGroupForACR: 'TMSolution'
+#           kubernetesServiceConnection: 'TMSolutionCluster'
+#           command: ls
+#           arguments: '--all'
+#           useClusterAdmin: true
