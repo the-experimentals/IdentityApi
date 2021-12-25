@@ -14,14 +14,12 @@ resources:
 
 pr: none
 
-variables:
-- template: variables.yml@templates
-  parameters:    
-    imageRepository: 'identityapi'
-    helmChart: './identityapi-chart'  
-    valueFile: './identityapi-chart/values.yaml'
-    tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
-    imagePullSecret: 'tmsolutioncr6942264c-auth'
+variables:  
+  imageRepository: 'identityapi'
+  helmChart: './identityapi-chart'  
+  valueFile: './identityapi-chart/values.yaml'
+  tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
+  imagePullSecret: 'tmsolutioncr6942264c-auth'
     
 stages:
 - stage: BuildImage
