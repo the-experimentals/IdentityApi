@@ -25,10 +25,7 @@ variables:
   containerRegistry: tmsolutioncr.azurecr.io
   dockerfilePath: '**/Dockerfile'
   vmImageName: ubuntu-latest
-
-steps:
-  - script: echo ${{ parameters.imageRepository }}
-    
+      
 stages:
 - stage: BuildImage
   displayName: Build and push docker image
