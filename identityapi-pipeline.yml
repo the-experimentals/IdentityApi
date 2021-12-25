@@ -24,7 +24,7 @@ variables:
     imagePullSecret: 'tmsolutioncr6942264c-auth'
 
 steps:
-  - script: echo ${{ parameters.imageRepository }}
+  - script: echo ${{ variables.imageRepository }}
     
 # stages:
 # - stage: BuildImage
