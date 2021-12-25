@@ -4,7 +4,13 @@ name: IdentityApi
 # - main
 
 resources:
-- repo: self
+  repositories:
+    - repository: templates
+      type: github
+      name: itsbibeksaini/pipeline-templates
+      endpoint: github.com_itsbibeksaini
+
+# - repo: self
 
 variables:
   # Container registry service connection established during pipeline creation
@@ -25,7 +31,7 @@ variables:
 stages:
 - stage: BuildImage
   displayName: Build and push docker image
-  jobs:
+  jobs:  
   - job: Build
     displayName: Build
     pool:
