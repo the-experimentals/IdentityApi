@@ -10,8 +10,6 @@ resources:
       name: itsbibeksaini/pipeline-templates
       endpoint: github.com_itsbibeksaini
 
-# - repo: self
-
 pr: none
 
 variables:  
