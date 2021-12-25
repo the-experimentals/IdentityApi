@@ -53,7 +53,7 @@ stages:
         displayName: Create imagePullSecret
         inputs:
           action: createSecret
-          secretName: $(imagePullSecret)
+          secretName: ${{ parameters.imagePullSecret }}
           dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
           kubernetesServiceConnection: 'TMSolutionCluster'
       - task: HelmDeploy@0
@@ -66,15 +66,15 @@ stages:
           kubernetesServiceConnection: 'TMSolutionCluster'    
           command: upgrade
           chartType: FilePath
-          chartPath: $(helmChart)
+          chartPath: ${{ parameters.helmChart }}
           install: true
-          releaseName: $(imageRepository)
-          valueFile: $(valueFile)
+          releaseName: ${{ parameters.imageRepository }}
+          valueFile: ${{ parameters.valueFile }}
           arguments: >-
             --timeout 300s
             --atomic
-            --set image.tag=$(tag)
-            --set imagePullSecrets[0].name=$(imagePullSecret)
+            --set image.tag=${{ parameters.tag }}
+            --set imagePullSecrets[0].name=${{ parameters.imagePullSecret }}
           useClusterAdmin: true
       - task: HelmDeploy@0
         displayName: Listing helm charts
