@@ -12,6 +12,8 @@ resources:
 
 # - repo: self
 
+pr: none
+
 # Agent VM image name
 pool:
   vmImageName: 'ubuntu-latest'
