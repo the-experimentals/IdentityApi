@@ -32,7 +32,9 @@ stages:
     pool:
       vmImage: $(vmImageName)
     steps:         
-    - template: build-image.yml@templates      
+    - template: build-image.yml@templates    
+      parameters:
+        tag: $(tag)  
 - stage: HelmDeploy
   displayName: Helm deploy
   jobs:
