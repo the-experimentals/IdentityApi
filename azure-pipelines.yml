@@ -1,0 +1,47 @@
+name: IdentityApi
+
+trigger:
+- main
+
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: itsbibeksaini/pipeline-templates
+      endpoint: github.com_itsbibeksaini
+
+pr: none
+
+variables:  
+  imageRepository: 'identityapi'
+  helmChart: './identityapi-chart'  
+  valueFile: './identityapi-chart/values.yaml'
+  tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
+  vmImageName: ubuntu-latest
+
+stages:
+- stage: BuildImage
+  displayName: Build and push docker image
+  jobs:  
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: $(vmImageName)
+    steps:         
+    - template: build-image.yml@templates
+      parameters:
+        tag: $(tag)
+        imageRepository: $(imageRepository)
+- stage: Deploy
+  displayName: Helm Deploy
+  jobs:
+    - job: Deploy
+      pool:
+       vmImage: $(vmImageName)
+      steps:         
+      - template: helm-deploy.yml@templates
+        parameters:
+          helmChart: $(helmChart)
+          imageRepository: $(imageRepository)
+          valueFile: $(valueFile)
+          tag: $(tag)
