@@ -16,9 +16,6 @@ variables:
   imageRepository: 'identityapi'
   helmChart: './identityapi-chart'  
   valueFile: './identityapi-chart/values.yaml'
-  imagePullSecret: 'tmsolutioncr6942264c-auth'
-  helmVersion: 3.7.0
-  containerRegistry: tmsolutioncr.azurecr.io
   vmImageName: ubuntu-latest
 
 stages:
@@ -34,3 +31,15 @@ stages:
       parameters:
         tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
         imageRepository: $(imageRepository)
+- stage: Deploy
+  displayName: Helm Deploy
+  jobs:
+    - job: Deploy
+      pool:
+       vmImage: $(vmImageName)
+      steps:         
+      - template: helm-deploy.yml@templates
+        parameters:
+          helmChart: $(helmChart)
+          imageRepository: $(imageRepository)
+          valueFile: $(valueFile)
