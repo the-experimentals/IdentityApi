@@ -24,5 +24,13 @@ variables:
   dockerfilePath: '**/Dockerfile'
   vmImageName: ubuntu-latest
 
-steps:
-  - script: echo 'Testing pipeline'
+stages:
+- stage: BuildImage
+  displayName: Build and push docker image
+  jobs:  
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: $(vmImageName)
+    steps:         
+    - template: build-image.yml@templates
