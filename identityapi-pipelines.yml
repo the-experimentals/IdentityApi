@@ -23,3 +23,6 @@ variables:
   containerRegistry: tmsolutioncr.azurecr.io
   dockerfilePath: '**/Dockerfile'
   vmImageName: ubuntu-latest
+
+steps:
+  - script: echo 'Testing pipeline'
