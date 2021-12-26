@@ -159,19 +159,7 @@ namespace IdentityApi.Controllers
             return ua;
         }
 
-        private IPAddress GetIPAddress()
-        {
-            IPAddress ipAddress = HttpContext.Connection.RemoteIpAddress;
+        private IPAddress GetIPAddress() => IPAddress.Parse(Request.Headers.Where(x => x.Key.Equals("X-Forwarded-For")).FirstOrDefault().Value);
 
-            if (ipAddress != null)
-            {
-                if (ipAddress.AddressFamily == System.Net.Sockets.AddressFamily.InterNetworkV6)
-                {
-                    ipAddress = System.Net.Dns.GetHostEntry(ipAddress).AddressList.First(x => x.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork);
-                }
-            }
-
-            return ipAddress;
-        }
     }
 }
