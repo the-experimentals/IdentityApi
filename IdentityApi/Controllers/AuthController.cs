@@ -161,7 +161,7 @@ namespace IdentityApi.Controllers
 
         private IPAddress GetIPAddress()
         {
-            IPAddress ipAddress = Request.HttpContext.Connection.RemoteIpAddress;
+            IPAddress ipAddress = HttpContext.Connection.RemoteIpAddress;
 
             if (ipAddress != null)
             {
