@@ -91,7 +91,7 @@ namespace IdentityApi.Account
             var profiles = (from profile in _store.PROFILE
                             join credential in _store.CREDENTIALS
                             on profile.ID equals credential.PROFILE_ID
-                            where credential.USERNAME != "system"
+                            where credential.USERNAME != "system" && profile.STATUS != Identifiers.Status.DELETED
                             select new
                             {
                                 dataProfile = profile,
