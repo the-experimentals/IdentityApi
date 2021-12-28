@@ -241,5 +241,17 @@ namespace IdentityApi.Account
 
             return isVerified;
         }
+
+        public bool DeleteProfile(string profileID)
+        {
+            Profile profile = _store.PROFILE.Where(x => x.ID.Equals(profileID)).FirstOrDefault();
+
+            if (profile == null)
+                throw new InvalidOperationException("Profile not found");
+
+            profile.STATUS = Identifiers.Status.DELETED;
+            _store.PROFILE.Update(profile);
+            return _store.SaveChanges() == 1;
+        }
     }
 }

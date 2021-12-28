@@ -13,7 +13,7 @@ namespace IdentityApi.Account
         public List<ProfileCardResponse> GetProfiles();
         public ProfileSaveStatus CreateProfile(Profile profile);
         //public void UpdateProfile(Profile profile);
-        //public void DeleteProfile(string profileID);
+        public bool DeleteProfile(string profileID);
         public ChangeRequestResponse ChangePassword(string profileID, ChangePasswordRequest changePasswordRequest);
         public string GenerateOTP(string profile);
         public bool VerifyProfile(string profile, string responseOTP);

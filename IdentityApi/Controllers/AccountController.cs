@@ -205,5 +205,23 @@ namespace IdentityApi.Controllers
 
             return Ok(response);
         }
+
+        /// <summary>
+        /// Endpoint action for deleting profile.
+        /// </summary>
+        /// <param name="deleteProfile"></param>
+        /// <returns></returns>
+        [HttpPost(AccountMappings.DELETE_PROFILE)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult DeleteProfile(DeleteProfileRequest deleteProfile)
+        {
+            bool isDeleted = _accountManager.DeleteProfile(deleteProfile.PROFILE_ID);
+
+            if (!isDeleted)
+                return BadRequest();
+
+            return Ok();
+        }
     }
 }
