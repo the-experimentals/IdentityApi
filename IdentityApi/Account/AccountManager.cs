@@ -106,6 +106,7 @@ namespace IdentityApi.Account
                 {
                     profileViews.Add(new ProfileCardResponse
                     {
+                        PROFILE_ID = profile.dataProfile.ID,
                         USERNAME = profile.dataCredential.USERNAME,
                         NAME = profile.dataProfile.NAME,
                         LOCKED = profile.dataProfile.LOCKED,
