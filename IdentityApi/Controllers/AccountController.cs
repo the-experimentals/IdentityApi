@@ -211,7 +211,7 @@ namespace IdentityApi.Controllers
         /// </summary>
         /// <param name="deleteProfile"></param>
         /// <returns></returns>
-        [HttpPost(AccountMappings.DELETE_PROFILE)]
+        [HttpPatch(AccountMappings.DELETE_PROFILE)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult DeleteProfile(DeleteProfileRequest deleteProfile)
