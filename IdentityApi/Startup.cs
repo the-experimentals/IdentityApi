@@ -14,6 +14,7 @@ using IdentityApi.StartupTasks.Tasks;
 using IdentityApi.Utilities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -21,6 +22,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -40,6 +42,8 @@ namespace IdentityApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHealthChecks();
+
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddAutoMapper(typeof(Startup));
@@ -167,6 +171,16 @@ namespace IdentityApi
 
             app.UseEndpoints(endpoints =>
             {
+                app.UseHealthChecks("/health/live", new HealthCheckOptions()
+                {
+                    Predicate = check => check.Name == "Liveness",
+                });
+
+                app.UseHealthChecks("/health/ready", new HealthCheckOptions()
+                {
+                    Predicate = check => check.Name == "Readiness",
+                });
+
                 endpoints.MapControllers();
             });
         }
