@@ -44,7 +44,7 @@ namespace IdentityApi.Auth
             {
                 var userData = (from credential in _store.CREDENTIALS
                                 join profile in _store.PROFILE on credential.PROFILE_ID equals profile.ID
-                                where credential.USERNAME == logInRequest.USERNAME.Trim().ToLower()
+                                where credential.USERNAME == logInRequest.USERNAME.Trim().ToLower() && profile.STATUS != Status.DELETED
                                 select new
                                 {
                                     dataCredential = credential,
