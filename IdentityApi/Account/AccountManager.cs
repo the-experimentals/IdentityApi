@@ -247,7 +247,7 @@ namespace IdentityApi.Account
         {
             Profile profile = _store.PROFILE.Where(x => x.ID.Equals(profileID)).FirstOrDefault();
 
-            if (profile == null)
+            if (profile == null || profile.ID.Equals(Profile.ADMIN_GUID))
                 throw new InvalidOperationException("Profile not found");
 
             profile.STATUS = Identifiers.Status.DELETED;
