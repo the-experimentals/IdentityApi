@@ -214,7 +214,7 @@ namespace IdentityApi.Controllers
         [HttpPatch(AccountMappings.DELETE_PROFILE)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult DeleteProfile(DeleteProfileRequest deleteProfile)
+        public IActionResult DeleteProfile(ProfileRequest deleteProfile)
         {
             bool isDeleted = _accountManager.DeleteProfile(deleteProfile.PROFILE_ID);
 
@@ -222,6 +222,12 @@ namespace IdentityApi.Controllers
                 return BadRequest();
 
             return Ok();
+        }
+
+        [HttpGet(AccountMappings.GET_PROFILE_VIEW)]
+        public IActionResult GetProfileView(ProfileRequest profileRequest)
+        {
+            return Unauthorized();
         }
     }
 }

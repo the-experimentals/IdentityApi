@@ -12,5 +12,6 @@ namespace IdentityApi.Mappings
         public const string SEND_VERIFICATION_CODE = "send-verification-code";
         public const string VERIFY_PROFILE = "verify-profile";
         public const string DELETE_PROFILE = "delete-profile";
+        public const string GET_PROFILE_VIEW = "get-porfile-view";
     }
 }
