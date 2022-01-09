@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using IdentityApi.Account;
 using IdentityApi.Auth;
-using IdentityApi.CustomPolicies.AuthorizationPolicy;
+using IdentityApi.CustomPolicies.AccountPolicy;
 using IdentityApi.Data;
 using IdentityApi.Services.CustomRazorEngine;
 using IdentityApi.Services.gRPC.Clients;
@@ -135,7 +135,12 @@ namespace IdentityApi
             services.AddStartupTask<DBMigrator>();
             services.AddStartupTask<WarmupServices>().TryAddSingleton(services);
 
-            services.AddSingleton<IAuthorizationHandler, AuthorizationHandler>();
+            services.AddSingleton<IAuthorizationHandler, AccountPolicyHandler>();
+
+            services.AddAuthorization(opts =>
+            {
+                opts.AddPolicy("AccountPolicy", p => p.Requirements.Add(new AccountPolicyRequirement()));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

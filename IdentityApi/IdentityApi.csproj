@@ -47,7 +47,8 @@
     <None Remove="StartupTasks\" />
     <None Remove="StartupTasks\Tasks\" />
     <None Remove="CustomPolicies\" />
-    <None Remove="CustomPolicies\AuthorizationPolicy\" />
+    <None Remove="CustomPolicies\AuthPolicy\" />
+    <None Remove="CustomPolicies\AccountPolicy\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -70,7 +71,8 @@
     <Folder Include="StartupTasks\" />
     <Folder Include="StartupTasks\Tasks\" />
     <Folder Include="CustomPolicies\" />
-    <Folder Include="CustomPolicies\AuthorizationPolicy\" />
+    <Folder Include="CustomPolicies\AuthPolicy\" />
+    <Folder Include="CustomPolicies\AccountPolicy\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.1">
