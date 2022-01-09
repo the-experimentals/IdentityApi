@@ -159,7 +159,15 @@ namespace IdentityApi.Controllers
             return ua;
         }
 
-        private IPAddress GetIPAddress() => IPAddress.Parse(Request.Headers.Where(x => x.Key.Equals("X-Forwarded-For")).FirstOrDefault().Value);
+        private IPAddress GetIPAddress()
+        {
+            var header = Request.Headers.Where(x => x.Key.Equals("X-Forwarded-For")).FirstOrDefault();
+
+            if (header.Value.Count > 0)
+                return IPAddress.Parse(header.Value);
+
+            return IPAddress.Parse("127.0.0.1");
+        }
 
     }
 }
