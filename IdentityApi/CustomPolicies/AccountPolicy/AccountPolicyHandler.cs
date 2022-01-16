@@ -18,6 +18,10 @@ namespace IdentityApi.CustomPolicies.AccountPolicy
         {
             HttpContext httpContext = _httpContext.HttpContext;
             ClaimsIdentity userIdentity = httpContext.User.Identity as ClaimsIdentity;
+
+            if (!httpContext.User.Identity.IsAuthenticated)
+                return Task.CompletedTask;
+
             string role = userIdentity.FindFirst(ClaimTypes.Role).Value;
             PathString path = httpContext.Request.Path;
 
@@ -32,6 +36,7 @@ namespace IdentityApi.CustomPolicies.AccountPolicy
 
                 context.Fail();
             }
+
 
             return Task.CompletedTask;
         }
