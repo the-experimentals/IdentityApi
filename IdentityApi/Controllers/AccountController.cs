@@ -19,7 +19,7 @@ using PwnedPasswords.Client;
 
 namespace IdentityApi.Controllers
 {
-    [Authorize]
+    [Authorize(Policy = "AccountPolicy")]
     [ApiController]
     [Route(AccountMappings.ENDPOINT_ROUTE)]
     [Produces(MediaTypeNames.Application.Json)]

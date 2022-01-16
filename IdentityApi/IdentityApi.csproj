@@ -46,6 +46,9 @@
     <None Remove="Services\CustomRazorViewEngine\" />
     <None Remove="StartupTasks\" />
     <None Remove="StartupTasks\Tasks\" />
+    <None Remove="CustomPolicies\" />
+    <None Remove="CustomPolicies\AuthPolicy\" />
+    <None Remove="CustomPolicies\AccountPolicy\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -67,6 +70,9 @@
     <Folder Include="Services\CustomRazorEngine\" />
     <Folder Include="StartupTasks\" />
     <Folder Include="StartupTasks\Tasks\" />
+    <Folder Include="CustomPolicies\" />
+    <Folder Include="CustomPolicies\AuthPolicy\" />
+    <Folder Include="CustomPolicies\AccountPolicy\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.1">
