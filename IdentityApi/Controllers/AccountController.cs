@@ -224,10 +224,26 @@ namespace IdentityApi.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="profileRequest"></param>
+        /// <returns></returns>
         [HttpGet(AccountMappings.GET_PROFILE_VIEW)]
         public IActionResult GetProfileView(ProfileRequest profileRequest)
         {
-            return Unauthorized();
+            ClaimsIdentity userIdentity = HttpContext.User.Identity as ClaimsIdentity;
+            string profileID = userIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+
+            if (!string.IsNullOrEmpty(profileID))
+            {
+                var profile = _accountManager.GetProfile(profileID);
+                return Ok(profile);
+            }
+            else
+                return BadRequest();
+
         }
     }
 }

@@ -10,6 +10,7 @@ namespace IdentityApi.Account
     {
         // CURD operation methods
         public Profile GetProfile(string profileID);
+        public Person GetPerson(string profileID);
         public List<ProfileCardResponse> GetProfiles();
         public ProfileSaveStatus CreateProfile(Profile profile);
         //public void UpdateProfile(Profile profile);

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using IdentityApi.Mappings;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Controllers;
 
 namespace IdentityApi.CustomPolicies.AccountPolicy
 {
@@ -23,7 +25,7 @@ namespace IdentityApi.CustomPolicies.AccountPolicy
                 return Task.CompletedTask;
 
             string role = userIdentity.FindFirst(ClaimTypes.Role).Value;
-            PathString path = httpContext.Request.Path;
+            string action = httpContext.GetEndpoint().Metadata.GetMetadata<ControllerActionDescriptor>().ActionName;
 
             if (role.Equals("ADMIN"))
             {
@@ -31,10 +33,18 @@ namespace IdentityApi.CustomPolicies.AccountPolicy
             }
             else
             {
+                switch (action)
+                {
+                    case "GetProfileView":
+                        context.Succeed(requirement);
+                        break;
+                    default:
+                        context.Fail();
+                        break;
+                }
+                //check for path here and then decaide.
 
-                // check for path here and then decaide.
-
-                context.Fail();
+                
             }
 
 

@@ -34,7 +34,6 @@
     <None Remove="Account\" />
     <None Remove="Auth\" />
     <None Remove="Identifiers\" />
-    <None Remove="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
@@ -43,6 +42,5 @@
     <Folder Include="Account\" />
     <Folder Include="Auth\" />
     <Folder Include="Identifiers\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
 </Project>
