@@ -38,8 +38,8 @@ namespace IdentityApi.Account
                     if (string.IsNullOrWhiteSpace(profile.ID))
                         profile.ID = Guid.NewGuid().ToString();
 
-                    //if (person != null)
-                    //    profile.NAME = person.FIRST_NAME + " " + person.LAST_NAME;
+                    if (person != null)
+                        profile.NAME = person.FIRST_NAME + " " + person.LAST_NAME;
 
                     profile.CREATED_ON = DateTime.Now;
                 }
@@ -71,6 +71,13 @@ namespace IdentityApi.Account
                 {
                     credential.PROFILE_ID = profile.ID;
                     CreateCredentials(credential);
+
+                    var p = profile.PERSON;
+                    p.ID = Guid.NewGuid().ToString();
+                    p.PROFILE_ID = profile.ID;
+
+                    _store.PERSON.Add(profile.PERSON);
+                    _store.SaveChanges();
                 }
 
                 transaction.Commit();
@@ -161,7 +168,6 @@ namespace IdentityApi.Account
                 };
 
                 _store.CREDENTIALS.Add(newCredential);
-                _store.SaveChanges();
 
             }
         }

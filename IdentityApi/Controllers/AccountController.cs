@@ -64,10 +64,14 @@ namespace IdentityApi.Controllers
 
             Profile userProfile = new()
             {
-                NAME = string.Concat(newProfileView.FIRST_NAME.Trim(), " ", newProfileView.LAST_NAME.Trim()),
                 EMAIL = newProfileView.EMAIL.Trim().ToLower(),
                 NEW = true,
-                CREATED_BY = profileID
+                CREATED_BY = profileID,
+                PERSON = new()
+                {
+                    FIRST_NAME = newProfileView.FIRST_NAME.Trim(),
+                    LAST_NAME = newProfileView.LAST_NAME.Trim()
+                }
             };
 
             userProfile.CREDENTIAL = new()
