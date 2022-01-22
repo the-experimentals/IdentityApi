@@ -209,7 +209,11 @@ namespace IdentityApi.Account
         {
             Profile profile = _cache.Get<Profile>(Profile.PROFILE_CACHE_KEY + profileID);
 
-            if (profile == null)
+            //if (profile == null)
+            //{
+            //    from profile in _store.PROFILE
+            //    join person in _store.PE
+            //}
                 profile = _store.PROFILE.Find(profileID);
 
             return profile;
@@ -253,6 +257,11 @@ namespace IdentityApi.Account
             profile.STATUS = Identifiers.Status.DELETED;
             _store.PROFILE.Update(profile);
             return _store.SaveChanges() == 1;
+        }
+
+        public Person GetPerson(string profileID)
+        {
+            throw new NotImplementedException();
         }
     }
 }
