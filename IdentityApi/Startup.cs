@@ -49,10 +49,12 @@ namespace IdentityApi
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddAutoMapper(typeof(Startup));
-            services.AddControllers().AddJsonOptions(options =>
-            {
-                options.JsonSerializerOptions.PropertyNamingPolicy = null;
-            });
+            services.AddControllers()
+            .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.PropertyNamingPolicy = null;
+                    options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+                });
 
             services.AddMemoryCache();
             services.AddDistributedMemoryCache(); // Adds a default in-memory implementation of IDistributedCache
