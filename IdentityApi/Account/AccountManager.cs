@@ -215,12 +215,26 @@ namespace IdentityApi.Account
         {
             Profile profile = _cache.Get<Profile>(Profile.PROFILE_CACHE_KEY + profileID);
 
-            //if (profile == null)
-            //{
-            //    from profile in _store.PROFILE
-            //    join person in _store.PE
-            //}
-                profile = _store.PROFILE.Find(profileID);
+            if (profile == null)
+            {
+                var dbProfile = (from p in _store.PROFILE
+                join person in _store.PERSON
+                on p.ID equals person.PROFILE_ID
+                where p.ID == profileID
+                select new
+                {
+                    dataProfile = p,
+                    dataPerson = person
+                }).FirstOrDefault();
+
+                if(dbProfile != null)
+                {
+                    profile = dbProfile.dataProfile;
+                    profile.PERSON = dbProfile.dataPerson;
+                    _cache.Add<Profile>(Profile.PROFILE_CACHE_KEY + profileID, profile);
+                }
+            }
+
 
             return profile;
         }

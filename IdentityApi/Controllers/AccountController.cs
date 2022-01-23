@@ -242,7 +242,11 @@ namespace IdentityApi.Controllers
 
             if (!string.IsNullOrEmpty(profileID))
             {
-                var profile = _accountManager.GetProfile(profileID);
+                var profile = _accountManager.GetProfile(profileRequest.PROFILE_ID);
+
+                if (profile == null)
+                    return NotFound("Profile not found");
+
                 return Ok(profile);
             }
             else
