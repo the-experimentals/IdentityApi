@@ -14,7 +14,7 @@ namespace IdentityApi.Auth
         public RefreshToken GetRefreshToken(string profileID, UserAgent ua, IPAddress ipAddress);
         public void UpdateRefreshToken(RefreshToken token);
         public string GenerateJwtToken(LogInResponse logInResponse);
-        public void Logout(string profileID, UserAgent ua, IPAddress ipAddress);
-        public void DeleteRefreshToken(RefreshToken refreshToken);
+        public bool Logout(string profileID, UserAgent ua, IPAddress ipAddress);
+        public bool DeleteRefreshToken(RefreshToken refreshToken);
     }
 }

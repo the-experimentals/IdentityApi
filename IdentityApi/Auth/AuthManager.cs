@@ -236,17 +236,28 @@ namespace IdentityApi.Auth
             return refreshToken;
         }
         
-        public void DeleteRefreshToken(RefreshToken refreshToken)
+        public bool DeleteRefreshToken(RefreshToken refreshToken)
         {
             refreshToken.STATUS = Status.DELETED;
 
             _store.REFRESH_TOKENS.Update(refreshToken);
-            _store.SaveChanges();
+            return _store.SaveChanges() == 1;
         }
 
-        public void Logout(string profileID, UserAgent ua, IPAddress ipAddress)
+        public bool Logout(string profileID, UserAgent ua, IPAddress ipAddress)
         {
-            throw new NotImplementedException();
+            RefreshToken refreshToken = GetRefreshToken(profileID, ua, ipAddress);
+
+            refreshToken.ACTIVE = false;
+
+            _store.REFRESH_TOKENS.Update(refreshToken);
+
+            bool isUpdated =_store.SaveChanges() == 1;
+
+            _cache.Add<RefreshToken>(RefreshToken.REFRESH_TOKEN_CACHE_KEY + refreshToken.SHA, refreshToken);
+
+            return isUpdated;
+           
         }
 
         public void UpdateRefreshToken(RefreshToken token)

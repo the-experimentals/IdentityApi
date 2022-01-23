@@ -139,10 +139,25 @@ namespace IdentityApi.Controllers
             return Ok(tokenResponse);
         }
 
+        /// <summary>
+        /// Endpoint  action for marking refresh token as not active(which stands for use is logout).
+        /// </summary>
+        /// <returns></returns>
+        /// <response code="200">User has successfully logout.</response>
+        /// <response code="400">Unable to logout user.</response>
+        /// <response code="500">Something went wrong while logging user out.</response> 
         [HttpPatch("log-out")]
         public IActionResult LogOut()
         {
-            return Unauthorized();
+            string profileID = GetProfileID();
+
+            bool success =_authManager.Logout(profileID, GetClientInfo(), GetIPAddress());
+
+            if (success)
+                return Ok();
+            else
+                return BadRequest();
+
         }
         private RequestModels.UserAgent GetClientInfo()
         {
@@ -168,6 +183,9 @@ namespace IdentityApi.Controllers
 
             return IPAddress.Parse("127.0.0.1");
         }
+
+        private string GetProfileID() => (HttpContext.User.Identity as ClaimsIdentity).FindFirst(ClaimTypes.NameIdentifier).Value;
+
 
     }
 }
