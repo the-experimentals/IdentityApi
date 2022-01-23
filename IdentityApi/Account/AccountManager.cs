@@ -61,14 +61,9 @@ namespace IdentityApi.Account
             try
             {
                 if (profile.NEW)
-                    _store.PROFILE.Add(profile);
-                else
-                    _store.PROFILE.Update(profile);
-
-                _store.SaveChanges();
-
-                if (profile.NEW)
                 {
+                    _store.PROFILE.Add(profile);
+                    
                     credential.PROFILE_ID = profile.ID;
                     CreateCredentials(credential);
 
@@ -79,6 +74,11 @@ namespace IdentityApi.Account
                     _store.PERSON.Add(profile.PERSON);
                     _store.SaveChanges();
                 }
+                    
+                else
+                    _store.PROFILE.Update(profile);
+
+                _store.SaveChanges();
 
                 transaction.Commit();
                 status.IS_SAVED = true;
