@@ -30,6 +30,12 @@ namespace IdentityApiTest.Account
                 {
                     USERNAME = "testProfile",
                     PASSWORD = "TESTPASSWORD"
+                },
+                PERSON = new()
+                {
+                    FIRST_NAME = "test",
+                    LAST_NAME = "profile",
+                    PROFILE_ID = testProfileGUID,
                 }
            });
 
