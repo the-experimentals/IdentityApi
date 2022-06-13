@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./IdentityApi.sln
     - name: Build
       run: dotnet build ./IdentityApi/IdentityApi.csproj --no-restore
     - name: Test
