@@ -1,5 +1,6 @@
 ﻿using System;
 using IdentityApi.Account;
+using IdentityApiTest.Data;
 using IdentityApiTest.Mockings;
 using IdentityApiTest.Ordering;
 using Xunit;
@@ -47,7 +48,7 @@ namespace IdentityApiTest.Account
         void TestDeleteInvalidProfile() => Assert.Throws<InvalidOperationException>(() => _accountManager.DeleteProfile(new Guid().ToString()));
 
         [Fact(DisplayName = "Test delete profile"), Priority(3)]
-        void TestDeleteProfile() => Assert.True(_accountManager.DeleteProfile(testProfileGUID));
+        void TestDeleteProfile() => Assert.True(_accountManager.DeleteProfile(DummyAccountData.profile.ID));
 
     }
 }

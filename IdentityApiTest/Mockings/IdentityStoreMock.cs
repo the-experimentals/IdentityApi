@@ -16,11 +16,13 @@ namespace IdentityApiTest.Mockings
         public IdentityStoreMock()
         {
             DbContextOptions<IdentityStore> options = new DbContextOptionsBuilder<IdentityStore>()
-                              .UseInMemoryDatabase(databaseName: "testDB")
+                              .UseInMemoryDatabase(Guid.NewGuid().ToString())
                               .ConfigureWarnings(x => x.Ignore(InMemoryEventId.TransactionIgnoredWarning))
                               .Options;
 
             _store = new IdentityStore(options);
+
+           
 
             _store.PROFILE.Add(DummyAccountData.profile);
 

@@ -9,14 +9,14 @@ namespace IdentityApiTest.Mockings
     {
         public IEnumerator<object[]> GetEnumerator()
         {
-            yield return new object[]
-            {
-                new LogInRequest()
-                {
-                    USERNAME = "testuser",
-                    PASSWORD = "testPassword"
-                }                
-            };
+            //yield return new object[]
+            //{
+            //    new LogInRequest()
+            //    {
+            //        USERNAME = "testuser",
+            //        PASSWORD = "testPassword"
+            //    }                
+            //};
 
             yield return new object[]
             {
