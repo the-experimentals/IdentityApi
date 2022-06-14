@@ -53,7 +53,8 @@ namespace IdentityApi.Utilities
         {
             char[] chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".ToCharArray();
             byte[] data = new byte[1];
-            using RNGCryptoServiceProvider crypto = new();
+            using RandomNumberGenerator crypto = RandomNumberGenerator.Create();
+            
 
             crypto.GetNonZeroBytes(data); //produces wild sequences of numbers that are NOT reproducible.
             data = new byte[maxSize];
