@@ -1,17 +1,17 @@
 ﻿using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Net;
 using System.Security.Claims;
 using System.Text;
 using IdentityApi.Auth;
 using IdentityApi.Data;
 using IdentityApi.RequestModels;
 using IdentityApi.ResponseModels;
+using IdentityApiTest.Data;
 using IdentityApiTest.Mockings;
-using IdentityApiTest.Ordering;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using Moq;
 using Xunit;
 
 namespace IdentityApiTest.Auth
@@ -36,7 +36,7 @@ namespace IdentityApiTest.Auth
             _authManager = new AuthManager(storeMock._store, cacheMock._cache, Options.Create<JwtSecretKey>(jwtSecretKey));
         }
 
-        [Theory(DisplayName ="Test authenticate user."), Priority(1)]
+        [Theory(DisplayName ="Test authenticate user.")]
         [ClassData(typeof(LogInRequestTestData))]
         void TestAuthenticate(LogInRequest logInRequest)
         {
@@ -45,7 +45,7 @@ namespace IdentityApiTest.Auth
             Assert.True(result.IS_AUTHENTICATED);
         }
 
-        [Fact(DisplayName ="Test username not found"), Priority(2)]
+        [Fact(DisplayName ="Test username not found")]
         void TestUserNameNotFound()
         {
             LogInRequest request = new()
@@ -59,7 +59,7 @@ namespace IdentityApiTest.Auth
             Assert.Equal("User not found", response.ERRORS[0]);
         }
 
-        [Fact(DisplayName ="Test generating jwt token"), Priority(3)]
+        [Fact(DisplayName ="Test generating jwt token")]
         void TestGenerateJWTToken()
         {
             LogInRequest request = new()
@@ -83,6 +83,53 @@ namespace IdentityApiTest.Auth
 
         // Test Refresh token CRUD and in cache
 
+        [Fact(DisplayName = "Test generate refresh token")]
+        void TestGenerateRefreshToken()
+        {
+            string profileID = Guid.NewGuid().ToString();
+
+            UserAgent ua = new()
+            {
+                BROWSER = "",
+                DEVICE = "",
+                OS = ""
+            };
+
+            var ipAddress = IPAddress.Parse("127.0.0.1");
+
+            Assert.NotNull(_authManager.GenerateRefreshToken(profileID, ua, ipAddress));
+
+            
+        }
+
+        [Fact(DisplayName = "Test get refresh token")]
+        void TestGetRefreshToken()
+        {
+            UserAgent ua = new()
+            {
+                BROWSER = DummyAccountData.refreshToken.BROWSER,
+                DEVICE = DummyAccountData.refreshToken.DEVICE,
+                OS = DummyAccountData.refreshToken.OS
+            };
+
+            var refreshToken = _authManager.GetRefreshToken(DummyAccountData.profile.ID, ua, IPAddress.Parse("127.0.0.1"));
+
+            Assert.NotNull(refreshToken);
+
+            Assert.Equal(DummyAccountData.profile.ID, refreshToken.PROFILE_ID);
+        }
+
+        [Fact(DisplayName = "Test get refresh token with null user agent")]
+        void TestGetRefreshTokenWithNullUserAgent() => Assert.Throws<InvalidOperationException>(() => _authManager.GetRefreshToken(DummyAccountData.profile.ID, null, IPAddress.Parse("127.0.0.1")));
+
+        /*
+         * TODO:
+         * Test refresh token from cache.
+         * Refresh tpken with expired time
+         * Refresh token with valid time
+         */
+
+        
         private string VerifyJWTToken(string token)
         {
             if (string.IsNullOrEmpty(token))

@@ -28,6 +28,8 @@ namespace IdentityApiTest.Mockings
 
             _store.CREDENTIALS.Add(DummyAccountData.credential);
 
+            _store.REFRESH_TOKENS.Add(DummyAccountData.refreshToken);
+
             _store.SaveChanges();
         }
     }
