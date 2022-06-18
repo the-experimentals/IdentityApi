@@ -122,14 +122,25 @@ namespace IdentityApiTest.Auth
         [Fact(DisplayName = "Test get refresh token with null user agent")]
         void TestGetRefreshTokenWithNullUserAgent() => Assert.Throws<InvalidOperationException>(() => _authManager.GetRefreshToken(DummyAccountData.profile.ID, null, IPAddress.Parse("127.0.0.1")));
 
-        /*
-         * TODO:
-         * Test refresh token from cache.
-         * Refresh tpken with expired time
-         * Refresh token with valid time
-         */
+        [Fact(DisplayName = "Test delete reefresh token")]
+        void TestDeleteRefreshToken()
+        {
+            var isDeleted = _authManager.DeleteRefreshToken(DummyAccountData.refreshToken);
 
-        
+            Assert.True(isDeleted);
+
+            UserAgent ua = new()
+            {
+                BROWSER = DummyAccountData.refreshToken.BROWSER,
+                DEVICE = DummyAccountData.refreshToken.DEVICE,
+                OS = DummyAccountData.refreshToken.OS
+            };
+
+            var refreshToken = _authManager.GetRefreshToken(DummyAccountData.profile.ID, ua, IPAddress.Parse("127.0.0.1"));
+            Assert.Null(refreshToken);
+
+        }
+
         private string VerifyJWTToken(string token)
         {
             if (string.IsNullOrEmpty(token))

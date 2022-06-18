@@ -230,7 +230,7 @@ namespace IdentityApi.Auth
                     _store.SaveChanges();
                 }
 
-                _cache.Add<RefreshToken>(RefreshToken.REFRESH_TOKEN_CACHE_KEY + refreshToken.SHA, refreshToken);
+                _cache.Add<RefreshToken>(RefreshToken.REFRESH_TOKEN_CACHE_KEY + refreshToken.SHA, refreshToken); 
             }
 
             return refreshToken;

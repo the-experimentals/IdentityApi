@@ -10,7 +10,7 @@ namespace IdentityApiTest.Data
     {
         // Data set 1
 
-        static string testProfileGuid = Guid.NewGuid().ToString();
+        static string storeProfileGuid = Guid.NewGuid().ToString();
 
         static UserSecret userSecret = Utility.GetUserSecret(null, "defaultTest");
 
@@ -18,14 +18,14 @@ namespace IdentityApiTest.Data
         {
             ID = Guid.NewGuid().ToString(),
             USERNAME = "default",
-            PROFILE_ID = testProfileGuid,
+            PROFILE_ID = storeProfileGuid,
             SALT = userSecret.SALT,
             SECRET_HASH = userSecret.SECRET_HASH
         };
 
         public static Profile profile = new()
         {
-            ID = testProfileGuid,
+            ID = storeProfileGuid,
             NAME = "default test user",
             NEW = true,
             CREATED_BY = "system",
@@ -36,7 +36,7 @@ namespace IdentityApiTest.Data
         public static RefreshToken refreshToken = new()
         {
             ID = Guid.NewGuid().ToString(),
-            PROFILE_ID = testProfileGuid,
+            PROFILE_ID = storeProfileGuid,
             BROWSER = "",
             DEVICE = "",
             OS = "",
@@ -47,8 +47,29 @@ namespace IdentityApiTest.Data
             IPv4 = "127.0.0.1",
             TOKEN = Utility.GetUniqueString(32),
             REFRESHED_ON = DateTime.UtcNow,
-            SHA = Utility.ComputeSHA(string.Concat(testProfileGuid, "", "", "", IPAddress.Parse("127.0.0.1")))
+            SHA = Utility.ComputeSHA(string.Concat(storeProfileGuid, "", "", "", IPAddress.Parse("127.0.0.1")))
 
         };
+
+        // Refresh token with expired token time.
+
+        public static RefreshToken expiredRefreshToken = new()
+        {
+            ID = Guid.NewGuid().ToString(),
+            PROFILE_ID = storeProfileGuid,
+            BROWSER = "",
+            DEVICE = "",
+            OS = "",
+            GENERATED_ON = DateTime.UtcNow.AddDays(-2),
+            LIFE_SPAN = 1,
+            STATUS = IdentityApi.Identifiers.Status.ACTIVE,
+            ACTIVE = true,
+            IPv4 = "127.0.0.1",
+            TOKEN = Utility.GetUniqueString(32),
+            REFRESHED_ON = DateTime.UtcNow,
+            SHA = Utility.ComputeSHA(string.Concat(storeProfileGuid, "", "", "", IPAddress.Parse("127.0.0.1")))
+
+        };
+
     }
 }
