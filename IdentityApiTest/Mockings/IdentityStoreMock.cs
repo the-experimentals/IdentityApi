@@ -24,11 +24,14 @@ namespace IdentityApiTest.Mockings
 
            
 
-            _store.PROFILE.Add(DummyAccountData.profile);
+            _store.PROFILE.Add(DummyAccountData.defaultProfile);
+            _store.PROFILE.Add(DummyAccountData.deleteProfile);
 
-            _store.CREDENTIALS.Add(DummyAccountData.credential);
+            _store.CREDENTIALS.Add(DummyAccountData.defaultProfilecredential);
+            _store.CREDENTIALS.Add(DummyAccountData.deleteProfilecredential);
 
-            _store.REFRESH_TOKENS.Add(DummyAccountData.refreshToken);
+            _store.REFRESH_TOKENS.Add(DummyAccountData.defaultProfileRefreshToken);
+            _store.REFRESH_TOKENS.Add(DummyAccountData.deleteProfileRefreshToken);
 
             _store.SaveChanges();
         }

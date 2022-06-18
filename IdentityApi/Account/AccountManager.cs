@@ -275,8 +275,11 @@ namespace IdentityApi.Account
                 throw new InvalidOperationException("Profile not found");
 
             profile.STATUS = Identifiers.Status.DELETED;
+            
             _store.PROFILE.Update(profile);
-            return _store.SaveChanges() == 1;
+
+            return _store.SaveChanges() > 0;
+
         }
 
         public Person GetPerson(string profileID)

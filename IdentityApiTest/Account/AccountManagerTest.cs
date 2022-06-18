@@ -48,7 +48,7 @@ namespace IdentityApiTest.Account
         void TestDeleteInvalidProfile() => Assert.Throws<InvalidOperationException>(() => _accountManager.DeleteProfile(new Guid().ToString()));
 
         [Fact(DisplayName = "Test delete profile"), Priority(3)]
-        void TestDeleteProfile() => Assert.True(_accountManager.DeleteProfile(DummyAccountData.profile.ID));
+        void TestDeleteProfile() => Assert.True(_accountManager.DeleteProfile(DummyAccountData.defaultProfile.ID));
 
     }
 }
