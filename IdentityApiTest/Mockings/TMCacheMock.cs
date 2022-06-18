@@ -16,9 +16,9 @@ namespace IdentityApiTest.Mockings
         {
             _cache = new(new MemoryCache(new MemoryCacheOptions()));
 
-            Profile profile = DummyAccountData.profile;
+            Profile profile = DummyAccountData.cacheProfile;
 
-            _cache.Add<string>("testuser", profile.ID);
+            _cache.Add<string>("testcacheuser", profile.ID);
 
             _cache.Add<Profile>(Profile.PROFILE_CACHE_KEY + profile.ID, profile);
         }

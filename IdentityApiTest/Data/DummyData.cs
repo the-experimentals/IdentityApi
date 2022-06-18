@@ -1,0 +1,142 @@
+﻿using System;
+using System.Net;
+using IdentityApi.Account;
+using IdentityApi.DataModels;
+using IdentityApi.Utilities;
+
+namespace IdentityApiTest.Data
+{
+    public class DummyAccountData
+    {
+        // Data set 1
+
+        static string defaultProfileGuid = Guid.NewGuid().ToString();
+
+        static UserSecret defaultProfileuserSecret = Utility.GetUserSecret(null, "defaultTest");
+
+        public static Credential defaultProfilecredential = new()
+        {
+            ID = Guid.NewGuid().ToString(),
+            USERNAME = "default",
+            PROFILE_ID = defaultProfileGuid,
+            SALT = defaultProfileuserSecret.SALT,
+            SECRET_HASH = defaultProfileuserSecret.SECRET_HASH
+        };
+
+        public static Profile defaultProfile = new()
+        {
+            ID = defaultProfileGuid,
+            NAME = "default test user",
+            NEW = true,
+            CREATED_BY = "system",
+            EMAIL = "test@test.com",
+            CREDENTIAL = defaultProfilecredential
+        };
+
+        public static RefreshToken defaultProfileRefreshToken = new()
+        {
+            ID = Guid.NewGuid().ToString(),
+            PROFILE_ID = defaultProfileGuid,
+            BROWSER = "",
+            DEVICE = "",
+            OS = "",
+            GENERATED_ON = DateTime.UtcNow,
+            LIFE_SPAN = 1,
+            STATUS = IdentityApi.Identifiers.Status.ACTIVE,
+            ACTIVE = true,
+            IPv4 = "127.0.0.1",
+            TOKEN = Utility.GetUniqueString(32),
+            REFRESHED_ON = DateTime.UtcNow,
+            SHA = Utility.ComputeSHA(string.Concat(defaultProfileGuid, "", "", "", IPAddress.Parse("127.0.0.1")))
+
+        };
+
+        // Data set 2
+
+        static string cacheProfileGuid = Guid.NewGuid().ToString();
+
+        static UserSecret cacheProfileuserSecret = Utility.GetUserSecret(null, "defaultTest");
+
+        public static Credential cacheProfilecredential = new()
+        {
+            ID = Guid.NewGuid().ToString(),
+            USERNAME = "default",
+            PROFILE_ID = cacheProfileGuid,
+            SALT = cacheProfileuserSecret.SALT,
+            SECRET_HASH = cacheProfileuserSecret.SECRET_HASH
+        };
+
+        public static Profile cacheProfile = new()
+        {
+            ID = cacheProfileGuid,
+            NAME = "cache test user",
+            NEW = true,
+            CREATED_BY = "system",
+            EMAIL = "test@test.com",
+            CREDENTIAL = cacheProfilecredential
+        };
+
+        public static RefreshToken cacheProfileRefreshToken = new()
+        {
+            ID = Guid.NewGuid().ToString(),
+            PROFILE_ID = cacheProfileGuid,
+            BROWSER = "",
+            DEVICE = "",
+            OS = "",
+            GENERATED_ON = DateTime.UtcNow,
+            LIFE_SPAN = 1,
+            STATUS = IdentityApi.Identifiers.Status.ACTIVE,
+            ACTIVE = true,
+            IPv4 = "127.0.0.1",
+            TOKEN = Utility.GetUniqueString(32),
+            REFRESHED_ON = DateTime.UtcNow,
+            SHA = Utility.ComputeSHA(string.Concat(cacheProfileGuid, "", "", "", IPAddress.Parse("127.0.0.1")))
+
+        };
+
+        // Data set 3
+
+        static string deleteProfileGuid = Guid.NewGuid().ToString();
+
+        static UserSecret deleteProfileuserSecret = Utility.GetUserSecret(null, "defaultTest");
+
+        public static Credential deleteProfilecredential = new()
+        {
+            ID = Guid.NewGuid().ToString(),
+            USERNAME = "default",
+            PROFILE_ID = deleteProfileGuid,
+            SALT = deleteProfileuserSecret.SALT,
+            SECRET_HASH = deleteProfileuserSecret.SECRET_HASH
+        };
+
+        public static Profile deleteProfile = new()
+        {
+            ID = deleteProfileGuid,
+            NAME = "delete test user",
+            NEW = true,
+            CREATED_BY = "system",
+            EMAIL = "test@test.com",
+            CREDENTIAL = cacheProfilecredential
+        };
+
+        public static RefreshToken deleteProfileRefreshToken = new()
+        {
+            ID = Guid.NewGuid().ToString(),
+            PROFILE_ID = deleteProfileGuid,
+            BROWSER = "",
+            DEVICE = "",
+            OS = "",
+            GENERATED_ON = DateTime.UtcNow,
+            LIFE_SPAN = 1,
+            STATUS = IdentityApi.Identifiers.Status.ACTIVE,
+            ACTIVE = true,
+            IPv4 = "127.0.0.1",
+            TOKEN = Utility.GetUniqueString(32),
+            REFRESHED_ON = DateTime.UtcNow,
+            SHA = Utility.ComputeSHA(string.Concat(deleteProfileGuid, "", "", "", IPAddress.Parse("127.0.0.1")))
+
+        };
+
+
+    }
+}

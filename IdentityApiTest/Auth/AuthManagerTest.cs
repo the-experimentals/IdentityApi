@@ -107,20 +107,39 @@ namespace IdentityApiTest.Auth
         {
             UserAgent ua = new()
             {
-                BROWSER = DummyAccountData.refreshToken.BROWSER,
-                DEVICE = DummyAccountData.refreshToken.DEVICE,
-                OS = DummyAccountData.refreshToken.OS
+                BROWSER = DummyAccountData.defaultProfileRefreshToken.BROWSER,
+                DEVICE = DummyAccountData.defaultProfileRefreshToken.DEVICE,
+                OS = DummyAccountData.defaultProfileRefreshToken.OS
             };
 
-            var refreshToken = _authManager.GetRefreshToken(DummyAccountData.profile.ID, ua, IPAddress.Parse("127.0.0.1"));
+            var refreshToken = _authManager.GetRefreshToken(DummyAccountData.defaultProfile.ID, ua, IPAddress.Parse("127.0.0.1"));
 
             Assert.NotNull(refreshToken);
 
-            Assert.Equal(DummyAccountData.profile.ID, refreshToken.PROFILE_ID);
+            Assert.Equal(DummyAccountData.defaultProfile.ID, refreshToken.PROFILE_ID);
         }
 
         [Fact(DisplayName = "Test get refresh token with null user agent")]
-        void TestGetRefreshTokenWithNullUserAgent() => Assert.Throws<InvalidOperationException>(() => _authManager.GetRefreshToken(DummyAccountData.profile.ID, null, IPAddress.Parse("127.0.0.1")));
+        void TestGetRefreshTokenWithNullUserAgent() => Assert.Throws<InvalidOperationException>(() => _authManager.GetRefreshToken(DummyAccountData.defaultProfile.ID, null, IPAddress.Parse("127.0.0.1")));
+
+        [Fact(DisplayName = "Test delete reefresh token")]
+        void TestDeleteRefreshToken()
+        {
+            var isDeleted = _authManager.DeleteRefreshToken(DummyAccountData.deleteProfileRefreshToken);
+
+            Assert.True(isDeleted);
+
+            UserAgent ua = new()
+            {
+                BROWSER = DummyAccountData.deleteProfileRefreshToken.BROWSER,
+                DEVICE = DummyAccountData.deleteProfileRefreshToken.DEVICE,
+                OS = DummyAccountData.deleteProfileRefreshToken.OS
+            };
+
+            var refreshToken = _authManager.GetRefreshToken(DummyAccountData.deleteProfile.ID, ua, IPAddress.Parse("127.0.0.1"));
+            Assert.Null(refreshToken);
+
+        }
 
         /*
          * TODO:
@@ -129,7 +148,7 @@ namespace IdentityApiTest.Auth
          * Refresh token with valid time
          */
 
-        
+
         private string VerifyJWTToken(string token)
         {
             if (string.IsNullOrEmpty(token))
