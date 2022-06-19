@@ -1,0 +1,6125 @@
+{
+  "IdentityApi.dll": {
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/EmailTemplate/OtpEmail.cshtml": {
+      "AspNetCoreGeneratedDocument.EmailTemplate_OtpEmail/<<ExecuteAsync>b__8_1>d": {
+        "System.Void AspNetCoreGeneratedDocument.EmailTemplate_OtpEmail/<<ExecuteAsync>b__8_1>d::MoveNext()": {
+          "Lines": {
+            "52": 0
+          },
+          "Branches": []
+        }
+      },
+      "AspNetCoreGeneratedDocument.EmailTemplate_OtpEmail/<ExecuteAsync>d__8": {
+        "System.Void AspNetCoreGeneratedDocument.EmailTemplate_OtpEmail/<ExecuteAsync>d__8::MoveNext()": {
+          "Lines": {
+            "1": 0
+          },
+          "Branches": [
+            {
+              "Line": 1,
+              "Offset": 330,
+              "EndOffset": 332,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 1,
+              "Offset": 330,
+              "EndOffset": 443,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 1,
+              "Offset": 768,
+              "EndOffset": 770,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 1,
+              "Offset": 768,
+              "EndOffset": 881,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/obj/Debug/net6.0/Protos/Policyapi.cs": {
+      "PolicyApi.Protos.PolicyapiReflection": {
+        "Google.Protobuf.Reflection.FileDescriptor PolicyApi.Protos.PolicyapiReflection::get_Descriptor()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.Void PolicyApi.Protos.PolicyapiReflection::.cctor()": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": []
+        }
+      },
+      "PolicyApi.Protos.TokenResponse": {
+        "Google.Protobuf.MessageParser`1<PolicyApi.Protos.TokenResponse> PolicyApi.Protos.TokenResponse::get_Parser()": {
+          "Lines": {
+            "52": 0
+          },
+          "Branches": []
+        },
+        "Google.Protobuf.Reflection.MessageDescriptor PolicyApi.Protos.TokenResponse::get_Descriptor()": {
+          "Lines": {
+            "57": 0
+          },
+          "Branches": []
+        },
+        "Google.Protobuf.Reflection.MessageDescriptor PolicyApi.Protos.TokenResponse::pb::Google.Protobuf.IMessage.get_Descriptor()": {
+          "Lines": {
+            "63": 0
+          },
+          "Branches": []
+        },
+        "PolicyApi.Protos.TokenResponse PolicyApi.Protos.TokenResponse::Clone()": {
+          "Lines": {
+            "83": 0,
+            "84": 0,
+            "85": 0
+          },
+          "Branches": []
+        },
+        "System.String PolicyApi.Protos.TokenResponse::get_ACCESS()": {
+          "Lines": {
+            "94": 0
+          },
+          "Branches": []
+        },
+        "System.Void PolicyApi.Protos.TokenResponse::set_ACCESS(System.String)": {
+          "Lines": {
+            "95": 0,
+            "96": 0,
+            "97": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean PolicyApi.Protos.TokenResponse::Equals(System.Object)": {
+          "Lines": {
+            "103": 0,
+            "104": 0,
+            "105": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean PolicyApi.Protos.TokenResponse::Equals(PolicyApi.Protos.TokenResponse)": {
+          "Lines": {
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "113": 0,
+            "114": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0
+          },
+          "Branches": [
+            {
+              "Line": 110,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 110,
+              "Offset": 7,
+              "EndOffset": 14,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 113,
+              "Offset": 20,
+              "EndOffset": 22,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 113,
+              "Offset": 20,
+              "EndOffset": 27,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 116,
+              "Offset": 46,
+              "EndOffset": 48,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 116,
+              "Offset": 46,
+              "EndOffset": 52,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Int32 PolicyApi.Protos.TokenResponse::GetHashCode()": {
+          "Lines": {
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0
+          },
+          "Branches": [
+            {
+              "Line": 124,
+              "Offset": 14,
+              "EndOffset": 16,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 124,
+              "Offset": 14,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 125,
+              "Offset": 41,
+              "EndOffset": 43,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 125,
+              "Offset": 41,
+              "EndOffset": 59,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.String PolicyApi.Protos.TokenResponse::ToString()": {
+          "Lines": {
+            "133": 0,
+            "134": 0,
+            "135": 0
+          },
+          "Branches": []
+        },
+        "System.Void PolicyApi.Protos.TokenResponse::WriteTo(Google.Protobuf.CodedOutputStream)": {
+          "Lines": {
+            "139": 0,
+            "141": 0,
+            "150": 0
+          },
+          "Branches": []
+        },
+        "System.Void PolicyApi.Protos.TokenResponse::pb::Google.Protobuf.IBufferMessage.InternalWriteTo(Google.Protobuf.WriteContext&)": {
+          "Lines": {
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0
+          },
+          "Branches": [
+            {
+              "Line": 156,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 156,
+              "Offset": 12,
+              "EndOffset": 34,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 159,
+              "Offset": 45,
+              "EndOffset": 47,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 159,
+              "Offset": 45,
+              "EndOffset": 62,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Int32 PolicyApi.Protos.TokenResponse::CalculateSize()": {
+          "Lines": {
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "170": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "175": 0,
+            "176": 0
+          },
+          "Branches": [
+            {
+              "Line": 169,
+              "Offset": 14,
+              "EndOffset": 16,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 169,
+              "Offset": 14,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 172,
+              "Offset": 48,
+              "EndOffset": 50,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 172,
+              "Offset": 48,
+              "EndOffset": 66,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void PolicyApi.Protos.TokenResponse::MergeFrom(PolicyApi.Protos.TokenResponse)": {
+          "Lines": {
+            "180": 0,
+            "181": 0,
+            "182": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "187": 0,
+            "188": 0,
+            "189": 0,
+            "190": 0
+          },
+          "Branches": [
+            {
+              "Line": 181,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 181,
+              "Offset": 7,
+              "EndOffset": 12,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 184,
+              "Offset": 23,
+              "EndOffset": 25,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 185,
+              "Offset": 32,
+              "EndOffset": 34,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 185,
+              "Offset": 32,
+              "EndOffset": 52,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 185,
+              "Offset": 55,
+              "EndOffset": 57,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 185,
+              "Offset": 55,
+              "EndOffset": 72,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 184,
+              "Offset": 23,
+              "EndOffset": 73,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void PolicyApi.Protos.TokenResponse::MergeFrom(Google.Protobuf.CodedInputStream)": {
+          "Lines": {
+            "194": 0,
+            "196": 0,
+            "214": 0
+          },
+          "Branches": []
+        },
+        "System.Void PolicyApi.Protos.TokenResponse::pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(Google.Protobuf.ParseContext&)": {
+          "Lines": {
+            "219": 0,
+            "221": 0,
+            "222": 0,
+            "224": 0,
+            "225": 0,
+            "226": 0,
+            "227": 0,
+            "228": 0,
+            "229": 0,
+            "230": 0,
+            "231": 0,
+            "234": 0,
+            "235": 0
+          },
+          "Branches": [
+            {
+              "Line": 221,
+              "Offset": 104,
+              "EndOffset": 3,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 222,
+              "Offset": 11,
+              "EndOffset": 15,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 222,
+              "Offset": 11,
+              "EndOffset": 35,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 228,
+              "Offset": 54,
+              "EndOffset": 56,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 228,
+              "Offset": 54,
+              "EndOffset": 69,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 228,
+              "Offset": 74,
+              "EndOffset": 76,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 228,
+              "Offset": 74,
+              "EndOffset": 88,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 221,
+              "Offset": 104,
+              "EndOffset": 106,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void PolicyApi.Protos.TokenResponse::.ctor()": {
+          "Lines": {
+            "68": 0,
+            "70": 0
+          },
+          "Branches": []
+        },
+        "System.Void PolicyApi.Protos.TokenResponse::.ctor(PolicyApi.Protos.TokenResponse)": {
+          "Lines": {
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0
+          },
+          "Branches": []
+        },
+        "System.Void PolicyApi.Protos.TokenResponse::.cctor()": {
+          "Lines": {
+            "48": 0,
+            "89": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/obj/Debug/net6.0/Protos/PolicyapiGrpc.cs": {
+      "PolicyApi.Protos.PolicyApi": {
+        "System.Void PolicyApi.Protos.PolicyApi::__Helper_SerializeMessage(Google.Protobuf.IMessage,Grpc.Core.SerializationContext)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 12,
+              "EndOffset": 50,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "T PolicyApi.Protos.PolicyApi::__Helper_DeserializeMessage(Grpc.Core.DeserializationContext,Google.Protobuf.MessageParser`1<T>)": {
+          "Lines": {
+            "38": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "45": 0,
+            "46": 0
+          },
+          "Branches": [
+            {
+              "Line": 40,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 40,
+              "Offset": 8,
+              "EndOffset": 26,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "Google.Protobuf.Reflection.ServiceDescriptor PolicyApi.Protos.PolicyApi::get_Descriptor()": {
+          "Lines": {
+            "64": 0
+          },
+          "Branches": []
+        },
+        "System.Void PolicyApi.Protos.PolicyApi::.cctor()": {
+          "Lines": {
+            "13": 0,
+            "49": 0,
+            "51": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0
+          },
+          "Branches": []
+        }
+      },
+      "PolicyApi.Protos.PolicyApi/__Helper_MessageCache`1": {
+        "System.Void PolicyApi.Protos.PolicyApi/__Helper_MessageCache`1::.cctor()": {
+          "Lines": {
+            "33": 0
+          },
+          "Branches": []
+        }
+      },
+      "PolicyApi.Protos.PolicyApi/PolicyApiClient": {
+        "PolicyApi.Protos.TokenResponse PolicyApi.Protos.PolicyApi/PolicyApiClient::GetPolicyToken(Google.Protobuf.WellKnownTypes.Empty,Grpc.Core.Metadata,System.Nullable`1<System.DateTime>,System.Threading.CancellationToken)": {
+          "Lines": {
+            "96": 0,
+            "97": 0,
+            "98": 0
+          },
+          "Branches": []
+        },
+        "PolicyApi.Protos.TokenResponse PolicyApi.Protos.PolicyApi/PolicyApiClient::GetPolicyToken(Google.Protobuf.WellKnownTypes.Empty,Grpc.Core.CallOptions)": {
+          "Lines": {
+            "101": 0,
+            "102": 0,
+            "103": 0
+          },
+          "Branches": []
+        },
+        "Grpc.Core.AsyncUnaryCall`1<PolicyApi.Protos.TokenResponse> PolicyApi.Protos.PolicyApi/PolicyApiClient::GetPolicyTokenAsync(Google.Protobuf.WellKnownTypes.Empty,Grpc.Core.Metadata,System.Nullable`1<System.DateTime>,System.Threading.CancellationToken)": {
+          "Lines": {
+            "106": 0,
+            "107": 0,
+            "108": 0
+          },
+          "Branches": []
+        },
+        "Grpc.Core.AsyncUnaryCall`1<PolicyApi.Protos.TokenResponse> PolicyApi.Protos.PolicyApi/PolicyApiClient::GetPolicyTokenAsync(Google.Protobuf.WellKnownTypes.Empty,Grpc.Core.CallOptions)": {
+          "Lines": {
+            "111": 0,
+            "112": 0,
+            "113": 0
+          },
+          "Branches": []
+        },
+        "PolicyApi.Protos.PolicyApi/PolicyApiClient PolicyApi.Protos.PolicyApi/PolicyApiClient::NewInstance(Grpc.Core.ClientBase/ClientBaseConfiguration)": {
+          "Lines": {
+            "117": 0,
+            "118": 0,
+            "119": 0
+          },
+          "Branches": []
+        },
+        "System.Void PolicyApi.Protos.PolicyApi/PolicyApiClient::.ctor(Grpc.Core.ChannelBase)": {
+          "Lines": {
+            "73": 0,
+            "74": 0,
+            "75": 0
+          },
+          "Branches": []
+        },
+        "System.Void PolicyApi.Protos.PolicyApi/PolicyApiClient::.ctor(Grpc.Core.CallInvoker)": {
+          "Lines": {
+            "79": 0,
+            "80": 0,
+            "81": 0
+          },
+          "Branches": []
+        },
+        "System.Void PolicyApi.Protos.PolicyApi/PolicyApiClient::.ctor()": {
+          "Lines": {
+            "84": 0,
+            "85": 0,
+            "86": 0
+          },
+          "Branches": []
+        },
+        "System.Void PolicyApi.Protos.PolicyApi/PolicyApiClient::.ctor(Grpc.Core.ClientBase/ClientBaseConfiguration)": {
+          "Lines": {
+            "90": 0,
+            "91": 0,
+            "92": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Program.cs": {
+      "IdentityApi.Program": {
+        "Microsoft.Extensions.Hosting.IHostBuilder IdentityApi.Program::CreateHostBuilder(System.String[])": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        }
+      },
+      "IdentityApi.Program/<Main>d__0": {
+        "System.Void IdentityApi.Program/<Main>d__0::MoveNext()": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Startup.cs": {
+      "IdentityApi.Startup": {
+        "Microsoft.Extensions.Configuration.IConfiguration IdentityApi.Startup::get_Configuration()": {
+          "Lines": {
+            "42": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "46": 0,
+            "47": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "137": 0,
+            "138": 0,
+            "140": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,IdentityApi.Data.DBInitializer)": {
+          "Lines": {
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "155": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0,
+            "166": 0,
+            "168": 0,
+            "170": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "175": 0,
+            "176": 0,
+            "177": 0,
+            "179": 0,
+            "181": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "187": 0,
+            "188": 0,
+            "189": 0,
+            "190": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "196": 0,
+            "197": 0
+          },
+          "Branches": [
+            {
+              "Line": 151,
+              "Offset": 22,
+              "EndOffset": 24,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 151,
+              "Offset": 22,
+              "EndOffset": 94,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void IdentityApi.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/obj/Debug/net6.0/Protos/Notificationapi.cs": {
+      "IdentityApi.Protos.NotificationapiReflection": {
+        "Google.Protobuf.Reflection.FileDescriptor IdentityApi.Protos.NotificationapiReflection::get_Descriptor()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.NotificationapiReflection::.cctor()": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0
+          },
+          "Branches": []
+        }
+      },
+      "IdentityApi.Protos.EmailRequest": {
+        "Google.Protobuf.MessageParser`1<IdentityApi.Protos.EmailRequest> IdentityApi.Protos.EmailRequest::get_Parser()": {
+          "Lines": {
+            "58": 0
+          },
+          "Branches": []
+        },
+        "Google.Protobuf.Reflection.MessageDescriptor IdentityApi.Protos.EmailRequest::get_Descriptor()": {
+          "Lines": {
+            "63": 0
+          },
+          "Branches": []
+        },
+        "Google.Protobuf.Reflection.MessageDescriptor IdentityApi.Protos.EmailRequest::pb::Google.Protobuf.IMessage.get_Descriptor()": {
+          "Lines": {
+            "69": 0
+          },
+          "Branches": []
+        },
+        "IdentityApi.Protos.EmailRequest IdentityApi.Protos.EmailRequest::Clone()": {
+          "Lines": {
+            "92": 0,
+            "93": 0,
+            "94": 0
+          },
+          "Branches": []
+        },
+        "Google.Protobuf.Collections.RepeatedField`1<System.String> IdentityApi.Protos.EmailRequest::get_TO()": {
+          "Lines": {
+            "104": 0
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.Protos.EmailRequest::get_SUBJECT()": {
+          "Lines": {
+            "114": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.EmailRequest::set_SUBJECT(System.String)": {
+          "Lines": {
+            "115": 0,
+            "116": 0,
+            "117": 0
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.Protos.EmailRequest::get_CONTENT()": {
+          "Lines": {
+            "128": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.EmailRequest::set_CONTENT(System.String)": {
+          "Lines": {
+            "129": 0,
+            "130": 0,
+            "131": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Boolean> IdentityApi.Protos.EmailRequest::get_HTML()": {
+          "Lines": {
+            "142": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.EmailRequest::set_HTML(System.Nullable`1<System.Boolean>)": {
+          "Lines": {
+            "143": 0,
+            "144": 0,
+            "145": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean IdentityApi.Protos.EmailRequest::Equals(System.Object)": {
+          "Lines": {
+            "151": 0,
+            "152": 0,
+            "153": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean IdentityApi.Protos.EmailRequest::Equals(IdentityApi.Protos.EmailRequest)": {
+          "Lines": {
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "161": 0,
+            "162": 0,
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0
+          },
+          "Branches": [
+            {
+              "Line": 158,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 158,
+              "Offset": 7,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 161,
+              "Offset": 23,
+              "EndOffset": 25,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 161,
+              "Offset": 23,
+              "EndOffset": 33,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 164,
+              "Offset": 55,
+              "EndOffset": 57,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 164,
+              "Offset": 55,
+              "EndOffset": 64,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 165,
+              "Offset": 85,
+              "EndOffset": 87,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 165,
+              "Offset": 85,
+              "EndOffset": 91,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 166,
+              "Offset": 112,
+              "EndOffset": 114,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 166,
+              "Offset": 112,
+              "EndOffset": 118,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 167,
+              "Offset": 174,
+              "EndOffset": 176,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 167,
+              "Offset": 174,
+              "EndOffset": 180,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Int32 IdentityApi.Protos.EmailRequest::GetHashCode()": {
+          "Lines": {
+            "173": 0,
+            "174": 0,
+            "175": 0,
+            "176": 0,
+            "177": 0,
+            "178": 0,
+            "179": 0,
+            "180": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0
+          },
+          "Branches": [
+            {
+              "Line": 176,
+              "Offset": 28,
+              "EndOffset": 30,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 176,
+              "Offset": 28,
+              "EndOffset": 44,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 177,
+              "Offset": 55,
+              "EndOffset": 57,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 177,
+              "Offset": 55,
+              "EndOffset": 71,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 178,
+              "Offset": 84,
+              "EndOffset": 86,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 178,
+              "Offset": 84,
+              "EndOffset": 110,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 179,
+              "Offset": 123,
+              "EndOffset": 125,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 179,
+              "Offset": 123,
+              "EndOffset": 141,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.String IdentityApi.Protos.EmailRequest::ToString()": {
+          "Lines": {
+            "187": 0,
+            "188": 0,
+            "189": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.EmailRequest::WriteTo(Google.Protobuf.CodedOutputStream)": {
+          "Lines": {
+            "193": 0,
+            "195": 0,
+            "211": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.EmailRequest::pb::Google.Protobuf.IBufferMessage.InternalWriteTo(Google.Protobuf.WriteContext&)": {
+          "Lines": {
+            "216": 0,
+            "217": 0,
+            "218": 0,
+            "219": 0,
+            "220": 0,
+            "221": 0,
+            "222": 0,
+            "223": 0,
+            "224": 0,
+            "225": 0,
+            "226": 0,
+            "227": 0,
+            "228": 0,
+            "229": 0,
+            "230": 0
+          },
+          "Branches": [
+            {
+              "Line": 218,
+              "Offset": 30,
+              "EndOffset": 32,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 218,
+              "Offset": 30,
+              "EndOffset": 52,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 221,
+              "Offset": 63,
+              "EndOffset": 65,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 221,
+              "Offset": 63,
+              "EndOffset": 85,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 224,
+              "Offset": 98,
+              "EndOffset": 100,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 224,
+              "Offset": 98,
+              "EndOffset": 120,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 227,
+              "Offset": 131,
+              "EndOffset": 133,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 227,
+              "Offset": 131,
+              "EndOffset": 148,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Int32 IdentityApi.Protos.EmailRequest::CalculateSize()": {
+          "Lines": {
+            "235": 0,
+            "236": 0,
+            "237": 0,
+            "238": 0,
+            "239": 0,
+            "240": 0,
+            "241": 0,
+            "242": 0,
+            "243": 0,
+            "244": 0,
+            "245": 0,
+            "246": 0,
+            "247": 0,
+            "248": 0,
+            "249": 0,
+            "250": 0,
+            "251": 0
+          },
+          "Branches": [
+            {
+              "Line": 238,
+              "Offset": 33,
+              "EndOffset": 35,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 238,
+              "Offset": 33,
+              "EndOffset": 56,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 241,
+              "Offset": 67,
+              "EndOffset": 69,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 241,
+              "Offset": 67,
+              "EndOffset": 90,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 244,
+              "Offset": 103,
+              "EndOffset": 105,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 244,
+              "Offset": 103,
+              "EndOffset": 126,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 247,
+              "Offset": 139,
+              "EndOffset": 141,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 247,
+              "Offset": 139,
+              "EndOffset": 157,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void IdentityApi.Protos.EmailRequest::MergeFrom(IdentityApi.Protos.EmailRequest)": {
+          "Lines": {
+            "255": 0,
+            "256": 0,
+            "257": 0,
+            "259": 0,
+            "260": 0,
+            "261": 0,
+            "262": 0,
+            "263": 0,
+            "264": 0,
+            "265": 0,
+            "266": 0,
+            "267": 0,
+            "268": 0,
+            "269": 0,
+            "270": 0,
+            "271": 0,
+            "272": 0,
+            "273": 0,
+            "274": 0,
+            "275": 0,
+            "276": 0
+          },
+          "Branches": [
+            {
+              "Line": 256,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 256,
+              "Offset": 7,
+              "EndOffset": 15,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 260,
+              "Offset": 44,
+              "EndOffset": 46,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 261,
+              "Offset": 53,
+              "EndOffset": 55,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 261,
+              "Offset": 53,
+              "EndOffset": 73,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 261,
+              "Offset": 76,
+              "EndOffset": 78,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 261,
+              "Offset": 76,
+              "EndOffset": 93,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 260,
+              "Offset": 44,
+              "EndOffset": 94,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 265,
+              "Offset": 105,
+              "EndOffset": 107,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 266,
+              "Offset": 114,
+              "EndOffset": 116,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 266,
+              "Offset": 114,
+              "EndOffset": 134,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            },
+            {
+              "Line": 266,
+              "Offset": 139,
+              "EndOffset": 141,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 0
+            },
+            {
+              "Line": 266,
+              "Offset": 139,
+              "EndOffset": 156,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 0
+            },
+            {
+              "Line": 265,
+              "Offset": 105,
+              "EndOffset": 157,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 270,
+              "Offset": 172,
+              "EndOffset": 174,
+              "Path": 0,
+              "Ordinal": 14,
+              "Hits": 0
+            },
+            {
+              "Line": 271,
+              "Offset": 186,
+              "EndOffset": 188,
+              "Path": 0,
+              "Ordinal": 16,
+              "Hits": 0
+            },
+            {
+              "Line": 271,
+              "Offset": 186,
+              "EndOffset": 223,
+              "Path": 1,
+              "Ordinal": 17,
+              "Hits": 0
+            },
+            {
+              "Line": 271,
+              "Offset": 228,
+              "EndOffset": 230,
+              "Path": 0,
+              "Ordinal": 18,
+              "Hits": 0
+            },
+            {
+              "Line": 271,
+              "Offset": 228,
+              "EndOffset": 245,
+              "Path": 1,
+              "Ordinal": 19,
+              "Hits": 0
+            },
+            {
+              "Line": 270,
+              "Offset": 172,
+              "EndOffset": 246,
+              "Path": 1,
+              "Ordinal": 15,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void IdentityApi.Protos.EmailRequest::MergeFrom(Google.Protobuf.CodedInputStream)": {
+          "Lines": {
+            "280": 0,
+            "282": 0,
+            "318": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.EmailRequest::pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(Google.Protobuf.ParseContext&)": {
+          "Lines": {
+            "323": 0,
+            "325": 0,
+            "326": 0,
+            "328": 0,
+            "329": 0,
+            "330": 0,
+            "331": 0,
+            "332": 0,
+            "334": 0,
+            "335": 0,
+            "336": 0,
+            "337": 0,
+            "338": 0,
+            "339": 0,
+            "341": 0,
+            "342": 0,
+            "343": 0,
+            "344": 0,
+            "345": 0,
+            "346": 0,
+            "348": 0,
+            "349": 0,
+            "350": 0,
+            "351": 0,
+            "352": 0,
+            "353": 0,
+            "356": 0,
+            "357": 0
+          },
+          "Branches": [
+            {
+              "Line": 325,
+              "Offset": 300,
+              "EndOffset": 6,
+              "Path": 1,
+              "Ordinal": 23,
+              "Hits": 0
+            },
+            {
+              "Line": 326,
+              "Offset": 14,
+              "EndOffset": 16,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 326,
+              "Offset": 19,
+              "EndOffset": 23,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 326,
+              "Offset": 14,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 326,
+              "Offset": 33,
+              "EndOffset": 37,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 326,
+              "Offset": 26,
+              "EndOffset": 47,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 326,
+              "Offset": 40,
+              "EndOffset": 47,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 326,
+              "Offset": 19,
+              "EndOffset": 70,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 326,
+              "Offset": 26,
+              "EndOffset": 94,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 336,
+              "Offset": 113,
+              "EndOffset": 115,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 336,
+              "Offset": 113,
+              "EndOffset": 128,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            },
+            {
+              "Line": 336,
+              "Offset": 133,
+              "EndOffset": 135,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 0
+            },
+            {
+              "Line": 326,
+              "Offset": 33,
+              "EndOffset": 150,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 343,
+              "Offset": 170,
+              "EndOffset": 172,
+              "Path": 0,
+              "Ordinal": 14,
+              "Hits": 0
+            },
+            {
+              "Line": 343,
+              "Offset": 170,
+              "EndOffset": 186,
+              "Path": 1,
+              "Ordinal": 15,
+              "Hits": 0
+            },
+            {
+              "Line": 343,
+              "Offset": 191,
+              "EndOffset": 193,
+              "Path": 0,
+              "Ordinal": 16,
+              "Hits": 0
+            },
+            {
+              "Line": 326,
+              "Offset": 40,
+              "EndOffset": 206,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 350,
+              "Offset": 231,
+              "EndOffset": 233,
+              "Path": 0,
+              "Ordinal": 18,
+              "Hits": 0
+            },
+            {
+              "Line": 350,
+              "Offset": 231,
+              "EndOffset": 264,
+              "Path": 1,
+              "Ordinal": 19,
+              "Hits": 0
+            },
+            {
+              "Line": 350,
+              "Offset": 269,
+              "EndOffset": 271,
+              "Path": 0,
+              "Ordinal": 20,
+              "Hits": 0
+            },
+            {
+              "Line": 336,
+              "Offset": 133,
+              "EndOffset": 284,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 0
+            },
+            {
+              "Line": 343,
+              "Offset": 191,
+              "EndOffset": 284,
+              "Path": 1,
+              "Ordinal": 17,
+              "Hits": 0
+            },
+            {
+              "Line": 350,
+              "Offset": 269,
+              "EndOffset": 284,
+              "Path": 1,
+              "Ordinal": 21,
+              "Hits": 0
+            },
+            {
+              "Line": 325,
+              "Offset": 300,
+              "EndOffset": 305,
+              "Path": 0,
+              "Ordinal": 22,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void IdentityApi.Protos.EmailRequest::.ctor()": {
+          "Lines": {
+            "74": 0,
+            "76": 0,
+            "100": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.EmailRequest::.ctor(IdentityApi.Protos.EmailRequest)": {
+          "Lines": {
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.EmailRequest::.cctor()": {
+          "Lines": {
+            "54": 0,
+            "98": 0,
+            "99": 0,
+            "109": 0,
+            "123": 0,
+            "137": 0
+          },
+          "Branches": []
+        }
+      },
+      "IdentityApi.Protos.EmailResponse": {
+        "Google.Protobuf.MessageParser`1<IdentityApi.Protos.EmailResponse> IdentityApi.Protos.EmailResponse::get_Parser()": {
+          "Lines": {
+            "371": 0
+          },
+          "Branches": []
+        },
+        "Google.Protobuf.Reflection.MessageDescriptor IdentityApi.Protos.EmailResponse::get_Descriptor()": {
+          "Lines": {
+            "376": 0
+          },
+          "Branches": []
+        },
+        "Google.Protobuf.Reflection.MessageDescriptor IdentityApi.Protos.EmailResponse::pb::Google.Protobuf.IMessage.get_Descriptor()": {
+          "Lines": {
+            "382": 0
+          },
+          "Branches": []
+        },
+        "IdentityApi.Protos.EmailResponse IdentityApi.Protos.EmailResponse::Clone()": {
+          "Lines": {
+            "402": 0,
+            "403": 0,
+            "404": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Boolean> IdentityApi.Protos.EmailResponse::get_SENT()": {
+          "Lines": {
+            "413": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.EmailResponse::set_SENT(System.Nullable`1<System.Boolean>)": {
+          "Lines": {
+            "414": 0,
+            "415": 0,
+            "416": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean IdentityApi.Protos.EmailResponse::Equals(System.Object)": {
+          "Lines": {
+            "422": 0,
+            "423": 0,
+            "424": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean IdentityApi.Protos.EmailResponse::Equals(IdentityApi.Protos.EmailResponse)": {
+          "Lines": {
+            "428": 0,
+            "429": 0,
+            "430": 0,
+            "432": 0,
+            "433": 0,
+            "435": 0,
+            "436": 0,
+            "437": 0
+          },
+          "Branches": [
+            {
+              "Line": 429,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 429,
+              "Offset": 7,
+              "EndOffset": 14,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 432,
+              "Offset": 20,
+              "EndOffset": 22,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 432,
+              "Offset": 20,
+              "EndOffset": 27,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 435,
+              "Offset": 81,
+              "EndOffset": 83,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 435,
+              "Offset": 81,
+              "EndOffset": 87,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Int32 IdentityApi.Protos.EmailResponse::GetHashCode()": {
+          "Lines": {
+            "441": 0,
+            "442": 0,
+            "443": 0,
+            "444": 0,
+            "445": 0,
+            "446": 0,
+            "447": 0,
+            "448": 0
+          },
+          "Branches": [
+            {
+              "Line": 443,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 443,
+              "Offset": 16,
+              "EndOffset": 41,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 444,
+              "Offset": 52,
+              "EndOffset": 54,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 444,
+              "Offset": 52,
+              "EndOffset": 70,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.String IdentityApi.Protos.EmailResponse::ToString()": {
+          "Lines": {
+            "452": 0,
+            "453": 0,
+            "454": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.EmailResponse::WriteTo(Google.Protobuf.CodedOutputStream)": {
+          "Lines": {
+            "458": 0,
+            "460": 0,
+            "469": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.EmailResponse::pb::Google.Protobuf.IBufferMessage.InternalWriteTo(Google.Protobuf.WriteContext&)": {
+          "Lines": {
+            "474": 0,
+            "475": 0,
+            "476": 0,
+            "477": 0,
+            "478": 0,
+            "479": 0,
+            "480": 0,
+            "481": 0
+          },
+          "Branches": [
+            {
+              "Line": 475,
+              "Offset": 14,
+              "EndOffset": 16,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 475,
+              "Offset": 14,
+              "EndOffset": 36,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 478,
+              "Offset": 47,
+              "EndOffset": 49,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 478,
+              "Offset": 47,
+              "EndOffset": 64,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Int32 IdentityApi.Protos.EmailResponse::CalculateSize()": {
+          "Lines": {
+            "486": 0,
+            "487": 0,
+            "488": 0,
+            "489": 0,
+            "490": 0,
+            "491": 0,
+            "492": 0,
+            "493": 0,
+            "494": 0,
+            "495": 0
+          },
+          "Branches": [
+            {
+              "Line": 488,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 488,
+              "Offset": 16,
+              "EndOffset": 39,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 491,
+              "Offset": 50,
+              "EndOffset": 52,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 491,
+              "Offset": 50,
+              "EndOffset": 68,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void IdentityApi.Protos.EmailResponse::MergeFrom(IdentityApi.Protos.EmailResponse)": {
+          "Lines": {
+            "499": 0,
+            "500": 0,
+            "501": 0,
+            "503": 0,
+            "504": 0,
+            "505": 0,
+            "506": 0,
+            "507": 0,
+            "508": 0,
+            "509": 0
+          },
+          "Branches": [
+            {
+              "Line": 500,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 500,
+              "Offset": 7,
+              "EndOffset": 12,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 503,
+              "Offset": 25,
+              "EndOffset": 27,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 504,
+              "Offset": 39,
+              "EndOffset": 41,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 504,
+              "Offset": 39,
+              "EndOffset": 75,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 504,
+              "Offset": 78,
+              "EndOffset": 80,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 504,
+              "Offset": 78,
+              "EndOffset": 95,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 503,
+              "Offset": 25,
+              "EndOffset": 96,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void IdentityApi.Protos.EmailResponse::MergeFrom(Google.Protobuf.CodedInputStream)": {
+          "Lines": {
+            "513": 0,
+            "515": 0,
+            "533": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.EmailResponse::pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(Google.Protobuf.ParseContext&)": {
+          "Lines": {
+            "538": 0,
+            "540": 0,
+            "541": 0,
+            "543": 0,
+            "544": 0,
+            "545": 0,
+            "546": 0,
+            "547": 0,
+            "548": 0,
+            "549": 0,
+            "550": 0,
+            "553": 0,
+            "554": 0
+          },
+          "Branches": [
+            {
+              "Line": 540,
+              "Offset": 126,
+              "EndOffset": 3,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 541,
+              "Offset": 11,
+              "EndOffset": 15,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 541,
+              "Offset": 11,
+              "EndOffset": 35,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 547,
+              "Offset": 59,
+              "EndOffset": 61,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 547,
+              "Offset": 59,
+              "EndOffset": 91,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 547,
+              "Offset": 96,
+              "EndOffset": 98,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 547,
+              "Offset": 96,
+              "EndOffset": 110,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 540,
+              "Offset": 126,
+              "EndOffset": 128,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void IdentityApi.Protos.EmailResponse::.ctor()": {
+          "Lines": {
+            "387": 0,
+            "389": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.EmailResponse::.ctor(IdentityApi.Protos.EmailResponse)": {
+          "Lines": {
+            "395": 0,
+            "396": 0,
+            "397": 0,
+            "398": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.EmailResponse::.cctor()": {
+          "Lines": {
+            "367": 0,
+            "408": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/obj/Debug/net6.0/Protos/NotificationapiGrpc.cs": {
+      "IdentityApi.Protos.NotificationApi": {
+        "System.Void IdentityApi.Protos.NotificationApi::__Helper_SerializeMessage(Google.Protobuf.IMessage,Grpc.Core.SerializationContext)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 12,
+              "EndOffset": 50,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "T IdentityApi.Protos.NotificationApi::__Helper_DeserializeMessage(Grpc.Core.DeserializationContext,Google.Protobuf.MessageParser`1<T>)": {
+          "Lines": {
+            "38": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "45": 0,
+            "46": 0
+          },
+          "Branches": [
+            {
+              "Line": 40,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 40,
+              "Offset": 8,
+              "EndOffset": 26,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "Google.Protobuf.Reflection.ServiceDescriptor IdentityApi.Protos.NotificationApi::get_Descriptor()": {
+          "Lines": {
+            "64": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.NotificationApi::.cctor()": {
+          "Lines": {
+            "13": 0,
+            "49": 0,
+            "51": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0
+          },
+          "Branches": []
+        }
+      },
+      "IdentityApi.Protos.NotificationApi/__Helper_MessageCache`1": {
+        "System.Void IdentityApi.Protos.NotificationApi/__Helper_MessageCache`1::.cctor()": {
+          "Lines": {
+            "33": 0
+          },
+          "Branches": []
+        }
+      },
+      "IdentityApi.Protos.NotificationApi/NotificationApiClient": {
+        "IdentityApi.Protos.EmailResponse IdentityApi.Protos.NotificationApi/NotificationApiClient::SendEmail(IdentityApi.Protos.EmailRequest,Grpc.Core.Metadata,System.Nullable`1<System.DateTime>,System.Threading.CancellationToken)": {
+          "Lines": {
+            "96": 0,
+            "97": 0,
+            "98": 0
+          },
+          "Branches": []
+        },
+        "IdentityApi.Protos.EmailResponse IdentityApi.Protos.NotificationApi/NotificationApiClient::SendEmail(IdentityApi.Protos.EmailRequest,Grpc.Core.CallOptions)": {
+          "Lines": {
+            "101": 0,
+            "102": 0,
+            "103": 0
+          },
+          "Branches": []
+        },
+        "Grpc.Core.AsyncUnaryCall`1<IdentityApi.Protos.EmailResponse> IdentityApi.Protos.NotificationApi/NotificationApiClient::SendEmailAsync(IdentityApi.Protos.EmailRequest,Grpc.Core.Metadata,System.Nullable`1<System.DateTime>,System.Threading.CancellationToken)": {
+          "Lines": {
+            "106": 0,
+            "107": 0,
+            "108": 0
+          },
+          "Branches": []
+        },
+        "Grpc.Core.AsyncUnaryCall`1<IdentityApi.Protos.EmailResponse> IdentityApi.Protos.NotificationApi/NotificationApiClient::SendEmailAsync(IdentityApi.Protos.EmailRequest,Grpc.Core.CallOptions)": {
+          "Lines": {
+            "111": 0,
+            "112": 0,
+            "113": 0
+          },
+          "Branches": []
+        },
+        "IdentityApi.Protos.NotificationApi/NotificationApiClient IdentityApi.Protos.NotificationApi/NotificationApiClient::NewInstance(Grpc.Core.ClientBase/ClientBaseConfiguration)": {
+          "Lines": {
+            "117": 0,
+            "118": 0,
+            "119": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.NotificationApi/NotificationApiClient::.ctor(Grpc.Core.ChannelBase)": {
+          "Lines": {
+            "73": 0,
+            "74": 0,
+            "75": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.NotificationApi/NotificationApiClient::.ctor(Grpc.Core.CallInvoker)": {
+          "Lines": {
+            "79": 0,
+            "80": 0,
+            "81": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.NotificationApi/NotificationApiClient::.ctor()": {
+          "Lines": {
+            "84": 0,
+            "85": 0,
+            "86": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Protos.NotificationApi/NotificationApiClient::.ctor(Grpc.Core.ClientBase/ClientBaseConfiguration)": {
+          "Lines": {
+            "90": 0,
+            "91": 0,
+            "92": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Utilities/TMCache.cs": {
+      "IdentityApi.Utilities.TMCache": {
+        "System.Void IdentityApi.Utilities.TMCache::Add(System.String,T)": {
+          "Lines": {
+            "26": 12,
+            "28": 12,
+            "29": 8,
+            "31": 8,
+            "34": 8,
+            "35": 8,
+            "36": 8,
+            "39": 8,
+            "40": 8,
+            "41": 12
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 20,
+              "EndOffset": 22,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 8
+            },
+            {
+              "Line": 28,
+              "Offset": 20,
+              "EndOffset": 66,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 12
+            }
+          ]
+        },
+        "T IdentityApi.Utilities.TMCache::Get(System.String)": {
+          "Lines": {
+            "50": 9,
+            "51": 9,
+            "52": 9
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Utilities.TMCache::Remove(System.String)": {
+          "Lines": {
+            "59": 1,
+            "60": 1,
+            "61": 1
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Utilities.TMCache::Refresh(System.String,T)": {
+          "Lines": {
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Utilities.TMCache::Dispose()": {
+          "Lines": {
+            "76": 1,
+            "77": 1,
+            "78": 1
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Utilities.TMCache::.ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache)": {
+          "Lines": {
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Utilities/Utility.cs": {
+      "IdentityApi.Utilities.Utility": {
+        "IdentityApi.Account.UserSecret IdentityApi.Utilities.Utility::GetUserSecret(System.Byte[],System.String)": {
+          "Lines": {
+            "14": 7,
+            "15": 7,
+            "16": 5,
+            "18": 5,
+            "19": 5,
+            "20": 5,
+            "21": 5,
+            "24": 7,
+            "25": 7,
+            "26": 7,
+            "27": 7,
+            "28": 7,
+            "29": 7,
+            "31": 7,
+            "32": 7,
+            "33": 7,
+            "34": 7,
+            "35": 7,
+            "37": 7,
+            "38": 7
+          },
+          "Branches": [
+            {
+              "Line": 15,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 5
+            },
+            {
+              "Line": 15,
+              "Offset": 7,
+              "EndOffset": 47,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 7
+            }
+          ]
+        },
+        "System.String IdentityApi.Utilities.Utility::ComputeSHA(System.String)": {
+          "Lines": {
+            "41": 11,
+            "42": 11,
+            "43": 11,
+            "45": 11,
+            "46": 726,
+            "47": 352,
+            "49": 11,
+            "50": 11
+          },
+          "Branches": [
+            {
+              "Line": 46,
+              "Offset": 73,
+              "EndOffset": 35,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 352
+            },
+            {
+              "Line": 46,
+              "Offset": 73,
+              "EndOffset": 75,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 11
+            }
+          ]
+        },
+        "System.String IdentityApi.Utilities.Utility::GetUniqueString(System.Int32)": {
+          "Lines": {
+            "53": 7,
+            "54": 7,
+            "55": 7,
+            "56": 7,
+            "59": 7,
+            "60": 7,
+            "61": 7,
+            "63": 7,
+            "64": 469,
+            "65": 224,
+            "67": 7,
+            "68": 7
+          },
+          "Branches": [
+            {
+              "Line": 64,
+              "Offset": 98,
+              "EndOffset": 64,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 224
+            },
+            {
+              "Line": 64,
+              "Offset": 98,
+              "EndOffset": 100,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 7
+            }
+          ]
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/StartupTasks/ServiceCollectionExtensions.cs": {
+      "IdentityApi.StartupTasks.ServiceCollectionExtensions": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection IdentityApi.StartupTasks.ServiceCollectionExtensions::AddStartupTask(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/StartupTasks/StartupTaskWebHostExtensions.cs": {
+      "IdentityApi.StartupTasks.StartupTaskWebHostExtensions/<RunWithTasksAsync>d__0": {
+        "System.Void IdentityApi.StartupTasks.StartupTaskWebHostExtensions/<RunWithTasksAsync>d__0::MoveNext()": {
+          "Lines": {
+            "12": 0,
+            "14": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 223,
+              "EndOffset": 79,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 17,
+              "Offset": 223,
+              "EndOffset": 228,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/StartupTasks/Tasks/DBMigrator.cs": {
+      "IdentityApi.StartupTasks.Tasks.DBMigrator": {
+        "System.Void IdentityApi.StartupTasks.Tasks.DBMigrator::.ctor(System.IServiceProvider)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      },
+      "IdentityApi.StartupTasks.Tasks.DBMigrator/<ExecuteAsync>d__2": {
+        "System.Void IdentityApi.StartupTasks.Tasks.DBMigrator/<ExecuteAsync>d__2::MoveNext()": {
+          "Lines": {
+            "20": 0,
+            "22": 0,
+            "24": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/StartupTasks/Tasks/WarmupServices.cs": {
+      "IdentityApi.StartupTasks.Tasks.WarmupServices": {
+        "System.Threading.Tasks.Task IdentityApi.StartupTasks.Tasks.WarmupServices::ExecuteAsync(System.Threading.CancellationToken)": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": [
+            {
+              "Line": 25,
+              "Offset": 61,
+              "EndOffset": 33,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 61,
+              "EndOffset": 63,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Collections.Generic.IEnumerable`1<System.Type> IdentityApi.StartupTasks.Tasks.WarmupServices::GetServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.StartupTasks.Tasks.WarmupServices::.ctor(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.IServiceProvider)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Services/SQLServer/IdentityStore.cs": {
+      "IdentityApi.Services.SQLServer.IdentityStore": {
+        "System.Void IdentityApi.Services.SQLServer.IdentityStore::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "11": 2
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<IdentityApi.DataModels.Credential> IdentityApi.Services.SQLServer.IdentityStore::get_CREDENTIALS()": {
+          "Lines": {
+            "13": 15
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<IdentityApi.DataModels.Person> IdentityApi.Services.SQLServer.IdentityStore::get_PERSON()": {
+          "Lines": {
+            "14": 3
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<IdentityApi.DataModels.Profile> IdentityApi.Services.SQLServer.IdentityStore::get_PROFILE()": {
+          "Lines": {
+            "15": 18
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<IdentityApi.DataModels.RefreshToken> IdentityApi.Services.SQLServer.IdentityStore::get_REFRESH_TOKENS()": {
+          "Lines": {
+            "16": 21
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Services.SQLServer.IdentityStore::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<IdentityApi.Services.SQLServer.IdentityStore>)": {
+          "Lines": {
+            "9": 6
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Services/SQLServer/IdentityStoreFactory.cs": {
+      "IdentityApi.Services.SQLServer.IdentityStoreFactory": {
+        "IdentityApi.Services.SQLServer.IdentityStore IdentityApi.Services.SQLServer.IdentityStoreFactory::CreateDbContext(System.String[])": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "17": 0,
+            "19": 0,
+            "21": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Services/gRPC/Clients/NotificationClient.cs": {
+      "IdentityApi.Services.gRPC.Clients.NotificationClient": {
+        "System.Void IdentityApi.Services.gRPC.Clients.NotificationClient::.ctor(AutoMapper.IMapper,Microsoft.AspNetCore.Http.IHttpContextAccessor)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": []
+        }
+      },
+      "IdentityApi.Services.gRPC.Clients.NotificationClient/<SendEmailAsync>d__4": {
+        "System.Void IdentityApi.Services.gRPC.Clients.NotificationClient/<SendEmailAsync>d__4::MoveNext()": {
+          "Lines": {
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Services/gRPC/Clients/PolicyApiClient.cs": {
+      "IdentityApi.Services.gRPC.Clients.PolicyApiClient": {
+        "System.Void IdentityApi.Services.gRPC.Clients.PolicyApiClient::.ctor(AutoMapper.IMapper,Microsoft.AspNetCore.Http.IHttpContextAccessor)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": []
+        }
+      },
+      "IdentityApi.Services.gRPC.Clients.PolicyApiClient/<GetPolicyTokenAsync>d__4": {
+        "System.Void IdentityApi.Services.gRPC.Clients.PolicyApiClient/<GetPolicyTokenAsync>d__4::MoveNext()": {
+          "Lines": {
+            "34": 0,
+            "35": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Services/CustomRazorEngine/CustomRazorEngine.cs": {
+      "IdentityApi.Services.CustomRazorEngine.CustomRazorEngine": {
+        "Microsoft.AspNetCore.Mvc.ViewEngines.IView IdentityApi.Services.CustomRazorEngine.CustomRazorEngine::FindView(System.String)": {
+          "Lines": {
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": [
+            {
+              "Line": 32,
+              "Offset": 24,
+              "EndOffset": 26,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 24,
+              "EndOffset": 36,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "Microsoft.AspNetCore.Mvc.ActionContext IdentityApi.Services.CustomRazorEngine.CustomRazorEngine::GetContext()": {
+          "Lines": {
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Services.CustomRazorEngine.CustomRazorEngine::.ctor(Microsoft.AspNetCore.Mvc.Razor.IRazorViewEngine,Microsoft.AspNetCore.Mvc.ViewFeatures.ITempDataProvider,System.IServiceProvider)": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        }
+      },
+      "IdentityApi.Services.CustomRazorEngine.CustomRazorEngine/<RazorViewToHtmlAsync>d__6`1": {
+        "System.Void IdentityApi.Services.CustomRazorEngine.CustomRazorEngine/<RazorViewToHtmlAsync>d__6`1::MoveNext()": {
+          "Lines": {
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "52": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "71": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/ResponseModels/ChangeRequestResponse.cs": {
+      "IdentityApi.ResponseModels.ChangeRequestResponse": {
+        "System.Boolean IdentityApi.ResponseModels.ChangeRequestResponse::get_IS_CHANGED()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<System.String> IdentityApi.ResponseModels.ChangeRequestResponse::get_ERRORS()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/ResponseModels/LogInResponse.cs": {
+      "IdentityApi.ResponseModels.LogInResponse": {
+        "System.Boolean IdentityApi.ResponseModels.LogInResponse::get_IS_AUTHENTICATED()": {
+          "Lines": {
+            "8": 5
+          },
+          "Branches": []
+        },
+        "System.Boolean IdentityApi.ResponseModels.LogInResponse::get_IS_VERIFIED()": {
+          "Lines": {
+            "9": 3
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<System.String> IdentityApi.ResponseModels.LogInResponse::get_ERRORS()": {
+          "Lines": {
+            "10": 5
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.ResponseModels.LogInResponse::get_PROFILE_ID()": {
+          "Lines": {
+            "11": 4
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.ResponseModels.LogInResponse::get_NAME()": {
+          "Lines": {
+            "12": 3
+          },
+          "Branches": []
+        },
+        "System.Boolean IdentityApi.ResponseModels.LogInResponse::get_HAS_PWNED_PASSWORD()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "IdentityApi.ResponseModels.TokenResponse IdentityApi.ResponseModels.LogInResponse::get_TOKEN()": {
+          "Lines": {
+            "15": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/ResponseModels/NewProfileResponse.cs": {
+      "IdentityApi.ResponseModels.NewProfileResponse": {
+        "System.Boolean IdentityApi.ResponseModels.NewProfileResponse::get_IS_SAVED()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<System.String> IdentityApi.ResponseModels.NewProfileResponse::get_list()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/ResponseModels/ProfileCardResponse.cs": {
+      "IdentityApi.ResponseModels.ProfileCardResponse": {
+        "System.String IdentityApi.ResponseModels.ProfileCardResponse::get_PROFILE_ID()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.ResponseModels.ProfileCardResponse::get_USERNAME()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.ResponseModels.ProfileCardResponse::get_NAME()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean IdentityApi.ResponseModels.ProfileCardResponse::get_LOCKED()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.ResponseModels.ProfileCardResponse::get_INITIALS()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/ResponseModels/ProfileViewResponse.cs": {
+      "IdentityApi.ResponseModels.ProfileViewResponse": {
+        "System.String IdentityApi.ResponseModels.ProfileViewResponse::get_NAME()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.ResponseModels.ProfileViewResponse::get_USERNAME()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.ResponseModels.ProfileViewResponse::get_INITIALS()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/ResponseModels/RefreshTokenResponse.cs": {
+      "IdentityApi.ResponseModels.RefreshTokenResponse": {
+        "System.Boolean IdentityApi.ResponseModels.RefreshTokenResponse::get_IS_REFRESHED()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<System.String> IdentityApi.ResponseModels.RefreshTokenResponse::get_ERRORS()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/ResponseModels/TokenResponse.cs": {
+      "IdentityApi.ResponseModels.TokenResponse": {
+        "System.String IdentityApi.ResponseModels.TokenResponse::get_ACCESS()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.ResponseModels.TokenResponse::get_REFRESH()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean IdentityApi.ResponseModels.TokenResponse::get_ALLOW_REFRESH()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean IdentityApi.ResponseModels.TokenResponse::get_IS_REFRESHED()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 IdentityApi.ResponseModels.TokenResponse::get_TTL()": {
+          "Lines": {
+            "10": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/ResponseModels/VerificationCodeResponse.cs": {
+      "IdentityApi.ResponseModels.VerificationCodeResponse": {
+        "System.Boolean IdentityApi.ResponseModels.VerificationCodeResponse::get_SENT()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<System.String> IdentityApi.ResponseModels.VerificationCodeResponse::get_ERRORS()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/ResponseModels/VerifyProfileResponse.cs": {
+      "IdentityApi.ResponseModels.VerifyProfileResponse": {
+        "System.Boolean IdentityApi.ResponseModels.VerifyProfileResponse::get_VERIFIED()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/RequestModels/ChangePasswordRequest.cs": {
+      "IdentityApi.RequestModels.ChangePasswordRequest": {
+        "System.String IdentityApi.RequestModels.ChangePasswordRequest::get_OLD_PASSWORD()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.RequestModels.ChangePasswordRequest::get_NEW_PASSWORD()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.RequestModels.ChangePasswordRequest::get_CONFIRM_PASSWORD()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/RequestModels/CheckPwnedPasswordRequest.cs": {
+      "IdentityApi.RequestModels.CheckPwnedPasswordRequest": {
+        "System.String IdentityApi.RequestModels.CheckPwnedPasswordRequest::get_PASSWORD()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/RequestModels/EmailRequest.cs": {
+      "IdentityApi.RequestModels.EmailRequest": {
+        "System.Collections.Generic.List`1<System.String> IdentityApi.RequestModels.EmailRequest::get_TO()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.RequestModels.EmailRequest::get_SUBJECT()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.RequestModels.EmailRequest::get_CONTENT()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean IdentityApi.RequestModels.EmailRequest::get_HTML()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/RequestModels/LogInRequest.cs": {
+      "IdentityApi.RequestModels.LogInRequest": {
+        "System.String IdentityApi.RequestModels.LogInRequest::get_USERNAME()": {
+          "Lines": {
+            "10": 10
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.RequestModels.LogInRequest::get_PASSWORD()": {
+          "Lines": {
+            "14": 7
+          },
+          "Branches": []
+        },
+        "System.Boolean IdentityApi.RequestModels.LogInRequest::get_REMEMBER_ME()": {
+          "Lines": {
+            "16": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/RequestModels/NewProfileRequest.cs": {
+      "IdentityApi.RequestModels.NewProfileRequest": {
+        "System.String IdentityApi.RequestModels.NewProfileRequest::get_USERNAME()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.RequestModels.NewProfileRequest::get_PASSWORD()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.RequestModels.NewProfileRequest::get_CONFIRM_PASSWORD()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.RequestModels.NewProfileRequest::get_FIRST_NAME()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.RequestModels.NewProfileRequest::get_LAST_NAME()": {
+          "Lines": {
+            "26": 0
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.RequestModels.NewProfileRequest::get_EMAIL()": {
+          "Lines": {
+            "30": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/RequestModels/ProfileRequest.cs": {
+      "IdentityApi.RequestModels.ProfileRequest": {
+        "System.String IdentityApi.RequestModels.ProfileRequest::get_PROFILE_ID()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/RequestModels/RefreshTokenRequest.cs": {
+      "IdentityApi.RequestModels.RefreshTokenRequest": {
+        "System.String IdentityApi.RequestModels.RefreshTokenRequest::get_REFRESH()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/RequestModels/UserAgent.cs": {
+      "IdentityApi.RequestModels.UserAgent": {
+        "System.String IdentityApi.RequestModels.UserAgent::get_DEVICE()": {
+          "Lines": {
+            "6": 15
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.RequestModels.UserAgent::get_OS()": {
+          "Lines": {
+            "7": 8
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.RequestModels.UserAgent::get_BROWSER()": {
+          "Lines": {
+            "8": 22
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/RequestModels/VerifyProfileRequest.cs": {
+      "IdentityApi.RequestModels.VerifyProfileRequest": {
+        "System.String IdentityApi.RequestModels.VerifyProfileRequest::get_OTP()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Migrations/20210818183632_IdentityStore.v1.cs": {
+      "IdentityApi.Migrations.IdentityStorev1": {
+        "System.Void IdentityApi.Migrations.IdentityStorev1::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Migrations.IdentityStorev1::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "87": 0,
+            "88": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Migrations/20210818183632_IdentityStore.v1.Designer.cs": {
+      "IdentityApi.Migrations.IdentityStorev1": {
+        "System.Void IdentityApi.Migrations.IdentityStorev1::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "164": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Migrations/20220122175151_AccountStorev1.1.cs": {
+      "IdentityApi.Migrations.AccountStorev11": {
+        "System.Void IdentityApi.Migrations.AccountStorev11::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Migrations.AccountStorev11::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Migrations/20220122175151_AccountStorev1.1.Designer.cs": {
+      "IdentityApi.Migrations.AccountStorev11": {
+        "System.Void IdentityApi.Migrations.AccountStorev11::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "25": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "170": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "175": 0,
+            "176": 0,
+            "177": 0,
+            "178": 0,
+            "180": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "187": 0,
+            "188": 0,
+            "189": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "196": 0,
+            "197": 0,
+            "198": 0,
+            "199": 0,
+            "200": 0,
+            "202": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Migrations/IdentityStoreModelSnapshot.cs": {
+      "IdentityApi.Migrations.IdentityStoreModelSnapshot": {
+        "System.Void IdentityApi.Migrations.IdentityStoreModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "170": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "175": 0,
+            "176": 0,
+            "178": 0,
+            "179": 0,
+            "180": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "187": 0,
+            "189": 0,
+            "190": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "196": 0,
+            "197": 0,
+            "198": 0,
+            "200": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Mappings/MappingProfiles.cs": {
+      "IdentityApi.Mappings.MappingProfiles": {
+        "System.Void IdentityApi.Mappings.MappingProfiles::.ctor()": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/EmailTemplate/OtpView.cs": {
+      "IdentityApi.EmailTemplate.OtpView": {
+        "System.String IdentityApi.EmailTemplate.OtpView::get_OTP()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/DataModels/Credential.cs": {
+      "IdentityApi.DataModels.Credential": {
+        "System.String IdentityApi.DataModels.Credential::get_ID()": {
+          "Lines": {
+            "10": 5
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.DataModels.Credential::get_PROFILE_ID()": {
+          "Lines": {
+            "13": 8
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.DataModels.Credential::get_USERNAME()": {
+          "Lines": {
+            "18": 13
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.DataModels.Credential::get_SECRET_HASH()": {
+          "Lines": {
+            "20": 7
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.DataModels.Credential::get_PASSWORD()": {
+          "Lines": {
+            "22": 3
+          },
+          "Branches": []
+        },
+        "System.Byte[] IdentityApi.DataModels.Credential::get_SALT()": {
+          "Lines": {
+            "24": 7
+          },
+          "Branches": []
+        },
+        "IdentityApi.DataModels.Profile IdentityApi.DataModels.Credential::get_PROFILE()": {
+          "Lines": {
+            "27": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/DataModels/Person.cs": {
+      "IdentityApi.DataModels.Person": {
+        "System.String IdentityApi.DataModels.Person::get_ID()": {
+          "Lines": {
+            "10": 1
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.DataModels.Person::get_PROFILE_ID()": {
+          "Lines": {
+            "13": 2
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.DataModels.Person::get_FIRST_NAME()": {
+          "Lines": {
+            "16": 2
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.DataModels.Person::get_LAST_NAME()": {
+          "Lines": {
+            "19": 2
+          },
+          "Branches": []
+        },
+        "IdentityApi.DataModels.Profile IdentityApi.DataModels.Person::get_PROFILE()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/DataModels/Profile.cs": {
+      "IdentityApi.DataModels.Profile": {
+        "System.String IdentityApi.DataModels.Profile::get_ID()": {
+          "Lines": {
+            "15": 30
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.DataModels.Profile::get_NAME()": {
+          "Lines": {
+            "17": 9
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.DataModels.Profile::get_EMAIL()": {
+          "Lines": {
+            "21": 6
+          },
+          "Branches": []
+        },
+        "System.DateTime IdentityApi.DataModels.Profile::get_CREATED_ON()": {
+          "Lines": {
+            "24": 1
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.DataModels.Profile::get_CREATED_BY()": {
+          "Lines": {
+            "26": 6
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> IdentityApi.DataModels.Profile::get_MODIFIED_ON()": {
+          "Lines": {
+            "28": 0
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.DataModels.Profile::get_MODIFIED_BY()": {
+          "Lines": {
+            "29": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean IdentityApi.DataModels.Profile::get_LOCKED()": {
+          "Lines": {
+            "32": 2
+          },
+          "Branches": []
+        },
+        "System.Int32 IdentityApi.DataModels.Profile::get_LOGIN_ATTEMPTS()": {
+          "Lines": {
+            "36": 2
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.DataModels.Profile::get_LANGUAGE()": {
+          "Lines": {
+            "38": 6
+          },
+          "Branches": []
+        },
+        "System.Boolean IdentityApi.DataModels.Profile::get_EMAIL_VERIFIED()": {
+          "Lines": {
+            "41": 2
+          },
+          "Branches": []
+        },
+        "IdentityApi.Identifiers.Status IdentityApi.DataModels.Profile::get_STATUS()": {
+          "Lines": {
+            "44": 9
+          },
+          "Branches": []
+        },
+        "IdentityApi.DataModels.Credential IdentityApi.DataModels.Profile::get_CREDENTIAL()": {
+          "Lines": {
+            "47": 16
+          },
+          "Branches": []
+        },
+        "System.Boolean IdentityApi.DataModels.Profile::get_NEW()": {
+          "Lines": {
+            "49": 8
+          },
+          "Branches": []
+        },
+        "IdentityApi.DataModels.Person IdentityApi.DataModels.Profile::get_PERSON()": {
+          "Lines": {
+            "51": 4
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.DataModels.Profile::.cctor()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/DataModels/RefreshToken.cs": {
+      "IdentityApi.DataModels.RefreshToken": {
+        "System.String IdentityApi.DataModels.RefreshToken::get_ID()": {
+          "Lines": {
+            "12": 8
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.DataModels.RefreshToken::get_TOKEN()": {
+          "Lines": {
+            "14": 9
+          },
+          "Branches": []
+        },
+        "System.DateTime IdentityApi.DataModels.RefreshToken::get_GENERATED_ON()": {
+          "Lines": {
+            "16": 10
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.DataModels.RefreshToken::get_PROFILE_ID()": {
+          "Lines": {
+            "18": 11
+          },
+          "Branches": []
+        },
+        "System.Int32 IdentityApi.DataModels.RefreshToken::get_LIFE_SPAN()": {
+          "Lines": {
+            "20": 10
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.DataModels.RefreshToken::get_DEVICE()": {
+          "Lines": {
+            "23": 11
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.DataModels.RefreshToken::get_BROWSER()": {
+          "Lines": {
+            "25": 11
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.DataModels.RefreshToken::get_OS()": {
+          "Lines": {
+            "27": 11
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.DataModels.RefreshToken::get_IPv4()": {
+          "Lines": {
+            "29": 6
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.DataModels.RefreshToken::get_SHA()": {
+          "Lines": {
+            "31": 11
+          },
+          "Branches": []
+        },
+        "System.Boolean IdentityApi.DataModels.RefreshToken::get_ACTIVE()": {
+          "Lines": {
+            "33": 9
+          },
+          "Branches": []
+        },
+        "System.DateTime IdentityApi.DataModels.RefreshToken::get_REFRESHED_ON()": {
+          "Lines": {
+            "36": 12
+          },
+          "Branches": []
+        },
+        "IdentityApi.Identifiers.Status IdentityApi.DataModels.RefreshToken::get_STATUS()": {
+          "Lines": {
+            "39": 8
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Data/DBInitializer.cs": {
+      "IdentityApi.Data.DBInitializer": {
+        "System.Void IdentityApi.Data.DBInitializer::Initialize()": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        },
+        "IdentityApi.Account.ProfileSaveStatus IdentityApi.Data.DBInitializer::SeedAdmin()": {
+          "Lines": {
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "27": 1,
+            "28": 1,
+            "29": 1,
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1,
+            "38": 1,
+            "40": 1,
+            "41": 1
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Data.DBInitializer::.ctor(IdentityApi.Account.IAccountManager)": {
+          "Lines": {
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "13": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Data/JwtSecretKey.cs": {
+      "IdentityApi.Data.JwtSecretKey": {
+        "System.String IdentityApi.Data.JwtSecretKey::get_SECRET()": {
+          "Lines": {
+            "6": 12
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.Data.JwtSecretKey::get_ISSUER()": {
+          "Lines": {
+            "7": 12
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.Data.JwtSecretKey::get_AUDIENCE()": {
+          "Lines": {
+            "8": 10
+          },
+          "Branches": []
+        },
+        "System.Int32 IdentityApi.Data.JwtSecretKey::get_TTL()": {
+          "Lines": {
+            "9": 11
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/CustomPolicies/AccountPolicy/AccountPolicyHandler.cs": {
+      "IdentityApi.CustomPolicies.AccountPolicy.AccountPolicyHandler": {
+        "System.Threading.Tasks.Task IdentityApi.CustomPolicies.AccountPolicy.AccountPolicyHandler::HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext,IdentityApi.CustomPolicies.AccountPolicy.AccountPolicyRequirement)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "27": 0,
+            "28": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "35": 0,
+            "36": 0,
+            "39": 0,
+            "40": 0,
+            "42": 0,
+            "43": 0,
+            "48": 0,
+            "51": 0,
+            "52": 0
+          },
+          "Branches": [
+            {
+              "Line": 24,
+              "Offset": 53,
+              "EndOffset": 55,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 53,
+              "EndOffset": 64,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 118,
+              "EndOffset": 120,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 118,
+              "EndOffset": 132,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 152,
+              "EndOffset": 156,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 152,
+              "EndOffset": 166,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void IdentityApi.CustomPolicies.AccountPolicy.AccountPolicyHandler::.ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/CustomPolicies/AccountPolicy/AccountPolicyRequirement.cs": {
+      "IdentityApi.CustomPolicies.AccountPolicy.AccountPolicyRequirement": {
+        "System.Void IdentityApi.CustomPolicies.AccountPolicy.AccountPolicyRequirement::.ctor()": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Controllers/AccountController.cs": {
+      "IdentityApi.Controllers.AccountController": {
+        "Microsoft.AspNetCore.Mvc.IActionResult IdentityApi.Controllers.AccountController::Test()": {
+          "Lines": {
+            "44": 0,
+            "45": 0,
+            "46": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Mvc.IActionResult IdentityApi.Controllers.AccountController::CreateNewProfile(IdentityApi.RequestModels.NewProfileRequest)": {
+          "Lines": {
+            "59": 0,
+            "60": 0,
+            "62": 0,
+            "63": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "83": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "89": 0,
+            "92": 0,
+            "93": 0
+          },
+          "Branches": [
+            {
+              "Line": 85,
+              "Offset": 212,
+              "EndOffset": 214,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 85,
+              "Offset": 212,
+              "EndOffset": 239,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "Microsoft.AspNetCore.Mvc.IActionResult IdentityApi.Controllers.AccountController::GetProfiles()": {
+          "Lines": {
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Mvc.IActionResult IdentityApi.Controllers.AccountController::ChangePassword(IdentityApi.RequestModels.ChangePasswordRequest)": {
+          "Lines": {
+            "138": 0,
+            "140": 0,
+            "141": 0,
+            "143": 0,
+            "145": 0,
+            "146": 0,
+            "148": 0,
+            "149": 0
+          },
+          "Branches": [
+            {
+              "Line": 145,
+              "Offset": 62,
+              "EndOffset": 64,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 145,
+              "Offset": 62,
+              "EndOffset": 75,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "Microsoft.AspNetCore.Mvc.IActionResult IdentityApi.Controllers.AccountController::VerifyProfile(IdentityApi.RequestModels.VerifyProfileRequest)": {
+          "Lines": {
+            "203": 0,
+            "204": 0,
+            "205": 0,
+            "207": 0,
+            "208": 0,
+            "210": 0,
+            "211": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Mvc.IActionResult IdentityApi.Controllers.AccountController::DeleteProfile(IdentityApi.RequestModels.ProfileRequest)": {
+          "Lines": {
+            "222": 0,
+            "223": 0,
+            "225": 0,
+            "226": 0,
+            "228": 0,
+            "229": 0
+          },
+          "Branches": [
+            {
+              "Line": 225,
+              "Offset": 25,
+              "EndOffset": 27,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 225,
+              "Offset": 25,
+              "EndOffset": 36,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "Microsoft.AspNetCore.Mvc.IActionResult IdentityApi.Controllers.AccountController::GetProfileView(IdentityApi.RequestModels.ProfileRequest)": {
+          "Lines": {
+            "238": 0,
+            "239": 0,
+            "240": 0,
+            "243": 0,
+            "244": 0,
+            "245": 0,
+            "247": 0,
+            "248": 0,
+            "250": 0,
+            "253": 0,
+            "255": 0
+          },
+          "Branches": [
+            {
+              "Line": 243,
+              "Offset": 51,
+              "EndOffset": 53,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 247,
+              "Offset": 80,
+              "EndOffset": 82,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 247,
+              "Offset": 80,
+              "EndOffset": 97,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 243,
+              "Offset": 51,
+              "EndOffset": 108,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void IdentityApi.Controllers.AccountController::.ctor(IdentityApi.Account.IAccountManager,PwnedPasswords.Client.IPwnedPasswordsClient,IdentityApi.Services.gRPC.Clients.NotificationClient,IdentityApi.Services.CustomRazorEngine.ICustomRazorEngine)": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0
+          },
+          "Branches": []
+        }
+      },
+      "IdentityApi.Controllers.AccountController/<CheckPwnedPasswordAsync>d__7": {
+        "System.Void IdentityApi.Controllers.AccountController/<CheckPwnedPasswordAsync>d__7::MoveNext()": {
+          "Lines": {
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0
+          },
+          "Branches": [
+            {
+              "Line": 107,
+              "Offset": 36,
+              "EndOffset": 38,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 107,
+              "Offset": 36,
+              "EndOffset": 55,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "IdentityApi.Controllers.AccountController/<SendVerificationCodeAsync>d__10": {
+        "System.Void IdentityApi.Controllers.AccountController/<SendVerificationCodeAsync>d__10::MoveNext()": {
+          "Lines": {
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "162": 0,
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "170": 0,
+            "172": 0,
+            "174": 0,
+            "175": 0,
+            "176": 0,
+            "177": 0,
+            "179": 0,
+            "180": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "187": 0,
+            "188": 0,
+            "190": 0,
+            "192": 0,
+            "193": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Controllers/AuthController.cs": {
+      "IdentityApi.Controllers.AuthController": {
+        "Microsoft.AspNetCore.Mvc.IActionResult IdentityApi.Controllers.AuthController::Test()": {
+          "Lines": {
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": [
+            {
+              "Line": 43,
+              "Offset": 68,
+              "EndOffset": 27,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 43,
+              "Offset": 68,
+              "EndOffset": 70,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "Microsoft.AspNetCore.Mvc.IActionResult IdentityApi.Controllers.AuthController::LogOut()": {
+          "Lines": {
+            "151": 0,
+            "152": 0,
+            "154": 0,
+            "156": 0,
+            "157": 0,
+            "159": 0,
+            "161": 0
+          },
+          "Branches": [
+            {
+              "Line": 156,
+              "Offset": 36,
+              "EndOffset": 38,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 156,
+              "Offset": 36,
+              "EndOffset": 47,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "IdentityApi.RequestModels.UserAgent IdentityApi.Controllers.AuthController::GetClientInfo()": {
+          "Lines": {
+            "163": 0,
+            "164": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "170": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "175": 0
+          },
+          "Branches": []
+        },
+        "System.Net.IPAddress IdentityApi.Controllers.AuthController::GetIPAddress()": {
+          "Lines": {
+            "178": 0,
+            "179": 0,
+            "181": 0,
+            "182": 0,
+            "184": 0,
+            "185": 0
+          },
+          "Branches": [
+            {
+              "Line": 181,
+              "Offset": 74,
+              "EndOffset": 76,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 181,
+              "Offset": 74,
+              "EndOffset": 96,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.String IdentityApi.Controllers.AuthController::GetProfileID()": {
+          "Lines": {
+            "187": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Controllers.AuthController::.ctor(IdentityApi.Auth.IAuthManager,IdentityApi.Services.gRPC.Clients.PolicyApiClient)": {
+          "Lines": {
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": []
+        }
+      },
+      "IdentityApi.Controllers.AuthController/<LogInAsync>d__4": {
+        "System.Void IdentityApi.Controllers.AuthController/<LogInAsync>d__4::MoveNext()": {
+          "Lines": {
+            "65": 0,
+            "68": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "81": 0,
+            "83": 0,
+            "84": 0,
+            "86": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "92": 0,
+            "94": 0,
+            "97": 0,
+            "98": 0
+          },
+          "Branches": [
+            {
+              "Line": 70,
+              "Offset": 59,
+              "EndOffset": 64,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 74,
+              "Offset": 106,
+              "EndOffset": 111,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 83,
+              "Offset": 304,
+              "EndOffset": 306,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 83,
+              "Offset": 304,
+              "EndOffset": 328,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 74,
+              "Offset": 106,
+              "EndOffset": 449,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 70,
+              "Offset": 59,
+              "EndOffset": 492,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "IdentityApi.Controllers.AuthController/<RefreshTokenAsync>d__5": {
+        "System.Void IdentityApi.Controllers.AuthController/<RefreshTokenAsync>d__5::MoveNext()": {
+          "Lines": {
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "117": 0,
+            "119": 0,
+            "120": 0,
+            "122": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "129": 0,
+            "131": 0,
+            "132": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "139": 0,
+            "140": 0
+          },
+          "Branches": [
+            {
+              "Line": 119,
+              "Offset": 133,
+              "EndOffset": 135,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 119,
+              "Offset": 133,
+              "EndOffset": 168,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 119,
+              "Offset": 171,
+              "EndOffset": 173,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 119,
+              "Offset": 171,
+              "EndOffset": 195,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 131,
+              "Offset": 437,
+              "EndOffset": 439,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 131,
+              "Offset": 437,
+              "EndOffset": 461,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Auth/AuthManager.cs": {
+      "IdentityApi.Auth.AuthManager": {
+        "IdentityApi.ResponseModels.LogInResponse IdentityApi.Auth.AuthManager::Authenticate(IdentityApi.RequestModels.LogInRequest)": {
+          "Lines": {
+            "35": 3,
+            "36": 3,
+            "38": 3,
+            "39": 3,
+            "41": 3,
+            "42": 1,
+            "44": 2,
+            "45": 2,
+            "46": 2,
+            "47": 2,
+            "48": 2,
+            "49": 2,
+            "50": 2,
+            "51": 2,
+            "52": 2,
+            "55": 2,
+            "56": 1,
+            "57": 1,
+            "58": 1,
+            "59": 1,
+            "60": 2,
+            "61": 3,
+            "62": 2,
+            "63": 2,
+            "65": 2,
+            "66": 2,
+            "67": 2,
+            "69": 2,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "75": 2,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "81": 2,
+            "82": 2,
+            "83": 2,
+            "84": 2,
+            "88": 2,
+            "90": 2,
+            "91": 2,
+            "93": 2,
+            "94": 2,
+            "95": 2,
+            "96": 2,
+            "98": 0,
+            "99": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "108": 0,
+            "110": 0,
+            "111": 0,
+            "113": 0,
+            "114": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 2,
+            "121": 1,
+            "122": 1,
+            "123": 1,
+            "124": 1,
+            "126": 3,
+            "127": 3
+          },
+          "Branches": [
+            {
+              "Line": 41,
+              "Offset": 68,
+              "EndOffset": 70,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 41,
+              "Offset": 68,
+              "EndOffset": 98,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 55,
+              "Offset": 895,
+              "EndOffset": 897,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 55,
+              "Offset": 895,
+              "EndOffset": 921,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            },
+            {
+              "Line": 61,
+              "Offset": 930,
+              "EndOffset": 935,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 2
+            },
+            {
+              "Line": 65,
+              "Offset": 992,
+              "EndOffset": 997,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 2
+            },
+            {
+              "Line": 67,
+              "Offset": 1020,
+              "EndOffset": 1022,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 2
+            },
+            {
+              "Line": 67,
+              "Offset": 1020,
+              "EndOffset": 1030,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 69,
+              "Offset": 1047,
+              "EndOffset": 1049,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 69,
+              "Offset": 1047,
+              "EndOffset": 1081,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 2
+            },
+            {
+              "Line": 75,
+              "Offset": 1094,
+              "EndOffset": 1096,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 0
+            },
+            {
+              "Line": 75,
+              "Offset": 1094,
+              "EndOffset": 1128,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 2
+            },
+            {
+              "Line": 65,
+              "Offset": 992,
+              "EndOffset": 1266,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 101,
+              "Offset": 1303,
+              "EndOffset": 1308,
+              "Path": 0,
+              "Ordinal": 14,
+              "Hits": 0
+            },
+            {
+              "Line": 103,
+              "Offset": 1322,
+              "EndOffset": 1324,
+              "Path": 0,
+              "Ordinal": 16,
+              "Hits": 0
+            },
+            {
+              "Line": 105,
+              "Offset": 1342,
+              "EndOffset": 1344,
+              "Path": 0,
+              "Ordinal": 18,
+              "Hits": 0
+            },
+            {
+              "Line": 105,
+              "Offset": 1342,
+              "EndOffset": 1354,
+              "Path": 1,
+              "Ordinal": 19,
+              "Hits": 0
+            },
+            {
+              "Line": 103,
+              "Offset": 1322,
+              "EndOffset": 1423,
+              "Path": 1,
+              "Ordinal": 17,
+              "Hits": 0
+            },
+            {
+              "Line": 101,
+              "Offset": 1303,
+              "EndOffset": 1441,
+              "Path": 1,
+              "Ordinal": 15,
+              "Hits": 0
+            },
+            {
+              "Line": 61,
+              "Offset": 930,
+              "EndOffset": 1445,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.String IdentityApi.Auth.AuthManager::GenerateJwtToken(IdentityApi.ResponseModels.LogInResponse)": {
+          "Lines": {
+            "130": 1,
+            "131": 1,
+            "133": 1,
+            "135": 1,
+            "136": 1,
+            "138": 1,
+            "139": 1,
+            "140": 1,
+            "141": 1,
+            "143": 1,
+            "145": 1,
+            "146": 1,
+            "147": 1,
+            "148": 1,
+            "149": 1,
+            "150": 1,
+            "151": 1,
+            "152": 1,
+            "153": 1,
+            "155": 1,
+            "157": 1,
+            "158": 1
+          },
+          "Branches": [
+            {
+              "Line": 138,
+              "Offset": 72,
+              "EndOffset": 74,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 138,
+              "Offset": 72,
+              "EndOffset": 98,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "IdentityApi.DataModels.RefreshToken IdentityApi.Auth.AuthManager::GenerateRefreshToken(System.String,IdentityApi.RequestModels.UserAgent,System.Net.IPAddress)": {
+          "Lines": {
+            "161": 2,
+            "162": 2,
+            "164": 2,
+            "165": 2,
+            "166": 2,
+            "167": 2,
+            "168": 2,
+            "169": 2,
+            "170": 2,
+            "171": 2,
+            "172": 2,
+            "173": 2,
+            "174": 2,
+            "175": 2,
+            "176": 2,
+            "177": 2,
+            "178": 2,
+            "179": 2,
+            "181": 2,
+            "182": 2,
+            "184": 2,
+            "185": 2
+          },
+          "Branches": []
+        },
+        "IdentityApi.DataModels.RefreshToken IdentityApi.Auth.AuthManager::GetOrCreateRefreshToken(System.String,IdentityApi.RequestModels.UserAgent,System.Net.IPAddress)": {
+          "Lines": {
+            "188": 0,
+            "189": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "195": 0,
+            "197": 0,
+            "198": 0
+          },
+          "Branches": [
+            {
+              "Line": 191,
+              "Offset": 17,
+              "EndOffset": 19,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 191,
+              "Offset": 17,
+              "EndOffset": 60,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "IdentityApi.DataModels.RefreshToken IdentityApi.Auth.AuthManager::GetRefreshToken(System.String,IdentityApi.RequestModels.UserAgent,System.Net.IPAddress)": {
+          "Lines": {
+            "201": 6,
+            "202": 6,
+            "203": 1,
+            "205": 5,
+            "207": 5,
+            "209": 5,
+            "211": 3,
+            "214": 5,
+            "215": 4,
+            "216": 4,
+            "218": 4,
+            "219": 1,
+            "221": 1,
+            "222": 1,
+            "223": 1,
+            "225": 3,
+            "226": 3,
+            "227": 3,
+            "229": 3,
+            "230": 3,
+            "231": 3,
+            "233": 4,
+            "234": 4,
+            "236": 5,
+            "237": 5
+          },
+          "Branches": [
+            {
+              "Line": 202,
+              "Offset": 13,
+              "EndOffset": 15,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 202,
+              "Offset": 13,
+              "EndOffset": 21,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 5
+            },
+            {
+              "Line": 209,
+              "Offset": 70,
+              "EndOffset": 75,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 3
+            },
+            {
+              "Line": 209,
+              "Offset": 70,
+              "EndOffset": 285,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 5
+            },
+            {
+              "Line": 214,
+              "Offset": 293,
+              "EndOffset": 298,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 4
+            },
+            {
+              "Line": 218,
+              "Offset": 339,
+              "EndOffset": 341,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 1
+            },
+            {
+              "Line": 218,
+              "Offset": 339,
+              "EndOffset": 363,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 3
+            },
+            {
+              "Line": 214,
+              "Offset": 293,
+              "EndOffset": 445,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 5
+            }
+          ]
+        },
+        "System.Boolean IdentityApi.Auth.AuthManager::DeleteRefreshToken(IdentityApi.DataModels.RefreshToken)": {
+          "Lines": {
+            "240": 2,
+            "241": 2,
+            "243": 2,
+            "244": 2,
+            "245": 2
+          },
+          "Branches": []
+        },
+        "System.Boolean IdentityApi.Auth.AuthManager::Logout(System.String,IdentityApi.RequestModels.UserAgent,System.Net.IPAddress)": {
+          "Lines": {
+            "248": 0,
+            "249": 0,
+            "251": 0,
+            "253": 0,
+            "255": 0,
+            "257": 0,
+            "259": 0,
+            "261": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean IdentityApi.Auth.AuthManager::UpdateRefreshToken(IdentityApi.DataModels.RefreshToken)": {
+          "Lines": {
+            "264": 1,
+            "265": 1,
+            "266": 1,
+            "268": 1,
+            "269": 1,
+            "271": 1,
+            "272": 1,
+            "274": 1,
+            "275": 1
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.Auth.AuthManager::GetSHA(System.String,IdentityApi.RequestModels.UserAgent,System.Net.IPAddress)": {
+          "Lines": {
+            "278": 7,
+            "279": 7,
+            "280": 7
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Auth.AuthManager::.ctor(IdentityApi.Services.SQLServer.IdentityStore,IdentityApi.Utilities.TMCache,Microsoft.Extensions.Options.IOptions`1<IdentityApi.Data.JwtSecretKey>)": {
+          "Lines": {
+            "27": 10,
+            "28": 10,
+            "29": 10,
+            "30": 10,
+            "31": 10,
+            "32": 10
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Account/AccountManager.cs": {
+      "IdentityApi.Account.AccountManager": {
+        "IdentityApi.Account.ProfileSaveStatus IdentityApi.Account.AccountManager::CreateProfile(IdentityApi.DataModels.Profile)": {
+          "Lines": {
+            "26": 1,
+            "27": 1,
+            "29": 1,
+            "31": 1,
+            "32": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "38": 1,
+            "39": 0,
+            "41": 1,
+            "42": 1,
+            "44": 1,
+            "45": 1,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "52": 1,
+            "54": 0,
+            "56": 0,
+            "59": 1,
+            "62": 1,
+            "63": 1,
+            "64": 1,
+            "65": 1,
+            "67": 1,
+            "68": 1,
+            "70": 1,
+            "71": 1,
+            "72": 1,
+            "74": 1,
+            "75": 1,
+            "76": 1,
+            "79": 0,
+            "81": 1,
+            "83": 1,
+            "84": 1,
+            "85": 1,
+            "86": 1,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "93": 1,
+            "94": 1
+          },
+          "Branches": [
+            {
+              "Line": 31,
+              "Offset": 33,
+              "EndOffset": 38,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 34,
+              "Offset": 252,
+              "EndOffset": 254,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 38,
+              "Offset": 278,
+              "EndOffset": 280,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 278,
+              "EndOffset": 307,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            },
+            {
+              "Line": 41,
+              "Offset": 316,
+              "EndOffset": 318,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 1
+            },
+            {
+              "Line": 41,
+              "Offset": 316,
+              "EndOffset": 349,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 1
+            },
+            {
+              "Line": 34,
+              "Offset": 252,
+              "EndOffset": 364,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 33,
+              "EndOffset": 401,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 63,
+              "Offset": 431,
+              "EndOffset": 436,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 1
+            },
+            {
+              "Line": 63,
+              "Offset": 431,
+              "EndOffset": 574,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Collections.Generic.List`1<IdentityApi.ResponseModels.ProfileCardResponse> IdentityApi.Account.AccountManager::GetProfiles()": {
+          "Lines": {
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "108": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "125": 0,
+            "127": 0
+          },
+          "Branches": [
+            {
+              "Line": 110,
+              "Offset": 702,
+              "EndOffset": 707,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 112,
+              "Offset": 850,
+              "EndOffset": 719,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 112,
+              "Offset": 850,
+              "EndOffset": 855,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 110,
+              "Offset": 702,
+              "EndOffset": 873,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.String IdentityApi.Account.AccountManager::GetNameInitials(System.String)": {
+          "Lines": {
+            "130": 0,
+            "131": 0,
+            "133": 0,
+            "134": 0,
+            "136": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "143": 0,
+            "144": 0
+          },
+          "Branches": [
+            {
+              "Line": 133,
+              "Offset": 18,
+              "EndOffset": 20,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 133,
+              "Offset": 18,
+              "EndOffset": 28,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 138,
+              "Offset": 95,
+              "EndOffset": 50,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 138,
+              "Offset": 95,
+              "EndOffset": 97,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void IdentityApi.Account.AccountManager::CreateCredentials(IdentityApi.DataModels.Credential)": {
+          "Lines": {
+            "147": 1,
+            "153": 1,
+            "154": 1,
+            "155": 1,
+            "159": 1,
+            "161": 1,
+            "162": 1,
+            "163": 1,
+            "164": 1,
+            "165": 1,
+            "166": 1,
+            "167": 1,
+            "168": 1,
+            "170": 1,
+            "172": 1,
+            "173": 1
+          },
+          "Branches": [
+            {
+              "Line": 154,
+              "Offset": 174,
+              "EndOffset": 179,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 154,
+              "Offset": 174,
+              "EndOffset": 327,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "IdentityApi.ResponseModels.ChangeRequestResponse IdentityApi.Account.AccountManager::ChangePassword(System.String,IdentityApi.RequestModels.ChangePasswordRequest)": {
+          "Lines": {
+            "176": 0,
+            "177": 0,
+            "179": 0,
+            "181": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "186": 0,
+            "188": 0,
+            "189": 0,
+            "191": 0,
+            "192": 0,
+            "193": 0,
+            "194": 0,
+            "196": 0,
+            "197": 0,
+            "199": 0,
+            "201": 0,
+            "202": 0,
+            "204": 0,
+            "205": 0,
+            "207": 0,
+            "208": 0,
+            "209": 0,
+            "211": 0,
+            "212": 0
+          },
+          "Branches": [
+            {
+              "Line": 183,
+              "Offset": 67,
+              "EndOffset": 69,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 183,
+              "Offset": 67,
+              "EndOffset": 93,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 191,
+              "Offset": 153,
+              "EndOffset": 155,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 191,
+              "Offset": 153,
+              "EndOffset": 176,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "IdentityApi.DataModels.Profile IdentityApi.Account.AccountManager::GetProfile(System.String)": {
+          "Lines": {
+            "215": 0,
+            "216": 0,
+            "218": 0,
+            "219": 0,
+            "220": 0,
+            "221": 0,
+            "222": 0,
+            "223": 0,
+            "224": 0,
+            "225": 0,
+            "226": 0,
+            "227": 0,
+            "228": 0,
+            "230": 0,
+            "231": 0,
+            "232": 0,
+            "233": 0,
+            "234": 0,
+            "235": 0,
+            "236": 0,
+            "239": 0,
+            "240": 0
+          },
+          "Branches": [
+            {
+              "Line": 218,
+              "Offset": 48,
+              "EndOffset": 53,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 230,
+              "Offset": 685,
+              "EndOffset": 687,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 230,
+              "Offset": 685,
+              "EndOffset": 738,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 218,
+              "Offset": 48,
+              "EndOffset": 739,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.String IdentityApi.Account.AccountManager::GenerateOTP(System.String)": {
+          "Lines": {
+            "243": 0,
+            "244": 0,
+            "246": 0,
+            "248": 0,
+            "249": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean IdentityApi.Account.AccountManager::VerifyProfile(System.String,System.String)": {
+          "Lines": {
+            "252": 0,
+            "253": 0,
+            "254": 0,
+            "255": 0,
+            "257": 0,
+            "258": 0,
+            "259": 0,
+            "260": 0,
+            "261": 0,
+            "263": 0,
+            "264": 0,
+            "265": 0,
+            "267": 0,
+            "268": 0
+          },
+          "Branches": [
+            {
+              "Line": 254,
+              "Offset": 31,
+              "EndOffset": 33,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 254,
+              "Offset": 31,
+              "EndOffset": 44,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 258,
+              "Offset": 55,
+              "EndOffset": 57,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 258,
+              "Offset": 55,
+              "EndOffset": 108,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean IdentityApi.Account.AccountManager::DeleteProfile(System.String)": {
+          "Lines": {
+            "271": 2,
+            "272": 2,
+            "274": 2,
+            "275": 1,
+            "277": 1,
+            "279": 1,
+            "281": 1,
+            "283": 1
+          },
+          "Branches": [
+            {
+              "Line": 274,
+              "Offset": 154,
+              "EndOffset": 156,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 274,
+              "Offset": 154,
+              "EndOffset": 174,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 274,
+              "Offset": 177,
+              "EndOffset": 179,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 274,
+              "Offset": 177,
+              "EndOffset": 190,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        },
+        "IdentityApi.DataModels.Person IdentityApi.Account.AccountManager::GetPerson(System.String)": {
+          "Lines": {
+            "286": 0,
+            "287": 0
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Account.AccountManager::.ctor(IdentityApi.Services.SQLServer.IdentityStore,IdentityApi.Utilities.TMCache)": {
+          "Lines": {
+            "15": 3,
+            "19": 3,
+            "20": 3,
+            "21": 3,
+            "22": 3,
+            "23": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Account/ProfileSaveStatus.cs": {
+      "IdentityApi.Account.ProfileSaveStatus": {
+        "System.Boolean IdentityApi.Account.ProfileSaveStatus::get_IS_SAVED()": {
+          "Lines": {
+            "8": 4
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<System.String> IdentityApi.Account.ProfileSaveStatus::get_ERRORS()": {
+          "Lines": {
+            "9": 2
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.Account.ProfileSaveStatus::get_PROFILE_ID()": {
+          "Lines": {
+            "10": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Account/UserSecret.cs": {
+      "IdentityApi.Account.UserSecret": {
+        "System.Byte[] IdentityApi.Account.UserSecret::get_SALT()": {
+          "Lines": {
+            "6": 12
+          },
+          "Branches": []
+        },
+        "System.String IdentityApi.Account.UserSecret::get_SECRET_HASH()": {
+          "Lines": {
+            "7": 14
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
