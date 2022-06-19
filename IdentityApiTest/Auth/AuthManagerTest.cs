@@ -225,6 +225,20 @@ public class AuthManagerTest : IClassFixture<IdentityStoreMock>, IClassFixture<T
         Assert.NotEqual(refreshToken.TOKEN, DummyData.amyProfileRefreshToken.TOKEN);
     }
 
+    [Fact(DisplayName = "Test logout")]
+    private void TestLogout()
+    {
+        UserAgent ua = new()
+        {
+            BROWSER = DummyData.deleteProfileRefreshToken.BROWSER,
+            DEVICE = DummyData.deleteProfileRefreshToken.DEVICE,
+            OS = DummyData.deleteProfileRefreshToken.OS
+        };
+
+        Assert.True(_authManager.Logout(DummyData.defaultProfile.ID, ua, IPAddress.Parse("127.0.0.1")));
+
+    }
+
     private string VerifyJWTToken(string token)
     {
         if (string.IsNullOrEmpty(token))
