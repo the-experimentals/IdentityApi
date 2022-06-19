@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Security.Claims;
 using System.Text;
+using System.Threading;
 using IdentityApi.Auth;
 using IdentityApi.Data;
 using IdentityApi.RequestModels;
@@ -107,47 +108,76 @@ namespace IdentityApiTest.Auth
         {
             UserAgent ua = new()
             {
-                BROWSER = DummyAccountData.defaultProfileRefreshToken.BROWSER,
-                DEVICE = DummyAccountData.defaultProfileRefreshToken.DEVICE,
-                OS = DummyAccountData.defaultProfileRefreshToken.OS
+                BROWSER = DummyData.defaultProfileRefreshToken.BROWSER,
+                DEVICE = DummyData.defaultProfileRefreshToken.DEVICE,
+                OS = DummyData.defaultProfileRefreshToken.OS
             };
 
-            var refreshToken = _authManager.GetRefreshToken(DummyAccountData.defaultProfile.ID, ua, IPAddress.Parse("127.0.0.1"));
+            var refreshToken = _authManager.GetRefreshToken(DummyData.defaultProfile.ID, ua, IPAddress.Parse("127.0.0.1"));
 
             Assert.NotNull(refreshToken);
 
-            Assert.Equal(DummyAccountData.defaultProfile.ID, refreshToken.PROFILE_ID);
+            Assert.Equal(DummyData.defaultProfile.ID, refreshToken.PROFILE_ID);
+            
         }
 
         [Fact(DisplayName = "Test get refresh token with null user agent")]
-        void TestGetRefreshTokenWithNullUserAgent() => Assert.Throws<InvalidOperationException>(() => _authManager.GetRefreshToken(DummyAccountData.defaultProfile.ID, null, IPAddress.Parse("127.0.0.1")));
+        void TestGetRefreshTokenWithNullUserAgent() => Assert.Throws<InvalidOperationException>(() => _authManager.GetRefreshToken(DummyData.defaultProfile.ID, null, IPAddress.Parse("127.0.0.1")));
 
         [Fact(DisplayName = "Test delete reefresh token")]
         void TestDeleteRefreshToken()
         {
-            var isDeleted = _authManager.DeleteRefreshToken(DummyAccountData.deleteProfileRefreshToken);
+            var isDeleted = _authManager.DeleteRefreshToken(DummyData.deleteProfileRefreshToken);
 
             Assert.True(isDeleted);
 
             UserAgent ua = new()
             {
-                BROWSER = DummyAccountData.deleteProfileRefreshToken.BROWSER,
-                DEVICE = DummyAccountData.deleteProfileRefreshToken.DEVICE,
-                OS = DummyAccountData.deleteProfileRefreshToken.OS
+                BROWSER = DummyData.deleteProfileRefreshToken.BROWSER,
+                DEVICE = DummyData.deleteProfileRefreshToken.DEVICE,
+                OS = DummyData.deleteProfileRefreshToken.OS
             };
 
-            var refreshToken = _authManager.GetRefreshToken(DummyAccountData.deleteProfile.ID, ua, IPAddress.Parse("127.0.0.1"));
+            var refreshToken = _authManager.GetRefreshToken(DummyData.deleteProfile.ID, ua, IPAddress.Parse("127.0.0.1"));
             Assert.Null(refreshToken);
 
         }
 
-        /*
-         * TODO:
-         * Test refresh token from cache.
-         * Refresh tpken with expired time
-         * Refresh token with valid time
-         */
+        [Fact(DisplayName ="Test get refresh token from cache")]
+        void TestGetRefreshTokenFromCache()
+        {
+            UserAgent ua = new()
+            {
+                BROWSER = DummyData.cacheProfileRefreshToken.BROWSER,
+                DEVICE = DummyData.cacheProfileRefreshToken.DEVICE,
+                OS = DummyData.cacheProfileRefreshToken.OS
+            };
 
+            var refreshToken = _authManager.GetRefreshToken(DummyData.cacheProfile.ID, ua, IPAddress.Parse("127.0.0.1"));
+
+            Assert.NotNull(refreshToken);
+
+            Assert.Equal(DummyData.cacheProfile.ID, refreshToken.PROFILE_ID);
+        }
+
+        [Fact(DisplayName = "Test when refresh token has expired")]
+        void TestGetExpiredRefreshToken()
+        {
+            UserAgent ua = new()
+            {
+                BROWSER = DummyData.ericProfileRefreshToken.BROWSER,
+                DEVICE = DummyData.ericProfileRefreshToken.DEVICE,
+                OS = DummyData.ericProfileRefreshToken.OS
+            };
+
+            var refreshToken = _authManager.GetRefreshToken(DummyData.ericProfile.ID, ua, IPAddress.Parse("127.0.0.1"));
+
+            Assert.NotNull(refreshToken);
+
+            Assert.NotEqual(DummyData.ericProfileRefreshToken.ID, refreshToken.ID);
+
+            Assert.Equal(DummyData.ericProfile.ID, refreshToken.PROFILE_ID);
+        }
 
         private string VerifyJWTToken(string token)
         {

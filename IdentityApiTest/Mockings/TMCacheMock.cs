@@ -16,11 +16,14 @@ namespace IdentityApiTest.Mockings
         {
             _cache = new(new MemoryCache(new MemoryCacheOptions()));
 
-            Profile profile = DummyAccountData.cacheProfile;
+            Profile profile = DummyData.cacheProfile;
 
-            _cache.Add<string>("testcacheuser", profile.ID);
+            _cache.Add<string>("testuser", profile.ID);
 
             _cache.Add<Profile>(Profile.PROFILE_CACHE_KEY + profile.ID, profile);
+
+            _cache.Add<RefreshToken>(RefreshToken.REFRESH_TOKEN_CACHE_KEY + DummyData.cacheProfileRefreshToken.SHA, DummyData.cacheProfileRefreshToken);
+
         }
 
         public void Dispose()

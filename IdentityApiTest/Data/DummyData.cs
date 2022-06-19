@@ -6,7 +6,7 @@ using IdentityApi.Utilities;
 
 namespace IdentityApiTest.Data
 {
-    public class DummyAccountData
+    public class DummyData
     {
         // Data set 1
 
@@ -134,6 +134,49 @@ namespace IdentityApiTest.Data
             TOKEN = Utility.GetUniqueString(32),
             REFRESHED_ON = DateTime.UtcNow,
             SHA = Utility.ComputeSHA(string.Concat(deleteProfileGuid, "", "", "", IPAddress.Parse("127.0.0.1")))
+
+        };
+
+        // Data set 4
+
+        static string ericProfileGuid = Guid.NewGuid().ToString();
+
+        static UserSecret ericProfileuserSecret = Utility.GetUserSecret(null, "defaultTest");
+
+        public static Credential ericProfilecredential = new()
+        {
+            ID = Guid.NewGuid().ToString(),
+            USERNAME = "default",
+            PROFILE_ID = ericProfileGuid,
+            SALT = ericProfileuserSecret.SALT,
+            SECRET_HASH = ericProfileuserSecret.SECRET_HASH
+        };
+
+        public static Profile ericProfile = new()
+        {
+            ID = ericProfileGuid,
+            NAME = "delete test user",
+            NEW = true,
+            CREATED_BY = "system",
+            EMAIL = "test@test.com",
+            CREDENTIAL = cacheProfilecredential
+        };
+
+        public static RefreshToken ericProfileRefreshToken = new()
+        {
+            ID = Guid.NewGuid().ToString(),
+            PROFILE_ID = ericProfileGuid,
+            BROWSER = "",
+            DEVICE = "",
+            OS = "",
+            GENERATED_ON = DateTime.UtcNow.AddDays(-2),
+            LIFE_SPAN = 1,
+            STATUS = IdentityApi.Identifiers.Status.ACTIVE,
+            ACTIVE = true,
+            IPv4 = "127.0.0.1",
+            TOKEN = Utility.GetUniqueString(32),
+            REFRESHED_ON = DateTime.UtcNow,
+            SHA = Utility.ComputeSHA(string.Concat(ericProfileGuid, "", "", "", IPAddress.Parse("127.0.0.1")))
 
         };
 
