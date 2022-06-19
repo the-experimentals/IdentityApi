@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace IdentityApi.RequestModels
+namespace IdentityApi.RequestModels;
+
+public class EmailRequest
 {
-    public class EmailRequest
-    {
-        public List<string> TO { get; set; } = new();
-        public string SUBJECT { get; set; }
-        public string CONTENT { get; set; }
-        public bool HTML { get; set; }
-    }
+    public List<string> TO { get; set; } = new();
+    public string SUBJECT { get; set; }
+    public string CONTENT { get; set; }
+    public bool HTML { get; set; }
 }

@@ -1,8 +1,6 @@
-﻿using System;
-namespace IdentityApi.ResponseModels
+﻿namespace IdentityApi.ResponseModels;
+
+public class VerifyProfileResponse
 {
-    public class VerifyProfileResponse
-    {
-        public bool VERIFIED { get; set; }
-    }
+    public bool VERIFIED { get; set; }
 }

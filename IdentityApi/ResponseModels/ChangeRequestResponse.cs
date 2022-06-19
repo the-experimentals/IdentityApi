@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace IdentityApi.ResponseModels
+namespace IdentityApi.ResponseModels;
+
+public class ChangeRequestResponse
 {
-    public class ChangeRequestResponse
-    {
-        public bool IS_CHANGED { get; set; }
-        public List<string> ERRORS { get; set; } = new();
-    }
+    public bool IS_CHANGED { get; set; }
+    public List<string> ERRORS { get; set; } = new();
 }

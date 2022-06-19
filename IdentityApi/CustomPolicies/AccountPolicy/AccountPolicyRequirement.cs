@@ -1,13 +1,7 @@
-﻿using System;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 
-namespace IdentityApi.CustomPolicies.AccountPolicy
+namespace IdentityApi.CustomPolicies.AccountPolicy;
+
+public class AccountPolicyRequirement : IAuthorizationRequirement
 {
-	public class AccountPolicyRequirement : IAuthorizationRequirement
-	{
-		public AccountPolicyRequirement()
-		{
-		}
-	}
 }
-

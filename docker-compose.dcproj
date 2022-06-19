@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" Sdk="Microsoft.Docker.Sdk" DefaultTargets="Build">
-  <PropertyGroup Label="Globals">
-    <ProjectVersion>2.1</ProjectVersion>
-    <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>{53A24E7A-4E42-4A31-803B-D53FC267616E}</ProjectGuid>
-    <ReleaseVersion>0.0.1</ReleaseVersion>
-    <DockerLaunchBrowser>True</DockerLaunchBrowser>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>identityapi</DockerServiceName>
-  </PropertyGroup>
-  <ItemGroup>
-    <None Include="docker-compose.override.yml">
-      <DependentUpon>docker-compose.yml</DependentUpon>
-    </None>
-    <None Include="docker-compose.yml" />
-    <None Include=".dockerignore" />
-  </ItemGroup>
+    <PropertyGroup Label="Globals">
+        <ProjectVersion>2.1</ProjectVersion>
+        <DockerTargetOS>Linux</DockerTargetOS>
+        <ProjectGuid>{53A24E7A-4E42-4A31-803B-D53FC267616E}</ProjectGuid>
+        <ReleaseVersion>0.0.1</ReleaseVersion>
+        <DockerLaunchBrowser>True</DockerLaunchBrowser>
+        <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
+        <DockerServiceName>identityapi</DockerServiceName>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="docker-compose.override.yml">
+            <DependentUpon>docker-compose.yml</DependentUpon>
+        </None>
+        <None Include="docker-compose.yml"/>
+        <None Include=".dockerignore"/>
+    </ItemGroup>
 </Project>

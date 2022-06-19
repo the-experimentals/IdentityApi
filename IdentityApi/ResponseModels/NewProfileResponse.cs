@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace IdentityApi.ResponseModels
+namespace IdentityApi.ResponseModels;
+
+public class NewProfileResponse
 {
-    public class NewProfileResponse
-    {
-        public bool IS_SAVED { get; set; }
-        public List<string> list { get; set; } = new();
-    }
+    public bool IS_SAVED { get; set; }
+    public List<string> list { get; set; } = new();
 }

@@ -1,33 +1,27 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using IdentityApi.RequestModels;
 
-namespace IdentityApiTest.Mockings
+namespace IdentityApiTest.Mockings;
+
+public class LogInRequestTestData : IEnumerable<object[]>
 {
-    public class LogInRequestTestData : IEnumerable<object[]>
+    public IEnumerator<object[]> GetEnumerator()
     {
-        public IEnumerator<object[]> GetEnumerator()
-        {
-            //yield return new object[]
-            //{
-            //    new LogInRequest()
-            //    {
-            //        USERNAME = "testuser",
-            //        PASSWORD = "testPassword"
-            //    }                
-            //};
+        //yield return new object[]
+        //{
+        //    new LogInRequest()
+        //    {
+        //        USERNAME = "testuser",
+        //        PASSWORD = "testPassword"
+        //    }                
+        //};
 
-            yield return new object[]
-            {
-                new LogInRequest()
-                {
-                    USERNAME = "default",
-                    PASSWORD = "defaultTest"
-                }
-            };
-        }
+        yield return new object[] { new LogInRequest { USERNAME = "default", PASSWORD = "defaultTest" } };
+    }
 
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return GetEnumerator();
     }
 }

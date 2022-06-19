@@ -1,34 +1,31 @@
 ﻿using System;
-using IdentityApi.Account;
 using IdentityApi.DataModels;
 using IdentityApi.Utilities;
 using IdentityApiTest.Data;
 using Microsoft.Extensions.Caching.Memory;
 
-namespace IdentityApiTest.Mockings
+namespace IdentityApiTest.Mockings;
+
+public class TMCacheMock : IDisposable
 {
-    public class TMCacheMock : IDisposable
+    public TMCacheMock()
     {
-        public TMCache _cache { get; private set; }
-        
+        _cache = new TMCache(new MemoryCache(new MemoryCacheOptions()));
 
-        public TMCacheMock()
-        {
-            _cache = new(new MemoryCache(new MemoryCacheOptions()));
+        var profile = DummyData.cacheProfile;
 
-            Profile profile = DummyData.cacheProfile;
+        _cache.Add("testuser", profile.ID);
 
-            _cache.Add<string>("testuser", profile.ID);
+        _cache.Add(Profile.PROFILE_CACHE_KEY + profile.ID, profile);
 
-            _cache.Add<Profile>(Profile.PROFILE_CACHE_KEY + profile.ID, profile);
+        _cache.Add(RefreshToken.REFRESH_TOKEN_CACHE_KEY + DummyData.cacheProfileRefreshToken.SHA,
+            DummyData.cacheProfileRefreshToken);
+    }
 
-            _cache.Add<RefreshToken>(RefreshToken.REFRESH_TOKEN_CACHE_KEY + DummyData.cacheProfileRefreshToken.SHA, DummyData.cacheProfileRefreshToken);
+    public TMCache _cache { get; }
 
-        }
-
-        public void Dispose()
-        {
-            _cache.Dispose();
-        }
+    public void Dispose()
+    {
+        _cache.Dispose();
     }
 }

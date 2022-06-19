@@ -4,7 +4,7 @@
       "AspNetCoreGeneratedDocument.EmailTemplate_OtpEmail/<<ExecuteAsync>b__8_1>d": {
         "System.Void AspNetCoreGeneratedDocument.EmailTemplate_OtpEmail/<<ExecuteAsync>b__8_1>d::MoveNext()": {
           "Lines": {
-            "52": 0
+            "51": 0
           },
           "Branches": []
         }
@@ -712,6 +712,8 @@
       "IdentityApi.Program": {
         "Microsoft.Extensions.Hosting.IHostBuilder IdentityApi.Program::CreateHostBuilder(System.String[])": {
           "Lines": {
+            "16": 0,
+            "17": 0,
             "18": 0,
             "19": 0,
             "20": 0,
@@ -724,9 +726,9 @@
       "IdentityApi.Program/<Main>d__0": {
         "System.Void IdentityApi.Program/<Main>d__0::MoveNext()": {
           "Lines": {
-            "13": 0,
-            "14": 0,
-            "15": 0
+            "11": 0,
+            "12": 0,
+            "13": 0
           },
           "Branches": []
         }
@@ -756,11 +758,11 @@
             "59": 0,
             "60": 0,
             "61": 0,
-            "64": 0,
+            "62": 0,
             "65": 0,
             "66": 0,
             "67": 0,
-            "69": 0,
+            "68": 0,
             "70": 0,
             "71": 0,
             "72": 0,
@@ -777,7 +779,7 @@
             "83": 0,
             "84": 0,
             "85": 0,
-            "87": 0,
+            "86": 0,
             "88": 0,
             "89": 0,
             "90": 0,
@@ -805,61 +807,61 @@
             "112": 0,
             "113": 0,
             "114": 0,
-            "115": 0,
             "116": 0,
+            "117": 0,
             "118": 0,
-            "119": 0,
             "120": 0,
+            "121": 0,
             "122": 0,
             "123": 0,
             "124": 0,
-            "125": 0,
             "126": 0,
+            "127": 0,
             "128": 0,
             "129": 0,
             "130": 0,
             "131": 0,
             "132": 0,
             "133": 0,
-            "134": 0,
             "135": 0,
-            "137": 0,
+            "136": 0,
             "138": 0,
             "140": 0,
+            "141": 0,
             "142": 0,
             "143": 0,
-            "144": 0,
-            "145": 0,
-            "146": 0
+            "144": 0
           },
           "Branches": []
         },
         "System.Void IdentityApi.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,IdentityApi.Data.DBInitializer)": {
           "Lines": {
+            "148": 0,
+            "149": 0,
             "150": 0,
             "151": 0,
-            "152": 0,
             "153": 0,
             "155": 0,
+            "156": 0,
             "157": 0,
             "158": 0,
             "159": 0,
             "160": 0,
             "161": 0,
-            "162": 0,
             "163": 0,
-            "164": 0,
-            "166": 0,
-            "168": 0,
+            "165": 0,
+            "167": 0,
+            "169": 0,
             "170": 0,
+            "171": 0,
             "172": 0,
             "173": 0,
             "174": 0,
-            "175": 0,
             "176": 0,
-            "177": 0,
-            "179": 0,
+            "178": 0,
+            "180": 0,
             "181": 0,
+            "182": 0,
             "183": 0,
             "184": 0,
             "185": 0,
@@ -867,18 +869,11 @@
             "187": 0,
             "188": 0,
             "189": 0,
-            "190": 0,
-            "191": 0,
-            "192": 0,
-            "193": 0,
-            "194": 0,
-            "195": 0,
-            "196": 0,
-            "197": 0
+            "190": 0
           },
           "Branches": [
             {
-              "Line": 151,
+              "Line": 149,
               "Offset": 22,
               "EndOffset": 24,
               "Path": 0,
@@ -886,7 +881,7 @@
               "Hits": 0
             },
             {
-              "Line": 151,
+              "Line": 149,
               "Offset": 22,
               "EndOffset": 94,
               "Path": 1,
@@ -2491,16 +2486,16 @@
       "IdentityApi.Utilities.TMCache": {
         "System.Void IdentityApi.Utilities.TMCache::Add(System.String,T)": {
           "Lines": {
-            "26": 12,
-            "28": 12,
-            "29": 8,
-            "31": 8,
-            "34": 8,
-            "35": 8,
-            "36": 8,
-            "39": 8,
-            "40": 8,
-            "41": 12
+            "26": 14,
+            "28": 14,
+            "29": 9,
+            "31": 9,
+            "34": 9,
+            "35": 9,
+            "36": 9,
+            "39": 9,
+            "40": 9,
+            "41": 14
           },
           "Branches": [
             {
@@ -2509,7 +2504,7 @@
               "EndOffset": 22,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 8
+              "Hits": 9
             },
             {
               "Line": 28,
@@ -2517,15 +2512,15 @@
               "EndOffset": 66,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 12
+              "Hits": 14
             }
           ]
         },
         "T IdentityApi.Utilities.TMCache::Get(System.String)": {
           "Lines": {
-            "50": 9,
-            "51": 9,
-            "52": 9
+            "50": 11,
+            "51": 11,
+            "52": 11
           },
           "Branches": []
         },
@@ -2569,26 +2564,22 @@
       "IdentityApi.Utilities.Utility": {
         "IdentityApi.Account.UserSecret IdentityApi.Utilities.Utility::GetUserSecret(System.Byte[],System.String)": {
           "Lines": {
-            "14": 7,
-            "15": 7,
-            "16": 5,
-            "18": 5,
-            "19": 5,
-            "20": 5,
-            "21": 5,
-            "24": 7,
-            "25": 7,
-            "26": 7,
-            "27": 7,
-            "28": 7,
-            "29": 7,
-            "31": 7,
-            "32": 7,
-            "33": 7,
-            "34": 7,
-            "35": 7,
-            "37": 7,
-            "38": 7
+            "14": 8,
+            "15": 8,
+            "16": 6,
+            "18": 6,
+            "19": 6,
+            "20": 6,
+            "21": 6,
+            "24": 8,
+            "25": 8,
+            "26": 8,
+            "27": 8,
+            "28": 8,
+            "29": 8,
+            "31": 8,
+            "33": 8,
+            "34": 8
           },
           "Branches": [
             {
@@ -2597,7 +2588,7 @@
               "EndOffset": 9,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 5
+              "Hits": 6
             },
             {
               "Line": 15,
@@ -2605,71 +2596,75 @@
               "EndOffset": 47,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 7
+              "Hits": 8
             }
           ]
         },
         "System.String IdentityApi.Utilities.Utility::ComputeSHA(System.String)": {
           "Lines": {
-            "41": 11,
-            "42": 11,
-            "43": 11,
-            "45": 11,
-            "46": 726,
-            "47": 352,
-            "49": 11,
-            "50": 11
+            "37": 15,
+            "38": 15,
+            "39": 15,
+            "41": 15,
+            "42": 990,
+            "43": 480,
+            "44": 480,
+            "45": 480,
+            "47": 15,
+            "48": 15
           },
           "Branches": [
             {
-              "Line": 46,
-              "Offset": 73,
+              "Line": 42,
+              "Offset": 75,
               "EndOffset": 35,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 352
+              "Hits": 480
             },
             {
-              "Line": 46,
-              "Offset": 73,
-              "EndOffset": 75,
+              "Line": 42,
+              "Offset": 75,
+              "EndOffset": 77,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 11
+              "Hits": 15
             }
           ]
         },
         "System.String IdentityApi.Utilities.Utility::GetUniqueString(System.Int32)": {
           "Lines": {
-            "53": 7,
-            "54": 7,
-            "55": 7,
-            "56": 7,
-            "59": 7,
-            "60": 7,
-            "61": 7,
-            "63": 7,
-            "64": 469,
-            "65": 224,
-            "67": 7,
-            "68": 7
+            "51": 9,
+            "52": 9,
+            "53": 9,
+            "54": 9,
+            "57": 9,
+            "58": 9,
+            "59": 9,
+            "61": 9,
+            "62": 603,
+            "63": 288,
+            "64": 288,
+            "65": 288,
+            "67": 9,
+            "68": 9
           },
           "Branches": [
             {
-              "Line": 64,
-              "Offset": 98,
+              "Line": 62,
+              "Offset": 100,
               "EndOffset": 64,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 224
+              "Hits": 288
             },
             {
-              "Line": 64,
-              "Offset": 98,
-              "EndOffset": 100,
+              "Line": 62,
+              "Offset": 100,
+              "EndOffset": 102,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 7
+              "Hits": 9
             }
           ]
         }
@@ -2679,7 +2674,9 @@
       "IdentityApi.StartupTasks.ServiceCollectionExtensions": {
         "Microsoft.Extensions.DependencyInjection.IServiceCollection IdentityApi.StartupTasks.ServiceCollectionExtensions::AddStartupTask(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
           "Lines": {
-            "10": 0
+            "9": 0,
+            "10": 0,
+            "11": 0
           },
           "Branches": []
         }
@@ -2689,18 +2686,18 @@
       "IdentityApi.StartupTasks.StartupTaskWebHostExtensions/<RunWithTasksAsync>d__0": {
         "System.Void IdentityApi.StartupTasks.StartupTaskWebHostExtensions/<RunWithTasksAsync>d__0::MoveNext()": {
           "Lines": {
-            "12": 0,
-            "14": 0,
+            "11": 0,
+            "13": 0,
+            "16": 0,
             "17": 0,
             "18": 0,
             "19": 0,
-            "20": 0,
-            "23": 0,
-            "24": 0
+            "22": 0,
+            "23": 0
           },
           "Branches": [
             {
-              "Line": 17,
+              "Line": 16,
               "Offset": 223,
               "EndOffset": 79,
               "Path": 1,
@@ -2708,7 +2705,7 @@
               "Hits": 0
             },
             {
-              "Line": 17,
+              "Line": 16,
               "Offset": 223,
               "EndOffset": 228,
               "Path": 0,
@@ -2802,39 +2799,39 @@
     },
     "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/Services/SQLServer/IdentityStore.cs": {
       "IdentityApi.Services.SQLServer.IdentityStore": {
-        "System.Void IdentityApi.Services.SQLServer.IdentityStore::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
-          "Lines": {
-            "11": 2
-          },
-          "Branches": []
-        },
         "Microsoft.EntityFrameworkCore.DbSet`1<IdentityApi.DataModels.Credential> IdentityApi.Services.SQLServer.IdentityStore::get_CREDENTIALS()": {
           "Lines": {
-            "13": 15
+            "10": 15
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<IdentityApi.DataModels.Person> IdentityApi.Services.SQLServer.IdentityStore::get_PERSON()": {
           "Lines": {
-            "14": 3
+            "11": 3
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<IdentityApi.DataModels.Profile> IdentityApi.Services.SQLServer.IdentityStore::get_PROFILE()": {
           "Lines": {
-            "15": 18
+            "12": 18
           },
           "Branches": []
         },
         "Microsoft.EntityFrameworkCore.DbSet`1<IdentityApi.DataModels.RefreshToken> IdentityApi.Services.SQLServer.IdentityStore::get_REFRESH_TOKENS()": {
           "Lines": {
-            "16": 21
+            "13": 24
+          },
+          "Branches": []
+        },
+        "System.Void IdentityApi.Services.SQLServer.IdentityStore::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "15": 2
           },
           "Branches": []
         },
         "System.Void IdentityApi.Services.SQLServer.IdentityStore::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<IdentityApi.Services.SQLServer.IdentityStore>)": {
           "Lines": {
-            "9": 6
+            "8": 6
           },
           "Branches": []
         }
@@ -2863,17 +2860,15 @@
       "IdentityApi.Services.gRPC.Clients.NotificationClient": {
         "System.Void IdentityApi.Services.gRPC.Clients.NotificationClient::.ctor(AutoMapper.IMapper,Microsoft.AspNetCore.Http.IHttpContextAccessor)": {
           "Lines": {
-            "17": 0,
-            "19": 0,
+            "18": 0,
             "20": 0,
             "21": 0,
-            "23": 0,
-            "25": 0,
+            "22": 0,
+            "24": 0,
             "26": 0,
             "27": 0,
-            "28": 0,
-            "30": 0,
-            "31": 0
+            "29": 0,
+            "30": 0
           },
           "Branches": []
         }
@@ -2881,9 +2876,9 @@
       "IdentityApi.Services.gRPC.Clients.NotificationClient/<SendEmailAsync>d__4": {
         "System.Void IdentityApi.Services.gRPC.Clients.NotificationClient/<SendEmailAsync>d__4::MoveNext()": {
           "Lines": {
+            "33": 0,
             "34": 0,
-            "35": 0,
-            "36": 0
+            "35": 0
           },
           "Branches": []
         }
@@ -2893,17 +2888,15 @@
       "IdentityApi.Services.gRPC.Clients.PolicyApiClient": {
         "System.Void IdentityApi.Services.gRPC.Clients.PolicyApiClient::.ctor(AutoMapper.IMapper,Microsoft.AspNetCore.Http.IHttpContextAccessor)": {
           "Lines": {
-            "17": 0,
-            "19": 0,
+            "18": 0,
             "20": 0,
             "21": 0,
-            "23": 0,
-            "25": 0,
+            "22": 0,
+            "24": 0,
             "26": 0,
             "27": 0,
-            "28": 0,
-            "30": 0,
-            "31": 0
+            "29": 0,
+            "30": 0
           },
           "Branches": []
         }
@@ -2911,8 +2904,9 @@
       "IdentityApi.Services.gRPC.Clients.PolicyApiClient/<GetPolicyTokenAsync>d__4": {
         "System.Void IdentityApi.Services.gRPC.Clients.PolicyApiClient/<GetPolicyTokenAsync>d__4::MoveNext()": {
           "Lines": {
+            "33": 0,
             "34": 0,
-            "35": 0,
+            "37": 0,
             "38": 0,
             "39": 0,
             "40": 0,
@@ -2921,9 +2915,8 @@
             "43": 0,
             "44": 0,
             "45": 0,
-            "46": 0,
-            "48": 0,
-            "49": 0
+            "47": 0,
+            "48": 0
           },
           "Branches": []
         }
@@ -2933,17 +2926,17 @@
       "IdentityApi.Services.CustomRazorEngine.CustomRazorEngine": {
         "Microsoft.AspNetCore.Mvc.ViewEngines.IView IdentityApi.Services.CustomRazorEngine.CustomRazorEngine::FindView(System.String)": {
           "Lines": {
-            "30": 0,
-            "31": 0,
-            "32": 0,
-            "33": 0,
-            "34": 0,
-            "37": 0,
-            "38": 0
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "60": 0,
+            "61": 0
           },
           "Branches": [
             {
-              "Line": 32,
+              "Line": 55,
               "Offset": 24,
               "EndOffset": 26,
               "Path": 0,
@@ -2951,7 +2944,7 @@
               "Hits": 0
             },
             {
-              "Line": 32,
+              "Line": 55,
               "Offset": 24,
               "EndOffset": 36,
               "Path": 1,
@@ -2962,11 +2955,11 @@
         },
         "Microsoft.AspNetCore.Mvc.ActionContext IdentityApi.Services.CustomRazorEngine.CustomRazorEngine::GetContext()": {
           "Lines": {
-            "41": 0,
-            "42": 0,
-            "43": 0,
-            "44": 0,
-            "45": 0
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0
           },
           "Branches": []
         },
@@ -2977,35 +2970,33 @@
             "24": 0,
             "25": 0,
             "26": 0,
-            "27": 0
+            "27": 0,
+            "28": 0
           },
           "Branches": []
         }
       },
-      "IdentityApi.Services.CustomRazorEngine.CustomRazorEngine/<RazorViewToHtmlAsync>d__6`1": {
-        "System.Void IdentityApi.Services.CustomRazorEngine.CustomRazorEngine/<RazorViewToHtmlAsync>d__6`1::MoveNext()": {
+      "IdentityApi.Services.CustomRazorEngine.CustomRazorEngine/<RazorViewToHtmlAsync>d__4`1": {
+        "System.Void IdentityApi.Services.CustomRazorEngine.CustomRazorEngine/<RazorViewToHtmlAsync>d__4`1::MoveNext()": {
           "Lines": {
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "35": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
             "48": 0,
             "49": 0,
-            "50": 0,
-            "52": 0,
-            "54": 0,
-            "55": 0,
-            "56": 0,
-            "57": 0,
-            "58": 0,
-            "59": 0,
-            "60": 0,
-            "61": 0,
-            "62": 0,
-            "63": 0,
-            "64": 0,
-            "65": 0,
-            "66": 0,
-            "67": 0,
-            "68": 0,
-            "69": 0,
-            "71": 0
+            "50": 0
           },
           "Branches": []
         }
@@ -3015,13 +3006,13 @@
       "IdentityApi.ResponseModels.ChangeRequestResponse": {
         "System.Boolean IdentityApi.ResponseModels.ChangeRequestResponse::get_IS_CHANGED()": {
           "Lines": {
-            "8": 0
+            "7": 0
           },
           "Branches": []
         },
         "System.Collections.Generic.List`1<System.String> IdentityApi.ResponseModels.ChangeRequestResponse::get_ERRORS()": {
           "Lines": {
-            "9": 0
+            "8": 0
           },
           "Branches": []
         }
@@ -3031,43 +3022,43 @@
       "IdentityApi.ResponseModels.LogInResponse": {
         "System.Boolean IdentityApi.ResponseModels.LogInResponse::get_IS_AUTHENTICATED()": {
           "Lines": {
-            "8": 5
+            "7": 5
           },
           "Branches": []
         },
         "System.Boolean IdentityApi.ResponseModels.LogInResponse::get_IS_VERIFIED()": {
           "Lines": {
-            "9": 3
+            "8": 3
           },
           "Branches": []
         },
         "System.Collections.Generic.List`1<System.String> IdentityApi.ResponseModels.LogInResponse::get_ERRORS()": {
           "Lines": {
-            "10": 5
+            "9": 5
           },
           "Branches": []
         },
         "System.String IdentityApi.ResponseModels.LogInResponse::get_PROFILE_ID()": {
           "Lines": {
-            "11": 4
+            "10": 4
           },
           "Branches": []
         },
         "System.String IdentityApi.ResponseModels.LogInResponse::get_NAME()": {
           "Lines": {
-            "12": 3
+            "11": 3
           },
           "Branches": []
         },
         "System.Boolean IdentityApi.ResponseModels.LogInResponse::get_HAS_PWNED_PASSWORD()": {
           "Lines": {
-            "13": 0
+            "12": 0
           },
           "Branches": []
         },
         "IdentityApi.ResponseModels.TokenResponse IdentityApi.ResponseModels.LogInResponse::get_TOKEN()": {
           "Lines": {
-            "15": 3
+            "14": 3
           },
           "Branches": []
         }
@@ -3077,13 +3068,13 @@
       "IdentityApi.ResponseModels.NewProfileResponse": {
         "System.Boolean IdentityApi.ResponseModels.NewProfileResponse::get_IS_SAVED()": {
           "Lines": {
-            "8": 0
+            "7": 0
           },
           "Branches": []
         },
         "System.Collections.Generic.List`1<System.String> IdentityApi.ResponseModels.NewProfileResponse::get_list()": {
           "Lines": {
-            "9": 0
+            "8": 0
           },
           "Branches": []
         }
@@ -3093,31 +3084,31 @@
       "IdentityApi.ResponseModels.ProfileCardResponse": {
         "System.String IdentityApi.ResponseModels.ProfileCardResponse::get_PROFILE_ID()": {
           "Lines": {
-            "6": 0
+            "5": 0
           },
           "Branches": []
         },
         "System.String IdentityApi.ResponseModels.ProfileCardResponse::get_USERNAME()": {
           "Lines": {
-            "7": 0
+            "6": 0
           },
           "Branches": []
         },
         "System.String IdentityApi.ResponseModels.ProfileCardResponse::get_NAME()": {
           "Lines": {
-            "8": 0
+            "7": 0
           },
           "Branches": []
         },
         "System.Boolean IdentityApi.ResponseModels.ProfileCardResponse::get_LOCKED()": {
           "Lines": {
-            "9": 0
+            "8": 0
           },
           "Branches": []
         },
         "System.String IdentityApi.ResponseModels.ProfileCardResponse::get_INITIALS()": {
           "Lines": {
-            "10": 0
+            "9": 0
           },
           "Branches": []
         }
@@ -3127,19 +3118,19 @@
       "IdentityApi.ResponseModels.ProfileViewResponse": {
         "System.String IdentityApi.ResponseModels.ProfileViewResponse::get_NAME()": {
           "Lines": {
-            "6": 0
+            "5": 0
           },
           "Branches": []
         },
         "System.String IdentityApi.ResponseModels.ProfileViewResponse::get_USERNAME()": {
           "Lines": {
-            "7": 0
+            "6": 0
           },
           "Branches": []
         },
         "System.String IdentityApi.ResponseModels.ProfileViewResponse::get_INITIALS()": {
           "Lines": {
-            "8": 0
+            "7": 0
           },
           "Branches": []
         }
@@ -3149,13 +3140,13 @@
       "IdentityApi.ResponseModels.RefreshTokenResponse": {
         "System.Boolean IdentityApi.ResponseModels.RefreshTokenResponse::get_IS_REFRESHED()": {
           "Lines": {
-            "8": 0
+            "7": 0
           },
           "Branches": []
         },
         "System.Collections.Generic.List`1<System.String> IdentityApi.ResponseModels.RefreshTokenResponse::get_ERRORS()": {
           "Lines": {
-            "9": 0
+            "8": 0
           },
           "Branches": []
         }
@@ -3165,31 +3156,31 @@
       "IdentityApi.ResponseModels.TokenResponse": {
         "System.String IdentityApi.ResponseModels.TokenResponse::get_ACCESS()": {
           "Lines": {
-            "6": 0
+            "5": 0
           },
           "Branches": []
         },
         "System.String IdentityApi.ResponseModels.TokenResponse::get_REFRESH()": {
           "Lines": {
-            "7": 0
+            "6": 0
           },
           "Branches": []
         },
         "System.Boolean IdentityApi.ResponseModels.TokenResponse::get_ALLOW_REFRESH()": {
           "Lines": {
-            "8": 0
+            "7": 0
           },
           "Branches": []
         },
         "System.Boolean IdentityApi.ResponseModels.TokenResponse::get_IS_REFRESHED()": {
           "Lines": {
-            "9": 0
+            "8": 0
           },
           "Branches": []
         },
         "System.Int32 IdentityApi.ResponseModels.TokenResponse::get_TTL()": {
           "Lines": {
-            "10": 3
+            "9": 3
           },
           "Branches": []
         }
@@ -3199,13 +3190,13 @@
       "IdentityApi.ResponseModels.VerificationCodeResponse": {
         "System.Boolean IdentityApi.ResponseModels.VerificationCodeResponse::get_SENT()": {
           "Lines": {
-            "8": 0
+            "7": 0
           },
           "Branches": []
         },
         "System.Collections.Generic.List`1<System.String> IdentityApi.ResponseModels.VerificationCodeResponse::get_ERRORS()": {
           "Lines": {
-            "9": 0
+            "8": 0
           },
           "Branches": []
         }
@@ -3215,7 +3206,7 @@
       "IdentityApi.ResponseModels.VerifyProfileResponse": {
         "System.Boolean IdentityApi.ResponseModels.VerifyProfileResponse::get_VERIFIED()": {
           "Lines": {
-            "6": 0
+            "5": 0
           },
           "Branches": []
         }
@@ -3225,19 +3216,19 @@
       "IdentityApi.RequestModels.ChangePasswordRequest": {
         "System.String IdentityApi.RequestModels.ChangePasswordRequest::get_OLD_PASSWORD()": {
           "Lines": {
-            "10": 0
+            "9": 0
           },
           "Branches": []
         },
         "System.String IdentityApi.RequestModels.ChangePasswordRequest::get_NEW_PASSWORD()": {
           "Lines": {
-            "14": 0
+            "13": 0
           },
           "Branches": []
         },
         "System.String IdentityApi.RequestModels.ChangePasswordRequest::get_CONFIRM_PASSWORD()": {
           "Lines": {
-            "19": 0
+            "18": 0
           },
           "Branches": []
         }
@@ -3247,7 +3238,7 @@
       "IdentityApi.RequestModels.CheckPwnedPasswordRequest": {
         "System.String IdentityApi.RequestModels.CheckPwnedPasswordRequest::get_PASSWORD()": {
           "Lines": {
-            "6": 0
+            "5": 0
           },
           "Branches": []
         }
@@ -3257,25 +3248,25 @@
       "IdentityApi.RequestModels.EmailRequest": {
         "System.Collections.Generic.List`1<System.String> IdentityApi.RequestModels.EmailRequest::get_TO()": {
           "Lines": {
-            "8": 0
+            "7": 0
           },
           "Branches": []
         },
         "System.String IdentityApi.RequestModels.EmailRequest::get_SUBJECT()": {
           "Lines": {
-            "9": 0
+            "8": 0
           },
           "Branches": []
         },
         "System.String IdentityApi.RequestModels.EmailRequest::get_CONTENT()": {
           "Lines": {
-            "10": 0
+            "9": 0
           },
           "Branches": []
         },
         "System.Boolean IdentityApi.RequestModels.EmailRequest::get_HTML()": {
           "Lines": {
-            "11": 0
+            "10": 0
           },
           "Branches": []
         }
@@ -3285,19 +3276,19 @@
       "IdentityApi.RequestModels.LogInRequest": {
         "System.String IdentityApi.RequestModels.LogInRequest::get_USERNAME()": {
           "Lines": {
-            "10": 10
+            "9": 10
           },
           "Branches": []
         },
         "System.String IdentityApi.RequestModels.LogInRequest::get_PASSWORD()": {
           "Lines": {
-            "14": 7
+            "13": 7
           },
           "Branches": []
         },
         "System.Boolean IdentityApi.RequestModels.LogInRequest::get_REMEMBER_ME()": {
           "Lines": {
-            "16": 1
+            "15": 1
           },
           "Branches": []
         }
@@ -3307,37 +3298,37 @@
       "IdentityApi.RequestModels.NewProfileRequest": {
         "System.String IdentityApi.RequestModels.NewProfileRequest::get_USERNAME()": {
           "Lines": {
-            "11": 0
+            "9": 0
           },
           "Branches": []
         },
         "System.String IdentityApi.RequestModels.NewProfileRequest::get_PASSWORD()": {
           "Lines": {
-            "15": 0
+            "13": 0
           },
           "Branches": []
         },
         "System.String IdentityApi.RequestModels.NewProfileRequest::get_CONFIRM_PASSWORD()": {
           "Lines": {
-            "20": 0
+            "18": 0
           },
           "Branches": []
         },
         "System.String IdentityApi.RequestModels.NewProfileRequest::get_FIRST_NAME()": {
           "Lines": {
-            "23": 0
+            "21": 0
           },
           "Branches": []
         },
         "System.String IdentityApi.RequestModels.NewProfileRequest::get_LAST_NAME()": {
           "Lines": {
-            "26": 0
+            "24": 0
           },
           "Branches": []
         },
         "System.String IdentityApi.RequestModels.NewProfileRequest::get_EMAIL()": {
           "Lines": {
-            "30": 0
+            "28": 0
           },
           "Branches": []
         }
@@ -3347,7 +3338,7 @@
       "IdentityApi.RequestModels.ProfileRequest": {
         "System.String IdentityApi.RequestModels.ProfileRequest::get_PROFILE_ID()": {
           "Lines": {
-            "8": 0
+            "5": 0
           },
           "Branches": []
         }
@@ -3357,7 +3348,7 @@
       "IdentityApi.RequestModels.RefreshTokenRequest": {
         "System.String IdentityApi.RequestModels.RefreshTokenRequest::get_REFRESH()": {
           "Lines": {
-            "9": 0
+            "7": 0
           },
           "Branches": []
         }
@@ -3367,19 +3358,19 @@
       "IdentityApi.RequestModels.UserAgent": {
         "System.String IdentityApi.RequestModels.UserAgent::get_DEVICE()": {
           "Lines": {
-            "6": 15
+            "5": 21
           },
           "Branches": []
         },
         "System.String IdentityApi.RequestModels.UserAgent::get_OS()": {
           "Lines": {
-            "7": 8
+            "6": 11
           },
           "Branches": []
         },
         "System.String IdentityApi.RequestModels.UserAgent::get_BROWSER()": {
           "Lines": {
-            "8": 22
+            "7": 31
           },
           "Branches": []
         }
@@ -3389,7 +3380,7 @@
       "IdentityApi.RequestModels.VerifyProfileRequest": {
         "System.String IdentityApi.RequestModels.VerifyProfileRequest::get_OTP()": {
           "Lines": {
-            "9": 0
+            "7": 0
           },
           "Branches": []
         }
@@ -4071,7 +4062,7 @@
       "IdentityApi.EmailTemplate.OtpView": {
         "System.String IdentityApi.EmailTemplate.OtpView::get_OTP()": {
           "Lines": {
-            "6": 0
+            "5": 0
           },
           "Branches": []
         }
@@ -4081,43 +4072,43 @@
       "IdentityApi.DataModels.Credential": {
         "System.String IdentityApi.DataModels.Credential::get_ID()": {
           "Lines": {
-            "10": 5
+            "8": 6
           },
           "Branches": []
         },
         "System.String IdentityApi.DataModels.Credential::get_PROFILE_ID()": {
           "Lines": {
-            "13": 8
+            "10": 9
           },
           "Branches": []
         },
         "System.String IdentityApi.DataModels.Credential::get_USERNAME()": {
           "Lines": {
-            "18": 13
+            "15": 14
           },
           "Branches": []
         },
         "System.String IdentityApi.DataModels.Credential::get_SECRET_HASH()": {
           "Lines": {
-            "20": 7
+            "17": 8
           },
           "Branches": []
         },
         "System.String IdentityApi.DataModels.Credential::get_PASSWORD()": {
           "Lines": {
-            "22": 3
+            "19": 3
           },
           "Branches": []
         },
         "System.Byte[] IdentityApi.DataModels.Credential::get_SALT()": {
           "Lines": {
-            "24": 7
+            "21": 8
           },
           "Branches": []
         },
         "IdentityApi.DataModels.Profile IdentityApi.DataModels.Credential::get_PROFILE()": {
           "Lines": {
-            "27": 0
+            "23": 0
           },
           "Branches": []
         }
@@ -4127,31 +4118,31 @@
       "IdentityApi.DataModels.Person": {
         "System.String IdentityApi.DataModels.Person::get_ID()": {
           "Lines": {
-            "10": 1
+            "8": 1
           },
           "Branches": []
         },
         "System.String IdentityApi.DataModels.Person::get_PROFILE_ID()": {
           "Lines": {
-            "13": 2
+            "10": 2
           },
           "Branches": []
         },
         "System.String IdentityApi.DataModels.Person::get_FIRST_NAME()": {
           "Lines": {
-            "16": 2
+            "12": 2
           },
           "Branches": []
         },
         "System.String IdentityApi.DataModels.Person::get_LAST_NAME()": {
           "Lines": {
-            "19": 2
+            "14": 2
           },
           "Branches": []
         },
         "IdentityApi.DataModels.Profile IdentityApi.DataModels.Person::get_PROFILE()": {
           "Lines": {
-            "22": 0
+            "16": 0
           },
           "Branches": []
         }
@@ -4161,91 +4152,91 @@
       "IdentityApi.DataModels.Profile": {
         "System.String IdentityApi.DataModels.Profile::get_ID()": {
           "Lines": {
-            "15": 30
+            "14": 33
           },
           "Branches": []
         },
         "System.String IdentityApi.DataModels.Profile::get_NAME()": {
           "Lines": {
-            "17": 9
+            "16": 10
           },
           "Branches": []
         },
         "System.String IdentityApi.DataModels.Profile::get_EMAIL()": {
           "Lines": {
-            "21": 6
+            "20": 7
           },
           "Branches": []
         },
         "System.DateTime IdentityApi.DataModels.Profile::get_CREATED_ON()": {
           "Lines": {
-            "24": 1
+            "22": 1
           },
           "Branches": []
         },
         "System.String IdentityApi.DataModels.Profile::get_CREATED_BY()": {
           "Lines": {
-            "26": 6
+            "24": 7
           },
           "Branches": []
         },
         "System.Nullable`1<System.DateTime> IdentityApi.DataModels.Profile::get_MODIFIED_ON()": {
           "Lines": {
-            "28": 0
+            "26": 0
           },
           "Branches": []
         },
         "System.String IdentityApi.DataModels.Profile::get_MODIFIED_BY()": {
           "Lines": {
-            "29": 0
+            "27": 0
           },
           "Branches": []
         },
         "System.Boolean IdentityApi.DataModels.Profile::get_LOCKED()": {
           "Lines": {
-            "32": 2
+            "29": 2
           },
           "Branches": []
         },
         "System.Int32 IdentityApi.DataModels.Profile::get_LOGIN_ATTEMPTS()": {
           "Lines": {
-            "36": 2
+            "32": 2
           },
           "Branches": []
         },
         "System.String IdentityApi.DataModels.Profile::get_LANGUAGE()": {
           "Lines": {
-            "38": 6
+            "34": 7
           },
           "Branches": []
         },
         "System.Boolean IdentityApi.DataModels.Profile::get_EMAIL_VERIFIED()": {
           "Lines": {
-            "41": 2
+            "36": 2
           },
           "Branches": []
         },
         "IdentityApi.Identifiers.Status IdentityApi.DataModels.Profile::get_STATUS()": {
           "Lines": {
-            "44": 9
+            "38": 10
           },
           "Branches": []
         },
         "IdentityApi.DataModels.Credential IdentityApi.DataModels.Profile::get_CREDENTIAL()": {
           "Lines": {
-            "47": 16
+            "40": 17
           },
           "Branches": []
         },
         "System.Boolean IdentityApi.DataModels.Profile::get_NEW()": {
           "Lines": {
-            "49": 8
+            "42": 9
           },
           "Branches": []
         },
         "IdentityApi.DataModels.Person IdentityApi.DataModels.Profile::get_PERSON()": {
           "Lines": {
-            "51": 4
+            "44": 4
           },
           "Branches": []
         },
@@ -4261,79 +4252,79 @@
       "IdentityApi.DataModels.RefreshToken": {
         "System.String IdentityApi.DataModels.RefreshToken::get_ID()": {
           "Lines": {
-            "12": 8
+            "11": 10
           },
           "Branches": []
         },
         "System.String IdentityApi.DataModels.RefreshToken::get_TOKEN()": {
           "Lines": {
-            "14": 9
+            "13": 15
           },
           "Branches": []
         },
         "System.DateTime IdentityApi.DataModels.RefreshToken::get_GENERATED_ON()": {
           "Lines": {
-            "16": 10
+            "15": 13
           },
           "Branches": []
         },
         "System.String IdentityApi.DataModels.RefreshToken::get_PROFILE_ID()": {
           "Lines": {
-            "18": 11
+            "17": 13
           },
           "Branches": []
         },
         "System.Int32 IdentityApi.DataModels.RefreshToken::get_LIFE_SPAN()": {
           "Lines": {
-            "20": 10
+            "19": 13
           },
           "Branches": []
         },
         "System.String IdentityApi.DataModels.RefreshToken::get_DEVICE()": {
           "Lines": {
-            "23": 11
+            "21": 15
           },
           "Branches": []
         },
         "System.String IdentityApi.DataModels.RefreshToken::get_BROWSER()": {
           "Lines": {
-            "25": 11
+            "23": 15
           },
           "Branches": []
         },
         "System.String IdentityApi.DataModels.RefreshToken::get_OS()": {
           "Lines": {
-            "27": 11
+            "25": 15
           },
           "Branches": []
         },
         "System.String IdentityApi.DataModels.RefreshToken::get_IPv4()": {
           "Lines": {
-            "29": 6
+            "27": 8
           },
           "Branches": []
         },
         "System.String IdentityApi.DataModels.RefreshToken::get_SHA()": {
           "Lines": {
-            "31": 11
+            "29": 15
           },
           "Branches": []
         },
         "System.Boolean IdentityApi.DataModels.RefreshToken::get_ACTIVE()": {
           "Lines": {
-            "33": 9
+            "31": 12
           },
           "Branches": []
         },
         "System.DateTime IdentityApi.DataModels.RefreshToken::get_REFRESHED_ON()": {
           "Lines": {
-            "36": 12
+            "33": 15
           },
           "Branches": []
         },
         "IdentityApi.Identifiers.Status IdentityApi.DataModels.RefreshToken::get_STATUS()": {
           "Lines": {
-            "39": 8
+            "35": 11
           },
           "Branches": []
         }
@@ -4361,12 +4352,8 @@
             "31": 1,
             "32": 1,
             "34": 1,
-            "35": 1,
             "36": 1,
-            "37": 1,
-            "38": 1,
-            "40": 1,
-            "41": 1
+            "37": 1
           },
           "Branches": []
         },
@@ -4385,25 +4372,25 @@
       "IdentityApi.Data.JwtSecretKey": {
         "System.String IdentityApi.Data.JwtSecretKey::get_SECRET()": {
           "Lines": {
-            "6": 12
+            "5": 14
           },
           "Branches": []
         },
         "System.String IdentityApi.Data.JwtSecretKey::get_ISSUER()": {
           "Lines": {
-            "7": 12
+            "6": 14
           },
           "Branches": []
         },
         "System.String IdentityApi.Data.JwtSecretKey::get_AUDIENCE()": {
           "Lines": {
-            "8": 10
+            "7": 12
           },
           "Branches": []
         },
         "System.Int32 IdentityApi.Data.JwtSecretKey::get_TTL()": {
           "Lines": {
-            "9": 11
+            "8": 13
           },
           "Branches": []
         }
@@ -4418,18 +4405,19 @@
             "22": 0,
             "24": 0,
             "25": 0,
-            "27": 0,
-            "28": 0,
+            "26": 0,
+            "29": 0,
             "30": 0,
-            "31": 0,
             "32": 0,
             "33": 0,
+            "34": 0,
             "35": 0,
-            "36": 0,
-            "39": 0,
-            "40": 0,
+            "37": 0,
+            "38": 0,
+            "41": 0,
             "42": 0,
-            "43": 0,
+            "44": 0,
+            "45": 0,
             "48": 0,
             "51": 0,
             "52": 0
@@ -4446,39 +4434,39 @@
             {
               "Line": 24,
               "Offset": 53,
-              "EndOffset": 64,
+              "EndOffset": 65,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
             },
             {
-              "Line": 30,
-              "Offset": 118,
-              "EndOffset": 120,
+              "Line": 32,
+              "Offset": 119,
+              "EndOffset": 121,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 0
             },
             {
-              "Line": 30,
-              "Offset": 118,
-              "EndOffset": 132,
+              "Line": 32,
+              "Offset": 119,
+              "EndOffset": 133,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 0
             },
             {
-              "Line": 36,
-              "Offset": 152,
-              "EndOffset": 156,
+              "Line": 38,
+              "Offset": 153,
+              "EndOffset": 157,
               "Path": 1,
               "Ordinal": 5,
               "Hits": 0
             },
             {
-              "Line": 36,
-              "Offset": 152,
-              "EndOffset": 166,
+              "Line": 38,
+              "Offset": 153,
+              "EndOffset": 167,
               "Path": 0,
               "Ordinal": 4,
               "Hits": 0
@@ -4487,22 +4475,10 @@
         },
         "System.Void IdentityApi.CustomPolicies.AccountPolicy.AccountPolicyHandler::.ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)": {
           "Lines": {
+            "13": 0,
             "14": 0,
             "15": 0,
-            "16": 0,
-            "17": 0
-          },
-          "Branches": []
-        }
-      }
-    },
-    "/Volumes/Mac Drive/TMSolution/Api/IdentityApi/IdentityApi/CustomPolicies/AccountPolicy/AccountPolicyRequirement.cs": {
-      "IdentityApi.CustomPolicies.AccountPolicy.AccountPolicyRequirement": {
-        "System.Void IdentityApi.CustomPolicies.AccountPolicy.AccountPolicyRequirement::.ctor()": {
-          "Lines": {
-            "8": 0,
-            "9": 0,
-            "10": 0
+            "16": 0
           },
           "Branches": []
         }
@@ -4512,19 +4488,18 @@
       "IdentityApi.Controllers.AccountController": {
         "Microsoft.AspNetCore.Mvc.IActionResult IdentityApi.Controllers.AccountController::Test()": {
           "Lines": {
-            "44": 0,
             "45": 0,
-            "46": 0
+            "46": 0,
+            "47": 0
           },
           "Branches": []
         },
         "Microsoft.AspNetCore.Mvc.IActionResult IdentityApi.Controllers.AccountController::CreateNewProfile(IdentityApi.RequestModels.NewProfileRequest)": {
           "Lines": {
-            "59": 0,
             "60": 0,
-            "62": 0,
+            "61": 0,
             "63": 0,
-            "65": 0,
+            "64": 0,
             "66": 0,
             "67": 0,
             "68": 0,
@@ -4539,18 +4514,17 @@
             "78": 0,
             "79": 0,
             "80": 0,
-            "81": 0,
-            "83": 0,
+            "82": 0,
+            "84": 0,
             "85": 0,
             "86": 0,
-            "87": 0,
-            "89": 0,
-            "92": 0,
-            "93": 0
+            "88": 0,
+            "91": 0,
+            "92": 0
           },
           "Branches": [
             {
-              "Line": 85,
+              "Line": 84,
               "Offset": 212,
               "EndOffset": 214,
               "Path": 0,
@@ -4558,7 +4532,7 @@
               "Hits": 0
             },
             {
-              "Line": 85,
+              "Line": 84,
               "Offset": 212,
               "EndOffset": 239,
               "Path": 1,
@@ -4569,27 +4543,28 @@
         },
         "Microsoft.AspNetCore.Mvc.IActionResult IdentityApi.Controllers.AccountController::GetProfiles()": {
           "Lines": {
-            "122": 0,
             "123": 0,
             "124": 0,
-            "125": 0
+            "125": 0,
+            "126": 0
           },
           "Branches": []
         },
         "Microsoft.AspNetCore.Mvc.IActionResult IdentityApi.Controllers.AccountController::ChangePassword(IdentityApi.RequestModels.ChangePasswordRequest)": {
           "Lines": {
-            "138": 0,
-            "140": 0,
+            "139": 0,
             "141": 0,
-            "143": 0,
-            "145": 0,
+            "142": 0,
+            "144": 0,
             "146": 0,
+            "147": 0,
             "148": 0,
-            "149": 0
+            "151": 0,
+            "152": 0
           },
           "Branches": [
             {
-              "Line": 145,
+              "Line": 146,
               "Offset": 62,
               "EndOffset": 64,
               "Path": 0,
@@ -4597,9 +4572,9 @@
               "Hits": 0
             },
             {
-              "Line": 145,
+              "Line": 146,
               "Offset": 62,
-              "EndOffset": 75,
+              "EndOffset": 76,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
@@ -4608,28 +4583,29 @@
         },
         "Microsoft.AspNetCore.Mvc.IActionResult IdentityApi.Controllers.AccountController::VerifyProfile(IdentityApi.RequestModels.VerifyProfileRequest)": {
           "Lines": {
-            "203": 0,
-            "204": 0,
-            "205": 0,
-            "207": 0,
-            "208": 0,
-            "210": 0,
-            "211": 0
+            "195": 0,
+            "196": 0,
+            "197": 0,
+            "199": 0,
+            "200": 0,
+            "202": 0,
+            "203": 0
           },
           "Branches": []
         },
         "Microsoft.AspNetCore.Mvc.IActionResult IdentityApi.Controllers.AccountController::DeleteProfile(IdentityApi.RequestModels.ProfileRequest)": {
           "Lines": {
+            "214": 0,
+            "215": 0,
+            "217": 0,
+            "218": 0,
+            "219": 0,
             "222": 0,
-            "223": 0,
-            "225": 0,
-            "226": 0,
-            "228": 0,
-            "229": 0
+            "223": 0
           },
           "Branches": [
             {
-              "Line": 225,
+              "Line": 217,
               "Offset": 25,
               "EndOffset": 27,
               "Path": 0,
@@ -4637,9 +4613,9 @@
               "Hits": 0
             },
             {
-              "Line": 225,
+              "Line": 217,
               "Offset": 25,
-              "EndOffset": 36,
+              "EndOffset": 37,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
@@ -4648,21 +4624,22 @@
         },
         "Microsoft.AspNetCore.Mvc.IActionResult IdentityApi.Controllers.AccountController::GetProfileView(IdentityApi.RequestModels.ProfileRequest)": {
           "Lines": {
+            "231": 0,
+            "232": 0,
+            "233": 0,
+            "236": 0,
+            "237": 0,
             "238": 0,
-            "239": 0,
             "240": 0,
-            "243": 0,
-            "244": 0,
+            "241": 0,
+            "242": 0,
             "245": 0,
-            "247": 0,
             "248": 0,
-            "250": 0,
-            "253": 0,
-            "255": 0
+            "249": 0
           },
           "Branches": [
             {
-              "Line": 243,
+              "Line": 236,
               "Offset": 51,
               "EndOffset": 53,
               "Path": 0,
@@ -4670,7 +4647,7 @@
               "Hits": 0
             },
             {
-              "Line": 247,
+              "Line": 240,
               "Offset": 80,
               "EndOffset": 82,
               "Path": 0,
@@ -4678,17 +4655,17 @@
               "Hits": 0
             },
             {
-              "Line": 247,
+              "Line": 240,
               "Offset": 80,
-              "EndOffset": 97,
+              "EndOffset": 98,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 0
             },
             {
-              "Line": 243,
+              "Line": 236,
               "Offset": 51,
-              "EndOffset": 108,
+              "EndOffset": 109,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
@@ -4703,7 +4680,8 @@
             "36": 0,
             "37": 0,
             "38": 0,
-            "39": 0
+            "39": 0,
+            "40": 0
           },
           "Branches": []
         }
@@ -4711,16 +4689,17 @@
       "IdentityApi.Controllers.AccountController/<CheckPwnedPasswordAsync>d__7": {
         "System.Void IdentityApi.Controllers.AccountController/<CheckPwnedPasswordAsync>d__7::MoveNext()": {
           "Lines": {
+            "105": 0,
             "106": 0,
             "107": 0,
             "108": 0,
-            "110": 0,
             "111": 0,
-            "112": 0
+            "112": 0,
+            "113": 0
           },
           "Branches": [
             {
-              "Line": 107,
+              "Line": 106,
               "Offset": 36,
               "EndOffset": 38,
               "Path": 0,
@@ -4728,9 +4707,9 @@
               "Hits": 0
             },
             {
-              "Line": 107,
+              "Line": 106,
               "Offset": 36,
-              "EndOffset": 55,
+              "EndOffset": 56,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
@@ -4741,33 +4720,22 @@
       "IdentityApi.Controllers.AccountController/<SendVerificationCodeAsync>d__10": {
         "System.Void IdentityApi.Controllers.AccountController/<SendVerificationCodeAsync>d__10::MoveNext()": {
           "Lines": {
-            "158": 0,
-            "159": 0,
-            "160": 0,
+            "161": 0,
             "162": 0,
-            "164": 0,
+            "163": 0,
             "165": 0,
-            "166": 0,
             "167": 0,
             "170": 0,
             "172": 0,
             "174": 0,
             "175": 0,
-            "176": 0,
             "177": 0,
+            "178": 0,
             "179": 0,
             "180": 0,
-            "181": 0,
             "182": 0,
-            "183": 0,
             "184": 0,
-            "185": 0,
-            "186": 0,
-            "187": 0,
-            "188": 0,
-            "190": 0,
-            "192": 0,
-            "193": 0
+            "185": 0
           },
           "Branches": []
         }
@@ -4807,17 +4775,18 @@
         },
         "Microsoft.AspNetCore.Mvc.IActionResult IdentityApi.Controllers.AuthController::LogOut()": {
           "Lines": {
-            "151": 0,
-            "152": 0,
+            "153": 0,
             "154": 0,
             "156": 0,
-            "157": 0,
+            "158": 0,
             "159": 0,
-            "161": 0
+            "160": 0,
+            "163": 0,
+            "164": 0
           },
           "Branches": [
             {
-              "Line": 156,
+              "Line": 158,
               "Offset": 36,
               "EndOffset": 38,
               "Path": 0,
@@ -4825,9 +4794,9 @@
               "Hits": 0
             },
             {
-              "Line": 156,
+              "Line": 158,
               "Offset": 36,
-              "EndOffset": 47,
+              "EndOffset": 48,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
@@ -4836,32 +4805,33 @@
         },
         "IdentityApi.RequestModels.UserAgent IdentityApi.Controllers.AuthController::GetClientInfo()": {
           "Lines": {
-            "163": 0,
-            "164": 0,
-            "166": 0,
             "167": 0,
             "168": 0,
             "170": 0,
             "171": 0,
             "172": 0,
-            "173": 0,
             "174": 0,
-            "175": 0
+            "175": 0,
+            "176": 0,
+            "177": 0,
+            "178": 0,
+            "179": 0
           },
           "Branches": []
         },
         "System.Net.IPAddress IdentityApi.Controllers.AuthController::GetIPAddress()": {
           "Lines": {
-            "178": 0,
-            "179": 0,
-            "181": 0,
             "182": 0,
-            "184": 0,
-            "185": 0
+            "183": 0,
+            "185": 0,
+            "186": 0,
+            "187": 0,
+            "190": 0,
+            "191": 0
           },
           "Branches": [
             {
-              "Line": 181,
+              "Line": 185,
               "Offset": 74,
               "EndOffset": 76,
               "Path": 0,
@@ -4869,9 +4839,9 @@
               "Hits": 0
             },
             {
-              "Line": 181,
+              "Line": 185,
               "Offset": 74,
-              "EndOffset": 96,
+              "EndOffset": 97,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
@@ -4880,7 +4850,9 @@
         },
         "System.String IdentityApi.Controllers.AuthController::GetProfileID()": {
           "Lines": {
-            "187": 0
+            "194": 0,
+            "195": 0,
+            "196": 0
           },
           "Branches": []
         },
@@ -4906,13 +4878,12 @@
             "74": 0,
             "75": 0,
             "76": 0,
-            "77": 0,
             "78": 0,
-            "79": 0,
+            "80": 0,
             "81": 0,
-            "83": 0,
-            "84": 0,
-            "86": 0,
+            "82": 0,
+            "85": 0,
+            "87": 0,
             "88": 0,
             "89": 0,
             "90": 0,
@@ -4939,7 +4910,7 @@
               "Hits": 0
             },
             {
-              "Line": 83,
+              "Line": 80,
               "Offset": 304,
               "EndOffset": 306,
               "Path": 0,
@@ -4947,9 +4918,9 @@
               "Hits": 0
             },
             {
-              "Line": 83,
+              "Line": 80,
               "Offset": 304,
-              "EndOffset": 328,
+              "EndOffset": 329,
               "Path": 1,
               "Ordinal": 5,
               "Hits": 0
@@ -4957,7 +4928,7 @@
             {
               "Line": 74,
               "Offset": 106,
-              "EndOffset": 449,
+              "EndOffset": 450,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 0
@@ -4965,7 +4936,7 @@
             {
               "Line": 70,
               "Offset": 59,
-              "EndOffset": 492,
+              "EndOffset": 493,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
@@ -4982,20 +4953,20 @@
             "117": 0,
             "119": 0,
             "120": 0,
+            "121": 0,
             "122": 0,
-            "124": 0,
             "125": 0,
-            "126": 0,
             "127": 0,
             "129": 0,
             "131": 0,
             "132": 0,
-            "134": 0,
-            "135": 0,
+            "133": 0,
             "136": 0,
             "137": 0,
+            "138": 0,
             "139": 0,
-            "140": 0
+            "141": 0,
+            "142": 0
           },
           "Branches": [
             {
@@ -5025,23 +4996,23 @@
             {
               "Line": 119,
               "Offset": 171,
-              "EndOffset": 195,
+              "EndOffset": 196,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 0
             },
             {
               "Line": 131,
-              "Offset": 437,
-              "EndOffset": 439,
+              "Offset": 438,
+              "EndOffset": 440,
               "Path": 0,
               "Ordinal": 4,
               "Hits": 0
             },
             {
               "Line": 131,
-              "Offset": 437,
-              "EndOffset": 461,
+              "Offset": 438,
+              "EndOffset": 463,
               "Path": 1,
               "Ordinal": 5,
               "Hits": 0
@@ -5060,24 +5031,23 @@
             "39": 3,
             "41": 3,
             "42": 1,
-            "44": 2,
-            "45": 2,
+            "43": 1,
+            "44": 1,
             "46": 2,
             "47": 2,
             "48": 2,
             "49": 2,
             "50": 2,
-            "51": 2,
-            "52": 2,
-            "55": 2,
+            "53": 2,
+            "54": 1,
+            "55": 1,
             "56": 1,
             "57": 1,
-            "58": 1,
-            "59": 1,
-            "60": 2,
-            "61": 3,
+            "58": 2,
+            "60": 3,
+            "61": 2,
             "62": 2,
-            "63": 2,
+            "64": 2,
             "65": 2,
             "66": 2,
             "67": 2,
@@ -5086,45 +5056,54 @@
             "71": 0,
             "72": 0,
             "73": 0,
+            "74": 0,
             "75": 2,
             "76": 0,
             "77": 0,
             "78": 0,
             "79": 0,
-            "81": 2,
+            "80": 0,
             "82": 2,
             "83": 2,
             "84": 2,
-            "88": 2,
-            "90": 2,
+            "85": 2,
+            "89": 2,
             "91": 2,
-            "93": 2,
+            "92": 2,
             "94": 2,
             "95": 2,
             "96": 2,
-            "98": 0,
+            "97": 2,
             "99": 0,
-            "101": 0,
+            "100": 0,
             "102": 0,
             "103": 0,
             "104": 0,
             "105": 0,
             "106": 0,
+            "107": 0,
             "108": 0,
-            "110": 0,
+            "109": 0,
             "111": 0,
+            "112": 0,
             "113": 0,
-            "114": 0,
+            "115": 0,
             "116": 0,
-            "117": 0,
             "118": 0,
-            "119": 2,
-            "121": 1,
-            "122": 1,
-            "123": 1,
-            "124": 1,
-            "126": 3,
-            "127": 3
+            "119": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 2,
+            "129": 1,
+            "130": 1,
+            "131": 1,
+            "132": 1,
+            "134": 3,
+            "135": 3
           },
           "Branches": [
             {
@@ -5138,151 +5117,151 @@
             {
               "Line": 41,
               "Offset": 68,
-              "EndOffset": 98,
+              "EndOffset": 100,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 2
             },
             {
-              "Line": 55,
-              "Offset": 895,
-              "EndOffset": 897,
+              "Line": 53,
+              "Offset": 897,
+              "EndOffset": 899,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 1
             },
             {
-              "Line": 55,
-              "Offset": 895,
-              "EndOffset": 921,
+              "Line": 53,
+              "Offset": 897,
+              "EndOffset": 923,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 2
             },
             {
-              "Line": 61,
-              "Offset": 930,
-              "EndOffset": 935,
+              "Line": 60,
+              "Offset": 932,
+              "EndOffset": 937,
               "Path": 0,
               "Ordinal": 4,
               "Hits": 2
             },
             {
-              "Line": 65,
-              "Offset": 992,
-              "EndOffset": 997,
+              "Line": 64,
+              "Offset": 994,
+              "EndOffset": 999,
               "Path": 0,
               "Ordinal": 6,
               "Hits": 2
             },
             {
-              "Line": 67,
-              "Offset": 1020,
-              "EndOffset": 1022,
+              "Line": 66,
+              "Offset": 1022,
+              "EndOffset": 1024,
               "Path": 0,
               "Ordinal": 8,
               "Hits": 2
             },
             {
-              "Line": 67,
-              "Offset": 1020,
-              "EndOffset": 1030,
+              "Line": 66,
+              "Offset": 1022,
+              "EndOffset": 1032,
               "Path": 1,
               "Ordinal": 9,
               "Hits": 0
             },
             {
               "Line": 69,
-              "Offset": 1047,
-              "EndOffset": 1049,
+              "Offset": 1049,
+              "EndOffset": 1051,
               "Path": 0,
               "Ordinal": 10,
               "Hits": 0
             },
             {
               "Line": 69,
-              "Offset": 1047,
-              "EndOffset": 1081,
+              "Offset": 1049,
+              "EndOffset": 1083,
               "Path": 1,
               "Ordinal": 11,
               "Hits": 2
             },
             {
               "Line": 75,
-              "Offset": 1094,
-              "EndOffset": 1096,
+              "Offset": 1096,
+              "EndOffset": 1098,
               "Path": 0,
               "Ordinal": 12,
               "Hits": 0
             },
             {
               "Line": 75,
-              "Offset": 1094,
-              "EndOffset": 1128,
+              "Offset": 1096,
+              "EndOffset": 1130,
               "Path": 1,
               "Ordinal": 13,
               "Hits": 2
             },
             {
-              "Line": 65,
-              "Offset": 992,
-              "EndOffset": 1266,
+              "Line": 64,
+              "Offset": 994,
+              "EndOffset": 1268,
               "Path": 1,
               "Ordinal": 7,
               "Hits": 0
             },
             {
-              "Line": 101,
-              "Offset": 1303,
-              "EndOffset": 1308,
+              "Line": 102,
+              "Offset": 1305,
+              "EndOffset": 1310,
               "Path": 0,
               "Ordinal": 14,
               "Hits": 0
             },
             {
-              "Line": 103,
-              "Offset": 1322,
-              "EndOffset": 1324,
+              "Line": 104,
+              "Offset": 1324,
+              "EndOffset": 1326,
               "Path": 0,
               "Ordinal": 16,
               "Hits": 0
             },
             {
-              "Line": 105,
-              "Offset": 1342,
-              "EndOffset": 1344,
+              "Line": 106,
+              "Offset": 1344,
+              "EndOffset": 1346,
               "Path": 0,
               "Ordinal": 18,
               "Hits": 0
             },
             {
-              "Line": 105,
-              "Offset": 1342,
-              "EndOffset": 1354,
+              "Line": 106,
+              "Offset": 1344,
+              "EndOffset": 1358,
               "Path": 1,
               "Ordinal": 19,
               "Hits": 0
             },
             {
-              "Line": 103,
-              "Offset": 1322,
-              "EndOffset": 1423,
+              "Line": 104,
+              "Offset": 1324,
+              "EndOffset": 1429,
               "Path": 1,
               "Ordinal": 17,
               "Hits": 0
             },
             {
-              "Line": 101,
-              "Offset": 1303,
-              "EndOffset": 1441,
+              "Line": 102,
+              "Offset": 1305,
+              "EndOffset": 1449,
               "Path": 1,
               "Ordinal": 15,
               "Hits": 0
             },
             {
-              "Line": 61,
-              "Offset": 930,
-              "EndOffset": 1445,
+              "Line": 60,
+              "Offset": 932,
+              "EndOffset": 1453,
               "Path": 1,
               "Ordinal": 5,
               "Hits": 1
@@ -5291,32 +5270,33 @@
         },
         "System.String IdentityApi.Auth.AuthManager::GenerateJwtToken(IdentityApi.ResponseModels.LogInResponse)": {
           "Lines": {
-            "130": 1,
-            "131": 1,
-            "133": 1,
-            "135": 1,
-            "136": 1,
             "138": 1,
             "139": 1,
-            "140": 1,
             "141": 1,
             "143": 1,
-            "145": 1,
+            "144": 1,
             "146": 1,
             "147": 1,
             "148": 1,
             "149": 1,
-            "150": 1,
             "151": 1,
-            "152": 1,
             "153": 1,
+            "154": 1,
             "155": 1,
+            "156": 1,
             "157": 1,
-            "158": 1
+            "158": 1,
+            "159": 1,
+            "160": 1,
+            "161": 1,
+            "162": 1,
+            "164": 1,
+            "166": 1,
+            "167": 1
           },
           "Branches": [
             {
-              "Line": 138,
+              "Line": 146,
               "Offset": 72,
               "EndOffset": 74,
               "Path": 0,
@@ -5324,7 +5304,7 @@
               "Hits": 1
             },
             {
-              "Line": 138,
+              "Line": 146,
               "Offset": 72,
               "EndOffset": 98,
               "Path": 1,
@@ -5335,93 +5315,97 @@
         },
         "IdentityApi.DataModels.RefreshToken IdentityApi.Auth.AuthManager::GenerateRefreshToken(System.String,IdentityApi.RequestModels.UserAgent,System.Net.IPAddress)": {
           "Lines": {
-            "161": 2,
-            "162": 2,
-            "164": 2,
-            "165": 2,
-            "166": 2,
-            "167": 2,
-            "168": 2,
-            "169": 2,
-            "170": 2,
-            "171": 2,
-            "172": 2,
-            "173": 2,
-            "174": 2,
-            "175": 2,
-            "176": 2,
-            "177": 2,
-            "178": 2,
-            "179": 2,
-            "181": 2,
-            "182": 2,
-            "184": 2,
-            "185": 2
+            "170": 3,
+            "171": 3,
+            "173": 3,
+            "174": 3,
+            "175": 3,
+            "176": 3,
+            "177": 3,
+            "178": 3,
+            "179": 3,
+            "180": 3,
+            "181": 3,
+            "182": 3,
+            "183": 3,
+            "184": 3,
+            "185": 3,
+            "186": 3,
+            "187": 3,
+            "188": 3,
+            "190": 3,
+            "191": 3,
+            "193": 3,
+            "194": 3
           },
           "Branches": []
         },
         "IdentityApi.DataModels.RefreshToken IdentityApi.Auth.AuthManager::GetOrCreateRefreshToken(System.String,IdentityApi.RequestModels.UserAgent,System.Net.IPAddress)": {
           "Lines": {
-            "188": 0,
-            "189": 0,
-            "191": 0,
-            "192": 0,
-            "193": 0,
-            "194": 0,
-            "195": 0,
-            "197": 0,
-            "198": 0
+            "197": 2,
+            "198": 2,
+            "200": 2,
+            "201": 1,
+            "202": 1,
+            "203": 1,
+            "204": 1,
+            "206": 2,
+            "207": 2
           },
           "Branches": [
             {
-              "Line": 191,
+              "Line": 200,
               "Offset": 17,
               "EndOffset": 19,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 0
+              "Hits": 1
             },
             {
-              "Line": 191,
+              "Line": 200,
               "Offset": 17,
               "EndOffset": 60,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 2
             }
           ]
         },
         "IdentityApi.DataModels.RefreshToken IdentityApi.Auth.AuthManager::GetRefreshToken(System.String,IdentityApi.RequestModels.UserAgent,System.Net.IPAddress)": {
           "Lines": {
-            "201": 6,
-            "202": 6,
-            "203": 1,
-            "205": 5,
-            "207": 5,
-            "209": 5,
-            "211": 3,
-            "214": 5,
-            "215": 4,
-            "216": 4,
-            "218": 4,
-            "219": 1,
-            "221": 1,
-            "222": 1,
-            "223": 1,
-            "225": 3,
-            "226": 3,
-            "227": 3,
-            "229": 3,
-            "230": 3,
-            "231": 3,
-            "233": 4,
-            "234": 4,
-            "236": 5,
-            "237": 5
+            "210": 8,
+            "211": 8,
+            "212": 1,
+            "213": 1,
+            "216": 7,
+            "218": 7,
+            "220": 7,
+            "222": 4,
+            "223": 4,
+            "224": 4,
+            "225": 4,
+            "228": 7,
+            "229": 5,
+            "230": 5,
+            "232": 5,
+            "233": 1,
+            "235": 1,
+            "236": 1,
+            "237": 1,
+            "239": 4,
+            "240": 4,
+            "241": 4,
+            "243": 4,
+            "244": 4,
+            "245": 4,
+            "247": 5,
+            "248": 5,
+            "250": 7,
+            "251": 7
           },
           "Branches": [
             {
-              "Line": 202,
+              "Line": 211,
               "Offset": 13,
               "EndOffset": 15,
               "Path": 0,
@@ -5429,116 +5413,116 @@
               "Hits": 1
             },
             {
-              "Line": 202,
+              "Line": 211,
               "Offset": 13,
-              "EndOffset": 21,
+              "EndOffset": 22,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 5
+              "Hits": 7
             },
             {
-              "Line": 209,
-              "Offset": 70,
-              "EndOffset": 75,
+              "Line": 220,
+              "Offset": 71,
+              "EndOffset": 76,
               "Path": 0,
               "Ordinal": 2,
-              "Hits": 3
-            },
-            {
-              "Line": 209,
-              "Offset": 70,
-              "EndOffset": 285,
-              "Path": 1,
-              "Ordinal": 3,
-              "Hits": 5
-            },
-            {
-              "Line": 214,
-              "Offset": 293,
-              "EndOffset": 298,
-              "Path": 0,
-              "Ordinal": 4,
               "Hits": 4
             },
             {
-              "Line": 218,
-              "Offset": 339,
-              "EndOffset": 341,
+              "Line": 220,
+              "Offset": 71,
+              "EndOffset": 288,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 7
+            },
+            {
+              "Line": 228,
+              "Offset": 296,
+              "EndOffset": 301,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 5
+            },
+            {
+              "Line": 232,
+              "Offset": 342,
+              "EndOffset": 344,
               "Path": 0,
               "Ordinal": 6,
               "Hits": 1
             },
             {
-              "Line": 218,
-              "Offset": 339,
-              "EndOffset": 363,
+              "Line": 232,
+              "Offset": 342,
+              "EndOffset": 366,
               "Path": 1,
               "Ordinal": 7,
-              "Hits": 3
+              "Hits": 4
             },
             {
-              "Line": 214,
-              "Offset": 293,
-              "EndOffset": 445,
+              "Line": 228,
+              "Offset": 296,
+              "EndOffset": 448,
               "Path": 1,
               "Ordinal": 5,
-              "Hits": 5
+              "Hits": 7
             }
           ]
         },
         "System.Boolean IdentityApi.Auth.AuthManager::DeleteRefreshToken(IdentityApi.DataModels.RefreshToken)": {
           "Lines": {
-            "240": 2,
-            "241": 2,
-            "243": 2,
-            "244": 2,
-            "245": 2
+            "254": 2,
+            "255": 2,
+            "257": 2,
+            "258": 2,
+            "259": 2
           },
           "Branches": []
         },
         "System.Boolean IdentityApi.Auth.AuthManager::Logout(System.String,IdentityApi.RequestModels.UserAgent,System.Net.IPAddress)": {
           "Lines": {
-            "248": 0,
-            "249": 0,
-            "251": 0,
-            "253": 0,
-            "255": 0,
-            "257": 0,
-            "259": 0,
-            "261": 0
+            "262": 0,
+            "263": 0,
+            "265": 0,
+            "267": 0,
+            "269": 0,
+            "271": 0,
+            "273": 0,
+            "274": 0
           },
           "Branches": []
         },
         "System.Boolean IdentityApi.Auth.AuthManager::UpdateRefreshToken(IdentityApi.DataModels.RefreshToken)": {
           "Lines": {
-            "264": 1,
-            "265": 1,
-            "266": 1,
-            "268": 1,
-            "269": 1,
-            "271": 1,
-            "272": 1,
-            "274": 1,
-            "275": 1
+            "277": 1,
+            "278": 1,
+            "279": 1,
+            "281": 1,
+            "282": 1,
+            "284": 1,
+            "285": 1,
+            "287": 1,
+            "288": 1
           },
           "Branches": []
         },
         "System.String IdentityApi.Auth.AuthManager::GetSHA(System.String,IdentityApi.RequestModels.UserAgent,System.Net.IPAddress)": {
           "Lines": {
-            "278": 7,
-            "279": 7,
-            "280": 7
+            "291": 10,
+            "292": 10,
+            "293": 10
           },
           "Branches": []
         },
         "System.Void IdentityApi.Auth.AuthManager::.ctor(IdentityApi.Services.SQLServer.IdentityStore,IdentityApi.Utilities.TMCache,Microsoft.Extensions.Options.IOptions`1<IdentityApi.Data.JwtSecretKey>)": {
           "Lines": {
-            "27": 10,
-            "28": 10,
-            "29": 10,
-            "30": 10,
-            "31": 10,
-            "32": 10
+            "27": 12,
+            "28": 12,
+            "29": 12,
+            "30": 12,
+            "31": 12,
+            "32": 12
           },
           "Branches": []
         }
@@ -5558,17 +5542,19 @@
             "36": 1,
             "38": 1,
             "39": 0,
-            "41": 1,
-            "42": 1,
+            "40": 0,
+            "41": 0,
+            "43": 1,
             "44": 1,
             "45": 1,
-            "47": 0,
-            "48": 0,
-            "49": 0,
-            "50": 0,
-            "52": 1,
+            "46": 1,
+            "48": 1,
+            "49": 1,
+            "51": 0,
+            "52": 0,
+            "53": 0,
             "54": 0,
-            "56": 0,
+            "56": 1,
             "59": 1,
             "62": 1,
             "63": 1,
@@ -5583,18 +5569,20 @@
             "75": 1,
             "76": 1,
             "79": 0,
-            "81": 1,
+            "80": 0,
+            "81": 0,
             "83": 1,
-            "84": 1,
             "85": 1,
             "86": 1,
-            "87": 0,
-            "88": 0,
+            "87": 1,
+            "88": 1,
             "89": 0,
             "90": 0,
             "91": 0,
-            "93": 1,
-            "94": 1
+            "92": 0,
+            "93": 0,
+            "95": 1,
+            "96": 1
           },
           "Branches": [
             {
@@ -5624,23 +5612,23 @@
             {
               "Line": 38,
               "Offset": 278,
-              "EndOffset": 307,
+              "EndOffset": 309,
               "Path": 1,
               "Ordinal": 5,
               "Hits": 1
             },
             {
-              "Line": 41,
-              "Offset": 316,
-              "EndOffset": 318,
+              "Line": 43,
+              "Offset": 318,
+              "EndOffset": 320,
               "Path": 0,
               "Ordinal": 6,
               "Hits": 1
             },
             {
-              "Line": 41,
-              "Offset": 316,
-              "EndOffset": 349,
+              "Line": 43,
+              "Offset": 318,
+              "EndOffset": 353,
               "Path": 1,
               "Ordinal": 7,
               "Hits": 1
@@ -5648,7 +5636,7 @@
             {
               "Line": 34,
               "Offset": 252,
-              "EndOffset": 364,
+              "EndOffset": 368,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 0
@@ -5656,10 +5644,10 @@
             {
               "Line": 31,
               "Offset": 33,
-              "EndOffset": 401,
+              "EndOffset": 403,
               "Path": 1,
               "Ordinal": 1,
-              "Hits": 0
+              "Hits": 1
             },
             {
               "Line": 63,
@@ -5681,17 +5669,15 @@
         },
         "System.Collections.Generic.List`1<IdentityApi.ResponseModels.ProfileCardResponse> IdentityApi.Account.AccountManager::GetProfiles()": {
           "Lines": {
-            "97": 0,
-            "98": 0,
             "99": 0,
             "100": 0,
             "101": 0,
             "102": 0,
             "103": 0,
             "104": 0,
-            "105": 0,
             "106": 0,
             "108": 0,
+            "109": 0,
             "110": 0,
             "111": 0,
             "112": 0,
@@ -5704,14 +5690,12 @@
             "119": 0,
             "120": 0,
             "121": 0,
-            "122": 0,
             "123": 0,
-            "125": 0,
-            "127": 0
+            "124": 0
           },
           "Branches": [
             {
-              "Line": 110,
+              "Line": 108,
               "Offset": 702,
               "EndOffset": 707,
               "Path": 0,
@@ -5719,7 +5703,7 @@
               "Hits": 0
             },
             {
-              "Line": 112,
+              "Line": 110,
               "Offset": 850,
               "EndOffset": 719,
               "Path": 1,
@@ -5727,7 +5711,7 @@
               "Hits": 0
             },
             {
-              "Line": 112,
+              "Line": 110,
               "Offset": 850,
               "EndOffset": 855,
               "Path": 0,
@@ -5735,7 +5719,7 @@
               "Hits": 0
             },
             {
-              "Line": 110,
+              "Line": 108,
               "Offset": 702,
               "EndOffset": 873,
               "Path": 1,
@@ -5744,125 +5728,40 @@
             }
           ]
         },
-        "System.String IdentityApi.Account.AccountManager::GetNameInitials(System.String)": {
-          "Lines": {
-            "130": 0,
-            "131": 0,
-            "133": 0,
-            "134": 0,
-            "136": 0,
-            "138": 0,
-            "139": 0,
-            "140": 0,
-            "141": 0,
-            "143": 0,
-            "144": 0
-          },
-          "Branches": [
-            {
-              "Line": 133,
-              "Offset": 18,
-              "EndOffset": 20,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 0
-            },
-            {
-              "Line": 133,
-              "Offset": 18,
-              "EndOffset": 28,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 0
-            },
-            {
-              "Line": 138,
-              "Offset": 95,
-              "EndOffset": 50,
-              "Path": 1,
-              "Ordinal": 3,
-              "Hits": 0
-            },
-            {
-              "Line": 138,
-              "Offset": 95,
-              "EndOffset": 97,
-              "Path": 0,
-              "Ordinal": 2,
-              "Hits": 0
-            }
-          ]
-        },
-        "System.Void IdentityApi.Account.AccountManager::CreateCredentials(IdentityApi.DataModels.Credential)": {
-          "Lines": {
-            "147": 1,
-            "153": 1,
-            "154": 1,
-            "155": 1,
-            "159": 1,
-            "161": 1,
-            "162": 1,
-            "163": 1,
-            "164": 1,
-            "165": 1,
-            "166": 1,
-            "167": 1,
-            "168": 1,
-            "170": 1,
-            "172": 1,
-            "173": 1
-          },
-          "Branches": [
-            {
-              "Line": 154,
-              "Offset": 174,
-              "EndOffset": 179,
-              "Path": 0,
-              "Ordinal": 0,
-              "Hits": 1
-            },
-            {
-              "Line": 154,
-              "Offset": 174,
-              "EndOffset": 327,
-              "Path": 1,
-              "Ordinal": 1,
-              "Hits": 1
-            }
-          ]
-        },
         "IdentityApi.ResponseModels.ChangeRequestResponse IdentityApi.Account.AccountManager::ChangePassword(System.String,IdentityApi.RequestModels.ChangePasswordRequest)": {
           "Lines": {
-            "176": 0,
-            "177": 0,
-            "179": 0,
-            "181": 0,
-            "183": 0,
-            "184": 0,
-            "185": 0,
-            "186": 0,
-            "188": 0,
-            "189": 0,
-            "191": 0,
-            "192": 0,
-            "193": 0,
-            "194": 0,
-            "196": 0,
-            "197": 0,
-            "199": 0,
-            "201": 0,
-            "202": 0,
-            "204": 0,
-            "205": 0,
-            "207": 0,
-            "208": 0,
-            "209": 0,
-            "211": 0,
-            "212": 0
+            "127": 0,
+            "128": 0,
+            "130": 0,
+            "132": 0,
+            "133": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "149": 0,
+            "150": 0,
+            "152": 0,
+            "154": 0,
+            "155": 0,
+            "157": 0,
+            "158": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "164": 0,
+            "165": 0
           },
           "Branches": [
             {
-              "Line": 183,
+              "Line": 135,
               "Offset": 67,
               "EndOffset": 69,
               "Path": 0,
@@ -5870,7 +5769,7 @@
               "Hits": 0
             },
             {
-              "Line": 183,
+              "Line": 135,
               "Offset": 67,
               "EndOffset": 93,
               "Path": 1,
@@ -5878,7 +5777,7 @@
               "Hits": 0
             },
             {
-              "Line": 191,
+              "Line": 144,
               "Offset": 153,
               "EndOffset": 155,
               "Path": 0,
@@ -5886,7 +5785,7 @@
               "Hits": 0
             },
             {
-              "Line": 191,
+              "Line": 144,
               "Offset": 153,
               "EndOffset": 176,
               "Path": 1,
@@ -5897,32 +5796,28 @@
         },
         "IdentityApi.DataModels.Profile IdentityApi.Account.AccountManager::GetProfile(System.String)": {
           "Lines": {
-            "215": 0,
-            "216": 0,
-            "218": 0,
-            "219": 0,
-            "220": 0,
-            "221": 0,
-            "222": 0,
-            "223": 0,
-            "224": 0,
-            "225": 0,
-            "226": 0,
-            "227": 0,
-            "228": 0,
-            "230": 0,
-            "231": 0,
-            "232": 0,
-            "233": 0,
-            "234": 0,
-            "235": 0,
-            "236": 0,
-            "239": 0,
-            "240": 0
+            "168": 0,
+            "169": 0,
+            "171": 0,
+            "172": 0,
+            "173": 0,
+            "174": 0,
+            "175": 0,
+            "176": 0,
+            "177": 0,
+            "179": 0,
+            "180": 0,
+            "181": 0,
+            "182": 0,
+            "183": 0,
+            "184": 0,
+            "185": 0,
+            "188": 0,
+            "189": 0
           },
           "Branches": [
             {
-              "Line": 218,
+              "Line": 171,
               "Offset": 48,
               "EndOffset": 53,
               "Path": 0,
@@ -5930,7 +5825,7 @@
               "Hits": 0
             },
             {
-              "Line": 230,
+              "Line": 179,
               "Offset": 685,
               "EndOffset": 687,
               "Path": 0,
@@ -5938,7 +5833,7 @@
               "Hits": 0
             },
             {
-              "Line": 230,
+              "Line": 179,
               "Offset": 685,
               "EndOffset": 738,
               "Path": 1,
@@ -5946,7 +5841,7 @@
               "Hits": 0
             },
             {
-              "Line": 218,
+              "Line": 171,
               "Offset": 48,
               "EndOffset": 739,
               "Path": 1,
@@ -5957,34 +5852,35 @@
         },
         "System.String IdentityApi.Account.AccountManager::GenerateOTP(System.String)": {
           "Lines": {
-            "243": 0,
-            "244": 0,
-            "246": 0,
-            "248": 0,
-            "249": 0
+            "192": 0,
+            "193": 0,
+            "195": 0,
+            "197": 0,
+            "198": 0
           },
           "Branches": []
         },
         "System.Boolean IdentityApi.Account.AccountManager::VerifyProfile(System.String,System.String)": {
           "Lines": {
-            "252": 0,
-            "253": 0,
-            "254": 0,
-            "255": 0,
-            "257": 0,
-            "258": 0,
-            "259": 0,
-            "260": 0,
-            "261": 0,
-            "263": 0,
-            "264": 0,
-            "265": 0,
-            "267": 0,
-            "268": 0
+            "201": 0,
+            "202": 0,
+            "203": 0,
+            "204": 0,
+            "205": 0,
+            "208": 0,
+            "209": 0,
+            "210": 0,
+            "211": 0,
+            "212": 0,
+            "214": 0,
+            "215": 0,
+            "216": 0,
+            "218": 0,
+            "219": 0
           },
           "Branches": [
             {
-              "Line": 254,
+              "Line": 203,
               "Offset": 31,
               "EndOffset": 33,
               "Path": 0,
@@ -5992,25 +5888,25 @@
               "Hits": 0
             },
             {
-              "Line": 254,
+              "Line": 203,
               "Offset": 31,
-              "EndOffset": 44,
+              "EndOffset": 45,
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
             },
             {
-              "Line": 258,
-              "Offset": 55,
-              "EndOffset": 57,
+              "Line": 209,
+              "Offset": 56,
+              "EndOffset": 58,
               "Path": 0,
               "Ordinal": 2,
               "Hits": 0
             },
             {
-              "Line": 258,
-              "Offset": 55,
-              "EndOffset": 108,
+              "Line": 209,
+              "Offset": 56,
+              "EndOffset": 109,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 0
@@ -6019,18 +5915,19 @@
         },
         "System.Boolean IdentityApi.Account.AccountManager::DeleteProfile(System.String)": {
           "Lines": {
-            "271": 2,
-            "272": 2,
-            "274": 2,
-            "275": 1,
-            "277": 1,
-            "279": 1,
-            "281": 1,
-            "283": 1
+            "222": 2,
+            "223": 2,
+            "225": 2,
+            "226": 1,
+            "227": 1,
+            "230": 1,
+            "232": 1,
+            "234": 1,
+            "235": 1
           },
           "Branches": [
             {
-              "Line": 274,
+              "Line": 225,
               "Offset": 154,
               "EndOffset": 156,
               "Path": 0,
@@ -6038,7 +5935,7 @@
               "Hits": 1
             },
             {
-              "Line": 274,
+              "Line": 225,
               "Offset": 154,
               "EndOffset": 174,
               "Path": 1,
@@ -6046,7 +5943,7 @@
               "Hits": 1
             },
             {
-              "Line": 274,
+              "Line": 225,
               "Offset": 177,
               "EndOffset": 179,
               "Path": 0,
@@ -6054,9 +5951,9 @@
               "Hits": 1
             },
             {
-              "Line": 274,
+              "Line": 225,
               "Offset": 177,
-              "EndOffset": 190,
+              "EndOffset": 191,
               "Path": 1,
               "Ordinal": 3,
               "Hits": 1
@@ -6065,14 +5962,102 @@
         },
         "IdentityApi.DataModels.Person IdentityApi.Account.AccountManager::GetPerson(System.String)": {
           "Lines": {
-            "286": 0,
-            "287": 0
+            "239": 0,
+            "240": 0
           },
           "Branches": []
         },
+        "System.String IdentityApi.Account.AccountManager::GetNameInitials(System.String)": {
+          "Lines": {
+            "244": 0,
+            "245": 0,
+            "247": 0,
+            "248": 0,
+            "249": 0,
+            "252": 0,
+            "254": 0,
+            "255": 0,
+            "256": 0,
+            "257": 0,
+            "259": 0,
+            "260": 0
+          },
+          "Branches": [
+            {
+              "Line": 247,
+              "Offset": 18,
+              "EndOffset": 20,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 247,
+              "Offset": 18,
+              "EndOffset": 29,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 254,
+              "Offset": 96,
+              "EndOffset": 51,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 254,
+              "Offset": 96,
+              "EndOffset": 98,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void IdentityApi.Account.AccountManager::CreateCredentials(IdentityApi.DataModels.Credential)": {
+          "Lines": {
+            "263": 1,
+            "269": 1,
+            "270": 1,
+            "271": 1,
+            "275": 1,
+            "277": 1,
+            "278": 1,
+            "279": 1,
+            "280": 1,
+            "281": 1,
+            "282": 1,
+            "283": 1,
+            "284": 1,
+            "286": 1,
+            "287": 1,
+            "288": 1
+          },
+          "Branches": [
+            {
+              "Line": 270,
+              "Offset": 174,
+              "EndOffset": 179,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 270,
+              "Offset": 174,
+              "EndOffset": 327,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
         "System.Void IdentityApi.Account.AccountManager::.ctor(IdentityApi.Services.SQLServer.IdentityStore,IdentityApi.Utilities.TMCache)": {
           "Lines": {
-            "15": 3,
+            "17": 3,
             "19": 3,
             "20": 3,
             "21": 3,
@@ -6087,19 +6072,19 @@
       "IdentityApi.Account.ProfileSaveStatus": {
         "System.Boolean IdentityApi.Account.ProfileSaveStatus::get_IS_SAVED()": {
           "Lines": {
-            "8": 4
+            "7": 4
           },
           "Branches": []
         },
         "System.Collections.Generic.List`1<System.String> IdentityApi.Account.ProfileSaveStatus::get_ERRORS()": {
           "Lines": {
-            "9": 2
+            "8": 2
           },
           "Branches": []
         },
         "System.String IdentityApi.Account.ProfileSaveStatus::get_PROFILE_ID()": {
           "Lines": {
-            "10": 2
+            "9": 2
           },
           "Branches": []
         }
@@ -6109,13 +6094,13 @@
       "IdentityApi.Account.UserSecret": {
         "System.Byte[] IdentityApi.Account.UserSecret::get_SALT()": {
           "Lines": {
-            "6": 12
+            "5": 14
           },
           "Branches": []
         },
         "System.String IdentityApi.Account.UserSecret::get_SECRET_HASH()": {
           "Lines": {
-            "7": 14
+            "6": 16
           },
           "Branches": []
         }

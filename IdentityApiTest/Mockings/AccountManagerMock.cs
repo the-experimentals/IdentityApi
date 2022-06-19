@@ -1,34 +1,27 @@
 ﻿using System;
 using IdentityApi.Account;
 using IdentityApi.DataModels;
-using IdentityApi.Services.SQLServer;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
 using Moq;
 
-namespace IdentityApiTest.Mockings
+namespace IdentityApiTest.Mockings;
+
+public class AccountManagerMock : IDisposable
 {
-    public class AccountManagerMock : IDisposable
+    public AccountManagerMock()
     {
-        //private IdentityStore _store;
-        public IAccountManager _accountManager { get; private set; }
+        Mock<IAccountManager> accountManagerMock = new();
 
-        public AccountManagerMock()
-        {
-            Mock <IAccountManager> accountManagerMock = new();
+        accountManagerMock.Setup(manager => manager.CreateProfile(It.Is<Profile>(p => p.ID == Profile.ADMIN_GUID)))
+            .Returns(new ProfileSaveStatus { IS_SAVED = true });
 
-            accountManagerMock.Setup(manager => manager.CreateProfile(It.Is<Profile>(p => p.ID == Profile.ADMIN_GUID))).Returns(new ProfileSaveStatus
-            {
-                IS_SAVED = true
-            });
+        _accountManager = accountManagerMock.Object;
+    }
 
-            _accountManager = accountManagerMock.Object;
-            
-        }
+    //private IdentityStore _store;
+    public IAccountManager _accountManager { get; private set; }
 
-        public void Dispose()
-        {
-            _accountManager = null;
-        }
+    public void Dispose()
+    {
+        _accountManager = null;
     }
 }

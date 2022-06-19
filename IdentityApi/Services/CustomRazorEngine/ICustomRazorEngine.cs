@@ -1,10 +1,8 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
-namespace IdentityApi.Services.CustomRazorEngine
+namespace IdentityApi.Services.CustomRazorEngine;
+
+public interface ICustomRazorEngine
 {
-    public interface ICustomRazorEngine
-    {
-        Task<string> RazorViewToHtmlAsync<TModel>(string viewName, TModel model);
-    }
+    Task<string> RazorViewToHtmlAsync<TModel>(string viewName, TModel model);
 }

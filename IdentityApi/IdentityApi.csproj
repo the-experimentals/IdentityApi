@@ -12,71 +12,71 @@
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="Controllers\" />
-    <None Remove="Services\" />
-    <None Remove="Services\SQLServer\" />
-    <None Remove="Microsoft.EntityFrameworkCore.Design" />
-    <None Remove="Microsoft.EntityFrameworkCore.Tools" />
-    <None Remove="Microsoft.EntityFrameworkCore" />
-    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
-    <None Remove="Data\" />
-    <None Remove="DataModels\" />
-    <None Remove="ResponseModels\" />
-    <None Remove="RequestModels\" />
-    <None Remove="Auth\" />
-    <None Remove="Account\" />
-    <None Remove="Identifiers\" />
-    <None Remove="Utilities\" />
-    <None Remove="Mappings\" />
-    <None Remove="Swashbuckle.AspNetCore.SwaggerGen" />
-    <None Remove="Swashbuckle.AspNetCore.SwaggerUI" />
-    <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
-    <None Remove="UAParser" />
-    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
-    <None Remove="Grpc.Net.Client" />
-    <None Remove="Google.Protobuf" />
-    <None Remove="Grpc.Tools" />
-    <None Remove="Grpc.AspNetCore" />
-    <None Remove="Grpc.Net.Client.Web" />
-    <None Remove="Protos\" />
-    <None Remove="Protos\policyapi.proto" />
-    <None Remove="Services\gRPC\" />
-    <None Remove="Services\gRPC\Clients\" />
-    <None Remove="PwnedPasswords.Client" />
-    <None Remove="Microsoft.Extensions.Http.Polly" />
-    <None Remove="Protos\notificationapi.proto" />
-    <None Remove="EmailTemplate\" />
-    <None Remove="Microsoft.AspNetCore.Razor" />
-    <None Remove="Services\CustomRazorViewEngine\" />
-    <None Remove="StartupTasks\" />
-    <None Remove="StartupTasks\Tasks\" />
-    <None Remove="CustomPolicies\" />
-    <None Remove="CustomPolicies\AuthPolicy\" />
-    <None Remove="CustomPolicies\AccountPolicy\" />
+    <None Remove="Controllers\"/>
+    <None Remove="Services\"/>
+    <None Remove="Services\SQLServer\"/>
+    <None Remove="Microsoft.EntityFrameworkCore.Design"/>
+    <None Remove="Microsoft.EntityFrameworkCore.Tools"/>
+    <None Remove="Microsoft.EntityFrameworkCore"/>
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer"/>
+    <None Remove="Data\"/>
+    <None Remove="DataModels\"/>
+    <None Remove="ResponseModels\"/>
+    <None Remove="RequestModels\"/>
+    <None Remove="Auth\"/>
+    <None Remove="Account\"/>
+    <None Remove="Identifiers\"/>
+    <None Remove="Utilities\"/>
+    <None Remove="Mappings\"/>
+    <None Remove="Swashbuckle.AspNetCore.SwaggerGen"/>
+    <None Remove="Swashbuckle.AspNetCore.SwaggerUI"/>
+    <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer"/>
+    <None Remove="UAParser"/>
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection"/>
+    <None Remove="Grpc.Net.Client"/>
+    <None Remove="Google.Protobuf"/>
+    <None Remove="Grpc.Tools"/>
+    <None Remove="Grpc.AspNetCore"/>
+    <None Remove="Grpc.Net.Client.Web"/>
+    <None Remove="Protos\"/>
+    <None Remove="Protos\policyapi.proto"/>
+    <None Remove="Services\gRPC\"/>
+    <None Remove="Services\gRPC\Clients\"/>
+    <None Remove="PwnedPasswords.Client"/>
+    <None Remove="Microsoft.Extensions.Http.Polly"/>
+    <None Remove="Protos\notificationapi.proto"/>
+    <None Remove="EmailTemplate\"/>
+    <None Remove="Microsoft.AspNetCore.Razor"/>
+    <None Remove="Services\CustomRazorViewEngine\"/>
+    <None Remove="StartupTasks\"/>
+    <None Remove="StartupTasks\Tasks\"/>
+    <None Remove="CustomPolicies\"/>
+    <None Remove="CustomPolicies\AuthPolicy\"/>
+    <None Remove="CustomPolicies\AccountPolicy\"/>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Services\" />
-    <Folder Include="Services\SQLServer\" />
-    <Folder Include="Data\" />
-    <Folder Include="DataModels\" />
-    <Folder Include="ResponseModels\" />
-    <Folder Include="RequestModels\" />
-    <Folder Include="Auth\" />
-    <Folder Include="Account\" />
-    <Folder Include="Identifiers\" />
-    <Folder Include="Utilities\" />
-    <Folder Include="Mappings\" />
-    <Folder Include="Protos\" />
-    <Folder Include="Services\gRPC\" />
-    <Folder Include="Services\gRPC\Clients\" />
-    <Folder Include="EmailTemplate\" />
-    <Folder Include="Services\CustomRazorEngine\" />
-    <Folder Include="StartupTasks\" />
-    <Folder Include="StartupTasks\Tasks\" />
-    <Folder Include="CustomPolicies\" />
-    <Folder Include="CustomPolicies\AuthPolicy\" />
-    <Folder Include="CustomPolicies\AccountPolicy\" />
+    <Folder Include="Controllers\"/>
+    <Folder Include="Services\"/>
+    <Folder Include="Services\SQLServer\"/>
+    <Folder Include="Data\"/>
+    <Folder Include="DataModels\"/>
+    <Folder Include="ResponseModels\"/>
+    <Folder Include="RequestModels\"/>
+    <Folder Include="Auth\"/>
+    <Folder Include="Account\"/>
+    <Folder Include="Identifiers\"/>
+    <Folder Include="Utilities\"/>
+    <Folder Include="Mappings\"/>
+    <Folder Include="Protos\"/>
+    <Folder Include="Services\gRPC\"/>
+    <Folder Include="Services\gRPC\Clients\"/>
+    <Folder Include="EmailTemplate\"/>
+    <Folder Include="Services\CustomRazorEngine\"/>
+    <Folder Include="StartupTasks\"/>
+    <Folder Include="StartupTasks\Tasks\"/>
+    <Folder Include="CustomPolicies\"/>
+    <Folder Include="CustomPolicies\AuthPolicy\"/>
+    <Folder Include="CustomPolicies\AccountPolicy\"/>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.6">
@@ -87,23 +87,23 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.6" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.6" />
-    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.3.1" />
-    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.3.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.6" />
-    <PackageReference Include="UAParser" Version="3.1.47" />
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
-    <PackageReference Include="Grpc.Net.Client" Version="2.46.0" />
-    <PackageReference Include="Google.Protobuf" Version="3.21.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.6"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.6"/>
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.3.1"/>
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.3.1"/>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.6"/>
+    <PackageReference Include="UAParser" Version="3.1.47"/>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0"/>
+    <PackageReference Include="Grpc.Net.Client" Version="2.46.0"/>
+    <PackageReference Include="Google.Protobuf" Version="3.21.1"/>
     <PackageReference Include="Grpc.Tools" Version="2.46.3">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Grpc.AspNetCore" Version="2.46.0" />
-    <PackageReference Include="Grpc.Net.Client.Web" Version="2.46.0" />
-    <PackageReference Include="PwnedPasswords.Client" Version="1.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="6.0.6" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.46.0"/>
+    <PackageReference Include="Grpc.Net.Client.Web" Version="2.46.0"/>
+    <PackageReference Include="PwnedPasswords.Client" Version="1.2.0"/>
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="6.0.6"/>
   </ItemGroup>
   <ItemGroup>
     <Protobuf Include="Protos\policyapi.proto" GrpcServices="Client">

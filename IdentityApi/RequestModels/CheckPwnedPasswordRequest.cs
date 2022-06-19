@@ -1,8 +1,6 @@
-﻿using System;
-namespace IdentityApi.RequestModels
+﻿namespace IdentityApi.RequestModels;
+
+public class CheckPwnedPasswordRequest
 {
-    public class CheckPwnedPasswordRequest
-    {
-        public string PASSWORD { get; set; }
-    }
+    public string PASSWORD { get; set; }
 }

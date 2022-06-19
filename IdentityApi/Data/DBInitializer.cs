@@ -1,43 +1,38 @@
-﻿using System;
-using IdentityApi.Account;
+﻿using IdentityApi.Account;
 using IdentityApi.DataModels;
 
-namespace IdentityApi.Data
+namespace IdentityApi.Data;
+
+public class DBInitializer
 {
-    public class DBInitializer
+    private readonly IAccountManager _accountManager;
+
+    public DBInitializer(IAccountManager accountManager)
     {
-        private readonly IAccountManager _accountManager;
-        public DBInitializer(IAccountManager accountManager)
+        _accountManager = accountManager;
+    }
+
+    public void Initialize()
+    {
+        SeedAdmin();
+    }
+
+    /// <summary>
+    ///     Seeds default admin account for new database.
+    /// </summary>
+    public ProfileSaveStatus SeedAdmin()
+    {
+        Profile newAdmin = new()
         {
-            _accountManager = accountManager;
-        }
+            ID = Profile.ADMIN_GUID,
+            NAME = "admin",
+            NEW = true,
+            CREATED_BY = "system",
+            EMAIL = "test@test.com"
+        };
 
-        public void Initialize()
-        {
-            SeedAdmin();
-        }
+        newAdmin.CREDENTIAL = new Credential { USERNAME = "system", PASSWORD = "DONOTSHARE" };
 
-        /// <summary>
-        /// Seeds default admin account for new database.
-        /// </summary>
-        public ProfileSaveStatus SeedAdmin()
-        {
-            Profile newAdmin = new()
-            {
-                ID = Profile.ADMIN_GUID,
-                NAME = "admin",
-                NEW = true,
-                CREATED_BY = "system",
-                EMAIL = "test@test.com"
-            };
-
-            newAdmin.CREDENTIAL = new()
-            {
-                USERNAME = "system",
-                PASSWORD = "DONOTSHARE"
-            };
-
-            return _accountManager.CreateProfile(newAdmin);
-        }
+        return _accountManager.CreateProfile(newAdmin);
     }
 }

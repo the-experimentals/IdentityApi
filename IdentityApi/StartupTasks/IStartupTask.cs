@@ -1,11 +1,9 @@
-﻿using System;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 
-namespace IdentityApi.StartupTasks
+namespace IdentityApi.StartupTasks;
+
+public interface IStartupTask
 {
-    public interface IStartupTask
-    {
-        Task ExecuteAsync(CancellationToken cancellationToken = default);
-    }
+    Task ExecuteAsync(CancellationToken cancellationToken = default);
 }

@@ -1,9 +1,7 @@
-﻿using System;
-namespace IdentityApi.Account
+﻿namespace IdentityApi.Account;
+
+public class UserSecret
 {
-    public class UserSecret
-    {
-        public byte[] SALT { get; set; }
-        public string SECRET_HASH { get; set; }
-    }
+    public byte[] SALT { get; set; }
+    public string SECRET_HASH { get; set; }
 }

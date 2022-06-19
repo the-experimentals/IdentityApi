@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace IdentityApi.Account
+namespace IdentityApi.Account;
+
+public class ProfileSaveStatus
 {
-    public class ProfileSaveStatus
-    {
-        public bool IS_SAVED { get; set; }
-        public List<string> ERRORS { get; set; } = new();
-        public string PROFILE_ID { get; set; }
-    }
+    public bool IS_SAVED { get; set; }
+    public List<string> ERRORS { get; set; } = new();
+    public string PROFILE_ID { get; set; }
 }

@@ -1,8 +1,6 @@
-﻿using System;
-namespace IdentityApi.EmailTemplate
+﻿namespace IdentityApi.EmailTemplate;
+
+public class OtpView
 {
-    public class OtpView
-    {
-        public string OTP { get; set; }
-    }
+    public string OTP { get; set; }
 }

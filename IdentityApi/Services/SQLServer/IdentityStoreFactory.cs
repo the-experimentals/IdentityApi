@@ -3,24 +3,23 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 
-namespace IdentityApi.Services.SQLServer
+namespace IdentityApi.Services.SQLServer;
+
+public class IdentityStoreFactory : IDesignTimeDbContextFactory<IdentityStore>
 {
-    public class IdentityStoreFactory : IDesignTimeDbContextFactory<IdentityStore>
+    public IdentityStore CreateDbContext(string[] args)
     {
-        public IdentityStore CreateDbContext(string[] args)
-        {
-            IConfigurationRoot configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
-                .Build();
+        var configuration = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json")
+            .Build();
 
-            DbContextOptionsBuilder<IdentityStore> builder = new();
+        DbContextOptionsBuilder<IdentityStore> builder = new();
 
-            string connectionString = configuration.GetConnectionString("IdentityStoreConnectionString");
+        var connectionString = configuration.GetConnectionString("IdentityStoreConnectionString");
 
-            builder.UseSqlServer(connectionString);
+        builder.UseSqlServer(connectionString);
 
-            return new IdentityStore(builder.Options);
-        }
+        return new IdentityStore(builder.Options);
     }
 }

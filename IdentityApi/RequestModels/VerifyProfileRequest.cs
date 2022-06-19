@@ -1,11 +1,8 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace IdentityApi.RequestModels
+namespace IdentityApi.RequestModels;
+
+public class VerifyProfileRequest
 {
-    public class VerifyProfileRequest
-    { 
-        [Required]
-        public string OTP { get; set; }
-    }
+    [Required] public string OTP { get; set; }
 }

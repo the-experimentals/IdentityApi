@@ -1,11 +1,6 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿namespace IdentityApi.RequestModels;
 
-namespace IdentityApi.RequestModels
+public class ProfileRequest
 {
-	public class ProfileRequest
-	{
-        public string PROFILE_ID { get; set; }
-    }
+    public string PROFILE_ID { get; set; }
 }
-

@@ -1,11 +1,8 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace IdentityApi.RequestModels
+namespace IdentityApi.RequestModels;
+
+public class RefreshTokenRequest
 {
-    public class RefreshTokenRequest
-    {
-        [Required]
-        public string REFRESH { get; set; }
-    }
+    [Required] public string REFRESH { get; set; }
 }
