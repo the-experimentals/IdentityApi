@@ -179,6 +179,29 @@ namespace IdentityApiTest.Auth
             Assert.Equal(DummyData.ericProfile.ID, refreshToken.PROFILE_ID);
         }
 
+        [Fact(DisplayName = "Test update refresh token")]
+        void TestUpdateRefreshToken()
+        {
+           var lastRefreshedON = DummyData.defaultProfileRefreshToken.REFRESHED_ON;
+           var token = DummyData.defaultProfileRefreshToken.TOKEN;
+
+           Assert.True(_authManager.UpdateRefreshToken(DummyData.defaultProfileRefreshToken));
+
+           UserAgent ua = new()
+           {
+               BROWSER = DummyData.defaultProfileRefreshToken.BROWSER,
+               DEVICE = DummyData.defaultProfileRefreshToken.DEVICE,
+               OS = DummyData.defaultProfileRefreshToken.OS
+           };
+
+           var refreshToken = _authManager.GetRefreshToken(DummyData.defaultProfile.ID, ua, IPAddress.Parse("127.0.0.1"));
+
+           Assert.NotEqual(refreshToken.TOKEN, token);
+
+           Assert.Equal(lastRefreshedON.CompareTo(refreshToken.REFRESHED_ON), -1);
+
+        }
+
         private string VerifyJWTToken(string token)
         {
             if (string.IsNullOrEmpty(token))

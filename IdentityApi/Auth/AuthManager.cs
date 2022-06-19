@@ -260,16 +260,18 @@ namespace IdentityApi.Auth
            
         }
 
-        public void UpdateRefreshToken(RefreshToken token)
+        public bool UpdateRefreshToken(RefreshToken token)
         {
             token.TOKEN = Utilities.Utility.GetUniqueString(32);
             token.REFRESHED_ON = DateTime.UtcNow;
 
             _store.REFRESH_TOKENS.Update(token);
-            _store.SaveChanges();
+            bool isUpdated = _store.SaveChanges() > 0;
 
             _cache.Remove(RefreshToken.REFRESH_TOKEN_CACHE_KEY + token.PROFILE_ID);
             _cache.Add(RefreshToken.REFRESH_TOKEN_CACHE_KEY + token.PROFILE_ID, token);
+
+            return isUpdated;
         }
 
         private string GetSHA(string profileID, UserAgent ua, IPAddress ipAddress)

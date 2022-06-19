@@ -12,7 +12,7 @@ namespace IdentityApi.Auth
         public RefreshToken GetOrCreateRefreshToken(string profileID, UserAgent ua, IPAddress ipAddress);
         public RefreshToken GenerateRefreshToken(string profileID, UserAgent ua, IPAddress ipAddress);
         public RefreshToken GetRefreshToken(string profileID, UserAgent ua, IPAddress ipAddress);
-        public void UpdateRefreshToken(RefreshToken token);
+        public bool UpdateRefreshToken(RefreshToken token);
         public string GenerateJwtToken(LogInResponse logInResponse);
         public bool Logout(string profileID, UserAgent ua, IPAddress ipAddress);
         public bool DeleteRefreshToken(RefreshToken refreshToken);
