@@ -139,12 +139,12 @@ public class DummyData
 
     private static readonly string ericProfileGuid = Guid.NewGuid().ToString();
 
-    private static readonly UserSecret ericProfileuserSecret = Utility.GetUserSecret(null, "defaultTest");
+    private static readonly UserSecret ericProfileuserSecret = Utility.GetUserSecret(null, "ericPassword");
 
     public static Credential ericProfilecredential = new()
     {
         ID = Guid.NewGuid().ToString(),
-        USERNAME = "default",
+        USERNAME = "eric",
         PROFILE_ID = ericProfileGuid,
         SALT = ericProfileuserSecret.SALT,
         SECRET_HASH = ericProfileuserSecret.SECRET_HASH
@@ -153,11 +153,12 @@ public class DummyData
     public static Profile ericProfile = new()
     {
         ID = ericProfileGuid,
-        NAME = "delete test user",
+        NAME = "amy",
         NEW = true,
         CREATED_BY = "system",
         EMAIL = "test@test.com",
-        CREDENTIAL = cacheProfilecredential
+        CREDENTIAL = cacheProfilecredential,
+        LOCKED = true
     };
 
     public static RefreshToken ericProfileRefreshToken = new()
@@ -179,25 +180,26 @@ public class DummyData
 
     private static readonly string amyProfileGuid = Guid.NewGuid().ToString();
 
-    private static UserSecret amyProfileuserSecret = Utility.GetUserSecret(null, "defaultTest");
+    private static UserSecret amyProfileuserSecret = Utility.GetUserSecret(null, "amyPassword");
 
     public static Credential amyProfilecredential = new()
     {
         ID = Guid.NewGuid().ToString(),
-        USERNAME = "default",
-        PROFILE_ID = ericProfileGuid,
-        SALT = ericProfileuserSecret.SALT,
-        SECRET_HASH = ericProfileuserSecret.SECRET_HASH
+        USERNAME = "amy",
+        PROFILE_ID = amyProfileGuid,
+        SALT = amyProfileuserSecret.SALT,
+        SECRET_HASH = amyProfileuserSecret.SECRET_HASH
     };
 
     public static Profile amyProfile = new()
     {
         ID = amyProfileGuid,
-        NAME = "delete test user",
+        NAME = "amy",
         NEW = true,
         CREATED_BY = "system",
         EMAIL = "test@test.com",
-        CREDENTIAL = cacheProfilecredential
+        CREDENTIAL = amyProfilecredential,
+        STATUS = Status.DEACTIVE
     };
 
     public static RefreshToken amyProfileRefreshToken = new()

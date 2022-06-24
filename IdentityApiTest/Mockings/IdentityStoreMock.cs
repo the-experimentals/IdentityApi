@@ -24,16 +24,20 @@ public class IdentityStoreMock
         _store.PROFILE.Add(DummyData.deleteProfile);
         _store.PROFILE.Add(DummyData.cacheProfile);
         _store.PROFILE.Add(DummyData.ericProfile);
+        _store.PROFILE.Add(DummyData.amyProfile);
+
 
         _store.CREDENTIALS.Add(DummyData.defaultProfilecredential);
         _store.CREDENTIALS.Add(DummyData.deleteProfilecredential);
         _store.CREDENTIALS.Add(DummyData.cacheProfilecredential);
         _store.CREDENTIALS.Add(DummyData.ericProfilecredential);
+        _store.CREDENTIALS.Add(DummyData.amyProfilecredential);
 
         _store.REFRESH_TOKENS.Add(DummyData.defaultProfileRefreshToken);
         _store.REFRESH_TOKENS.Add(DummyData.deleteProfileRefreshToken);
         _store.REFRESH_TOKENS.Add(DummyData.cacheProfileRefreshToken);
         _store.REFRESH_TOKENS.Add(DummyData.ericProfileRefreshToken);
+        _store.REFRESH_TOKENS.Add(DummyData.amyProfileRefreshToken);
 
         _store.SaveChanges();
     }
