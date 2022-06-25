@@ -45,9 +45,9 @@ public class AuthManager : IAuthManager
         else
         {
             var userData = (from credential in _store.CREDENTIALS
-                join profile in _store.PROFILE on credential.PROFILE_ID equals profile.ID
-                where credential.USERNAME == logInRequest.USERNAME.Trim().ToLower() && profile.STATUS != Status.DELETED
-                select new { dataCredential = credential, dataProfile = profile }).FirstOrDefault();
+                            join profile in _store.PROFILE on credential.PROFILE_ID equals profile.ID
+                            where credential.USERNAME == logInRequest.USERNAME.Trim().ToLower() && profile.STATUS != Status.DELETED
+                            select new { dataCredential = credential, dataProfile = profile }).FirstOrDefault();
 
 
             if (userData != null)
@@ -99,29 +99,33 @@ public class AuthManager : IAuthManager
             {
                 logInResponse.IS_AUTHENTICATED = false;
 
-                if (!userProfile.CREDENTIAL.USERNAME.Equals("system"))
+                if (userProfile.CREDENTIAL.USERNAME.Equals("system"))
                 {
-                    if (!userProfile.LOCKED)
+                    logInResponse.ERRORS.Add("Invalid password");
+                    return logInResponse;
+                }
+
+                if (!userProfile.LOCKED)
+                {
+                    if (userProfile.LOGIN_ATTEMPTS == Profile.MAX_ALLOWED_LOGON_ATTEMPTS)
                     {
-                        if (userProfile.LOGIN_ATTEMPTS == Profile.MAX_ALLOWED_LOGON_ATTEMPTS)
-                        {
-                            userProfile.LOCKED = true;
-                        }
-                        else
-                        {
-                            userProfile.LOGIN_ATTEMPTS++;
-                        }
-
-                        _store.PROFILE.Update(userProfile);
-                        _store.SaveChanges();
-
-                        logInResponse.ERRORS.Add("Invalid password");
+                        userProfile.LOCKED = true;
                     }
                     else
                     {
-                        logInResponse.ERRORS.Add(
-                            "Profile locked due to many invalid attempts to login. Contact administartor for assistance");
+                        userProfile.LOGIN_ATTEMPTS++;
                     }
+
+                    _store.PROFILE.Update(userProfile);
+                    _store.SaveChanges();
+
+                    logInResponse.ERRORS.Add("Invalid password");
+
+                }
+                else
+                {
+                    logInResponse.ERRORS.Add(
+                        "Profile locked due to many invalid attempts to login. Contact administartor for assistance");
                 }
             }
         }
@@ -218,7 +222,7 @@ public class AuthManager : IAuthManager
         var refreshToken = _cache.Get<RefreshToken>(RefreshToken.REFRESH_TOKEN_CACHE_KEY + sha);
 
         if (refreshToken == null)
-            //check if refresh token already exist in store for a profile
+        //check if refresh token already exist in store for a profile
         {
             refreshToken = _store.REFRESH_TOKENS.Where(x => x.SHA.Equals(sha) && x.STATUS != Status.DELETED)
                 .FirstOrDefault();

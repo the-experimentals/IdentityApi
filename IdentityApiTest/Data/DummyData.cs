@@ -9,6 +9,49 @@ namespace IdentityApiTest.Data;
 
 public class DummyData
 {
+
+    // Data set 0
+
+    private static readonly string systemProfileGuid = Guid.NewGuid().ToString();
+
+    private static readonly UserSecret systemProfileuserSecret = Utility.GetUserSecret(null, "systemPassword");
+
+    public static Credential systemProfilecredential = new()
+    {
+        ID = Guid.NewGuid().ToString(),
+        USERNAME = "system",
+        PROFILE_ID = systemProfileGuid,
+        SALT = systemProfileuserSecret.SALT,
+        SECRET_HASH = systemProfileuserSecret.SECRET_HASH
+    };
+
+    public static Profile systemProfile = new()
+    {
+        ID = systemProfileGuid,
+        NAME = "system test user",
+        NEW = true,
+        CREATED_BY = "system",
+        EMAIL = "test@test.com",
+        CREDENTIAL = systemProfilecredential
+    };
+
+    public static RefreshToken systemProfileRefreshToken = new()
+    {
+        ID = Guid.NewGuid().ToString(),
+        PROFILE_ID = systemProfileGuid,
+        BROWSER = "",
+        DEVICE = "",
+        OS = "",
+        GENERATED_ON = DateTime.UtcNow,
+        LIFE_SPAN = 1,
+        STATUS = Status.ACTIVE,
+        ACTIVE = true,
+        IPv4 = "127.0.0.1",
+        TOKEN = Utility.GetUniqueString(32),
+        REFRESHED_ON = DateTime.UtcNow,
+        SHA = Utility.ComputeSHA(string.Concat(systemProfileGuid, "", "", "", IPAddress.Parse("127.0.0.1")))
+    };
+
     // Data set 1
 
     private static readonly string defaultProfileGuid = Guid.NewGuid().ToString();

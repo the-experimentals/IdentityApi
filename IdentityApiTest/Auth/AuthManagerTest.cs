@@ -55,16 +55,6 @@ public class AuthManagerTest : IClassFixture<IdentityStoreMock>, IClassFixture<T
         Assert.Equal("User not found", response.ERRORS[0]);
     }
 
-    /*
-     * TODO:
-     * Locked Account. Done
-     * Deactivated. Done
-     * Incorrect password. Done
-     * Is system user with invalid password.
-     * Increase login attempt
-     * Too many attempts with incorrect password
-     */
-
     [Fact(DisplayName = "Test login with locked account")]
     private void TestLoginWithlockedaccroun()
     {
@@ -107,6 +97,38 @@ public class AuthManagerTest : IClassFixture<IdentityStoreMock>, IClassFixture<T
         Assert.False(response.IS_AUTHENTICATED);
 
         Assert.Equal("Invalid password", response.ERRORS[0]);
+    }
+
+    [Fact(DisplayName = "Test system user with invalid password")]
+    private void TestSystemUserWithInvalidPassword()
+    {
+        LogInRequest logInRequest = new()
+        {
+            USERNAME = "system",
+            PASSWORD = "invalidPassword"
+        };
+
+        var response = _authManager.Authenticate(logInRequest);
+
+        Assert.False(response.IS_AUTHENTICATED);
+
+        Assert.Equal("Invalid password", response.ERRORS[0]);
+    }
+
+    [Fact(DisplayName = "Test login to locked user.")]
+    private void TestLoginLockedUser()
+    {
+        LogInRequest logInRequest = new()
+        {
+            USERNAME = "eric",
+            PASSWORD = "ericPassword"
+        };
+
+        var response = _authManager.Authenticate(logInRequest);
+
+        Assert.False(response.IS_AUTHENTICATED);
+
+        Assert.Equal("Profile locked due to many invalid attempts to login. Contact administartor for assistance", response.ERRORS[0]);
     }
 
     [Fact(DisplayName = "Test generating jwt token")]
