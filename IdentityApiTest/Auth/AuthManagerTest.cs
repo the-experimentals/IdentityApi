@@ -59,8 +59,8 @@ public class AuthManagerTest : IClassFixture<IdentityStoreMock>, IClassFixture<T
      * TODO:
      * Locked Account. Done
      * Deactivated. Done
-     * Incorrect password
-     * Is system user
+     * Incorrect password. Done
+     * Is system user with invalid password.
      * Increase login attempt
      * Too many attempts with incorrect password
      */
@@ -95,6 +95,18 @@ public class AuthManagerTest : IClassFixture<IdentityStoreMock>, IClassFixture<T
         Assert.False(response.IS_AUTHENTICATED);
 
         Assert.Equal("Your profile is temporarily deactivated. To activate your profile conatct administrator.", response.ERRORS[0]);
+    }
+
+    [Fact(DisplayName = "Test login with invlid password")]
+    private void TestLoginWithInvalidPassword()
+    {
+        LogInRequest request = new() { USERNAME = "amy", PASSWORD = "incorrectPassword" };
+
+        var response = _authManager.Authenticate(request);
+
+        Assert.False(response.IS_AUTHENTICATED);
+
+        Assert.Equal("Invalid password", response.ERRORS[0]);
     }
 
     [Fact(DisplayName = "Test generating jwt token")]
