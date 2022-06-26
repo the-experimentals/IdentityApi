@@ -75,10 +75,10 @@ public class AccountManager : IAccountManager
                 _store.SaveChanges();
             }
 
-            else
-            {
-                _store.PROFILE.Update(profile);
-            }
+            // else
+            // {
+            //     _store.PROFILE.Update(profile);
+            // }
 
             _store.SaveChanges();
 
@@ -90,6 +90,7 @@ public class AccountManager : IAccountManager
         {
             transaction.Rollback();
             Console.WriteLine(ex.StackTrace);
+            throw new InvalidOperationException(ex.Message, ex.InnerException);
         }
 
         return status;
@@ -98,10 +99,10 @@ public class AccountManager : IAccountManager
     public List<ProfileCardResponse> GetProfiles()
     {
         var profiles = (from profile in _store.PROFILE
-            join credential in _store.CREDENTIALS
-                on profile.ID equals credential.PROFILE_ID
-            where credential.USERNAME != "system" && profile.STATUS != Status.DELETED
-            select new { dataProfile = profile, dataCredential = credential }).ToList();
+                        join credential in _store.CREDENTIALS
+                            on profile.ID equals credential.PROFILE_ID
+                        where credential.USERNAME != "system" && profile.STATUS != Status.DELETED
+                        select new { dataProfile = profile, dataCredential = credential }).ToList();
 
         List<ProfileCardResponse> profileViews = new();
 
@@ -171,10 +172,10 @@ public class AccountManager : IAccountManager
         if (profile == null)
         {
             var dbProfile = (from p in _store.PROFILE
-                join person in _store.PERSON
-                    on p.ID equals person.PROFILE_ID
-                where p.ID == profileID
-                select new { dataProfile = p, dataPerson = person }).FirstOrDefault();
+                             join person in _store.PERSON
+                                 on p.ID equals person.PROFILE_ID
+                             where p.ID == profileID
+                             select new { dataProfile = p, dataPerson = person }).FirstOrDefault();
 
             if (dbProfile != null)
             {

@@ -1,6 +1,5 @@
 ﻿using IdentityApi.Data;
 using IdentityApiTest.Mockings;
-using IdentityApiTest.Ordering;
 using Xunit;
 
 namespace IdentityApiTest.Data;
@@ -16,7 +15,6 @@ public class DBInitializerTest : IClassFixture<AccountManagerMock>
     }
 
     [Fact(DisplayName = "Test seeding default admin profile.")]
-    [Priority(1)]
     public void TestSeedAdmin()
     {
         var result = _dBInitializer.SeedAdmin();
