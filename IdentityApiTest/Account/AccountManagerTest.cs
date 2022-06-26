@@ -64,7 +64,7 @@ public class AccountManagerTest : IClassFixture<IdentityStoreMock>
             NEW = true,
             CREATED_BY = "system",
             EMAIL = "test@test.com",
-            CREDENTIAL = new Credential { USERNAME = "testProfile", PASSWORD = "TESTPASSWORD" },
+            CREDENTIAL = new Credential { USERNAME = "abcd", PASSWORD = "TESTPASSWORD" },
             PERSON = new Person { FIRST_NAME = "test", LAST_NAME = "profile", PROFILE_ID = testProfileGUID }
         }));
 
