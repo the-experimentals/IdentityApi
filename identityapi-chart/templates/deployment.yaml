@@ -37,21 +37,25 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: "ASPNETCORE_URLS"
-              value: "http://[*]:5001"
+              value: "http://[*]:8080"
           ports:
             - name: http
-              containerPort: 5001
+              containerPort: 8080
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /health/live
-              port: http
-            initialDelaySeconds: 60
-          readinessProbe:
-            httpGet:
-              path: /health/ready
-              port: http
-            initialDelaySeconds: 60
+          # livenessProbe:
+          #   httpGet:
+          #     path: /health/live
+          #     port: http
+          #   initialDelaySeconds: 30
+          #   failureThreshold: 5
+          #   periodSeconds: 30
+          # readinessProbe:
+          #   httpGet:
+          #     path: /health/ready
+          #     port: http
+          #   initialDelaySeconds: 30
+          #   failureThreshold: 5
+          #   periodSeconds: 30
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

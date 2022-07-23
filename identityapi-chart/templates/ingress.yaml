@@ -39,14 +39,14 @@ spec:
               service:
                 name: identityapi
                 port:
-                  number: 5001
+                  number: 8080
           - path: /account
             pathType: Prefix
             backend:
               service:
                 name: identityapi
                 port:
-                  number: 5001
+                  number: 8080
             # backend:
             #   serviceName: {{ $fullName }}
             #   servicePort: {{ $svcPort }}
