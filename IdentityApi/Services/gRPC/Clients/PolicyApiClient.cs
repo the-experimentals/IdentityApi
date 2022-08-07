@@ -15,7 +15,7 @@ public class PolicyApiClient
 {
     private readonly PolicyApi.Protos.PolicyApi.PolicyApiClient _client;
     private readonly IMapper _mapper;
-    private readonly string _serviceURL = "http://localhost:6001";
+    private readonly string _serviceURL = "http://policyapi.default:6900";
 
     public PolicyApiClient(IMapper mapper, IHttpContextAccessor httpContext)
     {
