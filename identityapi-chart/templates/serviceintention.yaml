@@ -8,3 +8,5 @@ spec:
   sources:
     - name: tmsolution-ingress
       action: allow
+    - name: tmsolution-gateway
+      action: allow
