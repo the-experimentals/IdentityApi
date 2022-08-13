@@ -38,6 +38,8 @@ spec:
           env:
             - name: "ASPNETCORE_URLS"
               value: "http://[*]:8080"
+            - name: "ConnectionStrings__IdentityStoreConnectionString"
+              value: "<DATABASE_CONNECTION_STRING>"
           ports:
             - name: http
               containerPort: 8080
