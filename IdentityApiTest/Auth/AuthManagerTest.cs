@@ -2,6 +2,7 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Net;
+using System.Security.Cryptography;
 using System.Text;
 using IdentityApi.Auth;
 using IdentityApi.Data;
@@ -24,14 +25,79 @@ public class AuthManagerTest : IClassFixture<IdentityStoreMock>, IClassFixture<T
 
     public AuthManagerTest(IdentityStoreMock storeMock, TMCacheMock cacheMock)
     {
-        //jwtSecretKey = new JwtSecretKey
-        //{
-        //    SECRET =
-        //        "Rh?jkJ4847wBXqvWCB5UbNZDnc&KN7ABxk^dpu43H9@f_Gt@FT@D=yHj?R!^ZTuEHN8Vb36-gNua5aak24fX=&g-+AUmS%?Udm3H6WT7h^W@AMhX!TzfbTCw?Z_XsBj6",
-        //    ISSUER = "TMSolution",
-        //    AUDIENCE = "TMSolution",
-        //    TTL = 5
-        //};
+        jwtSecretKey = new JwtSecretKey
+        {
+            ISSUER = "TMSolution",
+            AUDIENCE = "TMSolution",
+            TTL = 5,
+            PRIVATE_KEY = @"-----BEGIN RSA PRIVATE KEY-----
+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
+-----END RSA PRIVATE KEY-----
+",
+            PUBLIC_KEY = @"-----BEGIN PUBLIC KEY-----
+MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAs9oweHsvOR6X0z2T4TC0
+K7QY0wIlbnnG+v6QmsQlGqV3C3/0NQeURhkWkGTmI2O/HqjMKvCafWM1c8W6tU55
+YVDZUSJ9/byazEryM7XzoKPU2mlTi0/NFOVBs0Ne8NmxyKz7giWPAl/c//yvaGw6
+TPteNHqwtYxMVTWPe+YG6VfT+vyzVCbHz1FpWd/GGk7/9v2bXVbQnwN1AOb1rp/R
+kQzMLpfPAXx1m+rwqxUnauCGzU6qkN2eBRM8bu/YpwtcXMQGng7c10/Bn47+2ne7
+Jgl3TiAUlRp+thwXWkdoSSU4/5VPJMlC1Y80DlnLHq4+zOK8yAJB3FbmF4mAG8wn
+TB3HNh0zRMOxro3+l9bPTovvRip/S8/OUV4Q+q9wGArAZJmlaYLCnx/GMXgLjRce
+J6+XrmNzmyeXjm8tucjcJx8GZL7HcNMctuL5YBofEDuCDYKPOt0tVA95FZcwx1tw
+yOWsUTtQ+e4z0jQyy1Kii9pptNT6OPY/5cLpg0mPW/DrbyEaEMAZlLKQEr3ygbEq
+2WozkHvkj02bWvL9VklXS0cp/WLQorK1irE0tfOhmBMuadYZ2jiSTNWTGUQm41BU
+Qm01wW+gW99LME3zFDXeFUOjVhFmUDDdnYrcg225U93NBdCvTOjjfI1qju8UZvUx
+ftcnXiPc4Ye8CAJBduzVE80CAwEAAQ==
+-----END PUBLIC KEY-----
+"
+        };
 
         _authManager = new AuthManager(storeMock._store, cacheMock._cache, Options.Create(jwtSecretKey));
     }
@@ -323,24 +389,27 @@ public class AuthManagerTest : IClassFixture<IdentityStoreMock>, IClassFixture<T
         }
 
 
-        //JwtSecurityTokenHandler tokenHandler = new();
-        //var key = Encoding.ASCII.GetBytes(jwtSecretKey.SECRET);
+        JwtSecurityTokenHandler tokenHandler = new();
 
-        //var claims = tokenHandler.ValidateToken(token, new TokenValidationParameters
-        //{
-        //    ValidateIssuerSigningKey = true,
-        //    IssuerSigningKey = new SymmetricSecurityKey(key),
-        //    ValidateIssuer = false,
-        //    ValidateAudience = false,
-        //    // set clockskew to zero so tokens expire exactly at token expiration time (instead of 5 minutes later)
-        //    ClockSkew = TimeSpan.Zero
-        //}, out var validatedToken);
+        RSA rsa = RSA.Create();
+        rsa.ImportFromPem(jwtSecretKey.PUBLIC_KEY.ToCharArray());
 
-        //var jwtToken = (JwtSecurityToken)validatedToken;
-        //var profileID = jwtToken.Claims.FirstOrDefault(x => x.Type == "nameid").Value;
+        var claims = tokenHandler.ValidateToken(token, new TokenValidationParameters()
+        {
+            IssuerSigningKey = new RsaSecurityKey(rsa),
+            ValidAudience = "TMSolution",
+            ValidIssuer = "TMSolution",
+            RequireSignedTokens = true,
+            RequireExpirationTime = true, // <- JWTs are required to have "exp" property set
+            ValidateLifetime = true, // <- the "exp" will be validated
+            ValidateAudience = true,
+            ValidateIssuer = true,
+        }, out var validatedToken);
 
-        //return profileID;
+        var jwtToken = (JwtSecurityToken)validatedToken;
+        var profileID = jwtToken.Claims.FirstOrDefault(x => x.Type == "nameid").Value;
 
-        return "";
+        return profileID;
+
     }
 }
