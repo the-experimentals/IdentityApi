@@ -2,6 +2,7 @@
 using System.IO;
 using System.Net.Http;
 using System.Reflection;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json.Serialization;
 using IdentityApi.Account;
@@ -44,6 +45,8 @@ public class Startup
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
+        CryptoProviderFactory.DefaultCacheSignatureProviders = false;
+
         services.AddHealthChecks();
 
         services.AddControllersWithViews();
@@ -64,26 +67,48 @@ public class Startup
         // configure jwt authentication.
         var JwtSecretKeySection = Configuration.GetSection("JwtSecretKey");
         services.Configure<JwtSecretKey>(JwtSecretKeySection);
+
         var jwtSettings = JwtSecretKeySection.Get<JwtSecretKey>();
-        var key = Encoding.ASCII.GetBytes(jwtSettings.SECRET);
+        //var key = Encoding.ASCII.GetBytes(jwtSettings.SECRET);
+
+
+        services.AddSingleton<RsaSecurityKey>(provider =>
+        {
+            RSA rsa = RSA.Create();
+            rsa.ImportFromPem(jwtSettings.PUBLIC_KEY.ToCharArray());
+
+            //rsa.ImportRSAPublicKey(
+            //    source: Convert.FromBase64String(jwtSettings.PUBLIC_KEY),
+            //    bytesRead: out int _
+            //);
+
+            return new RsaSecurityKey(rsa);
+        });
+
 
         services.AddAuthentication(options =>
+        {
+            options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        })
+        .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
+        {
+            SecurityKey rsa = services.BuildServiceProvider().GetRequiredService<RsaSecurityKey>();
+
+            options.IncludeErrorDetails = true;
+
+            options.TokenValidationParameters = new()
             {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-            .AddJwtBearer(options =>
-            {
-                options.RequireHttpsMetadata = false;
-                options.SaveToken = true;
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(key),
-                    ValidateIssuer = false,
-                    ValidateAudience = false
-                };
-            });
+                IssuerSigningKey = rsa,
+                ValidAudience = "TMSolution",
+                ValidIssuer = "TMSolution",
+                RequireSignedTokens = true,
+                RequireExpirationTime = true, // <- JWTs are required to have "exp" property set
+                ValidateLifetime = true, // <- the "exp" will be validated
+                ValidateAudience = true,
+                ValidateIssuer = true,
+            };
+        });
 
         services.AddSwaggerGen(swagger =>
         {

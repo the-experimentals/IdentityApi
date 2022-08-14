@@ -4,6 +4,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Net;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using IdentityApi.Data;
 using IdentityApi.DataModels;
@@ -140,7 +141,6 @@ public class AuthManager : IAuthManager
 
     public string GenerateJwtToken(LogInResponse logInResponse)
     {
-        JwtSecurityTokenHandler tokenHandler = new();
 
         List<Claim> claims = new();
 
@@ -154,20 +154,34 @@ public class AuthManager : IAuthManager
 
         ClaimsIdentity claimsIdentity = new(claims);
 
-        var key = Encoding.ASCII.GetBytes(_jwtSecretKey.SECRET);
-        SecurityTokenDescriptor tokenDescriptor = new()
+        using RSA rsa = RSA.Create();
+
+        rsa.ImportFromPem(_jwtSecretKey.PRIVATE_KEY.ToCharArray());
+
+        SigningCredentials credentials = new(
+            key: new RsaSecurityKey(rsa),
+            algorithm: SecurityAlgorithms.RsaSha256
+        )
+        {
+            CryptoProviderFactory = new CryptoProviderFactory { CacheSignatureProviders = false }
+        };
+
+        DateTime jwtDate = DateTime.UtcNow;
+
+        SecurityTokenDescriptor securityToken = new()
         {
             Subject = claimsIdentity,
             Issuer = _jwtSecretKey.ISSUER,
-            Audience = _jwtSecretKey.ISSUER,
-            Expires = DateTime.UtcNow.AddMinutes(_jwtSecretKey.TTL),
-            SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
-                SecurityAlgorithms.HmacSha256Signature)
+            Audience = _jwtSecretKey.AUDIENCE,
+            NotBefore = jwtDate,
+            Expires = jwtDate.AddMinutes(_jwtSecretKey.TTL),
+            SigningCredentials = credentials
         };
 
-        var token = tokenHandler.CreateToken(tokenDescriptor);
+        var token = new JwtSecurityTokenHandler().CreateToken(securityToken);
 
-        return tokenHandler.WriteToken(token);
+        return new JwtSecurityTokenHandler().WriteToken(token);
+
     }
 
     public RefreshToken GenerateRefreshToken(string profileID, UserAgent ua, IPAddress ipAddress)

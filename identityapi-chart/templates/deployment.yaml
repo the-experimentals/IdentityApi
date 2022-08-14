@@ -39,7 +39,37 @@ spec:
             - name: "ASPNETCORE_URLS"
               value: "http://[*]:8080"
             - name: "ConnectionStrings__IdentityStoreConnectionString"
-              value: "<DATABASE_CONNECTION_STRING>"
+              value: "Server=host.docker.internal,1433;Initial Catalog=tmsolutiondb;User ID=sa;Password=Bibek123@;TrustServerCertificate=False;Connection Timeout=30;"
+            - name: "JwtSecretKey__PRIVATE_KEY"
+              valueFrom:
+                secretKeyRef:
+                  name: tmsolution-jwt-secrets
+                  key: PRIVATE_KEY
+                  optional: false
+            - name: "JwtSecretKey__PUBLIC_KEY"
+              valueFrom:
+                secretKeyRef:
+                  name: tmsolution-jwt-secrets
+                  key: PUBLIC_KEY
+                  optional: false
+            - name: "JwtSecretKey__ISSUER"
+              valueFrom:
+                secretKeyRef:
+                  name: tmsolution-jwt-secrets
+                  key: ISSUER
+                  optional: false
+            - name: "JwtSecretKey__AUDIENCE"
+              valueFrom:
+                secretKeyRef:
+                  name: tmsolution-jwt-secrets
+                  key: AUDIENCE
+                  optional: false
+            - name: "JwtSecretKey__TTL"
+              valueFrom:
+                secretKeyRef:
+                  name: tmsolution-jwt-secrets
+                  key: TTL
+                  optional: false
           ports:
             - name: http
               containerPort: 8080

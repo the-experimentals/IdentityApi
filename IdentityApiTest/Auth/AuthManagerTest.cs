@@ -24,14 +24,14 @@ public class AuthManagerTest : IClassFixture<IdentityStoreMock>, IClassFixture<T
 
     public AuthManagerTest(IdentityStoreMock storeMock, TMCacheMock cacheMock)
     {
-        jwtSecretKey = new JwtSecretKey
-        {
-            SECRET =
-                "Rh?jkJ4847wBXqvWCB5UbNZDnc&KN7ABxk^dpu43H9@f_Gt@FT@D=yHj?R!^ZTuEHN8Vb36-gNua5aak24fX=&g-+AUmS%?Udm3H6WT7h^W@AMhX!TzfbTCw?Z_XsBj6",
-            ISSUER = "TMSolution",
-            AUDIENCE = "TMSolution",
-            TTL = 5
-        };
+        //jwtSecretKey = new JwtSecretKey
+        //{
+        //    SECRET =
+        //        "Rh?jkJ4847wBXqvWCB5UbNZDnc&KN7ABxk^dpu43H9@f_Gt@FT@D=yHj?R!^ZTuEHN8Vb36-gNua5aak24fX=&g-+AUmS%?Udm3H6WT7h^W@AMhX!TzfbTCw?Z_XsBj6",
+        //    ISSUER = "TMSolution",
+        //    AUDIENCE = "TMSolution",
+        //    TTL = 5
+        //};
 
         _authManager = new AuthManager(storeMock._store, cacheMock._cache, Options.Create(jwtSecretKey));
     }
@@ -323,22 +323,24 @@ public class AuthManagerTest : IClassFixture<IdentityStoreMock>, IClassFixture<T
         }
 
 
-        JwtSecurityTokenHandler tokenHandler = new();
-        var key = Encoding.ASCII.GetBytes(jwtSecretKey.SECRET);
+        //JwtSecurityTokenHandler tokenHandler = new();
+        //var key = Encoding.ASCII.GetBytes(jwtSecretKey.SECRET);
 
-        var claims = tokenHandler.ValidateToken(token, new TokenValidationParameters
-        {
-            ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(key),
-            ValidateIssuer = false,
-            ValidateAudience = false,
-            // set clockskew to zero so tokens expire exactly at token expiration time (instead of 5 minutes later)
-            ClockSkew = TimeSpan.Zero
-        }, out var validatedToken);
+        //var claims = tokenHandler.ValidateToken(token, new TokenValidationParameters
+        //{
+        //    ValidateIssuerSigningKey = true,
+        //    IssuerSigningKey = new SymmetricSecurityKey(key),
+        //    ValidateIssuer = false,
+        //    ValidateAudience = false,
+        //    // set clockskew to zero so tokens expire exactly at token expiration time (instead of 5 minutes later)
+        //    ClockSkew = TimeSpan.Zero
+        //}, out var validatedToken);
 
-        var jwtToken = (JwtSecurityToken)validatedToken;
-        var profileID = jwtToken.Claims.FirstOrDefault(x => x.Type == "nameid").Value;
+        //var jwtToken = (JwtSecurityToken)validatedToken;
+        //var profileID = jwtToken.Claims.FirstOrDefault(x => x.Type == "nameid").Value;
 
-        return profileID;
+        //return profileID;
+
+        return "";
     }
 }
