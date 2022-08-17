@@ -34,6 +34,6 @@ Environment variables required by service
 | JwtSecretKey__AUDIENCE | <AUDIENCE> |
 | JwtSecretKey__TTL | <JWT_TTL>
 
-## Consumings service
+## Consuming service
   Follow the swagger api documentation to explore various service endpoints at: (doc)[http://localhost:8080/swagger]
   > Note: launching project through `Visual Studio` IDE opens service's swagger documentation by default.
