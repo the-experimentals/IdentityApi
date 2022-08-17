@@ -1,14 +1,14 @@
-![Build Status](https://github.com/TMExperimentals/IdentityApi/actions/workflows/dotnet.yml/badge.svg)
+
 
 <div align="center">
     <h1>Identity API</h1>
+    <a href="https://github.com/itsbibeksaini/IdentityApi/actions/workflows/dotnet.yml">
+        <img src="https://github.com/itsbibeksaini/IdentityApi/actions/workflows/dotnet.yml/badge.svg">
+    </a>
 </div>
 
-| TECH STACK |      |
-| :--------- | :--: |
-| Framework | |
-| Language | |
-| API Documentation | |
+
+
 
 Identity api is dedicated identity management system microservice for TM Solution. It has features of managing user accounts as well as managing authentication and authorization.
 
