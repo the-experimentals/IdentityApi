@@ -30,8 +30,8 @@ Environment variables required by service
 | ConnectionStrings__IdentityStoreConnectionString | Server=<SERVER_NAME>;Initial Catalog=<DATABASE_NAME>;User ID=<DATABASE_USER>;Password=<DATABASE_PASSWORD>;TrustServerCertificate=False;Connection Timeout=30; |
 | JwtSecretKey__PRIVATE_KEY | <PRIVATE_KEY> |
 | JwtSecretKey__PUBLIC_KEY | <PUBLIC_KEY> |
-| JwtSecretKey__ISSUER | <ISSUER> |
-| JwtSecretKey__AUDIENCE | <AUDIENCE> |
+| JwtSecretKey__ISSUER | < ISSUER > |
+| JwtSecretKey__AUDIENCE | < AUDIENCE > |
 | JwtSecretKey__TTL | <JWT_TTL>
 
 ## Consuming service
