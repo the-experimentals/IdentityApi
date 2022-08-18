@@ -4,11 +4,15 @@
     <h1>Identity API</h1>
     <a href="https://github.com/itsbibeksaini/IdentityApi/actions/workflows/dotnet.yml">
         <img src="https://github.com/itsbibeksaini/IdentityApi/actions/workflows/dotnet.yml/badge.svg">
-    </a>
+    </a>    
+    <h2>Tech stack</h2>    
+    <img src="https://github.com/itsbibeksaini/IdentityApi/blob/main/.github/images/dotnet.png">
+    <img src="https://github.com/itsbibeksaini/IdentityApi/blob/main/.github/images/csharpnet.png">
+    <img src="https://github.com/itsbibeksaini/IdentityApi/blob/main/.github/images/swagger.png">
+    <img src="https://github.com/itsbibeksaini/IdentityApi/blob/main/.github/images/sql.png">
+    <img src="https://github.com/itsbibeksaini/IdentityApi/blob/main/.github/images/grpc.png">
+    <img src="https://github.com/itsbibeksaini/IdentityApi/blob/main/.github/images/docker.png">
 </div>
-
-
-
 
 Identity api is dedicated identity management system microservice for TM Solution. It has features of managing user accounts as well as managing authentication and authorization.
 
@@ -22,10 +26,12 @@ Identity api is dedicated identity management system microservice for TM Solutio
     
 2. Install on local k8s cluster through helm chart available in repository.
     1. Create docker image for service/project on local system:
+    
         ```
         docker build --pull --rm -f "Dockerfile" -t identityapi:0.0.1 "."
         ```
     2. Install helm charts
+    
         ```
         helm upgrade identityapi --install ./identityapi-charts
         ```
