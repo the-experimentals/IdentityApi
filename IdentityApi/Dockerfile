@@ -7,7 +7,7 @@ ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["IdentityApi.csproj", "/src"]
+COPY ["./IdentityApi/IdentityApi.csproj", "/src"]
 RUN dotnet restore "IdentityApi.csproj"
 COPY . .
 WORKDIR "/src"
