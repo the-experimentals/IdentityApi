@@ -25,7 +25,7 @@ jobs:
     - name: Test
       run: dotnet test ./IdentityApiTest/IdentityApiTest.csproj --verbosity normal
     - name: Build image
-      run: docker build "**/Dockerfile" -t identityapi .
+      run: docker build -f "**/Dockerfile" -t identityapi .
     - name: Install doctl
       uses: digitalocean/action-doctl@v2
       with:
