@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout repo
+      uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
@@ -23,3 +24,16 @@ jobs:
       run: dotnet build ./IdentityApi/IdentityApi.csproj --no-restore
     - name: Test
       run: dotnet test ./IdentityApiTest/IdentityApiTest.csproj --verbosity normal
+    - name: Build image
+      run: docker build -t identityapi .
+    - name: Install doctl
+      uses: digitalocean/action-doctl@v2
+      with:
+        token: ""
+    - name: Container registry login
+      run: doctl registry login --expiry-seconds 600
+    - name: Tag image
+      run: 
+        docker tag identityapi \
+        registry.digitalocean.com/tmsolution-cr/identityapi:${{github.event.inputs.version }}
+  
