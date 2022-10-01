@@ -12,14 +12,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v2
-      with:
-        dotnet-version: 6.0.x
-    - name: Restore dependencies
-      run: dotnet restore ./IdentityApi.sln
-    - name: Build
-      run: dotnet build ./IdentityApi/IdentityApi.csproj --no-restore
-    - name: Test
-      run: dotnet test ./IdentityApiTest/IdentityApiTest.csproj --verbosity normal
+    - uses: itsbibeksaini/github-actions-workflows/.github/workflows/dotnet-build.yml@main
+#     - uses: actions/checkout@v3
+#     - name: Setup .NET
+#       uses: actions/setup-dotnet@v2
+#       with:
+#         dotnet-version: 6.0.x
+#     - name: Restore dependencies
+#       run: dotnet restore ./IdentityApi.sln
+#     - name: Build
+#       run: dotnet build ./IdentityApi/IdentityApi.csproj --no-restore
+#     - name: Test
+#       run: dotnet test ./IdentityApiTest/IdentityApiTest.csproj --verbosity normal
