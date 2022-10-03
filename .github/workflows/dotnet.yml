@@ -9,6 +9,10 @@ on:
 jobs:
   build:
     uses: itsbibeksaini/github-actions-workflows/.github/workflows/dotnet-build.yml@main
+    with:
+      SOLUTION_FILE: ./IdentityApi.sln
+      PROJECT_FILE: ./IdentityApi/IdentityApi.csproj
+      TEST_PROJECT_FILE: ./IdentityApiTest/IdentityApiTest.csproj
 #     - uses: actions/checkout@v3
 #     - name: Setup .NET
 #       uses: actions/setup-dotnet@v2
