@@ -15,6 +15,7 @@ jobs:
       TEST_PROJECT_FILE: ./IdentityApiTest/IdentityApiTest.csproj
   image:
     uses: itsbibeksaini/github-actions-workflows/.github/workflows/docker-build.yml@main
+    needs: build
     with:
       DOCKERFILE: "IdentityApi/Dockerfile"
       IMAGE_NAME: "identityapi"
