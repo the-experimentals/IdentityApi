@@ -13,13 +13,13 @@ jobs:
       SOLUTION_FILE: ./IdentityApi.sln
       PROJECT_FILE: ./IdentityApi/IdentityApi.csproj
       TEST_PROJECT_FILE: ./IdentityApiTest/IdentityApiTest.csproj
-  image:
-    uses: itsbibeksaini/github-actions-workflows/.github/workflows/docker-build.yml@main
-    needs: build
-    with:
-      DOCKERFILE: "IdentityApi/Dockerfile"
-      IMAGE_NAME: "identityapi"
-      TAG: $(echo $GITHUB_SHA | head -c7)
+#   image:
+#     uses: itsbibeksaini/github-actions-workflows/.github/workflows/docker-build.yml@main
+#     needs: build
+#     with:
+#       DOCKERFILE: "IdentityApi/Dockerfile"
+#       IMAGE_NAME: "identityapi"
+#       TAG: $(echo $GITHUB_SHA | head -c7)
 #     - uses: actions/checkout@v3
 #     - name: Setup .NET
 #       uses: actions/setup-dotnet@v2
