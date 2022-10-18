@@ -25,6 +25,11 @@ jobs:
     needs: image
     secrets:
       DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+  deploy:
+    uses: itsbibeksaini/github-actions-workflows/.github/workflows/helm-deploy.yml@main
+    needs: push
+    secrets:
+      DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
 #     - uses: actions/checkout@v3
 #     - name: Setup .NET
 #       uses: actions/setup-dotnet@v2
