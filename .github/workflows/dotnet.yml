@@ -20,6 +20,10 @@ jobs:
       DOCKERFILE: "IdentityApi/Dockerfile"
       IMAGE_NAME: "identityapi"
       TAG: $(echo $GITHUB_SHA | head -c7)
+  push:
+    uses: itsbibeksaini/github-actions-workflows/.github/workflows/push-docker-image.yml@main
+    needs: image
+    secrets: inherit
 #     - uses: actions/checkout@v3
 #     - name: Setup .NET
 #       uses: actions/setup-dotnet@v2
