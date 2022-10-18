@@ -24,7 +24,7 @@ jobs:
     uses: itsbibeksaini/github-actions-workflows/.github/workflows/push-docker-image.yml@main
     needs: image
     with:
-      DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      DIGITALOCEAN_ACCESS_TOKEN: $(echo $secrets.DIGITALOCEAN_ACCESS_TOKEN)
 #     - uses: actions/checkout@v3
 #     - name: Setup .NET
 #       uses: actions/setup-dotnet@v2
