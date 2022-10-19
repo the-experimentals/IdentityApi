@@ -26,22 +26,21 @@ on:
 
 jobs:
 
-  setup_env:
+  job1:
     runs-on: ubuntu-latest
+    # Map a step output to a job output
     outputs:
-      TAG: ${{ steps.set-tag.outputs.GIT_TAG }}
+      output1: ${{ steps.step1.outputs.test }}
+      output2: ${{ steps.step2.outputs.test }}
     steps:
-      - name: set outputs with default values
-        id: set-tag
-        run: |    
-          # If workflow_dispatch, use inputs (left), if other trigger, use default env (right)
-          echo GIT_TAG=$GITHUB_SHA >> $GITHUB_OUTPUT
-      - name: Test
-        run: echo ${{needs.setup_env.outputs.TAG}}
+      - id: step1
+        run: echo "test=hello" >> $GITHUB_OUTPUT
+      - id: step2
+        run: echo "test=world" >> $GITHUB_OUTPUT
     
   build:
     uses: itsbibeksaini/github-actions-workflows/.github/workflows/dotnet-build.yml@main
-    needs: setup_env
+    needs: job1
     with:
       SOLUTION_FILE: ./IdentityApi.sln
       PROJECT_FILE: ./IdentityApi/IdentityApi.csproj
@@ -62,7 +61,7 @@ jobs:
     with:
       DOCKERFILE: "IdentityApi/Dockerfile"
       IMAGE_NAME: "identityapi"
-      TAG: ${{needs.setup_env.outputs.TAG}}
+      TAG: echo ${{needs.job1.outputs.output1}} ${{needs.job1.outputs.output2}}
       
   push:
     uses: itsbibeksaini/github-actions-workflows/.github/workflows/push-docker-image.yml@main
