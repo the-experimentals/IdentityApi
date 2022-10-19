@@ -25,7 +25,10 @@ jobs:
         
   image:
     uses: itsbibeksaini/github-actions-workflows/.github/workflows/docker-build.yml@main
-    needs: build
+    needs:
+      - build
+      - compute_tag
+    
     with:
       DOCKERFILE: "IdentityApi/Dockerfile"
       IMAGE_NAME: "identityapi"
