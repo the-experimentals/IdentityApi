@@ -31,7 +31,7 @@ jobs:
     needs: build
     with:
       DOCKERFILE: "IdentityApi/Dockerfile"
-      IMAGE_NAME: "identityapi"
+      IMAGE_NAME: $GITHUB_SHA
       TAG: test
       
   push:
