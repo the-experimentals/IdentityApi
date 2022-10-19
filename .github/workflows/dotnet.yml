@@ -29,13 +29,13 @@ jobs:
   setup_env:
     runs-on: ubuntu-latest
     outputs:
-      TAG: ${{ steps.set-tag.outputs.TAG }}
+      TAG: ${{ steps.set-tag.outputs.GIT_TAG }}
     steps:
       - name: set outputs with default values
         id: set-tag
         run: |    
           # If workflow_dispatch, use inputs (left), if other trigger, use default env (right)
-          echo TAG=$GITHUB_SHA >> $GITHUB_OUTPUT
+          echo GIT_TAG=$GITHUB_SHA >> $GITHUB_OUTPUT
       - name: Test
         run: echo ${{needs.setup_env.outputs.TAG}}
     
