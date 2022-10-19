@@ -23,6 +23,8 @@ jobs:
         run: |    
           # If workflow_dispatch, use inputs (left), if other trigger, use default env (right)
           echo "TAG=$GITHUB_SHA" >> $GITHUB_OUTPUT
+      - name: Test
+        run: echo ${{needs.setup_env.outputs.TAG}}
     
   build:
     uses: itsbibeksaini/github-actions-workflows/.github/workflows/dotnet-build.yml@main
