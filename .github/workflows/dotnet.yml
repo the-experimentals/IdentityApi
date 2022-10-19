@@ -21,7 +21,7 @@ jobs:
       - name: Set env
         run: echo "GITHUB_SHA_SHORT=$(echo $GITHUB_SHA | cut -c 1-6)" >> $GITHUB_ENV
       - name: Test
-        run: $(echo $GITHUB_SHA_SHORT)
+        run: $GITHUB_SHA_SHORT
         
   image:
     uses: itsbibeksaini/github-actions-workflows/.github/workflows/docker-build.yml@main
