@@ -5,26 +5,17 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  workflow_dispatch:
-    inputs:
-      TAG:
-        required: true
       
 
 jobs:
 
   setup_env:
     runs-on: ubuntu-latest
-    outputs:
-      TAG: ${{ steps.set-output-defaults.outputs.TAG }}
     steps:
-      - name: set outputs with default values
-        id: set-output-defaults
-        run: |    
-          # If workflow_dispatch, use inputs (left), if other trigger, use default env (right)
-          echo "::set-output name=TAG::$GITHUB_SHA"
+      - name: Set env
+        run: echo "GITHUB_SHA_SHORT=$(echo $GITHUB_SHA | cut -c 1-6)" >> $GITHUB_ENV
       - name: Test
-        run: echo $TAG
+        run: echo $GITHUB_SHA_SHORT      
     
   build:
     uses: itsbibeksaini/github-actions-workflows/.github/workflows/dotnet-build.yml@main
@@ -49,7 +40,7 @@ jobs:
     with:
       DOCKERFILE: "IdentityApi/Dockerfile"
       IMAGE_NAME: "identityapi"
-      TAG: ${{needs.EnvSetup.outputs.TAG}}
+      TAG: $GITHUB_SHA_SHORT
   push:
     uses: itsbibeksaini/github-actions-workflows/.github/workflows/push-docker-image.yml@main
     needs: image
