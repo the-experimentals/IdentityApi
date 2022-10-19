@@ -19,7 +19,7 @@ jobs:
     with:
       DOCKERFILE: "IdentityApi/Dockerfile"
       IMAGE_NAME: "identityapi"
-      TAG: ${{ GITHUB_SHA }}
+      TAG: echo ${{ GITHUB_SHA }}
   push:
     uses: itsbibeksaini/github-actions-workflows/.github/workflows/push-docker-image.yml@main
     needs: image
