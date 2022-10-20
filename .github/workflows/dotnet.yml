@@ -34,6 +34,9 @@ jobs:
   deploy:
     uses: itsbibeksaini/github-actions-workflows/.github/workflows/helm-deploy.yml@main
     needs: push
+    with:
+      IMAGE_NAME: "identityapi"
+      HELM_CHARTS: "identityapi-charts"
     secrets:
       DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
       
