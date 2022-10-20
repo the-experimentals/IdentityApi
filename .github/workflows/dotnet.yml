@@ -8,7 +8,16 @@ on:
       
 
 jobs:
-      
+     
+  compute_tag:
+    runs-on: ubuntu-latest
+    # Map a step output to a job output
+    outputs:
+      TAG: ${{ steps.build-tag.outputs.tag-output }}      
+    steps:
+      - id: build-tag
+        run: echo "tag-output=$(echo $GITHUB_SHA | head -c7)" >> $GITHUB_OUTPUT
+ 
   build:
     uses: itsbibeksaini/github-actions-workflows/.github/workflows/dotnet-build.yml@main
     with:
@@ -21,7 +30,7 @@ jobs:
     needs: build
     with:
       DOCKERFILE: "IdentityApi/Dockerfile"
-      IMAGE_NAME: "identityapi"
+      IMAGE_NAME: ${{needs.compute_tag.outputs.TAG}}
       
   push:
     uses: itsbibeksaini/github-actions-workflows/.github/workflows/push-docker-image.yml@main
