@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    uses: itsbibeksaini/workflows/.github/workflows/dotnet-build.yml@main
+    uses: itsbibeksaini/github-workflows/.github/workflows/dotnet-build.yml@main
     with:
       SOLUTION_FILE: ./IdentityApi.sln
       PROJECT_FILE: ./IdentityApi/IdentityApi.csproj
