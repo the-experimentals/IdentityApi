@@ -7,6 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
+  
   build:
     uses: itsbibeksaini/github-workflows/.github/workflows/dotnet-build.yml@main
     with:
@@ -17,6 +18,7 @@ jobs:
   
   image:
     uses: itsbibeksaini/github-workflows/.github/workflows/docker-build.yml@main
+    if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' }}
     needs: build
     with:
       DOCKERFILE: "IdentityApi/Dockerfile"
