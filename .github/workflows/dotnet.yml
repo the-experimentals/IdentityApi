@@ -24,7 +24,7 @@ jobs:
       PROJECT_NAME: IdentityApi
   
   push:
-    uses: itsbibeksaini/github-workflows/.github/workflows/push-docker-image.yml@main
+    uses: itsbibeksaini/github-workflows/.github/workflows/docker-push-image.yml@main
     needs: image
     with:
       IMAGE_NAME: "identityapi"
