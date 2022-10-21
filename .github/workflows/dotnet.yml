@@ -23,6 +23,14 @@ jobs:
       IMAGE_NAME: "identityapi"
       PROJECT_NAME: IdentityApi
   
+  push:
+    uses: itsbibeksaini/github-workflows/.github/workflows/push-docker-image.yml@main
+    needs: image
+    with:
+      IMAGE_NAME: "identityapi"
+    secrets:
+      DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+  
 #   image:
 #     uses: itsbibeksaini/github-actions-workflows/.github/workflows/docker-build.yml@main
 #     needs: build
