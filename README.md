@@ -14,7 +14,7 @@
     <img src="https://github.com/itsbibeksaini/IdentityApi/blob/main/.github/images/docker.png">
 </div>
 
-Identity api is dedicated identity management system microservice for TM Solution. It has features of managing user accounts as well as managing authentication and authorization.
+Identity API is dedicated identity management system microservice for TM Solution. It has features of managing user accounts as well as managing authentication and authorization.
 
 ## Installation
 
