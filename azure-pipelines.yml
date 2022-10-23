@@ -38,6 +38,7 @@ stages:
         inputs:
           command: 'build'
           projects: ./IdentityApi.sln
+          arguments: -c Release
       - task: DotNetCoreCLI@2
         displayName: Test .NET Application.
         inputs:
@@ -47,6 +48,7 @@ stages:
         displayName: Publish .NET Application.
         inputs:
           command: publish
+          arguments: -c Release
       - script: |
           ls          
       - task: Docker@2
