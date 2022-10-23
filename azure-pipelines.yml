@@ -3,45 +3,69 @@ name: IdentityApi
 trigger:
 - main
 
-resources:
-  repositories:
-    - repository: templates
-      type: github
-      name: itsbibeksaini/pipeline-templates
-      endpoint: github.com_itsbibeksaini
+# resources:
+#   repositories:
+#     - repository: templates
+#       type: github
+#       name: itsbibeksaini/pipeline-templates
+#       endpoint: github.com_itsbibeksaini
 
 pr: none
 
-variables:  
-  imageRepository: 'identityapi'
-  helmChart: './identityapi-chart'  
-  valueFile: './identityapi-chart/values.yaml'
-  tag: $(Build.SourceBranchName)_$(Build.SourceVersion)
-  vmImageName: ubuntu-latest
+pool:
+  vmImage: ubuntu-latest
 
 stages:
 - stage: BuildImage
-  displayName: Build and push docker image
+  displayName: Build and push .NET Application.
   jobs:  
   - job: Build
-    displayName: Build
-    pool:
-      vmImage: $(vmImageName)
+    displayName: Building .NET Application.
     steps:         
-    - template: build-image.yml@templates
-      parameters:
-        tag: $(tag)
-        imageRepository: $(imageRepository)
-- stage: Deploy
-  displayName: Helm Deploy
-  jobs:
-    - job: Deploy
-      pool:
-       vmImage: $(vmImageName)
-      steps:         
-      - template: helm-deploy.yml@templates
-        parameters:
-          helmChart: $(helmChart)
-          imageRepository: $(imageRepository)
-          valueFile: $(valueFile)
-          tag: $(tag)
+      - task: UseDotNet@2
+        displayName: Install .NET SDK.
+        inputs:
+          version: '6.0.x'
+      - task: DotNetCoreCLI@2
+        displayName: Restore nuget packages.
+        inputs:
+          command: 'restore'
+          feedsToUse: 'select'
+          projects: "**/*.csproj"
+          includeNuGetOrg: true
+      - task: DotNetCoreCLI@2
+        displayName: Build .NET Application.
+        inputs:
+          command: 'build'
+          projects: ./IdentityApi.sln
+      - task: DotNetCoreCLI@2
+        displayName: Test .NET Application.
+        inputs:
+          command: test
+          projects: '**/*Test/*.csproj'
+      - task: DotNetCoreCLI@2
+        displayName: Publish .NET Application.
+        inputs:
+          command: publish
+      - script: |
+          ls          
+      - task: Docker@2
+        displayName: Build docker image.
+        inputs:
+          repository: identityapi
+          command: build
+          Dockerfile: '**/Dockerfile'
+    
+# - stage: Deploy
+#   displayName: Helm Deploy
+#   jobs:
+#     - job: Deploy
+#       pool:
+#        vmImage: $(vmImageName)
+#       steps:         
+#       - template: helm-deploy.yml@templates
+#         parameters:
+#           helmChart: $(helmChart)
+#           imageRepository: $(imageRepository)
+#           valueFile: $(valueFile)
+#           tag: $(tag)
