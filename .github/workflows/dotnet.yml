@@ -18,7 +18,6 @@ jobs:
       DOCKER_FILE: IdentityApi/Dockerfile
     secrets:
       DIGITALOCEAN_ACCESS_TOKEN: ${{secrets.DIGITALOCEAN_ACCESS_TOKEN}}
-      REGISTRY_NAME: ${{secrets.REGISTRY_NAME}}  
 #   build:
 #     uses: itsbibeksaini/github-workflows/.github/workflows/dotnet-build.yml@main
 #     with:
