@@ -48,7 +48,7 @@ stages:
         displayName: Publish .NET Application.
         inputs:
           command: publish
-          arguments: -c Release --output '$(Build.ArtifactStagingDirectory)/app/publish'
+          arguments: -c Release --output 'IdentityApi/app/publish'
       - script: |
           ls          
       - task: Docker@2
