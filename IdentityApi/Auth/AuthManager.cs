@@ -5,7 +5,6 @@ using System.Linq;
 using System.Net;
 using System.Security.Claims;
 using System.Security.Cryptography;
-using System.Text;
 using IdentityApi.Data;
 using IdentityApi.DataModels;
 using IdentityApi.Identifiers;
