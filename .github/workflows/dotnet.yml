@@ -9,7 +9,7 @@ on:
 jobs:
   
   build:
-    uses: itsbibeksaini/github-workflows/.github/workflows/dotnet-build.yml@main
+    uses: the-experimentals/github-workflows/.github/workflows/dotnet-build.yml@main
     with:
       SOLUTION_FILE: ./IdentityApi.sln
       PROJECT_FILE: ./IdentityApi/IdentityApi.csproj
