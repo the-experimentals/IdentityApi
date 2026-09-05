@@ -22,7 +22,7 @@
 # ENTRYPOINT ["dotnet", "IdentityApi.dll"]
 
 
-FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine AS base
+FROM mcr.microsoft.com/dotnet/aspnet:10.0-alpine AS base
 EXPOSE 8080
 
 RUN apk add icu-libs
